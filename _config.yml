@@ -10,6 +10,10 @@ permalink: pretty
 markdown: kramdown
 baseurl: "/kumamoto" # the subpath of your site, e.g. /blog/
 url: "http://kumamoto.mx" # the base hostname & protocol for your site
+
+gems:
+  - jekyll-sitemap
+
 prose:
   rooturl: '_posts'
   siteurl: 'http://wikipoliticamx.github.io/kumamoto/'
