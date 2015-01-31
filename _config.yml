@@ -1,10 +1,19 @@
-baseurl: /starter
+# Site settings
+title: Pedro Kumamoto - Aspirante a candidato independiente
+telephone: 33 1513 5549
+description: > # this means to ignore newlines until "baseurl:"
+  Pedro Kumamoto es un joven de 25 años, activista y egresado de la Licenciatura en Gestión Cultural. Fue presidente durante dos años de la Sociedad de Alumnos del ITESO, periodo en el que promovió la creación de un Consejo de Transparencia y un Consejo Electoral para universitarios.
+twitter_username: pkumamoto
+github_username:  wikipoliticamx
+
 permalink: pretty
-markdown: rdiscount
+markdown: kramdown
+baseurl: "/kumamoto" # the subpath of your site, e.g. /blog/
+url: "http://kumamoto.mx" # the base hostname & protocol for your site
 prose:
   rooturl: '_posts'
-  siteurl: 'http://prose.github.io/starter/'
-  relativeLinks: 'http://prose.github.io/starter/links.jsonp'
+  siteurl: 'http://wikipoliticamx.github.io/kumamoto/'
+  relativeLinks: 'http://wikipoliticamx.github.io/kumamoto/links.jsonp'
   media: 'media'
   metadata:
     _posts:
