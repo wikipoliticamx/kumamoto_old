@@ -5,4 +5,7 @@
   <pubDate>{{item.date | date_to_xmlschema}}</pubDate>
   <dc:creator>SITE NAME</dc:creator>
   <guid isPermaLink="true">{{site.baseurl}}{{item.url}}</guid>
+  {% for tag in item.tags %}
+  <category>{{ tag | xml_escape }}</category>
+  {% endfor %}
 </item>
