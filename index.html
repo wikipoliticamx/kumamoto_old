@@ -1,26 +1,111 @@
 ---
-layout: default
 section: blog
 ---
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <script>
+var today=new Date()
+var futuredate=new Date(2015,01,27) //Month is 0-11 in JavaScript
+//Set 1 day in milliseconds
+var one_day=1000*60*60*24
+//Calculate difference btw the two dates, and convert to days
+var days = Math.ceil((futuredate.getTime()-today.getTime())/(one_day))
+  </script>
+<body>
 
-<div class="page-content">
+<header class="site-header">
   <div class="wrapper">
-
-    <div class="home">
-      <h1 class="page-heading">Posts</h1>
-      <ul class='post-list'>
-        {% for item in site.categories.blog limit:1000 %}
-        <li>
-          <span class="post-meta">{{ item.date | date: "%b %-d, %Y" }}</span>
-          <h2>
-            <a class="post-link" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
-          </h2>
-        </li>
-        {% endfor %}
-      </ul>
-
-      {% include rss-link.html %}
+    <div class="site-brand">
+      <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+      <div class="site-slogan">{{ site.slogan }}</div>
     </div>
 
+    {% include nav.html %}
+
+    <img alt="ocupantes" src="{{ site.baseurl }}/img/ocupantes.jpg" style="">
+
+    <div class="box">
+      Faltan <script>document.write(days)</script> días
+    </div>
   </div>
-</div>
+
+</header>
+
+  <div class="page-content">
+    <div class="wrapper">
+
+      <center>
+        <h1>¿Por qué una candidatura independiente?</h1>
+        <p>
+          Un candidato independiente es un ciudadano que no pertenece a ningún partido político y busca un cargo de elección popular. Durante el periodo de recolección de firmas el candidato no recibe dinero público, sólo lo que cada uno de los que lo apoyamos hemos decidido aportar voluntariamente. Como no pertenece a un partido político, nadie más que los ciudadanos a los que representa, le dice qué hacer o por qué votar. 
+          Queremos probar que la política sin partidos sí es posible y la construimos entre todas y todos. 
+        </p>
+      </center>
+
+      <div class="column column-50">
+        <h2>#FirmaKumamoto</h2>
+        <div class="flexible-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/xS6Ne5SbvpU" frameborder="0" allowfullscreen></iframe></div>
+      </div>
+
+      <div class="column column-50">
+        <h2>Ocupantes</h2>
+        <p>Si bien la legislación nos obliga a postular a un solo  individuo como candidato, en este proyecto somos muchos y muchas personas. Somos gente de muchas disciplinas, universidades y lugares de origen que compartimos un mismo deseo y tenemos las mismas inquietudes y descontentos respecto a la forma de hacer política en nuestro país; pero también tenemos la seguridad de que paso a paso podemos replantearla y reconstruirla. Pedro Kumamoto es quien se encarga de representarnos a todos y a todas en esta precampaña donde todas las voces pesan lo mismo y la participación y la colectividad son partes fundamentales de su desarrollo. Cualquier persona con ganas de sumarse y trabajar con el equipo es bienvenida.</p>
+      </div>
+
+      <center>
+        <h2>Propuestas</h2>
+        <p>Nuestra propuesta es el como!</p>
+      </center>
+
+      <div class="row">
+        <div class="column column-33">
+          <h3>Colaborativa</h3>
+        </div>
+
+        <div class="column column-33">
+          <h3>Expertos</h3>
+        </div>
+
+        <div class="column column-33">
+          <h3>Wikipolitica</h3>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column column-50">
+          <h2>Bitácora</h2>
+          <ul class='post-list'>
+            {% for item in site.categories.blog limit:1000 %}
+            <li>
+              <span class="post-meta">{{ item.date | date: "%b %-d, %Y" }}</span>
+              <h2>
+                <a class="post-link" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
+              </h2>
+            </li>
+            {% endfor %}
+          </ul>
+          {% include rss-link.html %}
+        </div>
+
+        <div class="column column-50">
+          <h2>¿Dónde firmo Kumamoto?</h2>
+          <p>Lorem ipsum</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column column-50">
+          <img src="{{ site.baseurl }}/img/kuma.jpg">
+        </div>
+
+        <div class="column column-50">
+          <div class="flexible-container" style="height:500px; padding-bottom: 10px;"><iframe src="https://www.google.com/maps/d/embed?mid=z1TD728Xq-aQ.kzsyCxPggqIE" width="430" height="500" style="height: 500px"></iframe></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  {% include footer.html %}
+</body>
+</html>
