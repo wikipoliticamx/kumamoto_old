@@ -19,7 +19,7 @@ permalink: /bitacora/
         {% endfor %}
       </ul>
 
-      <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+      {% include rss-link.html %}
     </div>
 
   </div>
