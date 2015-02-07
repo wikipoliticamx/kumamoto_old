@@ -221,6 +221,13 @@ pre {
     }
 }
 
+.top-wrapper {
+    position: relative;
+    max-width: $content-width;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 
 
 /**
@@ -270,23 +277,56 @@ pre {
     position: relative;
 }
 
-.site-logo {
-    float: left;
-    margin: 5px;
+.ocupantes {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.site-header-top,
+.site-header-bottom {
+    position: absolute;
+    left: 0;
+    padding-left: $spacing-unit;
+    width: -webkit-calc(#{$content-width} - (#{$spacing-unit} * 2));
+    width:         calc(#{$content-width} - (#{$spacing-unit} * 2));
+    @include media-query($on-laptop) {
+        padding-left: $spacing-unit / 2;
+        width: auto;
+    }
+    @include media-query($on-palm) {
+        padding-left: 0;
+        width: auto;
+    }
+}
+.site-header-top {
+    top: 0;
+}
+.site-header-bottom {
+    bottom: 0;
 }
 
 .site-brand {
+    margin: $spacing-unit;
+    @include media-query($on-palm) {
+        margin: $spacing-unit / 2;
+    }
+}
+
+.site-logo {
     float: left;
-    margin-top: 5px;
-    z-index: 1;
-    position: relative;
+    margin-right: $spacing-unit;
+    @include media-query($on-palm) {
+        margin-right: $spacing-unit / 2;
+        width: 50px;
+    }
 }
 
 .site-title {
     text-transform: uppercase;
-    font-size: 26px;
+    font-size: 46px;
     letter-spacing: -1px;
-    line-height: 30px;
+    line-height: 46px;
     font-weight: bold;
     font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
 
@@ -296,7 +336,8 @@ pre {
     }
 
     @include media-query($on-palm) {
-      line-height: 56px;
+      font-size: 18px;
+      line-height: 18px;
     }
 }
 
@@ -304,17 +345,15 @@ pre {
     color: white;
     text-transform: uppercase;
     letter-spacing: -1px;
-    font-weight: bold;
     font-family: Lucida Sans Unicode, Lucida Grande, sans-serif;
+    font-size: 21px;
     @include media-query($on-palm) {
-      display: none;
+        font-size: 14px;
     }
 }
 
 .site-nav {
-    z-index: 1;
-    position: relative;
-    float: right;
+    text-align: center;
     line-height: 66px;
 
     .menu-icon {
@@ -323,6 +362,7 @@ pre {
 
     .page-link {
         color: $grey-color-light;
+        font-weight: bold;
         line-height: $base-line-height;
 
         // Gaps between nav items, but not on the first one
@@ -333,9 +373,9 @@ pre {
 
     @include media-query($on-palm) {
         line-height: 56px;
-        position: absolute;
-        top: 9px;
-        right: 30px;
+        position: fixed;
+        top: $spacing-unit / 2;
+        right: $spacing-unit / 2;
         background-color: $background-color;
         border: 1px solid $grey-color-light;
         border-radius: 5px;
@@ -463,7 +503,6 @@ pre {
  * Page content
  */
 .page-content {
-    padding: $spacing-unit 0;
 }
 
 .page-heading {
@@ -490,9 +529,35 @@ pre {
 }
 
 
+.day-box {
+    background-color: #efda1e;
+    border-radius: 50%;
+    padding: 10px;
+    font-size: 26px;
+    line-height: 26px;
+    text-align: center;
+    color: white;
+    width: 70px;
+    height: 70px;
+    padding: 20px;
+    margin: $spacing-unit;
+    float: left;
+    @include media-query($on-palm) {
+        font-size: 13px;
+        line-height: 13px;
+        width: 40px;
+        height: 40px;
+        padding: 10px;
+        margin: $spacing-unit / 2;
+    }
+}
 
-.box {
-  padding: 10px;
+.right {
+    float: right;
+    margin: $spacing-unit;
+    @include media-query($on-palm) {
+        margin: $spacing-unit / 2;
+    }
 }
 
 

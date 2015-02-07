@@ -15,18 +15,28 @@ var days = Math.ceil((futuredate.getTime()-today.getTime())/(one_day))
 <body>
 
 <header class="site-header">
-  <div class="wrapper">
-    <div class="site-brand">
-      <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
-      <div class="site-slogan">{{ site.slogan }}</div>
+  <div class="top-wrapper">
+    <img class="ocupantes" alt="ocupantes" src="{{ site.baseurl }}/img/ocupantes.gif" style="">
+
+    <div class="site-header-top">
+      <div class="site-brand">
+        <img class="site-logo" src="{{ site.baseurl }}/img/LogoPedroKumamoto.png" />
+        <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+        <div class="site-slogan">{{ site.slogan }}</div>
+      </div>
+
+      {% include nav.html %}
     </div>
 
-    {% include nav.html %}
-
-    <img alt="ocupantes" src="{{ site.baseurl }}/img/ocupantes.jpg" style="">
-
-    <div class="box">
-      Faltan <script>document.write(days)</script> días
+    <div class="site-header-bottom">
+      <div class="day-box">
+        Faltan <script>document.write(days)</script> días
+      </div>
+      <div class="right">
+        <a href="https://twitter.com/pkumamoto"><img title="Twitter Pedro Kumamoto" alt="Twitter Pedro Kumamoto" src="{{ site.baseurl }}/img/IconosTwitter.png"></a>
+        <a href="https://www.facebook.com/kumisima?fref=ts"><img title="Facebook Pedro Kumamoto" alt="Facebook Pedro Kumamoto" src="{{ site.baseurl }}/img/IconosFacebook.png"></a>
+        <a href="https://www.youtube.com/channel/UCmxg2eKb-Z2dFeRh9SRKrSg"><img title="YouTube Pedro Kumamoto" alt="YouTube Pedro Kumamoto" src="{{ site.baseurl }}/img/IconosYouTube.png"></a>
+      </div>
     </div>
   </div>
 
