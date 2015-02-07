@@ -623,6 +623,12 @@ pre {
     margin-bottom: $spacing-unit;
 }
 
+.splash > img {
+  display: block;
+  max-height: 500px;
+  margin: 0 auto;
+}
+
 .post-title {
     font-size: 42px;
     letter-spacing: -1px;
