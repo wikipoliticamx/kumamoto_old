@@ -316,7 +316,7 @@ pre {
     }
     @include media-query($on-palm) {
         padding-left: 0;
-        width: auto;
+        width: 100%;
     }
     a {
       outline: 0;
