@@ -138,6 +138,18 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 300;
 }
 
+h1 {
+}
+h2 {
+    font-size: 140%;
+}
+h3 {
+    font-size: 120%;
+}
+h4 {
+    font-size: 110%;
+}
+
 
 
 /**
@@ -550,11 +562,6 @@ pre {
  * Page content
  */
 .page-content {
-    h1 {
-    }
-    h2 {
-        font-size: 140%;
-    }
 }
 
 .blog-section h2 {
@@ -645,30 +652,6 @@ pre {
 
 .post-content {
     margin-bottom: $spacing-unit;
-
-    h2 {
-        font-size: 32px;
-
-        @include media-query($on-laptop) {
-            font-size: 28px;
-        }
-    }
-
-    h3 {
-        font-size: 26px;
-
-        @include media-query($on-laptop) {
-            font-size: 22px;
-        }
-    }
-
-    h4 {
-        font-size: 20px;
-
-        @include media-query($on-laptop) {
-            font-size: 18px;
-        }
-    }
 }
 
 .flexible-container {
