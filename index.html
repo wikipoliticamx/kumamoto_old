@@ -89,7 +89,7 @@ var days = Math.ceil((futuredate.getTime()-today.getTime())/(one_day))
 
     <div class="wrapper blog-section">
       <div class="column column-50">
-        <h2>Bitácora</h2>
+        <h2><a href="{{ site.baseurl }}/bitacora/">Bitácora</a></h2>
         <ul class='post-list'>
           {% for item in site.categories.blog limit:5 %}
           <li>
@@ -100,11 +100,12 @@ var days = Math.ceil((futuredate.getTime()-today.getTime())/(one_day))
           </li>
           {% endfor %}
         </ul>
+        <p><strong>Lee la bitácora completa <a href="{{ site.baseurl }}/bitacora/">aquí</a>.</strong></p>
         {% include rss-link.html %}
       </div>
 
       <div class="column column-50 column-last">
-        <h2>¿Dónde firmo?</h2>
+        <h2><a href="{{ site.baseurl }}/donde-firmo/">¿Dónde firmo?</a></h2>
         <ul class='post-list'>
           <li>
             <h3><a target="_blank" href="https://www.facebook.com/pages/Cocina-La-Tasca-Pizzeria-y-lasagnas/120491968011462">Cocina La Tasca</a></h3>
@@ -127,6 +128,7 @@ var days = Math.ceil((futuredate.getTime()-today.getTime())/(one_day))
             Av. Patria esq. Circuito Medas
           </li>
         </ul>
+        <p><strong>Más lugares para firmar <a href="{{ site.baseurl }}/donde-firmo/">aquí</a>.</strong></p>
       </div>
     </div>
 

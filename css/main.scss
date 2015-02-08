@@ -58,7 +58,9 @@ dl, dd, ol, ul, figure {
     padding: 0;
 }
 
-
+strong {
+    font-weight: bold;
+}
 
 /**
  * Basic styling
@@ -557,8 +559,10 @@ pre {
 
 .blog-section h2 {
     background-color: $wiki2-color;
-    color: white;
     padding: 3px;
+    a {
+        color: white;
+    }
 }
 
 .page-heading {
