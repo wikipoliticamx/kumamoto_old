@@ -9,7 +9,7 @@ github_username:  wikipoliticamx
 
 permalink: pretty
 markdown: kramdown
-baseurl: "/" # the subpath of your site, e.g. /blog/
+baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://kumamoto.mx" # the base hostname & protocol for your site
 
 gems:
