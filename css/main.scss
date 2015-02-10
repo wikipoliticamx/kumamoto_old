@@ -452,7 +452,6 @@ pre {
     font-size: 26px;
     line-height: 26px;
     text-align: center;
-    color: white;
     width: 70px;
     height: 70px;
     padding: 20px;
@@ -463,6 +462,9 @@ pre {
         width: 40px;
         height: 40px;
         padding: 10px;
+    }
+    a {
+        color: white;
     }
 }
 
