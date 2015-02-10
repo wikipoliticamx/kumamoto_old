@@ -1,8 +1,8 @@
 ---
-published: true
 layout: page
-permalink: donde-firmo/
-title: ¿Dónde firmo?
+published: true
+permalink: "donde-firmo/"
+title: "¿Dónde firmo?"
 ---
 
 Si tienes cualquier duda márcanos al [33 1513 5549](tel:33 1513 5549).
@@ -28,11 +28,14 @@ Rafael Sanzio 522 Esq. Santo Tomás de Aquino
 ### [Pizzas Petra Patria](https://es.foursquare.com/v/petra-pizza-a-la-le%C3%B1a/4ecdbdfee3007feb7a795240)
 Av. Patria esq. Circuito Medas
 
+### [Hopper Cat] (https://www.facebook.com/HopperCat?fref=ts)
+Av. Terranova 1091-1; Col. Providencia
+
+### [La Celeste Gelato] 
+Av. Tepeyac #1115-B Esquina con calle Arbol Col. Chapalita
+
 ### BH Spa
 Escorpión 3321-2 (plaza La Calma)
-
-### Maniak
-Calz. de los Paraísos 339. Preguntar por Susana.
 
 ### Hostería de Ángel
 5 de mayo 295 (casi esq Andador 20 de noviembre)
