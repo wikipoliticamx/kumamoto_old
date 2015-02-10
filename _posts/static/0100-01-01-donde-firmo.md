@@ -28,10 +28,10 @@ Rafael Sanzio 522 Esq. Santo Tomás de Aquino
 ### [Pizzas Petra Patria](https://es.foursquare.com/v/petra-pizza-a-la-le%C3%B1a/4ecdbdfee3007feb7a795240)
 Av. Patria esq. Circuito Medas
 
-### [Hopper Cat] (https://www.facebook.com/HopperCat?fref=ts)
+### Hopper Cat https://www.facebook.com/HopperCat?fref=ts
 Av. Terranova 1091-1; Col. Providencia
 
-### [La Celeste Gelato] 
+### La Celeste Gelato
 Av. Tepeyac #1115-B Esquina con calle Arbol Col. Chapalita
 
 ### BH Spa
