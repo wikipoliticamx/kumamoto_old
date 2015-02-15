@@ -1,6 +1,6 @@
 ---
 layout: page
-published: false
+published: true
 title: Aviso de privasidad
 permalink: "aviso-de-privasidad/"
 ---
