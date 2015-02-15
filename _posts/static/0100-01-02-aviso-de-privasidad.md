@@ -1,8 +1,8 @@
 ---
 layout: page
 published: true
-title: Aviso de privasidad
-permalink: "aviso-de-privasidad/"
+title: Aviso de privacidad
+permalink: "aviso-de-privacidad/"
 ---
 
 Wikipolítica D10, A.C. con domicilio en la calle José Guadalupe Montenegro 1917, esquina calle progreso, Colonia Moderna, C.P. 44190, en la ciudad de Guadalajara, Jalisco emite el siguiente aviso de privacidad, por medio del cual se da a conocer la utilización, procesos, modificaciones y transmisiones de que sean objeto los datos recabados por esta asociación.
