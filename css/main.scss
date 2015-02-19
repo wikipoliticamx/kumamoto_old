@@ -289,6 +289,7 @@ pre {
  */
 .site-header {
     background: $wiki2-color;
+    background-color: rgb(217, 109, 116);
     border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
@@ -479,6 +480,7 @@ pre {
 }
 .right {
     float: right;
+    margin-top: 22px;
 }
 
 
@@ -572,7 +574,7 @@ pre {
 }
 
 .blog-section h2 {
-    background-color: $wiki2-color;
+    background-color: #D96D74;
     padding: 3px;
     a {
         color: white;
@@ -607,11 +609,11 @@ pre {
 
 .por-que {
     color: white;
-    background-color: #93d4c9;
+   background-color: #94D3C8;
 }
 
 .ocupantes-box {
-    background-color: $wiki2-color;
+    background-color: #D96D74;
     padding: $spacing-unit / 4;
     h2 {
         color: white;
@@ -626,7 +628,7 @@ pre {
     background-image: url({{ site.baseurl }}/img/propuestas.jpg);
     .column {
         padding: $spacing-unit / 4;
-        background-color: rgba(146,212,200,0.5);
+        background-color: rgba(148, 211, 200, 0.9);
         h3 {
             color: white;
         }
