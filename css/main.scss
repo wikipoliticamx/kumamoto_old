@@ -16,8 +16,8 @@ $spacing-unit:     30px;
 $text-color:       #111;
 $background-color: #fdfdfd;
 $brand-color:      #2a7ae2;
-$wiki1-color:      #95d4cb;
-$wiki2-color:      #d66e75;
+$wiki1-color:      #94D3C8;
+$wiki2-color:      #D96D74;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -574,7 +574,7 @@ pre {
 }
 
 .blog-section h2 {
-    background-color: #D96D74;
+    background-color: $wiki2-color;
     padding: 3px;
     a {
         color: white;
@@ -609,11 +609,11 @@ pre {
 
 .por-que {
     color: white;
-   background-color: #94D3C8;
+   background-color:$wiki1-color;
 }
 
 .ocupantes-box {
-    background-color: #D96D74;
+    background-color: $wiki2-color;
     padding: $spacing-unit / 4;
     h2 {
         color: white;
