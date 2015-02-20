@@ -289,7 +289,7 @@ pre {
  */
 .site-header {
     background: $wiki2-color;
-    background-color: rgb(217, 109, 116);
+    background-color: $wiki2-color;
     border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
