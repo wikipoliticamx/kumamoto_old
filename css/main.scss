@@ -16,8 +16,8 @@ $spacing-unit:     30px;
 $text-color:       #111;
 $background-color: #fdfdfd;
 $brand-color:      #2a7ae2;
-$wiki1-color:      #95d4cb;
-$wiki2-color:      #d66e75;
+$wiki1-color:      #94D3C8;
+$wiki2-color:      #D96D74;
 
 $grey-color:       #828282;
 $grey-color-light: lighten($grey-color, 40%);
@@ -288,7 +288,7 @@ pre {
  * Site header
  */
 .site-header {
-    background: $wiki2-color;
+    background-color: $wiki2-color;
     border-top: 5px solid $grey-color-dark;
     border-bottom: 1px solid $grey-color-light;
     min-height: 56px;
@@ -479,6 +479,7 @@ pre {
 }
 .right {
     float: right;
+    margin-top: 22px;
 }
 
 
@@ -607,7 +608,7 @@ pre {
 
 .por-que {
     color: white;
-    background-color: #93d4c9;
+   background-color:$wiki1-color;
 }
 
 .ocupantes-box {
@@ -626,7 +627,7 @@ pre {
     background-image: url({{ site.baseurl }}/img/propuestas.jpg);
     .column {
         padding: $spacing-unit / 4;
-        background-color: rgba(146,212,200,0.5);
+        background-color: rgba(148, 211, 200, 0.9);
         h3 {
             color: white;
         }
