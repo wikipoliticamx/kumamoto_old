@@ -16,8 +16,10 @@ var days = Math.ceil((futuredate.getTime()-today.getTime())/(one_day))
 
 <header class="site-header">
   <div class="top-wrapper">
-    <img class="ocupantes" alt="ocupantes" src="{{ site.baseurl }}/img/ocupantes.gif" style="">
-
+<!--    <img class="ocupantes" alt="ocupantes" src="{{ site.baseurl }}/img/ocupantes.gif" style=""> -->
+    <video  autoplay loop>
+        <source src="img/ocupantes.mp4" type="video/mp4">
+</video>
     <div class="site-header-top">
       <div class="site-brand">
         <a class="site-title" href="{{ site.baseurl }}/"><img class="site-logo" src="{{ site.baseurl }}/img/LogoPedroKumamoto.png" /></a>
@@ -135,7 +137,9 @@ var days = Math.ceil((futuredate.getTime()-today.getTime())/(one_day))
     <div class="wrapper">
       <div class="column column-50">
         <h2>Pedro Kumamoto</h2>
-        <img src="{{ site.baseurl }}/img/kuma.gif">
+	<video id=kuma_vid autoplay loop>
+ 	<source src="img/kuma.mp4" type="video/mp4">
+	</video>
       </div>
 
       <div class="column column-50 column-last">
