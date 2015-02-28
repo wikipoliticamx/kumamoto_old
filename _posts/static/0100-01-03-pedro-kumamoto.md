@@ -11,6 +11,8 @@ Escucha lo que tienen que decir sobre él distintos medios informativos:
 
 ### El Informador. [Política diferente: Kuma](http://opinion.informador.com.mx/Rotonda/2015/02/03/politica-diferente-kuma/)
 
+### Más por más. [Lo que sé de Pedro](http://www.maspormas.com/maspormas-gdl/columnas-gdl/lo-que-se-de-pedro?nopaging=1)
+
 ### Mural. [Quiere Kumamoto reto ciudadano](http://www.mural.com/aplicaciones/articulo/default.aspx?Id=454667&v=3)
 
 ### Milenio. [Entre Kumamoto y un Payaso](http://www.milenio.com/firmas/frank_lozano/Kumamoto-Payaso_18_453134727.html)
