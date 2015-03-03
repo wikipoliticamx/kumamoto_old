@@ -38,3 +38,5 @@ Escucha lo que tienen que decir sobre él distintos medios informativos:
 ### Canal 44 (UdeG TV). [Candidaturas independientes, Carlos Zatarín y Pedro Kumamoto](http://udgtv.com/video/candidaturas-independientes-carlos-zatara%C3%ADn-y-pedro-kumamoto)
 
 ### Marcatextos. Comparativo de los candidatos al distrito 10. [Distrito 10, “refugio” de candidatos que llegaron… “de rebote”](http://marcatextos.com/zapopan/distrito-10-refugio-de-candidatos-que-llegaron-de-rebote/)
+
+### El Informador. [Wikipolítica](http://opinion.informador.com.mx/Columnas/2015/02/26/wikipolitica/)
