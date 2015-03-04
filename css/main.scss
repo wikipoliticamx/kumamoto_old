@@ -372,12 +372,15 @@ pre {
     font-size: 21px;
     @include media-query($on-palm) {
         font-size: 14px;
+	width: 85%;
+	position:relative;
     }
 }
 
 .site-nav {
     text-align: center;
     line-height: 66px;
+    z-index: 1;	
 
     .menu-icon {
         display: none;
