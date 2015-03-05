@@ -15,11 +15,11 @@ var days = Math.ceil((futuredate.getTime()-today.getTime())/(one_day))
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script>
   $(document).ready(function(){
-    if(/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-      $('#contenedor-video-e-imagen #contenedor-video').remove(); //borra el div con el video
-      $('#contenedor-video-e-imagen').append('<img class="ocupantes" alt="ocupantes" src="{{ site.baseurl }}/img/ocupantes1.jpg" style="">'); //agrega la imagen
-      $('#contenedor-video-e-imagen-2 #contenedor-video-2').remove(); //borra el div con el video
-      $('#contenedor-video-e-imagen-2').append('<img class="kuma" alt="kuma" src="{{ site.baseurl }}/img/kuma1.jpg" style="">'); //agrega la imagen
+    if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
+      $('#contenedor-video-e-imagen #contenedor-imagen').remove(); //borra el div con el video
+      $('#contenedor-video-e-imagen').append('<video class="ocupantes"  autoplay loop><source src="img/ocupantes.mp4" type="video/mp4"></video>'); //agrega la imagen
+      $('#contenedor-video-e-imagen-2 #contenedor-imagen-2').remove(); //borra el div con el video
+      $('#contenedor-video-e-imagen-2').append('<video class="kuma"  autoplay loop><source src="img/kuma.mp4" type="video/mp4"> </video>'); //agrega la imagen
     }
   });
   </script>
@@ -28,11 +28,8 @@ var days = Math.ceil((futuredate.getTime()-today.getTime())/(one_day))
 <header class="site-header">
   <div class="top-wrapper">
   <div id='contenedor-video-e-imagen'>
-<!--    <img class="ocupantes" alt="ocupantes" src="{{ site.baseurl }}/img/ocupantes.gif" style=""> -->
-    <div id='contenedor-video'>
-      <video class="ocupantes"  autoplay loop>
-        <source src="img/ocupantes.mp4" type="video/mp4">
-      </video>
+    <div id='contenedor-imagen'>
+      <img class="ocupantes" alt="ocupantes" src="{{ site.baseurl }}/img/ocupantes1.jpg" style="">
     </div>
   </div>
     <div class="site-header-top">
@@ -153,10 +150,8 @@ var days = Math.ceil((futuredate.getTime()-today.getTime())/(one_day))
       <div class="column column-50">
         <h2>Pedro Kumamoto</h2>
 	<div id="contenedor-video-e-imagen-2">
-	<div id="contenedor-video-2">
-	<video id=kuma_vid autoplay loop>
- 	<source src="img/kuma.mp4" type="video/mp4">
-	</video>
+	<div id="contenedor-imagen-2">
+	<img class="kuma" alt="kuma" src="{{ site.baseurl }}/img/kuma1.jpg" style="">
 	</div>
 	</div>
       </div>
