@@ -4,14 +4,6 @@ section: blog
 <!DOCTYPE html>
 <html>
   {% include head.html %}
-  <script>
-var today=new Date()
-var futuredate=new Date(2015,01,27) //Month is 0-11 in JavaScript
-//Set 1 day in milliseconds
-var one_day=1000*60*60*24
-//Calculate difference btw the two dates, and convert to days
-var days = Math.ceil((futuredate.getTime()-today.getTime())/(one_day))
-  </script>
   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script>
   $(document).ready(function(){
@@ -43,9 +35,6 @@ var days = Math.ceil((futuredate.getTime()-today.getTime())/(one_day))
     </div>
 
     <div class="site-header-bottom">
-      <div class="left day-box">
-        <a href="{{ site.baseurl }}/donde-firmo/">Faltan <script>document.write(days)</script> días</a>
-      </div>
       <div class="right">
         <a href="https://twitter.com/pkumamoto"><img title="Twitter Pedro Kumamoto" alt="Twitter Pedro Kumamoto" src="{{ site.baseurl }}/img/IconosTwitter.png"></a>
         <a href="https://www.facebook.com/kumisima?fref=ts"><img title="Facebook Pedro Kumamoto" alt="Facebook Pedro Kumamoto" src="{{ site.baseurl }}/img/IconosFacebook.png"></a>
