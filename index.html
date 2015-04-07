@@ -1,157 +1,108 @@
----
-section: blog
----
-<!DOCTYPE html>
-<html>
-  {% include head.html %}
-  <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-  <script>
-  $(document).ready(function(){
-    if(!/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)){
-      $('#contenedor-video-e-imagen #contenedor-imagen').remove(); //borra el div con el video
-      $('#contenedor-video-e-imagen').append('<video class="ocupantes"  autoplay loop><source src="img/ocupantes.mp4" type="video/mp4"></video>'); //agrega la imagen
-      $('#contenedor-video-e-imagen-2 #contenedor-imagen-2').remove(); //borra el div con el video
-      $('#contenedor-video-e-imagen-2').append('<video class="kuma"  autoplay loop><source src="img/kuma.mp4" type="video/mp4"> </video>'); //agrega la imagen
-    }
-  });
-  </script>
+<!doctype html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>Pedro Kumamoto | Ocupemos la ciudad, habitemos la política</title>
+	<meta name="description" content="Pedro Kumamoto es un joven de 25 años, activista y egresado de la Licenciatura en Gestión Cultural. Fue presidente durante dos años de la Sociedad de Alumnos del ITESO, periodo en el que promovió la creación de un Consejo de Transparencia y un Consejo Electoral para universitarios.">
+
+	<link rel="stylesheet" type="text/css" href="/kumamoto-public/css/style.css" />
+	<link rel="stylesheet" type="text/css" href="/kumamoto-public/css/jquery.fullPage.css" />
+   <!--<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">-->
+	<link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/88451c70-275f-495a-9532-5f67b61be709.css"/>
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<script src="/kumamoto-public/js/underscore-min.js"></script>
+	<script type="text/javascript" src="/kumamoto-public/js/jquery.fullPage.min.js"></script>
+
+	<script type='text/javascript' src="https://www.google.com/jsapi"></script>
+
+	<script src="/kumamoto-public/js/animate-min.js"></script>
+	<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>-->
+	<script src="/kumamoto-public/js/ScrollMagic.min.js"></script>
+	<script src="/kumamoto-public/js/opentip-jquery.min.js"></script>
+	<link href="/kumamoto-public/css/opentip.css" rel="stylesheet" type="text/css" />
+
+	<script src="/kumamoto-public/js/code.js"></script>
+	<script>
+		// Load the IFrame Player API code asynchronously.
+		var tag = document.createElement('script');
+		tag.src = "https://www.youtube.com/player_api";
+		var firstScriptTag = document.getElementsByTagName('script')[0];
+		firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+		// Replace the 'ytplayer' element with an <iframe> and
+		// YouTube player after the API code downloads.
+		function onYouTubeIframeAPIReady() {
+			KUMA.player = new YT.Player('ytplayer', {
+				videoId: $('.screen.video .sidebar .thumbs img:first').attr('data-youtube'),
+					playerVars:{
+					controls:'0',
+					showinfo:'0',
+				},
+				events:{
+					onReady:KUMA.video.ready,
+					onStateChange:KUMA.video.change
+				}
+			});
+		}
+	</script>
+</head>
 <body>
 
-<header class="site-header">
-  <div class="top-wrapper">
-  <div id='contenedor-video-e-imagen'>
-    <div id='contenedor-imagen'>
-      <img class="ocupantes" alt="ocupantes" src="{{ site.baseurl }}/img/ocupantes1.jpg" style="">
-    </div>
-  </div>
-    <div class="site-header-top">
-      <div class="site-brand">
-        <a class="site-title" href="{{ site.baseurl }}/"><img class="site-logo" src="{{ site.baseurl }}/img/LogoPedroKumamoto.png" /></a>
-        <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
-        <div class="site-slogan">{{ site.slogan }}</div>
-      </div>
 
-      {% include nav.html %}
-    </div>
-
-    <div class="site-header-bottom">
-      <div class="right">
-        <a href="https://twitter.com/pkumamoto"><img title="Twitter Pedro Kumamoto" alt="Twitter Pedro Kumamoto" src="{{ site.baseurl }}/img/IconosTwitter.png"></a>
-        <a href="https://www.facebook.com/kumisima?fref=ts"><img title="Facebook Pedro Kumamoto" alt="Facebook Pedro Kumamoto" src="{{ site.baseurl }}/img/IconosFacebook.png"></a>
-        <a href="https://www.youtube.com/channel/UCmxg2eKb-Z2dFeRh9SRKrSg"><img title="YouTube Pedro Kumamoto" alt="YouTube Pedro Kumamoto" src="{{ site.baseurl }}/img/IconosYouTube.png"></a>
-      </div>
-    </div>
-  </div>
-
-</header>
-
-  <div class="page-content">
-    <center class="wrapper por-que">
-      <h2>¿Por qué una candidatura independiente?</h2>
-      <p>
-        Un candidato independiente es un ciudadano que no pertenece a ningún partido político y busca un cargo de elección popular. Durante el periodo de recolección de firmas el candidato no recibe dinero público, sólo lo que cada uno de los que lo apoyamos hemos decidido aportar voluntariamente. Como no pertenece a un partido político, nadie más que los ciudadanos a los que representa, le dice qué hacer o por qué votar. 
-        Queremos probar que la política sin partidos sí es posible y la construimos entre todas y todos. 
-      </p>
-    </center>
-
-    <div class="wrapper">
-      <div class="column column-50">
-        <div class="flexible-container"><iframe width="560" height="315" src="https://www.youtube.com/embed/xS6Ne5SbvpU" frameborder="0" allowfullscreen></iframe></div>
-      </div>
-
-      <div class="column column-50 ocupantes-box column-last">
-        <img class="left" src="{{ site.baseurl }}/img/Logo-Ocupantes.png">
-        <h2>Ocupantes</h2>
-        <p>Si bien la legislación nos obliga a postular a un solo  individuo como candidato, en este proyecto somos muchos y muchas personas. Somos gente de muchas disciplinas, universidades y lugares de origen que compartimos un mismo deseo y tenemos las mismas inquietudes y descontentos respecto a la forma de hacer política en nuestro país; pero también tenemos la seguridad de que paso a paso podemos replantearla y reconstruirla. Pedro Kumamoto es quien se encarga de representarnos a todos y a todas en esta precampaña donde todas las voces pesan lo mismo y la participación y la colectividad son partes fundamentales de su desarrollo. Cualquier persona con ganas de sumarse y trabajar con el equipo es bienvenida.</p>
-      </div>
-    </div>
-
-    <div class="propuestas wrapper">
-      <center class="propuestas-box">
-        <h1>Propuestas</h1>
-        <p>¡Nuestra propuesta es el como!</p>
-      </center>
-
-      <div class="row">
-        <div class="column column-33">
-          <h3>Colaborativa</h3>
-          <p>Nuestra plataforma será completamente abierta y democrática. Nutriremos la creación de propuestas y la participación a partir de encuestas, herramientas colaborativas en línea, y los resultados que obtengamos en los meet-ups distritales. Así procuraremos que todas las voces sean incluídas a través de diferentes herramientas y y espacios completamente abiertos.</p>
-        </div>
-
-        <div class="column column-33">
-          <h3>Expertos</h3>
-          <p>Contaremos con un consejo consultivo de expertos de distintas disciplinas que nos ayudarán a  retomar propuestas que se han trabajado desde la sociedad civil y la academia. De esta forma garantizaremos que todas nuestras propuestas estén fundamentadas en necesidades reales y soluciones viables.</p>
-        </div>
-
-        <div class="column column-33 column-last">
-          <h3>Wikipolitica</h3>
-          <p>Hacer Wikipolítica significa abrir espacios para que muchas personas se puedan sumar y participar juntas. La política de hoy y de mañana no se puede concebir sin mecanismos de democracia directa, transparencia, rendición de cuentas, apertura de datos y empoderamiento digital. Impulsaremos propuestas que las conviertan en un ejercicio diario.</p>
-        </div>
-      </div>
-    </div>
-
-    <div class="wrapper blog-section">
-      <div class="column column-50">
-        <h2><a href="{{ site.baseurl }}/bitacora/">Bitácora</a></h2>
-        <ul class='post-list'>
-          {% for item in site.categories.blog limit:5 %}
-          <li>
-            <span class="post-meta">{{ item.date | date: "%b %-d, %Y" }}</span>
-            <h3>
-              <a class="post-link" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
-            </h3>
-          </li>
-          {% endfor %}
-        </ul>
-        <p><strong>Lee la bitácora completa <a href="{{ site.baseurl }}/bitacora/">aquí</a>.</strong></p>
-        {% include rss-link.html %}
-      </div>
-
-      <div class="column column-50 column-last">
-        <h2><a href="{{ site.baseurl }}/donde-firmo/">¿Dónde firmo?</a></h2>
-        <ul class='post-list'>
-          <li>
-            <h3><a target="_blank" href="https://www.facebook.com/pages/Cocina-La-Tasca-Pizzeria-y-lasagnas/120491968011462">Cocina La Tasca</a></h3>
-            Esquina de Charrasquis y Pegaso, Col. Paseos del Sol
-          </li>
-          <li>
-            <h3><a target="_blank" href="https://www.facebook.com/pages/Galer%C3%ADa-Ajolote-Arte-Contempor%C3%A1neo/27090952968?sk=info&tab=overview">Galería Ajolote</a></h3>
-            Av. Guadalupe 1688-A Esq. Niño Obrero
-          </li>
-          <li>
-            <h3><a target="_blank" href="https://www.facebook.com/harukisushijapanesse">Haruki Sushi</a></h3>
-            Rosario Castellanos 6040, Local 31
-          </li>
-          <li>
-            <h3><a target="_blank" href="https://es.foursquare.com/v/petra-pizza-a-la-le%C3%B1a/4e616dd0ae60e9edf551561e">Pizzas Petra Sanzio</a></h3>
-            Rafael Sanzio 522 Esq. Santo Tomás de Aquino
-          </li>
-          <li>
-            <h3><a target="_blank" href="https://es.foursquare.com/v/petra-pizza-a-la-le%C3%B1a/4ecdbdfee3007feb7a795240">Pizzas Petra Patria</a></h3>
-            Av. Patria esq. Circuito Medas
-          </li>
-        </ul>
-        <p><strong>Más lugares para firmar <a href="{{ site.baseurl }}/donde-firmo/">aquí</a>.</strong></p>
-      </div>
-    </div>
-
-    <div class="wrapper">
-      <div class="column column-50">
-        <h2>Pedro Kumamoto</h2>
-	<div id="contenedor-video-e-imagen-2">
-	<div id="contenedor-imagen-2">
-	<img class="kuma" alt="kuma" src="{{ site.baseurl }}/img/kuma1.jpg" style="">
+<div id="fullpage" class="splash">
+	<div class="section screen splash">
+		<img class="kumafoto" src="/kumamoto-public/img/kuma/cover-100k.jpg" />
+		
+		<div class="copy">
+			<img class="kumalogo" src="/kumamoto-public/img/logos/kumalogo-sin-texto.png" />
+			<h1 class="pedro"><img src="/kumamoto-public/img/type/pedro.png" alt="PEDRO" /></h1>
+			<h1 class="kumamoto"><img src="/kumamoto-public/img/type/kumamoto.png" alt="KUMAMOTO" /></h1>
+			<br clear="both"/>
+			<h3>
+				Candidato <strong>Independiente</strong> <span>Diputado Local</span> <b>Distrito 10</b> Zapopan
+			</h3>
+			<h2>
+				<strong>Ocupemos</strong> la ciudad,<br />
+				<strong>habitemos</strong> la política
+			</h2>
+			<h4>
+				¡Espera nuestro sitio <strong>próximamente</strong>!
+			</h4>
+		</div>
+		<!--<a class="kitkumamoto" href="kit">-->
+			<!--<img src="/kumamoto-public/img/ui/stamp-black-with-text.png" />-->
+		<!--</a>-->
+		<div class="goodbye">
+			<h1><span>CONTÁCTANOS:</span></h1>
+			<span class="linea-kumamoto">
+				<img class="whatsapp" src="/kumamoto-public/img/logos/whatsapp.png" /> <strong>Línea Kumamoto</strong> <a href="tel:+523315135549">33 1513 5549</a>
+			</span>
+			<div class="redes">
+				<a class="fb" href="https://www.facebook.com/PedroKumamoto" /><img src="/kumamoto-public/img/logos/fb.png" /></a>
+				<a class="twitter" href="https://twitter.com/pkumamoto" /><img src="/kumamoto-public/img/logos/twitter.png" /></a>
+				<a class="instagram" href="https://instagram.com/pkumamoto/" /><img src="/kumamoto-public/img/logos/instagram.png" /></a>
+			</div>
+			<div class="wikipolitica"> 
+				<a href="https://www.facebook.com/pages/Wikipol%C3%ADtica-Jalisco/1492178621017984">
+					<img src="/kumamoto-public/img/logos/wikipolitica-sin-texto.png" />
+				</a>
+			</div>
 	</div>
-	</div>
-      </div>
+</div>
 
-      <div class="column column-50 column-last">
-        <h2>Distrito 10</h2>
-        <div class="flexible-container" style="height:500px; padding-bottom: 10px;"><iframe src="https://www.google.com/maps/d/embed?mid=z1TD728Xq-aQ.kzsyCxPggqIE" width="422" height="422" style="height: 422px; width: 422px;"></iframe></div>
-      </div>
-    </div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  </div>
-  {% include footer.html %}
+  ga('create', 'UA-61493763-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
 </body>
 </html>

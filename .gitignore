@@ -1,4 +1,13 @@
 _site/*
 .DS_Store
-.sass-cache
 Gemfile.lock
+
+*.sass-cache
+# Ignore vim files
+*~
+*.swp
+nogit
+*.pxm
+*nogit*
+.ruby-version
+.DS_Store

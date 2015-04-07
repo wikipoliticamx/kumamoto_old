@@ -1,0 +1,33 @@
+---
+layout: default
+section: blog
+---
+
+{% if page.splash %}
+  {% if page.splash contains 'http' %}
+    {% capture url %}{{page.splash}}{% endcapture %}
+  {% else %}
+    {% capture url %}{{site.baseurl}}{{page.splash}}/{% endcapture %}
+  {% endif %}
+
+  <div class='col12 splash'>
+    <img src='{{url}}' alt='' />
+  </div>
+{% endif %}
+
+<div class="page-content">
+  <div class="wrapper">
+    <div class="post">
+
+      <header class="post-header">
+        <h1 class="post-title">{{ page.title }}</h1>
+        <p class="post-meta">{{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</p>
+      </header>
+
+      <article class="post-content">
+        {{ content }}
+      </article>
+
+    </div>
+  </div>
+</div>
