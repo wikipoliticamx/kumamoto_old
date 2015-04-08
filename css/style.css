@@ -1174,7 +1174,8 @@ body {
   text-align: center;
   text-align: left; }
 .compromisos .screen {
-  background: #eee; }
+  background: #e9eaed;
+  overflow: hidden; }
   .compromisos .screen .video {
     width: 30%;
     height: 100%;
@@ -1217,7 +1218,7 @@ body {
     height: 100%;
     display: inline-block;
     text-align: center;
-    background: #ccc; }
+    background: #B3D7DA; }
     .compromisos .screen .infografia img {
       width: 80%;
       margin-top: 5em; }
@@ -1265,12 +1266,12 @@ body {
       text-transform: uppercase;
       text-decoration: none;
       color: black;
-      background: #eee;
+      background: #e9eaed;
       display: inline-block;
-      float: right;
       padding: .5em 1em;
       font-size: 1.4em;
-      margin-right: 5em;
+      margin-left: 10em;
+      margin-top: 1em;
       font-family: "FF Meta W01", Helvetica, Arial, sans-serif; }
       .compromisos .screen .text a.leer-mas:hover {
         text-decoration: underline;
@@ -1291,6 +1292,14 @@ body {
       .compromisos .screen .text.leer-mas li {
         margin-top: 1em;
         margin-bottom: 1em; }
+      .compromisos .screen .text.leer-mas .fb-mockup {
+        display: none; }
+    .compromisos .screen .text .fb-mockup {
+      background: #e9eaed;
+      text-align: center;
+      border-top: 1px solid #ccc;
+      height: 500px;
+      overflow: hidden; }
 
 .navbar {
   background: transparent;
