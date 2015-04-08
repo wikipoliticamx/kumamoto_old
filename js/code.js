@@ -14,7 +14,6 @@ var KUMA = {
 		} else {
 			var where = $('#fullpage').attr('class');
 			$('.navbar').addClass(where);
-			KUMA.gif.boot();
 
 			if(where == 'propuestas') {
 				KUMA.propuestas.boot();
@@ -27,6 +26,7 @@ var KUMA = {
 			}
 		}
 		KUMA.fullPage.boot();
+		KUMA.gif.boot();
 	},
 	fullPage: {
 		boot:function() {
