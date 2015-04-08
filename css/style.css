@@ -1062,6 +1062,16 @@ body {
     width: 69%;
     display: inline-block;
     vertical-align: top; }
+    .principios .screen .text .fb-mockup {
+      background: #e9eaed;
+      text-align: center;
+      border-top: 1px solid #ccc;
+      height: 550px;
+      overflow: hidden;
+      text-align: center;
+      position: absolute;
+      bottom: 0;
+      width: 69%; }
   .principios .screen.toc {
     background: #c8c8a8; }
     .principios .screen.toc h1 {
