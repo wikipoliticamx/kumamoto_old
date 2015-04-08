@@ -863,8 +863,6 @@ body {
 .propuestas .screen .copy {
   font-size: 1.5em;
   position: relative; }
-  .propuestas .screen .copy img {
-    height: 200px; }
   .propuestas .screen .copy span.hidden, .propuestas .screen .copy span.menos {
     display: none; }
   .propuestas .screen .copy a.leer-mas {
@@ -873,9 +871,8 @@ body {
     color: black;
     background: #eee;
     display: inline-block;
-    float: right;
     padding: .5em 1em;
-    margin-right: 1em;
+    margin-left: 10em;
     font-family: "FF Meta W01", Helvetica, Arial, sans-serif; }
     .propuestas .screen .copy a.leer-mas:hover {
       text-decoration: underline;
@@ -891,8 +888,16 @@ body {
   .propuestas .screen .copy .left {
     width: 30%;
     text-align: center; }
+    .propuestas .screen .copy .left img {
+      height: 200px; }
   .propuestas .screen .copy .right {
     width: 60%; }
+.propuestas .screen .fb-mockup {
+  background: #e9eaed;
+  text-align: center;
+  border-top: 1px solid #ccc;
+  height: 500px;
+  overflow: hidden; }
 .propuestas .screen .text.leer-mas {
   height: 100%; }
   .propuestas .screen .text.leer-mas span.hidden, .propuestas .screen .text.leer-mas span.menos {
@@ -909,7 +914,7 @@ body {
     height: 100px;
     vertical-align: middle; }
 .propuestas .screen.toc .ciudad, .propuestas .screen.toc .gobierno {
-  width: 49.9%;
+  width: 49%;
   display: inline-block;
   text-align: center; }
 .propuestas .screen.toc h2 {
@@ -1128,6 +1133,40 @@ body {
     .principios .screen.transparencia .media {
       background: #e48d88; }
 
+#menu {
+  position: absolute;
+  top: 20%;
+  left: 0;
+  z-index: 2;
+  font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 1.3em; }
+  #menu a {
+    color: #fff;
+    display: block;
+    margin: 0; }
+    #menu a b, #menu a strong {
+      display: inline-block; }
+    #menu a b {
+      background: #555;
+      width: 2em;
+      padding: 0.5em 0;
+      text-align: center; }
+    #menu a strong {
+      display: none;
+      background: #aaa;
+      padding: 0.5em 1em;
+      text-transform: uppercase; }
+    #menu a:nth-child(odd) b {
+      background: #999; }
+    #menu a.active b {
+      background: pink; }
+    #menu a:hover b {
+      background: red; }
+    #menu a:hover strong {
+      display: inline-block;
+      background: blue; }
+
 /************************** COMPROMISOS **************************/
 .compromisos .pedro-kumamoto {
   margin-top: 2em;
@@ -1181,14 +1220,12 @@ body {
     height: 100%;
     display: inline-block;
     text-align: center;
-    background: #ccc;
+    background: #fff;
     overflow: hidden; }
     .compromisos .screen .video img {
-      position: absolute;
-      top: 0;
-      left: 0; }
+      width: 100%; }
   .compromisos .screen.toc {
-    text-align: center;
+    text-align: left;
     background: #fff; }
     .compromisos .screen.toc h2 {
       color: #c87072; }

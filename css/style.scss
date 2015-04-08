@@ -339,19 +339,21 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			strong {font-family:"FF Meta W01", Helvetica, Arial, sans-serif}
 		}
 		.copy { font-size:1.5em; position:relative;
-			img {height:200px;}
 			span.hidden, span.menos {display:none}
-			a.leer-mas { text-transform:uppercase; text-decoration:none; color:black; background:#eee; display:inline-block; float:right; padding:.5em 1em;
-				margin-right:1em; font-family:"FF Meta W01", Helvetica, Arial, sans-serif;
+			a.leer-mas { text-transform:uppercase; text-decoration:none; color:black; background:#eee; display:inline-block; padding:.5em 1em;
+				margin-left:10em;  font-family:"FF Meta W01", Helvetica, Arial, sans-serif;
 				&:hover {text-decoration:underline; background:#555; color:#fff;}
 			}
 			li {margin:20px 10px}
 			.propuestas {font-weight:bold}
 
 			.left, .right {display:inline-block; vertical-align:top}
-			.left {width:30%; text-align:center}
+			.left {width:30%; text-align:center;
+				img {height:200px;}
+			}
 			.right {width:60%}
 		}
+		.fb-mockup { background:#e9eaed; text-align:center; border-top:1px solid #ccc; height:500px; overflow:hidden}
 		.text.leer-mas {height:100%;
 			span.hidden, span.menos {display:inline}
 			a.leer-mas {background:#ccc}
@@ -362,7 +364,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				/*&:hover {background:#eee}*/
 				img {height:100px; vertical-align:middle}
 			}
-			.ciudad, .gobierno {width:49.9%; display:inline-block; text-align:center}
+			.ciudad, .gobierno {width:49%; display:inline-block; text-align:center}
 			h2 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:4.5em; font-weight:bold; text-transform:uppercase;
 				a {line-height:2em; background:pink; display:block; }
 				strong {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:bold}
@@ -471,6 +473,22 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 	}
 }
 
+#menu {position:absolute; top:20%; left:0; z-index:2; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:normal; font-size:1.3em;
+	a { color:#fff; display:block; margin:0;
+		b, strong {display:inline-block}
+		b { background:#555; width:2em; padding:0.5em 0; text-align:center;}
+
+		strong {display:none; background:#aaa; padding:0.5em 1em; text-transform:uppercase}
+
+		&:nth-child(odd) b {background:#999}
+		&.active b {background:pink}
+		&:hover {
+			b {background:red}
+			strong {display:inline-block; background:blue}
+		}
+	}
+}
+
 /************************** COMPROMISOS **************************/
 .compromisos {
 	.pedro-kumamoto { margin-top:2em; margin-left:4em;
@@ -487,10 +505,10 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		color:#000; width:100%; text-align:center; text-align:left;
 	}
 	.screen { background:#e9eaed; overflow:hidden;
-		.video { width:30%; height:100%; display:inline-block; text-align:center; background:#ccc; overflow:hidden;
-			img {position:absolute; top:0; left:0}
+		.video { width:30%; height:100%; display:inline-block; text-align:center; background:#fff; overflow:hidden;
+			img {width:100%}
 		}
-		&.toc { text-align:center; background:#fff;
+		&.toc { text-align:left; background:#fff;
 			h2 {color:rgb(200, 112, 114);}
 			p { font-family:Helvetica; font-size:1.5em; width:80%; margin:40px auto; text-align:left;
 				a, strong {color:rgb(200, 112, 114);}

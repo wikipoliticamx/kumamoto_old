@@ -1,9 +1,6 @@
 var KUMA = {
 	boot:function() {
 		//setTimeout(function(){ window.scrollTo(0, 1); }, 0); // Hide the address bar!
-		if($('#fullpage.splash').length == 0) {
-			$('#fullpage').fullpage({});
-		}
 		if($('#fullpage.home').length > 0) {
 			$('.navbar').addClass('home');
 			KUMA.screen.boot();
@@ -17,11 +14,33 @@ var KUMA = {
 			var where = $('#fullpage').attr('class');
 			$('.navbar').addClass(where);
 			KUMA.gif.boot();
-			if(where =~ 'propuestas') {
+
+			if(where == 'propuestas') {
 				KUMA.propuestas.boot();
-			} else if (where =~ 'compromisos') {
+			} else if (where == 'compromisos') {
 				KUMA.propuestas.boot();
+				KUMA.fullPage.options.anchors = KUMA.fullPage.options.navigationTooltips = ['toc', 'campaña', 'congreso'];
 			}
+		}
+		KUMA.fullPage.boot();
+	},
+	fullPage: {
+		boot:function() {
+		if($('#fullpage.splash').length == 0) {
+			$('#fullpage').fullpage( KUMA.fullPage.options );
+		}
+		},
+		options:{
+		  //Navigation
+        menu: '#menu',
+        //anchors:['firstSlide', 'secondSlide'],
+        navigation: false,
+		  css3:true,
+        //navigationPosition: 'right',
+        //navigationTooltips: ['firstSlide', 'secondSlide'],
+        //showActiveTooltips: true,
+        //slidesNavigation: true,
+        //slidesNavPosition: 'bottom',
 		}
 	},
 	// ----------------------
@@ -63,7 +82,7 @@ var KUMA = {
 			['mariana', 'Sé que todos de la mano podemos lograr un cambio real. Actuemos juntos y logremos la politica que merecemos', 3, 3],
 			['marce', '', 3, 2],
 			['mina', '', 3, 6],
-			['miguel', '', 3, 5],
+			['miguel', 'Para generar un cambio, alguien debe tirar la primer ficha del dominó.', 3, 5],
 			['nayeli', 'Ser joven significa ser dueños de nuestra vida, de nuestro presente y estar dispuestos a desafiar nuestro porvenir.', 3, 7],
 			['pabli', 'Quiero tener la oportunidad de incidir en la política, de forma y fondo, desde la innovación y la acción critica.', 3, 8],
 			['pablo', 'Debemos tomar todas las oportunidades posibles para cambiar nuestras realidades. Se trata de creer en nosotros mismos y no en terceros.', 3, 9],
