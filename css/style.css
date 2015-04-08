@@ -1041,12 +1041,35 @@ body {
 /************************** PRINCIPIOS **************************/
 .principios {
   vertical-align: top; }
-  .principios h1 {
+  .principios .pedro-kumamoto {
+    margin-top: 0;
+    margin-left: 4em; }
+    .principios .pedro-kumamoto .kumalogo {
+      float: left;
+      margin-right: 2.5em;
+      height: 12em;
+      margin-top: 5px;
+      position: relative;
+      z-index: 2; }
+    .principios .pedro-kumamoto h1 {
+      padding-top: 0;
+      margin-top: 0;
+      font-size: 10em;
+      line-height: 0.6em;
+      font-family: "Lemon/Milk", Helvetica, Arial;
+      margin-bottom: 0;
+      position: relative;
+      color: transparent;
+      text-align: left; }
+      .principios .pedro-kumamoto h1 img {
+        height: 0.5em;
+        vertical-align: middle; }
+  .principios h2 {
     font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
     font-weight: normal;
-    font-size: 7em;
+    font-size: 5em;
     text-align: center;
-    margin: 0;
+    margin: 0.7em 0;
     text-transform: uppercase;
     color: #000;
     text-align: center; }
@@ -1074,8 +1097,11 @@ body {
       width: 69%; }
   .principios .screen.toc {
     background: #c8c8a8; }
-    .principios .screen.toc h1 {
-      font-size: 8em; }
+    .principios .screen.toc h2 {
+      font-size: 6em;
+      color: white;
+      margin: 0;
+      text-align: left; }
     .principios .screen.toc .lista {
       background: #b3b397;
       width: 100%;
@@ -1088,7 +1114,7 @@ body {
         font-size: 3.5em;
         line-height: 1.7em;
         width: 23em;
-        color: #fff;
+        color: #000;
         text-decoration: none;
         font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
         text-transform: uppercase;
