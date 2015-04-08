@@ -80,23 +80,32 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 	
 	/* COVER */
 	&.cover {
-		img.kumafoto {width:100%; position:absolute; top:0; left:0; -webkit-filter:blur(10px)}
+		img.kumafoto {width:100%; position:absolute; top:0; right:0; -webkit-filter:blur(10px); }
 
-		.copy {padding:30px 0 0 30px; position:absolute; top:0; width:100%; z-index:1;
+		.copy {padding:2.5em 0 0 2.5em; position:absolute; top:0; width:100%; height:100%; z-index:1;
 			user-select:none; -o-user-select:none; -moz-user-select:none; -khtml-user-select:none; -webkit-user-select:none;
-			h1 {margin-top:0; padding-top:0; font-size:9em; line-height:0.95em; letter-spacing:0.05em; font-family:"Lemon/Milk", Helvetica, Arial; margin-bottom:0; position:relative; color:transparent;
-			}
-				h1.pedro {right:0; top:-400px;}
-				h1.kumamoto {right:0; opacity:0}
-			h2 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:5.4em; margin:20px 0 0 0; position:relative; left:-800px; top:50px; text-transform:uppercase; line-height:1.1em;
-				strong {text-transform:uppercase; letter-spacing:-3px}
 
+			.kumalogo {float:left; margin-right:2.5em; height:20em; margin-top:5px; opacity:0; position:relative; z-index:2}
+			
+			h1 {padding-top:0; margin-top:0; font-size:10em; line-height:1em; font-family:"Lemon/Milk", Helvetica, Arial; margin-bottom:0; 
+				position:relative; color:transparent; 
+				img {height:0.8em; vertical-align:middle}
+				&.pedro {right:0; top:-400px;}
+				&.kumamoto {right:0; opacity:0}
 			}
-			h3 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:3.8em; position:relative; margin:0; opacity:0; left:0; top:-10px; font-weight:200;
-				span {font-weight:700; transition: all 0.5s ease; }
+			//Candidato independiente
+			h3 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:3em; margin:0; opacity:0; font-weight:200; position:absolute;  top:8em; left:0.8em;
+				strong, bold {font-weight:700; font-size:inherit}
 			}
-
-			.kumalogo {float:left; margin-right:30px; height:16.25em; margin-top:5px; opacity:0; position:relative; z-index:2}
+			//Ocupemos la ciudad
+			h2 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:5em; margin:0.3em 0 0 0; position:absolute; left:-17.9em; top:6em; text-transform:uppercase; line-height:1.1em;
+			}
+			//proximamente
+			h4 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:3.5em; color:#fff; font-weight:200; padding:0; position:absolute; bottom:2.5em; left:0.6em;
+				text-shadow:2px 2px 5px #555;
+				strong {font-weight:700; color:#379088; text-transform:uppercase;
+				}
+			}
 		}
 		.redes {position:absolute; top:30px; right:30px; width:110px; line-height:30px; z-index:2;
 			img {width:30px; opacity:0; -webkit-filter:grayscale(1)}
@@ -114,6 +123,23 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			img {width:400px;}
 			em {display:block; margin-top:-320px; margin-left:-20px; font-size:30px; font-style:normal; font-family:"Besom"; text-transform:uppercase}
 			strong {font-size:45px; margin-top:5px; margin-left:-20px; display:block; font-family:"Besom"; display:block}
+		}
+		&.portrait {
+			.copy { padding-top:1.5em;
+				h1.pedro {font-size:18em; margin-bottom:0}
+				h1.kumamoto {display:inline-block; font-size:14em}
+
+				h3 {top:8.7em; left:0.7em; font-size:3.8em;
+					span {display:none}
+				}
+				.kumalogo {height:35em; position:absolute; top:40em; display:block;}
+
+				h2 {font-size:8em; right:17.85em; left:auto; top:auto; bottom:3.5em; width:14em; color:#fff}
+				h4 {top:auto; left:auto; bottom:4em; right:4em;
+					strong {color:#66CAC1}
+				}
+			}
+			.goodbye {font-size:1.3em}
 		}
 	}
 
@@ -447,19 +473,40 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 
 /************************** COMPROMISOS **************************/
 .compromisos {
-	h1 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:normal; font-size:7em; text-align:center; margin:0; text-transform:uppercase;
-		color:#000; width:100%; text-align:center;
+	.pedro-kumamoto { margin-top:2em; margin-left:4em;
+		.kumalogo {float:left; margin-right:2.5em; height:12em; margin-top:5px; position:relative; z-index:2}
+		h1 {padding-top:0; margin-top:0; font-size:10em; line-height:0.6em; font-family:"Lemon/Milk", Helvetica, Arial; margin-bottom:0; 
+			position:relative; color:transparent; text-align:left;
+			img {height:0.5em; vertical-align:middle}
+		}
+	}
+	h2 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:normal; font-size:5em; text-align:left; margin:0; text-transform:uppercase;
+		color:#000; width:100%; text-align:left;
+	}
+	h3 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:3em; text-align:left; margin:0; text-transform:uppercase;
+		color:#000; width:100%; text-align:center; text-align:left;
 	}
 	.screen { background:#eee;
-		.infografia { width:30%; height:100%; display:inline-block; text-align:center; background:#ccc;
-			img {width:80%; margin-top:200px}
-		}
-		.video { width:30%; height:100%; display:inline-block; text-align:center; background:#ccc; position:relative; overflow:hidden;
+		.video { width:30%; height:100%; display:inline-block; text-align:center; background:#ccc; overflow:hidden;
 			img {position:absolute; top:0; left:0}
 		}
+		&.toc { text-align:center; background:#fff;
+			h2 {color:rgb(200, 112, 114);}
+			p { font-family:Helvetica; font-size:1.5em; width:80%; margin:40px auto; text-align:left;
+				a, strong {color:rgb(200, 112, 114);}
+				b {color:#379088}
+			}
+			div.toc {text-align:left; margin-left:10%;
+				a.campanha, a.congreso {display:block; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:4em; text-transform:uppercase; text-decoration:none; margin:20px 0; color:black}
+			}
+		}
+		.infografia { width:30%; height:100%; display:inline-block; text-align:center; background:#ccc;
+			img {width:80%; margin-top:5em}
+		}
 		.text { width:69%; display:inline-block; vertical-align:top; background:#fff;
-			h1 {text-align:left; margin-left:1em; margin-top:.3em}
-			ol { font-size:1.5em; font-family:Helvetica; margin:0 auto; margin-top:2em; counter-reset:item; width:60%;
+			h3 {margin-left:1.7em; margin-top:0.6em}
+			h2 {text-align:left; margin-left:1em; line-height:1em}
+			ol { font-size:1.5em; font-family:Helvetica; margin:0 auto; margin-top:2em; margin-left:6em; counter-reset:item; width:60%; 
 				&.congreso {counter-reset:item 8;}
 				li:before {
 					content: counter(item) ". ";
@@ -476,6 +523,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				}
 			}
 			span.hidden, span.menos {display:none}
+			span.hidden {font-size:80%}
 			a.leer-mas { text-transform:uppercase; text-decoration:none; color:black; background:#eee; display:inline-block; float:right; padding:.5em 1em; font-size:1.4em;
 				margin-right:5em; font-family:"FF Meta W01", Helvetica, Arial, sans-serif;
 				&:hover {text-decoration:underline; background:#555; color:#fff;}
@@ -487,15 +535,6 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				span.mas {display:none}
 				ol {font-size:1.4em;}
 				li {margin-top:1em; margin-bottom:1em}
-			}
-		}
-		&.toc { text-align:center;
-			p { font-family:Helvetica; font-size:1.5em; width:80%; margin:40px auto; text-align:left;
-				a, strong {color:rgb(200, 112, 114);}
-				b {color:#379088}
-			}
-			div.toc {text-align:left; margin-left:10%;
-				a.campanha, a.congreso {display:block; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:4em; text-transform:uppercase; text-decoration:none; margin:20px 0}
 			}
 		}
 	}

@@ -360,14 +360,14 @@ var KUMA = {
 			//console.log('widthTest:', widthTest);
 			if( (hCover < h) && (widthTest > w) ) { //portrait
 				img = { width: 'auto', height:'100%', right:'-'+delta+'em', left:'auto', top:0 };
-				$('.screen.splash').addClass('portrait');
+				$('.screen.splash, .screen.cover').addClass('portrait');
 			} else { //landscape
 				if(widthTest <= w) {
 					img = { width:(wCover*1.2)+'px', height:(hCover*1.2)+'px', right:'auto', left:'-15em', top:'-13em' };
 				} else {
 					img = { width:wCover+'px', height:hCover+'px', right:'auto', left:0, top:0};
 				}
-				$('.screen.splash').removeClass('portrait');
+				$('.screen.splash, .screen.cover').removeClass('portrait');
 			}
 
 			$('.screen, .screen.acercade .copy, .screen.acercade .foto').css('height', h);

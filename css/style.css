@@ -208,68 +208,82 @@ body {
     width: 100%;
     position: absolute;
     top: 0;
-    left: 0;
+    right: 0;
     -webkit-filter: blur(10px); }
   .screen.cover .copy {
-    padding: 30px 0 0 30px;
+    padding: 2.5em 0 0 2.5em;
     position: absolute;
     top: 0;
     width: 100%;
+    height: 100%;
     z-index: 1;
     user-select: none;
     -o-user-select: none;
     -moz-user-select: none;
     -khtml-user-select: none;
     -webkit-user-select: none; }
-    .screen.cover .copy h1 {
-      margin-top: 0;
-      padding-top: 0;
-      font-size: 9em;
-      line-height: 0.95em;
-      letter-spacing: 0.05em;
-      font-family: "Lemon/Milk", Helvetica, Arial;
-      margin-bottom: 0;
-      position: relative;
-      color: transparent; }
-    .screen.cover .copy h1.pedro {
-      right: 0;
-      top: -400px; }
-    .screen.cover .copy h1.kumamoto {
-      right: 0;
-      opacity: 0; }
-    .screen.cover .copy h2 {
-      font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
-      font-weight: 200;
-      font-size: 5.4em;
-      margin: 20px 0 0 0;
-      position: relative;
-      left: -800px;
-      top: 50px;
-      text-transform: uppercase;
-      line-height: 1.1em; }
-      .screen.cover .copy h2 strong {
-        text-transform: uppercase;
-        letter-spacing: -3px; }
-    .screen.cover .copy h3 {
-      font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
-      font-size: 3.8em;
-      position: relative;
-      margin: 0;
-      opacity: 0;
-      left: 0;
-      top: -10px;
-      font-weight: 200; }
-      .screen.cover .copy h3 span {
-        font-weight: 700;
-        transition: all 0.5s ease; }
     .screen.cover .copy .kumalogo {
       float: left;
-      margin-right: 30px;
-      height: 16.25em;
+      margin-right: 2.5em;
+      height: 20em;
       margin-top: 5px;
       opacity: 0;
       position: relative;
       z-index: 2; }
+    .screen.cover .copy h1 {
+      padding-top: 0;
+      margin-top: 0;
+      font-size: 10em;
+      line-height: 1em;
+      font-family: "Lemon/Milk", Helvetica, Arial;
+      margin-bottom: 0;
+      position: relative;
+      color: transparent; }
+      .screen.cover .copy h1 img {
+        height: 0.8em;
+        vertical-align: middle; }
+      .screen.cover .copy h1.pedro {
+        right: 0;
+        top: -400px; }
+      .screen.cover .copy h1.kumamoto {
+        right: 0;
+        opacity: 0; }
+    .screen.cover .copy h3 {
+      font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
+      font-size: 3em;
+      margin: 0;
+      opacity: 0;
+      font-weight: 200;
+      position: absolute;
+      top: 8em;
+      left: 0.8em; }
+      .screen.cover .copy h3 strong, .screen.cover .copy h3 bold {
+        font-weight: 700;
+        font-size: inherit; }
+    .screen.cover .copy h2 {
+      font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
+      font-weight: 200;
+      font-size: 5em;
+      margin: 0.3em 0 0 0;
+      position: absolute;
+      left: -17.9em;
+      top: 6em;
+      text-transform: uppercase;
+      line-height: 1.1em; }
+    .screen.cover .copy h4 {
+      font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
+      font-size: 3.5em;
+      color: #fff;
+      font-weight: 200;
+      padding: 0;
+      position: absolute;
+      bottom: 2.5em;
+      left: 0.6em;
+      text-shadow: 2px 2px 5px #555; }
+      .screen.cover .copy h4 strong {
+        font-weight: 700;
+        color: #379088;
+        text-transform: uppercase; }
   .screen.cover .redes {
     position: absolute;
     top: 30px;
@@ -319,6 +333,42 @@ body {
       display: block;
       font-family: "Besom";
       display: block; }
+  .screen.cover.portrait .copy {
+    padding-top: 1.5em; }
+    .screen.cover.portrait .copy h1.pedro {
+      font-size: 18em;
+      margin-bottom: 0; }
+    .screen.cover.portrait .copy h1.kumamoto {
+      display: inline-block;
+      font-size: 14em; }
+    .screen.cover.portrait .copy h3 {
+      top: 8.7em;
+      left: 0.7em;
+      font-size: 3.8em; }
+      .screen.cover.portrait .copy h3 span {
+        display: none; }
+    .screen.cover.portrait .copy .kumalogo {
+      height: 35em;
+      position: absolute;
+      top: 40em;
+      display: block; }
+    .screen.cover.portrait .copy h2 {
+      font-size: 8em;
+      right: 17.85em;
+      left: auto;
+      top: auto;
+      bottom: 3.5em;
+      width: 14em;
+      color: #fff; }
+    .screen.cover.portrait .copy h4 {
+      top: auto;
+      left: auto;
+      bottom: 4em;
+      right: 4em; }
+      .screen.cover.portrait .copy h4 strong {
+        color: #66CAC1; }
+  .screen.cover.portrait .goodbye {
+    font-size: 1.3em; }
   .screen.video {
     background-color: #c8e5f0;
     color: black;
@@ -1079,18 +1129,89 @@ body {
       background: #e48d88; }
 
 /************************** COMPROMISOS **************************/
-.compromisos h1 {
+.compromisos .pedro-kumamoto {
+  margin-top: 2em;
+  margin-left: 4em; }
+  .compromisos .pedro-kumamoto .kumalogo {
+    float: left;
+    margin-right: 2.5em;
+    height: 12em;
+    margin-top: 5px;
+    position: relative;
+    z-index: 2; }
+  .compromisos .pedro-kumamoto h1 {
+    padding-top: 0;
+    margin-top: 0;
+    font-size: 10em;
+    line-height: 0.6em;
+    font-family: "Lemon/Milk", Helvetica, Arial;
+    margin-bottom: 0;
+    position: relative;
+    color: transparent;
+    text-align: left; }
+    .compromisos .pedro-kumamoto h1 img {
+      height: 0.5em;
+      vertical-align: middle; }
+.compromisos h2 {
   font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
   font-weight: normal;
-  font-size: 7em;
-  text-align: center;
+  font-size: 5em;
+  text-align: left;
   margin: 0;
   text-transform: uppercase;
   color: #000;
   width: 100%;
-  text-align: center; }
+  text-align: left; }
+.compromisos h3 {
+  font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  font-size: 3em;
+  text-align: left;
+  margin: 0;
+  text-transform: uppercase;
+  color: #000;
+  width: 100%;
+  text-align: center;
+  text-align: left; }
 .compromisos .screen {
   background: #eee; }
+  .compromisos .screen .video {
+    width: 30%;
+    height: 100%;
+    display: inline-block;
+    text-align: center;
+    background: #ccc;
+    overflow: hidden; }
+    .compromisos .screen .video img {
+      position: absolute;
+      top: 0;
+      left: 0; }
+  .compromisos .screen.toc {
+    text-align: center;
+    background: #fff; }
+    .compromisos .screen.toc h2 {
+      color: #c87072; }
+    .compromisos .screen.toc p {
+      font-family: Helvetica;
+      font-size: 1.5em;
+      width: 80%;
+      margin: 40px auto;
+      text-align: left; }
+      .compromisos .screen.toc p a, .compromisos .screen.toc p strong {
+        color: #c87072; }
+      .compromisos .screen.toc p b {
+        color: #379088; }
+    .compromisos .screen.toc div.toc {
+      text-align: left;
+      margin-left: 10%; }
+      .compromisos .screen.toc div.toc a.campanha, .compromisos .screen.toc div.toc a.congreso {
+        display: block;
+        font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
+        font-size: 4em;
+        text-transform: uppercase;
+        text-decoration: none;
+        margin: 20px 0;
+        color: black; }
   .compromisos .screen .infografia {
     width: 30%;
     height: 100%;
@@ -1099,33 +1220,25 @@ body {
     background: #ccc; }
     .compromisos .screen .infografia img {
       width: 80%;
-      margin-top: 200px; }
-  .compromisos .screen .video {
-    width: 30%;
-    height: 100%;
-    display: inline-block;
-    text-align: center;
-    background: #ccc;
-    position: relative;
-    overflow: hidden; }
-    .compromisos .screen .video img {
-      position: absolute;
-      top: 0;
-      left: 0; }
+      margin-top: 5em; }
   .compromisos .screen .text {
     width: 69%;
     display: inline-block;
     vertical-align: top;
     background: #fff; }
-    .compromisos .screen .text h1 {
+    .compromisos .screen .text h3 {
+      margin-left: 1.7em;
+      margin-top: 0.6em; }
+    .compromisos .screen .text h2 {
       text-align: left;
       margin-left: 1em;
-      margin-top: .3em; }
+      line-height: 1em; }
     .compromisos .screen .text ol {
       font-size: 1.5em;
       font-family: Helvetica;
       margin: 0 auto;
       margin-top: 2em;
+      margin-left: 6em;
       counter-reset: item;
       width: 60%; }
       .compromisos .screen .text ol.congreso {
@@ -1146,6 +1259,8 @@ body {
           color: #c87072; }
     .compromisos .screen .text span.hidden, .compromisos .screen .text span.menos {
       display: none; }
+    .compromisos .screen .text span.hidden {
+      font-size: 80%; }
     .compromisos .screen .text a.leer-mas {
       text-transform: uppercase;
       text-decoration: none;
@@ -1176,28 +1291,6 @@ body {
       .compromisos .screen .text.leer-mas li {
         margin-top: 1em;
         margin-bottom: 1em; }
-  .compromisos .screen.toc {
-    text-align: center; }
-    .compromisos .screen.toc p {
-      font-family: Helvetica;
-      font-size: 1.5em;
-      width: 80%;
-      margin: 40px auto;
-      text-align: left; }
-      .compromisos .screen.toc p a, .compromisos .screen.toc p strong {
-        color: #c87072; }
-      .compromisos .screen.toc p b {
-        color: #379088; }
-    .compromisos .screen.toc div.toc {
-      text-align: left;
-      margin-left: 10%; }
-      .compromisos .screen.toc div.toc a.campanha, .compromisos .screen.toc div.toc a.congreso {
-        display: block;
-        font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
-        font-size: 4em;
-        text-transform: uppercase;
-        text-decoration: none;
-        margin: 20px 0; }
 
 .navbar {
   background: transparent;
