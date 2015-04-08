@@ -7,6 +7,7 @@ var KUMA = {
 			KUMA.motion.boot('cover');
 			KUMA.nosotros.boot();
 			KUMA.video.boot();
+			KUMA.fullPage.options.anchors = ['inicio', 'video', 'nosotros', 'asesores', 'medios', 'acercade', 'mapa'];
 		} else if($('#fullpage.splash').length > 0) {
 			KUMA.screen.boot();
 			KUMA.motion.boot('splash');
@@ -17,9 +18,12 @@ var KUMA = {
 
 			if(where == 'propuestas') {
 				KUMA.propuestas.boot();
+				KUMA.fullPage.options.anchors = ['inicio', 'ocupemos-la-ciudad', 'ciudad-democratica', 'ciudad-sostenible', 'ciudad-incluyente', 'ocupemos-el-gobierno', 'gobernar-con-las-personas', 'excelencia', 'contrapeso'];
 			} else if (where == 'compromisos') {
 				KUMA.propuestas.boot();
-				KUMA.fullPage.options.anchors = KUMA.fullPage.options.navigationTooltips = ['toc', 'campaña', 'congreso'];
+				KUMA.fullPage.options.anchors = ['inicio', 'campaña', 'congreso'];
+			} else if (where == 'principios') {
+				KUMA.fullPage.options.anchors = ['inicio', 'inteligencia-colectiva', 'participacion-ciudadana', 'apertura', 'innovacion', 'perspectiva-de-genero', 'derechos-humanos', 'transparencia'];
 			}
 		}
 		KUMA.fullPage.boot();
@@ -31,16 +35,18 @@ var KUMA = {
 		}
 		},
 		options:{
-		  //Navigation
-        menu: '#menu',
-        //anchors:['firstSlide', 'secondSlide'],
-        navigation: false,
-		  css3:true,
-        //navigationPosition: 'right',
-        //navigationTooltips: ['firstSlide', 'secondSlide'],
-        //showActiveTooltips: true,
-        //slidesNavigation: true,
-        //slidesNavPosition: 'bottom',
+			//Navigation
+			menu: '#menu',
+			//anchors:['firstSlide', 'secondSlide'],
+			navigation: false,
+			css3:true,
+			animateAnchor:false,
+			keyboardScrolling:true
+			//navigationPosition: 'right',
+			//navigationTooltips: ['firstSlide', 'secondSlide'],
+			//showActiveTooltips: true,
+			//slidesNavigation: true,
+			//slidesNavPosition: 'bottom',
 		}
 	},
 	// ----------------------
@@ -166,9 +172,9 @@ var KUMA = {
 				emerge( {el:'a.fb img', timeout:700} );
 				emerge( {el:'a.twitter img', timeout:400} );
 				emerge( {el:'a.instagram img', timeout:800} );
-				animate({el:'a.principios', translateY:-140, duration:800});
-				animate({el:'a.compromisos', translateY:-140, duration:600});
-				animate({el:'a.propuestas', translateY:-140, duration:1200});
+				animate({el:'a.principios', translateY:'-12em', duration:800});
+				animate({el:'a.compromisos', translateY:'-12em', duration:600});
+				animate({el:'a.propuestas', translateY:'-12em', duration:1200});
 				animate({el:'.kitkumamoto', translateX:-400, duration:1200});
 			}, 1500);
 			setTimeout(function() {

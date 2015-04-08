@@ -841,7 +841,7 @@ body {
       .screen.mapa .goodbye .wikipolitica {
         display: inline-block; }
 
-/************************** PROPUESTAS **************************/
+/************************** ;PROPUESTAS **************************/
 .propuestas .screen p strong {
   color: #c87072; }
 .propuestas .screen ul strong, .propuestas .screen b {
@@ -899,7 +899,10 @@ body {
   height: 500px;
   overflow: hidden; }
 .propuestas .screen .text.leer-mas {
-  height: 100%; }
+  height: 100%;
+  font-size: 0.8em; }
+  .propuestas .screen .text.leer-mas .fb-mockup {
+    display: none; }
   .propuestas .screen .text.leer-mas span.hidden, .propuestas .screen .text.leer-mas span.menos {
     display: inline; }
   .propuestas .screen .text.leer-mas a.leer-mas {
@@ -913,40 +916,58 @@ body {
   .propuestas .screen.toc a img {
     height: 100px;
     vertical-align: middle; }
-.propuestas .screen.toc .ciudad, .propuestas .screen.toc .gobierno {
-  width: 49%;
-  display: inline-block;
-  text-align: center; }
 .propuestas .screen.toc h2 {
   font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
-  font-size: 4.5em;
+  font-size: 3.5em;
   font-weight: bold;
   text-transform: uppercase; }
   .propuestas .screen.toc h2 a {
-    line-height: 2em;
+    line-height: 1em;
     background: pink;
     display: block; }
   .propuestas .screen.toc h2 strong {
     font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
     font-weight: bold; }
-.propuestas .screen.toc .gobierno h2 a {
-  background: #c8e5f0; }
 .propuestas .screen.toc h3 {
   font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
-  font-size: 3.5em;
+  font-size: 2.5em;
   width: 100%;
   text-align: left;
   margin: 0;
-  margin-left: 70px; }
+  margin-left: 0.5em; }
   .propuestas .screen.toc h3 a {
-    line-height: 1.5em; }
+    line-height: 2.5em;
+    display: block; }
     .propuestas .screen.toc h3 a span {
       display: inline-block;
       width: 150px;
       text-align: center; }
+    .propuestas .screen.toc h3 a:hover {
+      background: #eee; }
   .propuestas .screen.toc h3 strong {
     font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
     font-weight: bold; }
+.propuestas .screen.toc .ciudad, .propuestas .screen.toc .gobierno {
+  width: 49%;
+  display: inline-block;
+  text-align: center;
+  vertical-align: top; }
+.propuestas .screen.toc .ciudad h2, .propuestas .screen.toc .ciudad h3 {
+  text-align: right; }
+.propuestas .screen.toc .ciudad h2 a img {
+  margin-right: 1em;
+  margin-left: 0.5em; }
+.propuestas .screen.toc .ciudad h3 a img {
+  margin-right: 1em; }
+.propuestas .screen.toc .ciudad h3 a {
+  margin-right: 1em; }
+.propuestas .screen.toc .gobierno h2 {
+  text-align: left; }
+  .propuestas .screen.toc .gobierno h2 a {
+    background: #c8e5f0; }
+  .propuestas .screen.toc .gobierno h2 a img {
+    margin-left: 0.8em;
+    margin-right: 0.3em; }
 .propuestas .screen.ciudad h1, .propuestas .screen.gobierno h1 {
   position: absolute;
   top: 20px;
@@ -1133,36 +1154,53 @@ body {
     .principios .screen.transparencia .media {
       background: #e48d88; }
 
+/************************** MENU **************************/
 #menu {
   position: absolute;
-  top: 20%;
+  bottom: 15%;
   left: 0;
   z-index: 2;
   font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
   font-weight: normal;
-  font-size: 1.3em; }
+  font-size: 1.3em;
+  counter-reset: item -1; }
   #menu a {
     color: #fff;
     display: block;
-    margin: 0; }
-    #menu a b, #menu a strong {
+    margin: 0;
+    height: 2.5em; }
+    #menu a strong {
       display: inline-block; }
-    #menu a b {
+    #menu a::before {
       background: #555;
       width: 2em;
+      height: 1.6em;
       padding: 0.5em 0;
-      text-align: center; }
+      text-align: center;
+      display: inline-block;
+      content: counter(item);
+      box-shadow: 2px 2px 5px #ccc;
+      counter-increment: item; }
     #menu a strong {
       display: none;
       background: #aaa;
       padding: 0.5em 1em;
       text-transform: uppercase; }
-    #menu a:nth-child(odd) b {
-      background: #999; }
-    #menu a.active b {
-      background: pink; }
-    #menu a:hover b {
-      background: red; }
+      #menu a strong span {
+        font-weight: 200; }
+    #menu a:nth-child(odd)::before {
+      background: #777; }
+    #menu a:nth-of-type(1):before {
+      content: '\2191';
+      background: #eee;
+      color: #333; }
+    #menu a.active::before {
+      content: '\2192';
+      background-color: yellow;
+      color: #333; }
+    #menu a:hover::before {
+      background: red;
+      content: counter(item); }
     #menu a:hover strong {
       display: inline-block;
       background: blue; }
@@ -1343,13 +1381,13 @@ body {
   position: absolute;
   bottom: 0;
   overflow: hidden;
-  height: 71.25px;
+  height: 5em;
   width: 100%; }
   .navbar a {
     text-transform: uppercase;
     display: inline-block;
-    line-height: 81.25px;
-    height: 71.25px;
+    line-height: 1em;
+    height: 5em;
     font-size: 4.5em;
     text-decoration: none;
     color: #4A746D;
@@ -1357,7 +1395,7 @@ body {
     text-align: center;
     width: 25%;
     text-align: center;
-    font-weight: 500;
+    font-weight: 200;
     font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
     position: relative;
     bottom: 0;
@@ -1374,7 +1412,7 @@ body {
       background: #fff;
       color: black;
       font-size: 4em;
-      line-height: 71.25px;
+      line-height: 1em;
       font-family: "Lemon/Milk";
       letter-spacing: 2px; }
       .navbar a.home img.kumalogo {
@@ -1409,21 +1447,21 @@ body {
     color: #fff; }
 
 .navbar.home {
-  height: 125px; }
+  height: 9.3em; }
   .navbar.home a {
-    bottom: -140px;
+    bottom: -12em;
     font-size: 5.6em;
-    height: 95px;
+    height: 5em;
     width: 33.33333%;
-    line-height: 90px; }
+    line-height: 1.15em; }
     .navbar.home a.home {
       display: none; }
     .navbar.home a.propuestas {
       font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
       font-weight: bold;
-      height: 125px;
+      height: 6em;
       font-size: 6.7em;
-      line-height: 125px;
+      line-height: 1.3em;
       box-shadow: 0 10px 30px #1B342F; }
     .navbar.home a.principios, .navbar.home a.compromisos {
-      margin-top: 30px; }
+      margin-top: 0.4em; }

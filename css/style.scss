@@ -329,7 +329,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 	}
 }
 
-/************************** PROPUESTAS **************************/
+/************************** ;PROPUESTAS **************************/
 .propuestas {
 	.screen {
 		p strong {color:rgb(200, 112, 114);}
@@ -354,7 +354,8 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			.right {width:60%}
 		}
 		.fb-mockup { background:#e9eaed; text-align:center; border-top:1px solid #ccc; height:500px; overflow:hidden}
-		.text.leer-mas {height:100%;
+		.text.leer-mas {height:100%; font-size:0.8em;
+			.fb-mockup {display:none}
 			span.hidden, span.menos {display:inline}
 			a.leer-mas {background:#ccc}
 			span.mas {display:none}
@@ -364,17 +365,29 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				/*&:hover {background:#eee}*/
 				img {height:100px; vertical-align:middle}
 			}
-			.ciudad, .gobierno {width:49%; display:inline-block; text-align:center}
-			h2 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:4.5em; font-weight:bold; text-transform:uppercase;
-				a {line-height:2em; background:pink; display:block; }
+			h2 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:3.5em; font-weight:bold; text-transform:uppercase;
+				a {line-height:1em; background:pink; display:block; }
 				strong {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:bold}
 			}
-			.gobierno h2 a {background:#c8e5f0}
-			h3 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:3.5em; width:100%; text-align:left; margin:0; margin-left:70px;
-				a {line-height:1.5em;
+			h3 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:2.5em; width:100%; text-align:left; margin:0; margin-left:0.5em;
+				a {line-height:2.5em; display:block;
 					span {display:inline-block; width:150px; text-align:center}
+					&:hover {background:#eee}
 				}
 				strong {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:bold}
+			}
+			.ciudad, .gobierno {width:49%; display:inline-block; text-align:center; vertical-align:top}
+			.ciudad {
+				h2, h3 {text-align:right;}
+				h2 a img {margin-right:1em; margin-left:0.5em}
+				h3 a img {margin-right:1em}
+				h3 a {margin-right:1em}
+			}
+			.gobierno {
+				h2 {text-align:left;
+					a {background:#c8e5f0}
+					a img {margin-left:0.8em; margin-right:0.3em}
+				}
 			}
 		}
 		&.ciudad, &.gobierno {
@@ -473,17 +486,27 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 	}
 }
 
-#menu {position:absolute; top:20%; left:0; z-index:2; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:normal; font-size:1.3em;
-	a { color:#fff; display:block; margin:0;
-		b, strong {display:inline-block}
-		b { background:#555; width:2em; padding:0.5em 0; text-align:center;}
 
-		strong {display:none; background:#aaa; padding:0.5em 1em; text-transform:uppercase}
+/************************** MENU **************************/
+#menu {position:absolute; bottom:15%; left:0; z-index:2; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:normal; font-size:1.3em; counter-reset:item -1;
+	a { color:#fff; display:block; margin:0; height:2.5em;
+		strong {display:inline-block}
 
-		&:nth-child(odd) b {background:#999}
-		&.active b {background:pink}
+		&::before { background:#555; width:2em; height:1.6em; padding:0.5em 0; text-align:center; display:inline-block;
+			content:counter(item);
+			box-shadow:2px 2px 5px #ccc;
+			counter-increment:item;
+		}
+		strong {display:none; background:#aaa; padding:0.5em 1em; text-transform:uppercase;
+			span {font-weight:200}
+		}
+
+		&:nth-child(odd)::before {background:#777}
+		// see https://css-tricks.com/snippets/html/glyphs/
+		&:nth-of-type(1):before {content:'\2191'; background:#eee; color:#333} //uarr
+		&.active::before {content:'\2192'; background-color:yellow; color:#333} //rarr
 		&:hover {
-			b {background:red}
+			&::before {background:red; content:counter(item)}
 			strong {display:inline-block; background:blue}
 		}
 	}
@@ -560,13 +583,11 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 	}
 }
 
-$navHeight:95px;
-$propExtra:30px;
-.navbar {background:transparent; position:absolute; bottom:0; overflow:hidden; height:$navHeight*.75; width:100%; 
-	a {text-transform:uppercase; display:inline-block; line-height:($navHeight*.75)+10; height:$navHeight*.75; font-size:4.5em; text-decoration:none; color:#4A746D; float:left; text-align:center; width:25%; text-align:center; font-weight:500; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; position:relative; bottom:0; z-index:1;
+.navbar {background:transparent; position:absolute; bottom:0; overflow:hidden; height:5em; width:100%; 
+	a {text-transform:uppercase; display:inline-block; line-height:1em; height:5em; font-size:4.5em; text-decoration:none; color:#4A746D; float:left; text-align:center; width:25%; text-align:center; font-weight:200; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; position:relative; bottom:0; z-index:1;
 		user-select:none; -o-user-select:none; -moz-user-select:none; -khtml-user-select:none; -webkit-user-select:none;
 
-		&.home {background:#fff; color:black; font-size:4em; line-height:$navHeight*.75; font-family:"Lemon/Milk"; letter-spacing:2px;
+		&.home {background:#fff; color:black; font-size:4em; line-height:1em; font-family:"Lemon/Milk"; letter-spacing:2px;
 			img.kumalogo {height:1.3em; vertical-align:middle; padding-right:15px;}
 			&:hover  {background:#000; color:#fff}
 		}
@@ -593,11 +614,11 @@ $propExtra:30px;
 	}
 }
 
-.navbar.home { height:$navHeight+$propExtra;
-	a {bottom:-140px; font-size:5.6em; height:$navHeight; width:33.33333%; line-height:$navHeight - 5; 
+.navbar.home { height:9.3em;
+	a {bottom:-12em; font-size:5.6em; height:5em; width:33.33333%; line-height:1.15em; 
 		&.home {display:none;}
-		&.propuestas { font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:bold; height:$navHeight+$propExtra; font-size:6.7em; line-height:$navHeight+$propExtra; box-shadow:0 10px 30px #1B342F; }
-		&.principios, &.compromisos { margin-top:$propExtra; }
+		&.propuestas { font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:bold; height:6em; font-size:6.7em; line-height:1.3em; box-shadow:0 10px 30px #1B342F; }
+		&.principios, &.compromisos { margin-top:0.4em; }
 	}
 }
 
