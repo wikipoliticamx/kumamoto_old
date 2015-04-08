@@ -1,7 +1,9 @@
 var KUMA = {
 	boot:function() {
-		setTimeout(function(){ window.scrollTo(0, 1); }, 0); // Hide the address bar!
-		//$('#fullpage').fullpage({});
+		//setTimeout(function(){ window.scrollTo(0, 1); }, 0); // Hide the address bar!
+		if($('#fullpage.splash').length == 0) {
+			$('#fullpage').fullpage({});
+		}
 		if($('#fullpage.home').length > 0) {
 			$('.navbar').addClass('home');
 			KUMA.screen.boot();
@@ -89,7 +91,7 @@ var KUMA = {
 		},
 		boot:function() { var galaxia = $('.screen.nosotros .galaxia'), i = 0;
 			_(KUMA.nosotros.miembros).chain().shuffle().first(32).each(function(miembro) { i+=1; var nombre = miembro[0], xq = miembro[1], x = miembro[2], y = miembro[3];
-				galaxia.append('<a href="javascript:void(null)" data-name="'+nombre+'" data-why="'+xq+'"><span>'+nombre.replace(/\-\d/,'').replace(/-/,' ')+'</span><img src="img/dot.png" style="background:url(img/nosotros/sprite-nosotros-400kb.jpg) '+(y*-150)+'px '+(x*-150)+'px" /></a>');
+				galaxia.append('<a href="javascript:void(null)" data-name="'+nombre+'" data-why="'+xq+'"><span>'+nombre.replace(/\-\d/,'').replace(/-/,' ')+'</span><img src="/img/dot.png" style="background-position:'+(y*-150)+'px '+(x*-150)+'px" /></a>');
 				
 				var face = galaxia.find('a:last');
 
