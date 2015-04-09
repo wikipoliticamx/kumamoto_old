@@ -22,7 +22,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				&.kumamoto {right:0; opacity:0}
 			}
 			//Candidato independiente
-			h3 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:3em; margin:0; opacity:0; font-weight:200; position:absolute;  top:8em; left:0.8em;
+			h3 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:2.8em; margin:0; opacity:0; font-weight:200; position:absolute; top:8.9em; left:0.8em;
 				strong, bold {font-weight:700; font-size:inherit}
 			}
 			//Ocupemos la ciudad
@@ -64,7 +64,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				h1.pedro {font-size:18em; margin-bottom:0}
 				h1.kumamoto {display:inline-block; font-size:14em}
 
-				h3 {top:8.7em; left:0.7em; font-size:3.8em;
+				h3 {top:9.2em; left:0.7em; font-size:3.7em;
 					span {display:none}
 				}
 				.kumalogo {height:35em; position:absolute; top:40em; display:block;}
@@ -315,14 +315,22 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				}
 			}
 		}
-		.goodbye { position:absolute; bottom:0; background:#555; height:60px; line-height:50px; width:100%; text-align:center; color:#fff; font-family:"FF Meta W01", Helvetica, Arial, sans-serif;
-			h1 {display:inline-block; margin:0; font-size:2.5em; margin-right:2.5em; vertical-align:middle}
-			span.linea-kumamoto {font-size:1.7em;
-				strong {text-transform:uppercase; font-weight:200; margin-left:10px; vertical-align:middle; display:inline-block}
+
+		.goodbye { position:absolute; bottom:0; background:#333; height:5em; line-height:4em; width:100%; text-align:center; color:#fff; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; z-index:2;
+			h1 {display:inline-block; margin:0; margin-bottom:0.2em; font-size:2.5em; height:100%; margin-right:2.5em; vertical-align:middle;
+				span {display:inline-block; margin-top:0.1em}
 			}
-			img {vertical-align:middle; height:35px}
+			span.linea-kumamoto {font-size:2em; 
+				a {color:#fff !important; text-decoration:none}
+				strong {text-transform:uppercase; font-weight:200; margin-left:0.8em; vertical-align:middle; display:inline-block}
+			}
+			img {vertical-align:middle; height:2.5em}
+			img.whatsapp {height:1.25em}
 			.redes {display:inline-block; margin:0 2em; padding:0 1em; margin-right:4em;
-				img {margin-right:15px}
+				img {margin-right:1.1em}
+				.fb { margin-right:10.5em;
+					img {position:absolute; height:8em; top:-2.6em}
+				}
 			}
 			.wikipolitica {display:inline-block; }
 		}
@@ -334,7 +342,16 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 	.screen {
 		p strong {color:rgb(200, 112, 114);}
 		ul strong, b {color:#379088}
-		h1 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:normal; font-size:7em; text-align:center; margin:0; text-transform:uppercase;
+
+		.pedro-kumamoto { margin-top:0; margin-left:4em;
+			.kumalogo {float:left; margin-right:2.5em; height:12em; margin-top:5px; position:relative; z-index:2}
+			h1 {padding-top:0; margin-top:0; font-size:10em; line-height:0.6em; font-family:"Lemon/Milk", Helvetica, Arial; margin-bottom:0; 
+				position:relative; color:transparent; text-align:left;
+				img {height:0.5em; vertical-align:middle}
+			}
+		}
+
+		h1 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:7em; text-align:center; margin:0; text-transform:uppercase;
 			z-index:2; color:#000; width:100%; text-align:center; margin-top:0;
 			strong {font-family:"FF Meta W01", Helvetica, Arial, sans-serif}
 		}
@@ -541,12 +558,12 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		}
 		&.toc { text-align:left; background:#fff;
 			h2 {color:rgb(200, 112, 114);}
-			p { font-family:Helvetica; font-size:1.5em; width:80%; margin:40px auto; text-align:left;
+			p { font-family:Helvetica; font-size:1.5em; width:80%; margin:1.5em auto; text-align:left;
 				a, strong {color:rgb(200, 112, 114);}
 				b {color:#379088}
 			}
 			div.toc {text-align:left; margin-left:10%;
-				a.campanha, a.congreso {display:block; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:4em; text-transform:uppercase; text-decoration:none; margin:20px 0; color:black}
+				a.campanha, a.congreso {display:block; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:4em; text-transform:uppercase; text-decoration:none; margin:0; color:black}
 			}
 		}
 		.infografia { width:30%; height:100%; display:inline-block; text-align:center; background:#B3D7DA;
@@ -595,8 +612,8 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 	a {text-transform:uppercase; display:inline-block; line-height:1em; height:5em; font-size:4.5em; text-decoration:none; color:#4A746D; float:left; text-align:center; width:25%; text-align:center; font-weight:200; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; position:relative; bottom:0; z-index:1;
 		user-select:none; -o-user-select:none; -moz-user-select:none; -khtml-user-select:none; -webkit-user-select:none;
 
-		&.home {background:#fff; color:black; font-size:4em; line-height:1em; font-family:"Lemon/Milk"; letter-spacing:2px;
-			img.kumalogo {height:1.3em; vertical-align:middle; padding-right:15px;}
+		&.home {background:#fff; color:black; font-size:3.5em; line-height:1em; font-family:"Lemon/Milk"; letter-spacing:2px;
+			img.kumalogo {height:1em; vertical-align:middle; margin-right:0.3em; margin-top:0.2em; display:inline-block;}
 			&:hover  {background:#000; color:#fff}
 		}
 		/*&.principios, &.propuestas, &.compromisos {*/
@@ -624,7 +641,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 
 .navbar.home { height:9.3em;
 	a {bottom:-12em; font-size:5.6em; height:5em; width:33.33333%; line-height:1.15em; 
-		&.home {display:none;}
+		&.home {display:none}
 		&.propuestas { font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:bold; height:6em; font-size:6.7em; line-height:1.3em; box-shadow:0 10px 30px #1B342F; }
 		&.principios, &.compromisos { margin-top:0.4em; }
 	}

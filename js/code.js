@@ -69,13 +69,13 @@ var KUMA = {
 			['daniel', 'Las decisiones que marcan el rumbo de nuestra ciudad, región o país, deben ser tomadas por y para los ciudadanos, no por los partidos.', 1, 4],
 			['dani', 'Creo que es responsabilidad de todas las personas conscientes de la situación actual del país participar en esta lucha a lado de Kumamoto.', 1, 3],
 			['darlen', 'Me gusta señalar lo que está mal pero también tomo responsabilidad construyendo para cambiarlo. Aquí encontré la forma y las personas para hacerlo.', 1, 5],
-			['dulce', '', 1, 7],
+			['dulce', 'Para generar un cambio hay que hacer las cosas diferentes, y con un equipo con esta pasion y calidad humana vale la pena intentarlo.', 1, 7],
 			['edgar-1', 'Hacer política no debería ser un estilo de vida sino una práctica diaria para todo aquel que se llame ciudadano.', 1, 8],
 			['edgar-2', 'Este proyecto está haciendo todo lo que considero ético y correcto para actuar políticamente. No participar seria una gran incongruencia.', 1, 9],
 			['eli', 'Creo que los grandes cambios surgen de equipos tan extraordinarios como el nuestro &mdash;y si perdemos, quiero perder con un equipo así.', 2, 0],
 			['fatima', '"Un hombre con una idea nueva es un loco hasta que la idea triunfa" Estoy loca, pero segura de que se construirá un mejor gobierno.', 2, 1],
 			['isa', 'Me gusta ver a la gente trabajando por el lugar donde vive. Hay una forma mejor de habitar la ciudad.', 2, 2],
-			['joaquin', '', 2, 4],
+			['joaquin', 'Creo en el poder de los ciudadanos. Creo que creando nuevas herramientas y formas de participar aportamos nuestro grano de arena.', 2, 4],
 			['javier', 'Estamos escribiendo la historia de nuestra ciudad y de nuestro Estado; páginas de paz, de esperanza y de construcción.', 2, 3],
 			['juan-pedro', 'Quiero hacer algo para aportar a la sociedad, aprender y aplicar todo al entorno en el que vivo.', 2, 5],
 			['karin', 'El mal uso que se ah hecho de la política nos volvió apáticos, lograremos hacer una en la que ahora vuelva el interés de participar', 2, 6],
@@ -86,8 +86,8 @@ var KUMA = {
 			['luis-2', 'Juntos podemos recuperar el control del pais y cambiar los paradigmas que secuestran la política. Es nuestro deber como Ciudadanos Mexicanos.', 3, 0],
 			['luis-3', 'Dando lo mejor de mí, habrá un cambio; si somos muchos, es más probable. Tirar el muro es prioridad, hacerlo en equipo es gusto.', 3, 1],
 			['mariana', 'Sé que todos de la mano podemos lograr un cambio real. Actuemos juntos y logremos la politica que merecemos', 3, 3],
-			['marce', '', 3, 2],
-			['mina', '', 3, 6],
+			//['marce', '', 3, 2],
+			//['mina', '', 3, 6],
 			['miguel', 'Para generar un cambio, alguien debe tirar la primer ficha del dominó.', 3, 5],
 			['nayeli', 'Ser joven significa ser dueños de nuestra vida, de nuestro presente y estar dispuestos a desafiar nuestro porvenir.', 3, 7],
 			['pabli', 'Quiero tener la oportunidad de incidir en la política, de forma y fondo, desde la innovación y la acción critica.', 3, 8],
@@ -95,14 +95,14 @@ var KUMA = {
 			['paola', 'Estoy convencida que este proyecto es un medio de empoderamiento del ciudadano, por la valentía de levantar la voz y actuar', 4, 0],
 			['pau', 'Tenemos que dejar a un lado la indiferencia y empezar a involucrarnos para poder tener la democracia que nos merecemos.', 4, 1],
 			['pepe', 'El primer paso para humanizar nuestra sociedad es volver a enamorarnos de la política.', 4, 3],
-			//['quique', '', 0, 0],
+			//['quique', 'Por re-encontrarme con ese concepto tan vapuelado hoy en dia....democracia', 0, 0],
 			['roberto', 'Ocupar es más que un lema, es devolver la toma de decisiones a la ciudadanía sobre su futuro y la ciudad que queremos.', 4, 4],
 			['rodrigo', 'Creo que debemos de crear la politica que haga posible la vida en común. Nuestra realidad demanda de nosotros actuar aquí y ahora.', 4, 5],
 			['sofia-1', 'La política la construimos todos los ciudadanos sin importar tu profesión creo que bajo esta perspectiva podremos desconstruir discursos y prácticas dominantes que sólo benefician a pocos y estando informados e involucrados podremos generar verdadera política y prácticas más incluyentes y benéficas para la mayoría.', 4, 6],
-			['sofia-2', '', 4, 7],
+			//['sofia-2', '', 4, 7],
 			['susy', 'Necesitamos preguntarnos qué sigue después de nuestro hartazgo. Nadie lo hará por nosotros.', 4, 8],
 			['diego', 'A falta de una opción digna y auténtica, ahora podemos construir una colectivamente, como nunca se ha intentado y cuando más necesita.', 1, 6],
-			['tanya', '', 4, 9],
+			//['tanya', '', 4, 9],
 			['alberto', 'Estoy aquí porque creo que mi generación se perdió en la cotidianidad y conformismo. Confío en Kuma y su equipo para hacer mejor las cosas.', 0, 1],
 			['mariela', 'La mejor manera de acrecentar nuestra democracia es hacerla nuestra. De los ciudadanos. Necesitamos caminar en esa dirección aquí y ahora.', 3, 4]
 		],
@@ -168,7 +168,7 @@ var KUMA = {
 			}, 500);
 			setTimeout(function() {
 				$(cover+'h3 strong').css('color', 'rgb(152, 95, 96)');
-				animate({el:' h2', translateX:'18.34em', duration:800});
+				animate({el:cover+'h2', translateX:'18.34em', duration:800});
 				emerge( {el:'a.fb img', timeout:700} );
 				emerge( {el:'a.twitter img', timeout:400} );
 				emerge( {el:'a.instagram img', timeout:800} );

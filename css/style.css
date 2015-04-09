@@ -68,12 +68,12 @@ body {
         opacity: 0; }
     .screen.splash .copy h3 {
       font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
-      font-size: 3em;
+      font-size: 2.8em;
       margin: 0;
       opacity: 0;
       font-weight: 200;
       position: absolute;
-      top: 8em;
+      top: 8.9em;
       left: 0.8em; }
       .screen.splash .copy h3 strong, .screen.splash .copy h3 bold {
         font-weight: 700;
@@ -177,9 +177,9 @@ body {
       display: inline-block;
       font-size: 14em; }
     .screen.splash.portrait .copy h3 {
-      top: 8.7em;
+      top: 9.2em;
       left: 0.7em;
-      font-size: 3.8em; }
+      font-size: 3.7em; }
       .screen.splash.portrait .copy h3 span {
         display: none; }
     .screen.splash.portrait .copy .kumalogo {
@@ -807,37 +807,54 @@ body {
     .screen.mapa .goodbye {
       position: absolute;
       bottom: 0;
-      background: #555;
-      height: 60px;
-      line-height: 50px;
+      background: #333;
+      height: 5em;
+      line-height: 4em;
       width: 100%;
       text-align: center;
       color: #fff;
-      font-family: "FF Meta W01", Helvetica, Arial, sans-serif; }
+      font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
+      z-index: 2; }
       .screen.mapa .goodbye h1 {
         display: inline-block;
         margin: 0;
+        margin-bottom: 0.2em;
         font-size: 2.5em;
+        height: 100%;
         margin-right: 2.5em;
         vertical-align: middle; }
+        .screen.mapa .goodbye h1 span {
+          display: inline-block;
+          margin-top: 0.1em; }
       .screen.mapa .goodbye span.linea-kumamoto {
-        font-size: 1.7em; }
+        font-size: 2em; }
+        .screen.mapa .goodbye span.linea-kumamoto a {
+          color: #fff !important;
+          text-decoration: none; }
         .screen.mapa .goodbye span.linea-kumamoto strong {
           text-transform: uppercase;
           font-weight: 200;
-          margin-left: 10px;
+          margin-left: 0.8em;
           vertical-align: middle;
           display: inline-block; }
       .screen.mapa .goodbye img {
         vertical-align: middle;
-        height: 35px; }
+        height: 2.5em; }
+      .screen.mapa .goodbye img.whatsapp {
+        height: 1.25em; }
       .screen.mapa .goodbye .redes {
         display: inline-block;
         margin: 0 2em;
         padding: 0 1em;
         margin-right: 4em; }
         .screen.mapa .goodbye .redes img {
-          margin-right: 15px; }
+          margin-right: 1.1em; }
+        .screen.mapa .goodbye .redes .fb {
+          margin-right: 10.5em; }
+          .screen.mapa .goodbye .redes .fb img {
+            position: absolute;
+            height: 8em;
+            top: -2.6em; }
       .screen.mapa .goodbye .wikipolitica {
         display: inline-block; }
 
@@ -846,9 +863,32 @@ body {
   color: #c87072; }
 .propuestas .screen ul strong, .propuestas .screen b {
   color: #379088; }
+.propuestas .screen .pedro-kumamoto {
+  margin-top: 0;
+  margin-left: 4em; }
+  .propuestas .screen .pedro-kumamoto .kumalogo {
+    float: left;
+    margin-right: 2.5em;
+    height: 12em;
+    margin-top: 5px;
+    position: relative;
+    z-index: 2; }
+  .propuestas .screen .pedro-kumamoto h1 {
+    padding-top: 0;
+    margin-top: 0;
+    font-size: 10em;
+    line-height: 0.6em;
+    font-family: "Lemon/Milk", Helvetica, Arial;
+    margin-bottom: 0;
+    position: relative;
+    color: transparent;
+    text-align: left; }
+    .propuestas .screen .pedro-kumamoto h1 img {
+      height: 0.5em;
+      vertical-align: middle; }
 .propuestas .screen h1 {
   font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 200;
   font-size: 7em;
   text-align: center;
   margin: 0;
@@ -1307,7 +1347,7 @@ body {
       font-family: Helvetica;
       font-size: 1.5em;
       width: 80%;
-      margin: 40px auto;
+      margin: 1.5em auto;
       text-align: left; }
       .compromisos .screen.toc p a, .compromisos .screen.toc p strong {
         color: #c87072; }
@@ -1322,7 +1362,7 @@ body {
         font-size: 4em;
         text-transform: uppercase;
         text-decoration: none;
-        margin: 20px 0;
+        margin: 0;
         color: black; }
   .compromisos .screen .infografia {
     width: 30%;
@@ -1447,14 +1487,16 @@ body {
     .navbar a.home {
       background: #fff;
       color: black;
-      font-size: 4em;
+      font-size: 3.5em;
       line-height: 1em;
       font-family: "Lemon/Milk";
       letter-spacing: 2px; }
       .navbar a.home img.kumalogo {
-        height: 1.3em;
+        height: 1em;
         vertical-align: middle;
-        padding-right: 15px; }
+        margin-right: 0.3em;
+        margin-top: 0.2em;
+        display: inline-block; }
       .navbar a.home:hover {
         background: #000;
         color: #fff; }
