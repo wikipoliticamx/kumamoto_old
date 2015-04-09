@@ -376,7 +376,7 @@ body {
     position: relative; }
     .screen.video .theater {
       overflow: hidden;
-      background: #607F8C;
+      background: black;
       width: 100%;
       position: absolute;
       top: 0; }
@@ -506,14 +506,24 @@ body {
       display: inline-block;
       vertical-align: middle;
       line-height: initial; }
+      .screen.nosotros .galaxia .azulejo-top, .screen.nosotros .galaxia .azulejo-bottom {
+        position: absolute;
+        z-index: 1;
+        width: 110%;
+        left: -2%; }
+      .screen.nosotros .galaxia .azulejo-bottom {
+        bottom: -6%; }
+      .screen.nosotros .galaxia .azulejo-top {
+        top: -6%; }
       .screen.nosotros .galaxia > a {
         display: inline-block;
         width: 12.5em;
         height: 12.5em;
-        margin: 1.6em 3.3em;
+        margin: 1em 3.3em;
         text-align: center;
         position: relative;
         text-decoration: none;
+        z-index: 2;
         vertical-align: middle;
         opacity: 0;
         transition: all 0.2s ease; }
@@ -670,7 +680,7 @@ body {
     position: relative; }
     .screen.asesores h1 {
       font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
-      font-weight: normal;
+      font-weight: 200;
       font-size: 7em;
       text-align: center;
       margin: 0;
@@ -745,18 +755,17 @@ body {
         float: left;
         text-align: left;
         position: relative;
-        font-family: "L Futura W01", Helvetica; }
+        font-family: "L Futura W01", Helvetica;
+        /*p:nth-of-type(2) { margin-top:60px; }*/ }
         .screen.acercade .yo-kuma .copy strong, .screen.acercade .yo-kuma .copy b {
           transition: all 2s ease; }
         .screen.acercade .yo-kuma .copy p {
           width: 70%;
           text-align: left;
           font-size: 1.5em;
-          margin-left: 80px; }
+          margin-left: 7em; }
         .screen.acercade .yo-kuma .copy p:nth-of-type(1) {
-          margin-top: 130px; }
-        .screen.acercade .yo-kuma .copy p:nth-of-type(2) {
-          margin-top: 60px; }
+          margin-top: 4.5em; }
         .screen.acercade .yo-kuma .copy .todos {
           width: 100%;
           position: absolute;

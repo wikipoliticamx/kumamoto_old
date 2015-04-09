@@ -7,7 +7,6 @@ var KUMA = {
 			KUMA.motion.boot('cover');
 			KUMA.nosotros.boot();
 			KUMA.video.boot();
-			KUMA.fullPage.options.anchors = ['inicio', 'video', 'nosotros', 'asesores', 'medios', 'acercade', 'mapa'];
 		} else if($('#fullpage.splash').length > 0) {
 			KUMA.screen.boot();
 			KUMA.motion.boot('splash');
@@ -17,12 +16,9 @@ var KUMA = {
 
 			if(where == 'propuestas') {
 				KUMA.propuestas.boot();
-				KUMA.fullPage.options.anchors = ['inicio', 'ocupemos-la-ciudad', 'ciudad-democratica', 'ciudad-sostenible', 'ciudad-incluyente', 'ocupemos-el-gobierno', 'gobernar-con-las-personas', 'excelencia', 'contrapeso'];
 			} else if (where == 'compromisos') {
 				KUMA.propuestas.boot();
-				KUMA.fullPage.options.anchors = ['inicio', 'campaña', 'congreso'];
 			} else if (where == 'principios') {
-				KUMA.fullPage.options.anchors = ['inicio', 'inteligencia-colectiva', 'participacion-ciudadana', 'apertura', 'innovacion', 'perspectiva-de-genero', 'derechos-humanos', 'transparencia'];
 			}
 		}
 		KUMA.fullPage.boot();
@@ -30,9 +26,17 @@ var KUMA = {
 	},
 	fullPage: {
 		boot:function() {
-		if($('#fullpage.splash').length == 0) {
-			$('#fullpage').fullpage( KUMA.fullPage.options );
-		}
+			if($('#fullpage.splash').length == 0) {
+				KUMA.fullPage.extractAnchors();
+				$('#fullpage').fullpage( KUMA.fullPage.options );
+			}
+		},
+		extractAnchors:function() {
+			var anchors = [];
+			$('#menu a').each(function() {
+				anchors.push( $(this).data('menuanchor') );
+			});
+			KUMA.fullPage.options.anchors = anchors;
 		},
 		options:{
 			//Navigation
@@ -54,57 +58,57 @@ var KUMA = {
 	// ----------------------
 	nosotros:{
 		miembros:[
-			['alaide', 'Nos dijeron que la política era de otros y había una sola forma de hacerla, pero tenemos todas las posiblidades al alcance de nuestra mano.', 0, 0],
-			['ale', 'Tenemos que comenzar a creer que nuestra realidad es transformable y que se pueden construir cosas bonitas a partir de la indignación.', 0, 2],
-			['armando', 'Esta campaña es nuestra mejor oportunidad para sacar a los cínicos del gobierno y recuperar las riendas del futuro', 0, 9],
-			['alex', 'Utilizaré todas las opciones y oportunidades para ir en contra de lógicas perniciosas. Creando un proyecto de deseo en la realidad.', 0, 3],
-			['alvaro', 'Los partidos actuales no nos representan y si no tomamos los ciudadanos las riendas, ellos las tomarán por nosotros.', 0, 4],
-			['amairani', 'Haré todo lo que esté en mis manos para que los ciudadanos hagamos propia la política, y qué mejor que hacerlo con un equipo como éste.', 0, 5],
-			['ana', 'Quiero demostrar que la política ni apesta ni es grotesca. Quiero retar con una campaña modelo a todos aquellos que lo olvidaron.', 0, 7],
-			['ana-gaby', 'Yo estoy aquí porque amo a México mi país. Basta de tolerancia a un gobierno criminal.', 0, 6],
-			['angel', 'Creo necesaria una democracia participativa y austera. El sistema actual debe cambiar, y no lo hará solo.', 0, 8],
-			['benjamin', 'Soy un creyente de que el país se construye desde la ciudadanía. Me inspiró y me motivó ver gente que trabaja por una mejor política sin ninguna pretensión mas que la de aportar su grano de arena.', 1, 0],
-			['camila', 'Es hora de replantear lo que significa hacer política, y eso nos toca a nosotros y a nadie más.', 1, 1],
-			['damian', 'Los partidos no nos representan, representan cúpulas de poder que tienen secuestrada la democracia. Llegó el momento de los independientes.', 1, 2],
-			['daniel', 'Las decisiones que marcan el rumbo de nuestra ciudad, región o país, deben ser tomadas por y para los ciudadanos, no por los partidos.', 1, 4],
-			['dani', 'Creo que es responsabilidad de todas las personas conscientes de la situación actual del país participar en esta lucha a lado de Kumamoto.', 1, 3],
-			['darlen', 'Me gusta señalar lo que está mal pero también tomo responsabilidad construyendo para cambiarlo. Aquí encontré la forma y las personas para hacerlo.', 1, 5],
-			['dulce', 'Para generar un cambio hay que hacer las cosas diferentes, y con un equipo con esta pasion y calidad humana vale la pena intentarlo.', 1, 7],
-			['edgar-1', 'Hacer política no debería ser un estilo de vida sino una práctica diaria para todo aquel que se llame ciudadano.', 1, 8],
-			['edgar-2', 'Este proyecto está haciendo todo lo que considero ético y correcto para actuar políticamente. No participar seria una gran incongruencia.', 1, 9],
-			['eli', 'Creo que los grandes cambios surgen de equipos tan extraordinarios como el nuestro &mdash;y si perdemos, quiero perder con un equipo así.', 2, 0],
-			['fatima', '"Un hombre con una idea nueva es un loco hasta que la idea triunfa" Estoy loca, pero segura de que se construirá un mejor gobierno.', 2, 1],
-			['isa', 'Me gusta ver a la gente trabajando por el lugar donde vive. Hay una forma mejor de habitar la ciudad.', 2, 2],
-			['joaquin', 'Creo en el poder de los ciudadanos. Creo que creando nuevas herramientas y formas de participar aportamos nuestro grano de arena.', 2, 4],
-			['javier', 'Estamos escribiendo la historia de nuestra ciudad y de nuestro Estado; páginas de paz, de esperanza y de construcción.', 2, 3],
-			['juan-pedro', 'Quiero hacer algo para aportar a la sociedad, aprender y aplicar todo al entorno en el que vivo.', 2, 5],
-			['karin', 'El mal uso que se ah hecho de la política nos volvió apáticos, lograremos hacer una en la que ahora vuelva el interés de participar', 2, 6],
-			['pedro', 'Las personas debemos estar al centro de la política, eso es la democracia y ésta es la oportunidad para volverlo realidad.', 4, 2],
-			['levhita', 'La historia está hecha de la acumulación de pequeños cambios. Cambios que parecían imposibles pero pues no.', 2, 7],
-			['lu', 'Hay que entender el espacio público, físico y simbólico como un "para nosotros, de nosotros."', 2, 8],
-			['luis-1', 'Hacer politica es volvernos habitantes del espacio que compartimos.', 2, 9],
-			['luis-2', 'Juntos podemos recuperar el control del pais y cambiar los paradigmas que secuestran la política. Es nuestro deber como Ciudadanos Mexicanos.', 3, 0],
-			['luis-3', 'Dando lo mejor de mí, habrá un cambio; si somos muchos, es más probable. Tirar el muro es prioridad, hacerlo en equipo es gusto.', 3, 1],
-			['mariana', 'Sé que todos de la mano podemos lograr un cambio real. Actuemos juntos y logremos la politica que merecemos', 3, 3],
+			['alaide', 'Nos dijeron que la política era de <b>otros</b> y había una sola forma de hacerla, pero tenemos todas las posiblidades al alcance de nuestra mano.', 0, 0],
+			['ale', 'Tenemos que comenzar a creer que nuestra realidad es <b>transformable</b> y que se pueden construir cosas bonitas a partir de la indignación.', 0, 2],
+			['armando', 'Esta campaña es nuestra mejor oportunidad para sacar a los <b>cínicos</b> del gobierno y recuperar las riendas del futuro', 0, 9],
+			['alex', 'Utilizaré todas las opciones y oportunidades para ir en contra de <b>lógicas perniciosas</b>. Creando un proyecto de deseo en la realidad.', 0, 3],
+			['alvaro', 'Los partidos actuales <b>no nos representan</b> y si no tomamos los ciudadanos las riendas, ellos las tomarán por nosotros.', 0, 4],
+			['amairani', 'Haré todo lo que esté en mis manos para que los ciudadanos hagamos <b>propia</b> la política, y qué mejor que hacerlo con un equipo como éste.', 0, 5],
+			['ana', 'Quiero demostrar que la política <b>ni apesta ni es <b>grotesca</b>. Quiero retar con una campaña modelo a todos aquellos que lo olvidaron.', 0, 7],
+			['ana-gaby', '<b>Amo</b> a México mi país. Basta de tolerancia a un gobierno criminal.', 0, 6],
+			['angel', 'Creo necesaria una democracia participativa y austera. El sistema actual debe cambiar, y <b>no</b> lo hará <b>solo</b>.', 0, 8],
+			['benjamin', 'Soy un creyente de que el pais se construye desde la ciudadania. Me <b>motiva</b> trabajar con gente que desea un mejor Mexico.', 1, 0],
+			['camila', 'Es hora de replantear lo que significa hacer política, y eso nos toca a nosotros y <b>a nadie más</b>.', 1, 1],
+			['damian', 'Los partidos no nos representan, representan <b>cúpulas</b> de poder que tienen secuestrada la democracia. Llegó el momento de los independientes.', 1, 2],
+			['daniel', 'Las decisiones que marcan el rumbo de nuestra ciudad, región o país, deben ser tomadas <b>por y para los ciudadanos</b>, no por los partidos.', 1, 4],
+			['dani', 'Creo que es <b>responsabilidad</b> de todas las personas conscientes de la situación actual del país participar en esta lucha a lado de Kumamoto.', 1, 3],
+			['darlen', 'Me gusta señalar lo que está mal pero también tomo responsabilidad construyendo para cambiarlo. Aquí encontré <b>la forma</b> y <b>las personas</b> para hacerlo.', 1, 5],
+			['dulce', 'Para generar un cambio hay que hacer las cosas diferentes, y con un equipo con esta <b>pasión y calidad humana</b> vale la pena intentarlo.', 1, 7],
+			['edgar-1', 'Hacer política no debería ser un estilo de vida sino una <b>práctica diaria</b> para todo aquel que se llame ciudadano.', 1, 8],
+			['edgar-2', 'Este proyecto está haciendo todo lo que considero ético y correcto para actuar políticamente. No participar seria una gran <b>incongruencia</b>.', 1, 9],
+			['eli', 'Creo que los grandes cambios surgen de equipos tan <b>extraordinarios</b> como el nuestro &mdash;y si perdemos, quiero perder con un equipo así.', 2, 0],
+			['fatima', '&laquo;Un hombre con una idea nueva es un loco hasta que la idea triunfa&raquo; Estoy <b>loca</b>, pero segura de que se construirá un mejor gobierno.', 2, 1],
+			['isa', 'Me gusta ver a la gente trabajando por el lugar donde vive. Hay una forma mejor de <b>habitar</b> la ciudad.', 2, 2],
+			['joaquin', 'Creo en el poder de los ciudadanos. Creo que creando nuevas herramientas y formas de participar aportamos nuestro <b>grano de arena</b>.', 2, 4],
+			['javier', 'Estamos escribiendo la <b>historia</b> de nuestra ciudad y de nuestro Estado; páginas de paz, de esperanza y de construcción.', 2, 3],
+			['juan-pedro', 'Quiero hacer algo para <b>aportar</b> a la sociedad, aprender y aplicar todo al entorno en el que vivo.', 2, 5],
+			['karin', 'El mal uso que se ha hecho de la política nos volvió <b>apáticos</b>, lograremos hacer una en la que ahora vuelva el <b>interés</b> de participar', 2, 6],
+			['pedro', 'Las personas debemos estar al <b>centro</b> de la política, eso es la democracia y ésta es la oportunidad para volverlo realidad.', 4, 2],
+			['levhita', 'La historia está hecha de la acumulación de pequeños cambios. Cambios que parecían imposibles pero pues <b>no</b>.', 2, 7],
+			['lu', 'Hay que entender el espacio público, físico y simbólico como un &laquo;<b>para</b> nosotros, <b>de</b> nosotros&raquo;.', 2, 8],
+			['luis-1', 'Hacer politica es volvernos <b>habitantes</b> del espacio que compartimos.', 2, 9],
+			['luis-2', 'Juntos podemos recuperar el control del pais y cambiar los paradigmas que <b>secuestran</b> la política. Es nuestro deber como Ciudadanos Mexicanos.', 3, 0],
+			['luis-3', 'Dando lo mejor de mí, habrá un cambio; si somos muchos, es más probable. Tirar el <b>muro</b> es prioridad, hacerlo en equipo es gusto.', 3, 1],
+			['mariana', 'Sé que todos <b>de la mano</b> podemos lograr un cambio real. Actuemos juntos y logremos la politica que merecemos', 3, 3],
 			//['marce', '', 3, 2],
 			//['mina', '', 3, 6],
-			['miguel', 'Para generar un cambio, alguien debe tirar la primer ficha del dominó.', 3, 5],
-			['nayeli', 'Ser joven significa ser dueños de nuestra vida, de nuestro presente y estar dispuestos a desafiar nuestro porvenir.', 3, 7],
-			['pabli', 'Quiero tener la oportunidad de incidir en la política, de forma y fondo, desde la innovación y la acción critica.', 3, 8],
-			['pablo', 'Debemos tomar todas las oportunidades posibles para cambiar nuestras realidades. Se trata de creer en nosotros mismos y no en terceros.', 3, 9],
-			['paola', 'Estoy convencida que este proyecto es un medio de empoderamiento del ciudadano, por la valentía de levantar la voz y actuar', 4, 0],
-			['pau', 'Tenemos que dejar a un lado la indiferencia y empezar a involucrarnos para poder tener la democracia que nos merecemos.', 4, 1],
-			['pepe', 'El primer paso para humanizar nuestra sociedad es volver a enamorarnos de la política.', 4, 3],
+			['miguel', 'Para generar un cambio, alguien debe tirar <b>la primer ficha</b> del dominó.', 3, 5],
+			['nayeli', '<b>Ser joven</b> significa ser dueños de nuestra vida, de nuestro presente y estar dispuestos a desafiar nuestro porvenir.', 3, 7],
+			['pabli', 'Quiero tener la oportunidad de <b>incidir</b> en la política, de forma y fondo, desde la innovación y la acción critica.', 3, 8],
+			['pablo', 'Debemos tomar todas las oportunidades posibles para cambiar nuestras realidades. Se trata de creer en nosotros mismos y <b>no en terceros</b>.', 3, 9],
+			['paola', 'Estoy convencida que este proyecto es un medio de empoderamiento del ciudadano, por la <b>valentía</b> de levantar la voz y actuar', 4, 0],
+			['pau', 'Tenemos que dejar a un lado la indiferencia y empezar a involucrarnos para poder tener la democracia que nos <b>merecemos</b>.', 4, 1],
+			['pepe', 'El primer paso para humanizar nuestra sociedad es volver a <b>enamorarnos</b> de la política.', 4, 3],
 			//['quique', 'Por re-encontrarme con ese concepto tan vapuelado hoy en dia....democracia', 0, 0],
-			['roberto', 'Ocupar es más que un lema, es devolver la toma de decisiones a la ciudadanía sobre su futuro y la ciudad que queremos.', 4, 4],
-			['rodrigo', 'Creo que debemos de crear la politica que haga posible la vida en común. Nuestra realidad demanda de nosotros actuar aquí y ahora.', 4, 5],
-			['sofia-1', 'La política la construimos todos los ciudadanos sin importar tu profesión creo que bajo esta perspectiva podremos desconstruir discursos y prácticas dominantes que sólo benefician a pocos y estando informados e involucrados podremos generar verdadera política y prácticas más incluyentes y benéficas para la mayoría.', 4, 6],
+			['roberto', 'Ocupar es más que un lema, es <b>devolver</b> la toma de decisiones a la ciudadanía sobre su futuro y la ciudad que queremos.', 4, 4],
+			['rodrigo', 'Creo que debemos de crear la politica que haga posible la <b>vida en común</b>. Nuestra realidad demanda de nosotros actuar aquí y ahora.', 4, 5],
+			['sofia-1', 'La política la construimos <b>todos</b> y estando informados e involucrados podremos generar verdadera política y prácticas más incluyentes y benéficas para la mayoría.', 4, 6],
 			//['sofia-2', '', 4, 7],
-			['susy', 'Necesitamos preguntarnos qué sigue después de nuestro hartazgo. Nadie lo hará por nosotros.', 4, 8],
-			['diego', 'A falta de una opción digna y auténtica, ahora podemos construir una colectivamente, como nunca se ha intentado y cuando más necesita.', 1, 6],
+			['susy', 'Necesitamos preguntarnos qué sigue <b>después</b> de nuestro hartazgo. Nadie lo hará por nosotros.', 4, 8],
+			['diego', 'A falta de una opción digna y auténtica, ahora podemos construir una colectivamente, como <b>nunca</b> se ha intentado y cuando más necesita.', 1, 6],
 			//['tanya', '', 4, 9],
-			['alberto', 'Estoy aquí porque creo que mi generación se perdió en la cotidianidad y conformismo. Confío en Kuma y su equipo para hacer mejor las cosas.', 0, 1],
-			['mariela', 'La mejor manera de acrecentar nuestra democracia es hacerla nuestra. De los ciudadanos. Necesitamos caminar en esa dirección aquí y ahora.', 3, 4]
+			['alberto', 'Estoy aquí porque creo que mi generación se perdió en la cotidianidad y <b>conformismo</b>. Confío en Kuma y su equipo para hacer mejor las cosas.', 0, 1],
+			['mariela', 'La mejor manera de acrecentar nuestra democracia es hacerla <b>nuestra</b>. De los ciudadanos. Necesitamos caminar en esa dirección aquí y ahora.', 3, 4]
 		],
 		emerge:function() { var i = 0;
 			_(KUMA.nosotros.miembros).chain().shuffle().each(function(miembro) { i+=1; var nombre = miembro[0], xq = miembro[1];
@@ -311,7 +315,7 @@ var KUMA = {
 				triggerElement: '.screen.nosotros'
 			}).on("enter", function(e) {
 				KUMA.nosotros.emerge();
-				KUMA.player.pauseVideo();
+				KUMA.video.pause();
 			});
 
 			// MEDIOS
