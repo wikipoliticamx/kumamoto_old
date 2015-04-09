@@ -120,6 +120,10 @@
 	margin-bottom:10px;
 }
 
+.opentip-container b {
+	color:rgb(152, 95, 96);
+}
+
 .opentip-container.ot-fixed .opentip {
   pointer-events: auto;
 }

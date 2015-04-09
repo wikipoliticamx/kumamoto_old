@@ -91,7 +91,7 @@ var KUMA = {
 			['luis-3', 'Dando lo mejor de mí, habrá un cambio; si somos muchos, es más probable. Tirar el <b>muro</b> es prioridad, hacerlo en equipo es gusto.', 3, 1],
 			['mariana', 'Sé que todos <b>de la mano</b> podemos lograr un cambio real. Actuemos juntos y logremos la politica que merecemos', 3, 3],
 			//['marce', '', 3, 2],
-			//['mina', '', 3, 6],
+			['mina', 'Porque quienes le estamos dando nuestro apoyo, aun siendo camaradas, lo tendremos en la mira. Y Kumamoto lo sabe y busca esa <b>crítica</b> que hace crecer.', 3, 6],
 			['miguel', 'Para generar un cambio, alguien debe tirar <b>la primer ficha</b> del dominó.', 3, 5],
 			['nayeli', '<b>Ser joven</b> significa ser dueños de nuestra vida, de nuestro presente y estar dispuestos a desafiar nuestro porvenir.', 3, 7],
 			['pabli', 'Quiero tener la oportunidad de <b>incidir</b> en la política, de forma y fondo, desde la innovación y la acción critica.', 3, 8],

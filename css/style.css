@@ -370,7 +370,7 @@ body {
   .screen.cover.portrait .goodbye {
     font-size: 1.3em; }
   .screen.video {
-    background-color: #c8e5f0;
+    background-color: #ADDFD7;
     color: black;
     text-align: center;
     position: relative; }
@@ -420,28 +420,31 @@ body {
         .screen.video .theater .sidebar .thumbs img {
           width: 200px;
           height: 111px;
+          display: inline-block;
           margin: 10px 5px;
           -webkit-filter: grayscale(1);
-          cursor: pointer; }
+          cursor: pointer;
+          background-repeat: no-repeat; }
           .screen.video .theater .sidebar .thumbs img:hover, .screen.video .theater .sidebar .thumbs img.active {
             -webkit-filter: grayscale(0);
             opacity: 1; }
     .screen.video .copy {
       position: absolute;
-      bottom: 7em;
+      bottom: 3.5em;
       width: 100%; }
       .screen.video .copy h1 {
         font-size: 5.6em;
-        line-height: 0.5em;
+        line-height: 1.11em;
         margin: 0;
         margin-right: 0.5em;
-        margin-top: 30px;
+        margin-top: 2.5;
         position: relative;
         top: 0.2em;
         display: inline-block;
         text-transform: uppercase;
         font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
-        font-weight: 200; }
+        font-weight: 200;
+        text-align: left; }
         .screen.video .copy h1 span {
           opacity: 0;
           position: relative;
@@ -456,9 +459,11 @@ body {
             color: #985f60;
             font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
             font-weight: bold; }
+        .screen.video .copy h1 div {
+          margin-left: 3em; }
       .screen.video .copy p {
         font-family: "L Futura W01", Helvetica;
-        width: 450px;
+        width: 30em;
         color: #000;
         display: inline-block;
         margin: 0 auto;
@@ -468,9 +473,17 @@ body {
         opacity: 0; }
         .screen.video .copy p span {
           display: block;
-          margin: 10px 0; }
+          margin: 0.5em 0; }
         .screen.video .copy p strong {
           transition: all 4s ease; }
+        .screen.video .copy p b {
+          color: #379088; }
+        .screen.video .copy p a {
+          color: black;
+          text-decoration: none;
+          font-style: italic; }
+          .screen.video .copy p a:hover {
+            text-decoration: underline; }
   .screen.nosotros {
     background: #f6f1e9;
     color: white;
