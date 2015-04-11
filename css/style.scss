@@ -1,5 +1,29 @@
 body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#fff}
-/*html {padding-bottom:80px;}*/
+
+/************************** MENU **************************/
+#menu {position:absolute; bottom:15%; left:0; z-index:2; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:normal; font-size:2em; counter-reset:item -1;
+	a { color:#fff; display:block; margin:0; height:2.5em;
+		strong {display:inline-block}
+
+		&::before { background:#67B2A4; width:2em; height:1.6em; padding:0.5em 0; text-align:center; display:inline-block;
+			content:counter(item);
+			box-shadow:2px 2px 5px #555;
+			counter-increment:item;
+		}
+		strong {display:none; background:#aaa; padding:0.5em 1em; text-transform:uppercase;
+			span {font-weight:200}
+		}
+
+		&:nth-child(odd)::before {background:#67B2A4}
+		// see https://css-tricks.com/snippets/html/glyphs/
+		&:nth-of-type(1):before {content:'\2191'; /*background:#eee;*/ color:#333} //uarr
+		&.active::before {content:'\2192'; background-color:#4E7B74; color:#fff} //rarr
+		&:hover {
+			&::before {background:#CD5560; content:counter(item)}
+			strong {display:inline-block; background:#4E7B74}
+		}
+	}
+}
 
 /* INDEX */
 /* SCREEN */
@@ -26,7 +50,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				strong, bold {font-weight:700; font-size:inherit}
 			}
 			//Ocupemos la ciudad
-			h2 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:5em; margin:0.3em 0 0 0; position:absolute; left:-17.9em; top:6em; text-transform:uppercase; line-height:1.1em;
+			h2 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:5em; margin:0.3em 0 0 0; position:absolute; left:-16.9em; top:6em; text-transform:uppercase; line-height:1.1em;
 			}
 			//proximamente
 			h4 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:3.5em; color:#fff; font-weight:200; padding:0; position:absolute; bottom:2.5em; left:0.6em;
@@ -98,7 +122,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				strong, bold {font-weight:700; font-size:inherit}
 			}
 			//Ocupemos la ciudad
-			h2 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:5em; margin:0.3em 0 0 0; position:absolute; left:-17.9em; top:6em; text-transform:uppercase; line-height:1.1em;
+			h2 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:5em; margin:0.3em 0 0 0; position:absolute; left:-16.9em; top:6em; text-transform:uppercase; line-height:1.1em;
 			}
 			//proximamente
 			h4 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:3.5em; color:#fff; font-weight:200; padding:0; position:absolute; bottom:2.5em; left:0.6em;
@@ -229,10 +253,11 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			strong {font-family:"FF Meta W01", Helvetica, Arial, sans-serif}
 		}
 		.carton { position:absolute; left:-340px; top:320px; z-index:5;
-			img {width:300px; box-shadow:2px 2px 3px #aaa; -webkit-filter:grayscale(0); transform:rotate(-10deg); transition: all 1s ease; position:relative; left:0}
+			img {width:25em; box-shadow:0.2em 0.2em 0.2em #aaa; -webkit-filter:grayscale(0); transform:rotate(-10deg); transition: all 1s ease; position:relative; left:0}
 			&:hover {
 				img {-webkit-filter:grayscale(0); transform:scale(1.3,1.3) rotate(0deg); left:100px; }
 			}
+			&.carton9abr {top:10em}
 		}
 		.logos { text-align:center; margin:0 auto; margin-top:30px; width:90%; 
 			a { opacity:0; }
@@ -314,7 +339,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		h1 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:4em; text-align:center; text-transform:uppercase; margin:0}
 		h2 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:1.7em; text-align:center; text-transform:uppercase; margin:0}
 		h3 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:2em; text-transform:uppercase; margin-top:40px; margin-bottom:10px}
-		a.mapa img {width:100%; position:absolute; top:-60px;}
+		a.mapa img {width:100%; position:absolute; top:-60px; left:0}
 		.copy { position:absolute; top:30px; right:-330px; background:#fff; padding:30px; z-index:3; box-shadow:0px 3px 5px #999;
 			.data-maps img {
 				transition: all 0.2s ease;
@@ -338,7 +363,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			.redes {display:inline-block; margin:0 2em; padding:0 1em; margin-right:4em;
 				img {margin-right:1.1em}
 				.fb { margin-right:10.5em;
-					img {position:absolute; height:8em; top:-2.6em}
+					img {position:absolute; top:-2.6em}
 				}
 			}
 			.wikipolitica {display:inline-block; }
@@ -350,28 +375,133 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 .propuestas {
 	.screen {
 		p strong {color:rgb(200, 112, 114);}
-		ul strong, b {color:#379088}
-
-		.pedro-kumamoto { margin-top:0; margin-left:4em;
-			.kumalogo {float:left; margin-right:2.5em; height:12em; margin-top:5px; position:relative; z-index:2}
-			h1 {padding-top:0; margin-top:0; font-size:10em; line-height:0.6em; font-family:"Lemon/Milk", Helvetica, Arial; margin-bottom:0; 
-				position:relative; color:transparent; text-align:left;
-				img {height:0.5em; vertical-align:middle}
-			}
+		ol {margin-top:0;
+			strong {color:#379088}
 		}
 
-		h1 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:7em; text-align:center; margin:0; text-transform:uppercase;
-			z-index:2; color:#000; width:100%; text-align:center; margin-top:0;
+		.header {margin-top:2em; margin-bottom:2em;
+			.pedro-kumamoto {width:60em; padding-left:4em; margin:0 auto; display:inline-block; vertical-align:middle;
+				.kumalogo {float:left; margin-right:2.5em; height:12em; margin-top:0.2em; position:relative; z-index:2}
+				h1 {padding-top:0; margin-top:0; font-size:10em; line-height:0.6em; font-family:"Lemon/Milk", Helvetica, Arial; margin-bottom:0; 
+					position:relative; color:transparent; text-align:left;
+					img {height:0.5em; vertical-align:middle}
+				}
+			}
+			.where { display:inline-block; vertical-align:middle;
+			}
+		}
+		h1 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:7em; text-align:center; margin:0;
+			z-index:2; color:#000; width:100%; text-align:center; margin-top:0; line-height:1em;
 			strong {font-family:"FF Meta W01", Helvetica, Arial, sans-serif}
 		}
-		.copy { font-size:1.5em; position:relative;
-			span.hidden, span.menos {display:none}
-			a.leer-mas { text-transform:uppercase; text-decoration:none; color:black; background:#eee; display:inline-block; padding:.5em 1em;
-				margin-left:10em;  font-family:"FF Meta W01", Helvetica, Arial, sans-serif;
-				&:hover {text-decoration:underline; background:#555; color:#fff;}
+		&.toc {
+			a {text-decoration:none;
+				img {height:3em; vertical-align:middle}
 			}
-			li {margin:20px 10px}
-			.propuestas {font-weight:bold}
+			h2 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:3.5em; font-weight:200; text-transform:uppercase;
+				a {color:black; line-height:3.5em; background:#EACCCC; display:block; }
+				strong {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:bold}
+				margin-bottom:0.2em;
+			}
+			h3 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:2.5em; width:100%; text-align:left; margin:0; font-weight:200;
+				a {color:black; line-height:4em; display:block;
+					span {display:inline-block; width:6em; text-align:center}
+					&:hover {background:#eee}
+				}
+				strong {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:bold}
+			}
+			.ciudad, .gobierno {width:49.9%; display:inline-block; text-align:center; vertical-align:top;
+			}
+			.ciudad {
+				h2, h3 {text-align:right;}
+				h2 a img {margin-right:1em; margin-left:0.5em}
+				h3 a img {margin-right:1em}
+			}
+			.gobierno {
+				h2 {text-align:left;
+					a {background:#DAECE8;
+						img {margin-left:0.8em; margin-right:0.3em}
+					}
+				}
+			}
+		}
+		&.ciudad, &.gobierno {
+			h1 {position:absolute; top:1em; left:0; font-size:9em; 
+				/*text-shadow:0.03em 0.03em white;*/
+				img {height:2.5em; vertical-align:middle}
+			}
+			img.gobierno, img.ciudad {position:absolute; top:0; left:0; z-index:1; height:100%}
+			div.copy {position:absolute; bottom:3em; right:4em; z-index:2; background-color:rgba(255, 255, 255, 1);
+				padding:1em 3em; font-size:1.4em; font-family:"L Futura W01", Helvetica; width:30em;
+				strong {font-size:1em}
+				b {color:#379088}
+			}
+		}
+		&.gobierno { position:relative;
+			h1 {position:absolute;  z-index:2; }
+			div.copy {left:4em; right:auto; }
+		}
+		&.democratica, &.sostenible, &.incluyente, &.personas, &.excelencia, &.contrapeso {background:#eee;
+			.video, .fb, .text {width:33%; display:inline-block; vertical-align:top; height:100%; overflow:hidden}
+				.video {width:28%}
+				.text {width:38%}
+				.fb {max-width:550px}
+			.video {background:#ccc; position:relative;
+				img {position:absolute; top:0; left:0}
+			}
+			.fb { background:#e9eaed; text-align:center;}
+			.fb img {width:511px}
+			.text {background:#fff;
+				h2 {text-transform:uppercase; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:3em; width:100%; 
+					margin-top:0; margin-bottom:0; padding:0.2em 0; font-weight:normal;
+					background:#F7E4E4; text-align:center;
+					img {height:1.5em; vertical-align:middle}
+					a {text-decoration:none; color:#000}
+				}
+				h1 {text-align:center; margin-left:0; margin-top:0; padding:0.4em 0; padding-top:0.2em; font-size:5em; background:#EACCCC; line-height:0.9em}
+				div.icono { margin:2em auto; text-align:center;
+					img {width:30%}
+				}
+				p, ol li {margin:0 2em; padding:0.7em 1em; padding-bottom:0.3em}
+				ol li {margin-top:0;}
+
+				p.mas, li.mas, p.menos, li.menos { cursor:pointer;
+					span.mas span.label {display:none}
+					&:hover {background:#eee;
+						a.leer-mas {background:#ccc}
+						a.leer-mas:hover {background:#555}
+						/*span.mas span.label {display:inline}*/
+					}
+				}
+				p.mas, li.mas {
+					span.hidden, span.menos {display:none}
+					span.mas {display:inline}
+				}
+				p a, ol li a {color:#000}
+				p.menos, li.menos {
+					span.hidden, span.menos {display:inline-block}
+					span.hidden {margin:0.5em 0}
+					a.leer-mas {background:#ccc}
+					span.mas {display:none}
+				}
+			}
+		}
+		&.personas, &.excelencia, &.contrapeso {
+			.text {
+				h2 {background:#ECFCF8}
+				h1 {background:#BBDAD3}
+			}
+		}
+		.copy { font-size:1.2em; position:relative; margin:0 2em; margin-top:2em;
+			span.hidden, span.menos {display:none}
+			a.leer-mas { text-transform:uppercase; text-decoration:none; color:black; background:#eee; display:inline-block; padding:0.1em 0.4em;
+				/*user-select:none; -o-user-select:none; -moz-user-select:none; -khtml-user-select:none; -webkit-user-select:none;*/
+				margin-left:0.2em; vertical-align:top; font-family:"FF Meta W01", Helvetica, Arial, sans-serif;
+				&:hover {text-decoration:underline; color:#fff; }
+			}
+			.propuestas, p strong {font-weight:bold; font-size:1.2em}
+			li strong {font-weight:bold; color:#379088}
+			b {color:black}
 
 			.left, .right {display:inline-block; vertical-align:top}
 			.left {width:30%; text-align:center;
@@ -379,71 +509,10 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			}
 			.right {width:60%}
 		}
-		.fb-mockup { background:#e9eaed; text-align:center; border-top:1px solid #ccc; height:500px; overflow:hidden}
-		.text.leer-mas {height:100%; font-size:0.8em;
-			.fb-mockup {display:none}
-			span.hidden, span.menos {display:inline}
-			a.leer-mas {background:#ccc}
-			span.mas {display:none}
-		}
-		&.toc {
-			a {color:#000; text-decoration:none;
-				/*&:hover {background:#eee}*/
-				img {height:100px; vertical-align:middle}
-			}
-			h2 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:3.5em; font-weight:bold; text-transform:uppercase;
-				a {line-height:1em; background:pink; display:block; }
-				strong {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:bold}
-			}
-			h3 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:2.5em; width:100%; text-align:left; margin:0; margin-left:0.5em;
-				a {line-height:2.5em; display:block;
-					span {display:inline-block; width:150px; text-align:center}
-					&:hover {background:#eee}
-				}
-				strong {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:bold}
-			}
-			.ciudad, .gobierno {width:49%; display:inline-block; text-align:center; vertical-align:top}
-			.ciudad {
-				h2, h3 {text-align:right;}
-				h2 a img {margin-right:1em; margin-left:0.5em}
-				h3 a img {margin-right:1em}
-				h3 a {margin-right:1em}
-			}
-			.gobierno {
-				h2 {text-align:left;
-					a {background:#c8e5f0}
-					a img {margin-left:0.8em; margin-right:0.3em}
-				}
-			}
-		}
-		&.ciudad, &.gobierno {
-			h1 {position:absolute; top:20px; left:0;
-				img {height:1.5em; vertical-align:middle}
-			}
-			div.copy {position:absolute; bottom:20%; right:9%; font-size:1.6em; font-family:"L Futura W01", Helvetica; width:40%}
-		}
-		&.gobierno { position:relative;
-			img.congreso {position:absolute; top:0; left:0; z-index:1; height:100%}
-			h1 {position:absolute; top:20px; z-index:2; color:white; }
-			div.copy {left:4%; right:auto; z-index:2; background-color:rgba(255, 255, 255, 0.8); padding:10px 30px}
-		}
-		&.democratica, &.sostenible, &.incluyente, &.personas, &.excelencia, &.contrapeso {background:#eee;
-			.video {width:30%; height:100%; display:inline-block; background:#ccc; vertical-align:middle; position:relative; overflow:hidden;
-				img {position:absolute; top:0; left:0}
-			}
-			.text {width:69%; display:inline-block; vertical-align:top; background:#fff;
-				h2 {text-transform:uppercase; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:3em; width:100%; margin-top:30px; margin-bottom:0; margin-left:50px;
-					opacity:0.4;
-					img {height:1em; vertical-align:middle}
-				}
-				h1 {text-align:left; margin-left:50px; margin-top:0; font-size:5em}
-			}
-
-		}
 	}
 }
 
-/************************** PRINCIPIOS **************************/
+/************************** ;PRINCIPIOS **************************/
 .principios { vertical-align:top;
 	.pedro-kumamoto { margin-top:0; margin-left:4em;
 		.kumalogo {float:left; margin-right:2.5em; height:12em; margin-top:5px; position:relative; z-index:2}
@@ -458,7 +527,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			img {width:80%; margin-top:200px}
 		}
 		.text { width:69%; display:inline-block; vertical-align:top;
-			.fb-mockup { background:#e9eaed; text-align:center; border-top:1px solid #ccc; height:550px; overflow:hidden; text-align:center; position:absolute; bottom:0; width:69%}
+			.fb { background:#e9eaed; text-align:center; border-top:1px solid #ccc; overflow:hidden; text-align:center; position:absolute; bottom:0; width:69%}
 		}
 
 		&.toc {background:#c8c8a8;
@@ -520,41 +589,21 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 	}
 }
 
-/************************** MENU **************************/
-#menu {position:absolute; bottom:15%; left:0; z-index:2; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:normal; font-size:1.3em; counter-reset:item -1;
-	a { color:#fff; display:block; margin:0; height:2.5em;
-		strong {display:inline-block}
-
-		&::before { background:#555; width:2em; height:1.6em; padding:0.5em 0; text-align:center; display:inline-block;
-			content:counter(item);
-			box-shadow:2px 2px 5px #ccc;
-			counter-increment:item;
-		}
-		strong {display:none; background:#aaa; padding:0.5em 1em; text-transform:uppercase;
-			span {font-weight:200}
-		}
-
-		&:nth-child(odd)::before {background:#777}
-		// see https://css-tricks.com/snippets/html/glyphs/
-		&:nth-of-type(1):before {content:'\2191'; background:#eee; color:#333} //uarr
-		&.active::before {content:'\2192'; background-color:yellow; color:#333} //rarr
-		&:hover {
-			&::before {background:red; content:counter(item)}
-			strong {display:inline-block; background:blue}
-		}
-	}
-}
-
-/************************** COMPROMISOS **************************/
+/************************** ;COMPROMISOS **************************/
 .compromisos {
-	.pedro-kumamoto { margin-top:2em; margin-left:4em;
-		.kumalogo {float:left; margin-right:2.5em; height:12em; margin-top:5px; position:relative; z-index:2}
-		h1 {padding-top:0; margin-top:0; font-size:10em; line-height:0.6em; font-family:"Lemon/Milk", Helvetica, Arial; margin-bottom:0; 
-			position:relative; color:transparent; text-align:left;
-			img {height:0.5em; vertical-align:middle}
+	.header {margin-top:2em; margin-bottom:6em;
+		.pedro-kumamoto {width:60em; padding-left:4em; margin:0 auto; display:inline-block; vertical-align:middle;
+			.kumalogo {float:left; margin-right:2.5em; height:12em; margin-top:0.2em; position:relative; z-index:2}
+			h1 {padding-top:0; margin-top:0; font-size:10em; line-height:0.6em; font-family:"Lemon/Milk", Helvetica, Arial; margin-bottom:0; 
+				position:relative; color:transparent; text-align:left;
+				img {height:0.5em; vertical-align:middle}
+			}
+		}
+		.where { display:inline-block; vertical-align:middle;
+			h2 {text-transform:none; font-size:7em}
 		}
 	}
-	h2 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:normal; font-size:5em; text-align:left; margin:0; text-transform:uppercase;
+	h2 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:5em; text-align:left; margin:0; text-transform:uppercase;
 		color:#000; width:100%; text-align:left;
 	}
 	h3 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:3em; text-align:left; margin:0; text-transform:uppercase;
@@ -565,13 +614,25 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			img {width:100%}
 		}
 		&.toc { text-align:left; background:#fff;
-			h2 {color:rgb(200, 112, 114);}
-			p { font-family:Helvetica; font-size:1.5em; width:80%; margin:1.5em auto; text-align:left;
+			/*h2 {color:rgb(200, 112, 114);}*/
+			p { font-family:Helvetica; font-size:1.5em; width:30em; margin:1.5em auto; text-align:left;
 				a, strong {color:rgb(200, 112, 114);}
 				b {color:#379088}
 			}
-			div.toc {text-align:left; margin-left:10%;
-				a.campanha, a.congreso {display:block; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:4em; text-transform:uppercase; text-decoration:none; margin:0; color:black}
+			div.toc {text-align:left; margin-top:8em;
+				a {display:inline-block; width:49.9%; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:5em; font-weight:200; text-transform:uppercase; text-decoration:none; margin:0; color:black; 
+					span {position:relative; width:2em; display:inline-block;
+						img {vertical-align:middle; height:3em; margin:0 1em; position:absolute;}
+					}
+				}
+				a.en-campanha { background:#EACCCC; text-align:right;
+					img {text-align:right; top:-2em; left:-0.8em}
+				}
+				a.en-el-congreso {background:#DAECE8;
+					span {width:3.5em;
+						img {top:-2em; left:-0.8em}
+					}
+				}
 			}
 		}
 		.infografia { width:30%; height:100%; display:inline-block; text-align:center; background:#B3D7DA;
@@ -609,32 +670,23 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				span.mas {display:none}
 				ol {font-size:1.4em;}
 				li {margin-top:1em; margin-bottom:1em}
-				.fb-mockup {display:none}
+				.fb {display:none}
 			}
-			.fb-mockup { background:#e9eaed; text-align:center; border-top:1px solid #ccc; height:500px; overflow:hidden}
+			.fb { background:#e9eaed; text-align:center; border-top:1px solid #ccc; overflow:hidden}
 		}
 	}
 }
 
-.navbar {background:transparent; position:absolute; bottom:0; overflow:hidden; height:5em; width:100%; 
-	a {text-transform:uppercase; display:inline-block; line-height:1em; height:5em; font-size:4.5em; text-decoration:none; color:#4A746D; float:left; text-align:center; width:25%; text-align:center; font-weight:200; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; position:relative; bottom:0; z-index:1;
+/************************** ;NAVBAR **************************/
+.navbar {background:transparent; position:absolute; bottom:0; overflow:hidden; height:9.3em; width:100%; 
+	a {text-transform:uppercase; display:inline-block; line-height:1.15em; height:5.6em; font-size:5.5em; text-decoration:none; color:#4A746D; float:left; text-align:center; width:33.3333%; text-align:center; font-weight:200; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; position:relative; bottom:-12em; z-index:1;
 		user-select:none; -o-user-select:none; -moz-user-select:none; -khtml-user-select:none; -webkit-user-select:none;
 
-		&.home {background:#fff; color:black; font-size:3.5em; line-height:1em; font-family:"Lemon/Milk"; letter-spacing:2px;
-			img.kumalogo {height:1em; vertical-align:middle; margin-right:0.3em; margin-top:0.2em; display:inline-block;}
-			&:hover  {background:#000; color:#fff}
-		}
-		/*&.principios, &.propuestas, &.compromisos {*/
-			/*img { height:90px; margin-right:15px; margin-top:-15px; vertical-align:middle}*/
-		/*}*/
-		&.principios  {background:#67B2A4; 
-			/*img {height:50px}*/
-		}
-		&.propuestas  {background:#4E7B74; color:#283F3A; font-weight:bold;}
-		&.compromisos {background:#67B2A4; letter-spacing:-2px;
-			/*img {height:75px; margin-top:-5px}*/
-		}
-		&:hover {background:#CD5560; color:#fff; }
+		&.principios  {background:#67B2A4; }
+		&.propuestas  {background:#4E7B74; color:#283F3A; font-weight:bold; height:6em; font-size:6.7em; line-height:1.3em; box-shadow:0 10px 30px #1B342F; z-index:2}
+		&.compromisos {background:#67B2A4; letter-spacing:-2px; }
+		&:hover, &.active {background:#CD5560; color:#fff; }
+		&.principios, &.compromisos { margin-top:0.4em; }
 	}
 	&.principios {
 		a.principios {background:#9b4b52; color:#fff;}
@@ -646,12 +698,3 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		a.propuestas {background:#9b4b52; color:#fff;}
 	}
 }
-
-.navbar.home { height:9.3em;
-	a {bottom:-12em; font-size:5.6em; height:5em; width:33.33333%; line-height:1.15em; 
-		&.home {display:none}
-		&.propuestas { font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:bold; height:6em; font-size:6.7em; line-height:1.3em; box-shadow:0 10px 30px #1B342F; }
-		&.principios, &.compromisos { margin-top:0.4em; }
-	}
-}
-

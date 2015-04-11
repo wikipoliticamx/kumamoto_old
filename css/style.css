@@ -5,7 +5,57 @@ body {
   font-size: 12px;
   background: #fff; }
 
-/*html {padding-bottom:80px;}*/
+/************************** MENU **************************/
+#menu {
+  position: absolute;
+  bottom: 15%;
+  left: 0;
+  z-index: 2;
+  font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
+  font-weight: normal;
+  font-size: 2em;
+  counter-reset: item -1; }
+  #menu a {
+    color: #fff;
+    display: block;
+    margin: 0;
+    height: 2.5em; }
+    #menu a strong {
+      display: inline-block; }
+    #menu a::before {
+      background: #67B2A4;
+      width: 2em;
+      height: 1.6em;
+      padding: 0.5em 0;
+      text-align: center;
+      display: inline-block;
+      content: counter(item);
+      box-shadow: 2px 2px 5px #555;
+      counter-increment: item; }
+    #menu a strong {
+      display: none;
+      background: #aaa;
+      padding: 0.5em 1em;
+      text-transform: uppercase; }
+      #menu a strong span {
+        font-weight: 200; }
+    #menu a:nth-child(odd)::before {
+      background: #67B2A4; }
+    #menu a:nth-of-type(1):before {
+      content: '\2191';
+      /*background:#eee;*/
+      color: #333; }
+    #menu a.active::before {
+      content: '\2192';
+      background-color: #4E7B74;
+      color: #fff; }
+    #menu a:hover::before {
+      background: #CD5560;
+      content: counter(item); }
+    #menu a:hover strong {
+      display: inline-block;
+      background: #4E7B74; }
+
 /* INDEX */
 /* SCREEN */
 .screen {
@@ -84,7 +134,7 @@ body {
       font-size: 5em;
       margin: 0.3em 0 0 0;
       position: absolute;
-      left: -17.9em;
+      left: -16.9em;
       top: 6em;
       text-transform: uppercase;
       line-height: 1.1em; }
@@ -266,7 +316,7 @@ body {
       font-size: 5em;
       margin: 0.3em 0 0 0;
       position: absolute;
-      left: -17.9em;
+      left: -16.9em;
       top: 6em;
       text-transform: uppercase;
       line-height: 1.1em; }
@@ -591,8 +641,8 @@ body {
       top: 320px;
       z-index: 5; }
       .screen.medios .carton img {
-        width: 300px;
-        box-shadow: 2px 2px 3px #aaa;
+        width: 25em;
+        box-shadow: 0.2em 0.2em 0.2em #aaa;
         -webkit-filter: grayscale(0);
         transform: rotate(-10deg);
         transition: all 1s ease;
@@ -602,6 +652,8 @@ body {
         -webkit-filter: grayscale(0);
         transform: scale(1.3, 1.3) rotate(0deg);
         left: 100px; }
+      .screen.medios .carton.carton9abr {
+        top: 10em; }
     .screen.medios .logos {
       text-align: center;
       margin: 0 auto;
@@ -809,7 +861,8 @@ body {
     .screen.mapa a.mapa img {
       width: 100%;
       position: absolute;
-      top: -60px; }
+      top: -60px;
+      left: 0; }
     .screen.mapa .copy {
       position: absolute;
       top: 30px;
@@ -875,7 +928,6 @@ body {
           margin-right: 10.5em; }
           .screen.mapa .goodbye .redes .fb img {
             position: absolute;
-            height: 8em;
             top: -2.6em; }
       .screen.mapa .goodbye .wikipolitica {
         display: inline-block; }
@@ -883,109 +935,71 @@ body {
 /************************** ;PROPUESTAS **************************/
 .propuestas .screen p strong {
   color: #c87072; }
-.propuestas .screen ul strong, .propuestas .screen b {
-  color: #379088; }
-.propuestas .screen .pedro-kumamoto {
-  margin-top: 0;
-  margin-left: 4em; }
-  .propuestas .screen .pedro-kumamoto .kumalogo {
-    float: left;
-    margin-right: 2.5em;
-    height: 12em;
-    margin-top: 5px;
-    position: relative;
-    z-index: 2; }
-  .propuestas .screen .pedro-kumamoto h1 {
-    padding-top: 0;
-    margin-top: 0;
-    font-size: 10em;
-    line-height: 0.6em;
-    font-family: "Lemon/Milk", Helvetica, Arial;
-    margin-bottom: 0;
-    position: relative;
-    color: transparent;
-    text-align: left; }
-    .propuestas .screen .pedro-kumamoto h1 img {
-      height: 0.5em;
-      vertical-align: middle; }
+.propuestas .screen ol {
+  margin-top: 0; }
+  .propuestas .screen ol strong {
+    color: #379088; }
+.propuestas .screen .header {
+  margin-top: 2em;
+  margin-bottom: 2em; }
+  .propuestas .screen .header .pedro-kumamoto {
+    width: 60em;
+    padding-left: 4em;
+    margin: 0 auto;
+    display: inline-block;
+    vertical-align: middle; }
+    .propuestas .screen .header .pedro-kumamoto .kumalogo {
+      float: left;
+      margin-right: 2.5em;
+      height: 12em;
+      margin-top: 0.2em;
+      position: relative;
+      z-index: 2; }
+    .propuestas .screen .header .pedro-kumamoto h1 {
+      padding-top: 0;
+      margin-top: 0;
+      font-size: 10em;
+      line-height: 0.6em;
+      font-family: "Lemon/Milk", Helvetica, Arial;
+      margin-bottom: 0;
+      position: relative;
+      color: transparent;
+      text-align: left; }
+      .propuestas .screen .header .pedro-kumamoto h1 img {
+        height: 0.5em;
+        vertical-align: middle; }
+  .propuestas .screen .header .where {
+    display: inline-block;
+    vertical-align: middle; }
 .propuestas .screen h1 {
   font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
   font-weight: 200;
   font-size: 7em;
   text-align: center;
   margin: 0;
-  text-transform: uppercase;
   z-index: 2;
   color: #000;
   width: 100%;
   text-align: center;
-  margin-top: 0; }
+  margin-top: 0;
+  line-height: 1em; }
   .propuestas .screen h1 strong {
     font-family: "FF Meta W01", Helvetica, Arial, sans-serif; }
-.propuestas .screen .copy {
-  font-size: 1.5em;
-  position: relative; }
-  .propuestas .screen .copy span.hidden, .propuestas .screen .copy span.menos {
-    display: none; }
-  .propuestas .screen .copy a.leer-mas {
-    text-transform: uppercase;
-    text-decoration: none;
-    color: black;
-    background: #eee;
-    display: inline-block;
-    padding: .5em 1em;
-    margin-left: 10em;
-    font-family: "FF Meta W01", Helvetica, Arial, sans-serif; }
-    .propuestas .screen .copy a.leer-mas:hover {
-      text-decoration: underline;
-      background: #555;
-      color: #fff; }
-  .propuestas .screen .copy li {
-    margin: 20px 10px; }
-  .propuestas .screen .copy .propuestas {
-    font-weight: bold; }
-  .propuestas .screen .copy .left, .propuestas .screen .copy .right {
-    display: inline-block;
-    vertical-align: top; }
-  .propuestas .screen .copy .left {
-    width: 30%;
-    text-align: center; }
-    .propuestas .screen .copy .left img {
-      height: 200px; }
-  .propuestas .screen .copy .right {
-    width: 60%; }
-.propuestas .screen .fb-mockup {
-  background: #e9eaed;
-  text-align: center;
-  border-top: 1px solid #ccc;
-  height: 500px;
-  overflow: hidden; }
-.propuestas .screen .text.leer-mas {
-  height: 100%;
-  font-size: 0.8em; }
-  .propuestas .screen .text.leer-mas .fb-mockup {
-    display: none; }
-  .propuestas .screen .text.leer-mas span.hidden, .propuestas .screen .text.leer-mas span.menos {
-    display: inline; }
-  .propuestas .screen .text.leer-mas a.leer-mas {
-    background: #ccc; }
-  .propuestas .screen .text.leer-mas span.mas {
-    display: none; }
 .propuestas .screen.toc a {
-  color: #000;
-  text-decoration: none;
-  /*&:hover {background:#eee}*/ }
+  text-decoration: none; }
   .propuestas .screen.toc a img {
-    height: 100px;
+    height: 3em;
     vertical-align: middle; }
 .propuestas .screen.toc h2 {
   font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
   font-size: 3.5em;
-  font-weight: bold;
-  text-transform: uppercase; }
+  font-weight: 200;
+  text-transform: uppercase;
+  margin-bottom: 0.2em; }
   .propuestas .screen.toc h2 a {
-    line-height: 1em;
-    background: pink;
+    color: black;
+    line-height: 3.5em;
+    background: #EACCCC;
     display: block; }
   .propuestas .screen.toc h2 strong {
     font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
@@ -996,13 +1010,14 @@ body {
   width: 100%;
   text-align: left;
   margin: 0;
-  margin-left: 0.5em; }
+  font-weight: 200; }
   .propuestas .screen.toc h3 a {
-    line-height: 2.5em;
+    color: black;
+    line-height: 4em;
     display: block; }
     .propuestas .screen.toc h3 a span {
       display: inline-block;
-      width: 150px;
+      width: 6em;
       text-align: center; }
     .propuestas .screen.toc h3 a:hover {
       background: #eee; }
@@ -1010,7 +1025,7 @@ body {
     font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
     font-weight: bold; }
 .propuestas .screen.toc .ciudad, .propuestas .screen.toc .gobierno {
-  width: 49%;
+  width: 49.9%;
   display: inline-block;
   text-align: center;
   vertical-align: top; }
@@ -1021,86 +1036,185 @@ body {
   margin-left: 0.5em; }
 .propuestas .screen.toc .ciudad h3 a img {
   margin-right: 1em; }
-.propuestas .screen.toc .ciudad h3 a {
-  margin-right: 1em; }
 .propuestas .screen.toc .gobierno h2 {
   text-align: left; }
   .propuestas .screen.toc .gobierno h2 a {
-    background: #c8e5f0; }
-  .propuestas .screen.toc .gobierno h2 a img {
-    margin-left: 0.8em;
-    margin-right: 0.3em; }
+    background: #DAECE8; }
+    .propuestas .screen.toc .gobierno h2 a img {
+      margin-left: 0.8em;
+      margin-right: 0.3em; }
 .propuestas .screen.ciudad h1, .propuestas .screen.gobierno h1 {
   position: absolute;
-  top: 20px;
-  left: 0; }
+  top: 1em;
+  left: 0;
+  font-size: 9em;
+  /*text-shadow:0.03em 0.03em white;*/ }
   .propuestas .screen.ciudad h1 img, .propuestas .screen.gobierno h1 img {
-    height: 1.5em;
+    height: 2.5em;
     vertical-align: middle; }
+.propuestas .screen.ciudad img.gobierno, .propuestas .screen.ciudad img.ciudad, .propuestas .screen.gobierno img.gobierno, .propuestas .screen.gobierno img.ciudad {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100%; }
 .propuestas .screen.ciudad div.copy, .propuestas .screen.gobierno div.copy {
   position: absolute;
-  bottom: 20%;
-  right: 9%;
-  font-size: 1.6em;
+  bottom: 3em;
+  right: 4em;
+  z-index: 2;
+  background-color: white;
+  padding: 1em 3em;
+  font-size: 1.4em;
   font-family: "L Futura W01", Helvetica;
-  width: 40%; }
+  width: 30em; }
+  .propuestas .screen.ciudad div.copy strong, .propuestas .screen.gobierno div.copy strong {
+    font-size: 1em; }
+  .propuestas .screen.ciudad div.copy b, .propuestas .screen.gobierno div.copy b {
+    color: #379088; }
 .propuestas .screen.gobierno {
   position: relative; }
-  .propuestas .screen.gobierno img.congreso {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    height: 100%; }
   .propuestas .screen.gobierno h1 {
     position: absolute;
-    top: 20px;
-    z-index: 2;
-    color: white; }
+    z-index: 2; }
   .propuestas .screen.gobierno div.copy {
-    left: 4%;
-    right: auto;
-    z-index: 2;
-    background-color: rgba(255, 255, 255, 0.8);
-    padding: 10px 30px; }
+    left: 4em;
+    right: auto; }
 .propuestas .screen.democratica, .propuestas .screen.sostenible, .propuestas .screen.incluyente, .propuestas .screen.personas, .propuestas .screen.excelencia, .propuestas .screen.contrapeso {
   background: #eee; }
-  .propuestas .screen.democratica .video, .propuestas .screen.sostenible .video, .propuestas .screen.incluyente .video, .propuestas .screen.personas .video, .propuestas .screen.excelencia .video, .propuestas .screen.contrapeso .video {
-    width: 30%;
-    height: 100%;
+  .propuestas .screen.democratica .video, .propuestas .screen.democratica .fb, .propuestas .screen.democratica .text, .propuestas .screen.sostenible .video, .propuestas .screen.sostenible .fb, .propuestas .screen.sostenible .text, .propuestas .screen.incluyente .video, .propuestas .screen.incluyente .fb, .propuestas .screen.incluyente .text, .propuestas .screen.personas .video, .propuestas .screen.personas .fb, .propuestas .screen.personas .text, .propuestas .screen.excelencia .video, .propuestas .screen.excelencia .fb, .propuestas .screen.excelencia .text, .propuestas .screen.contrapeso .video, .propuestas .screen.contrapeso .fb, .propuestas .screen.contrapeso .text {
+    width: 33%;
     display: inline-block;
-    background: #ccc;
-    vertical-align: middle;
-    position: relative;
+    vertical-align: top;
+    height: 100%;
     overflow: hidden; }
+  .propuestas .screen.democratica .video, .propuestas .screen.sostenible .video, .propuestas .screen.incluyente .video, .propuestas .screen.personas .video, .propuestas .screen.excelencia .video, .propuestas .screen.contrapeso .video {
+    width: 28%; }
+  .propuestas .screen.democratica .text, .propuestas .screen.sostenible .text, .propuestas .screen.incluyente .text, .propuestas .screen.personas .text, .propuestas .screen.excelencia .text, .propuestas .screen.contrapeso .text {
+    width: 38%; }
+  .propuestas .screen.democratica .fb, .propuestas .screen.sostenible .fb, .propuestas .screen.incluyente .fb, .propuestas .screen.personas .fb, .propuestas .screen.excelencia .fb, .propuestas .screen.contrapeso .fb {
+    max-width: 550px; }
+  .propuestas .screen.democratica .video, .propuestas .screen.sostenible .video, .propuestas .screen.incluyente .video, .propuestas .screen.personas .video, .propuestas .screen.excelencia .video, .propuestas .screen.contrapeso .video {
+    background: #ccc;
+    position: relative; }
     .propuestas .screen.democratica .video img, .propuestas .screen.sostenible .video img, .propuestas .screen.incluyente .video img, .propuestas .screen.personas .video img, .propuestas .screen.excelencia .video img, .propuestas .screen.contrapeso .video img {
       position: absolute;
       top: 0;
       left: 0; }
+  .propuestas .screen.democratica .fb, .propuestas .screen.sostenible .fb, .propuestas .screen.incluyente .fb, .propuestas .screen.personas .fb, .propuestas .screen.excelencia .fb, .propuestas .screen.contrapeso .fb {
+    background: #e9eaed;
+    text-align: center; }
+  .propuestas .screen.democratica .fb img, .propuestas .screen.sostenible .fb img, .propuestas .screen.incluyente .fb img, .propuestas .screen.personas .fb img, .propuestas .screen.excelencia .fb img, .propuestas .screen.contrapeso .fb img {
+    width: 511px; }
   .propuestas .screen.democratica .text, .propuestas .screen.sostenible .text, .propuestas .screen.incluyente .text, .propuestas .screen.personas .text, .propuestas .screen.excelencia .text, .propuestas .screen.contrapeso .text {
-    width: 69%;
-    display: inline-block;
-    vertical-align: top;
     background: #fff; }
     .propuestas .screen.democratica .text h2, .propuestas .screen.sostenible .text h2, .propuestas .screen.incluyente .text h2, .propuestas .screen.personas .text h2, .propuestas .screen.excelencia .text h2, .propuestas .screen.contrapeso .text h2 {
       text-transform: uppercase;
       font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
       font-size: 3em;
       width: 100%;
-      margin-top: 30px;
-      margin-bottom: 0;
-      margin-left: 50px;
-      opacity: 0.4; }
-      .propuestas .screen.democratica .text h2 img, .propuestas .screen.sostenible .text h2 img, .propuestas .screen.incluyente .text h2 img, .propuestas .screen.personas .text h2 img, .propuestas .screen.excelencia .text h2 img, .propuestas .screen.contrapeso .text h2 img {
-        height: 1em;
-        vertical-align: middle; }
-    .propuestas .screen.democratica .text h1, .propuestas .screen.sostenible .text h1, .propuestas .screen.incluyente .text h1, .propuestas .screen.personas .text h1, .propuestas .screen.excelencia .text h1, .propuestas .screen.contrapeso .text h1 {
-      text-align: left;
-      margin-left: 50px;
       margin-top: 0;
-      font-size: 5em; }
+      margin-bottom: 0;
+      padding: 0.2em 0;
+      font-weight: normal;
+      background: #F7E4E4;
+      text-align: center; }
+      .propuestas .screen.democratica .text h2 img, .propuestas .screen.sostenible .text h2 img, .propuestas .screen.incluyente .text h2 img, .propuestas .screen.personas .text h2 img, .propuestas .screen.excelencia .text h2 img, .propuestas .screen.contrapeso .text h2 img {
+        height: 1.5em;
+        vertical-align: middle; }
+      .propuestas .screen.democratica .text h2 a, .propuestas .screen.sostenible .text h2 a, .propuestas .screen.incluyente .text h2 a, .propuestas .screen.personas .text h2 a, .propuestas .screen.excelencia .text h2 a, .propuestas .screen.contrapeso .text h2 a {
+        text-decoration: none;
+        color: #000; }
+    .propuestas .screen.democratica .text h1, .propuestas .screen.sostenible .text h1, .propuestas .screen.incluyente .text h1, .propuestas .screen.personas .text h1, .propuestas .screen.excelencia .text h1, .propuestas .screen.contrapeso .text h1 {
+      text-align: center;
+      margin-left: 0;
+      margin-top: 0;
+      padding: 0.4em 0;
+      padding-top: 0.2em;
+      font-size: 5em;
+      background: #EACCCC;
+      line-height: 0.9em; }
+    .propuestas .screen.democratica .text div.icono, .propuestas .screen.sostenible .text div.icono, .propuestas .screen.incluyente .text div.icono, .propuestas .screen.personas .text div.icono, .propuestas .screen.excelencia .text div.icono, .propuestas .screen.contrapeso .text div.icono {
+      margin: 2em auto;
+      text-align: center; }
+      .propuestas .screen.democratica .text div.icono img, .propuestas .screen.sostenible .text div.icono img, .propuestas .screen.incluyente .text div.icono img, .propuestas .screen.personas .text div.icono img, .propuestas .screen.excelencia .text div.icono img, .propuestas .screen.contrapeso .text div.icono img {
+        width: 30%; }
+    .propuestas .screen.democratica .text p, .propuestas .screen.democratica .text ol li, .propuestas .screen.sostenible .text p, .propuestas .screen.sostenible .text ol li, .propuestas .screen.incluyente .text p, .propuestas .screen.incluyente .text ol li, .propuestas .screen.personas .text p, .propuestas .screen.personas .text ol li, .propuestas .screen.excelencia .text p, .propuestas .screen.excelencia .text ol li, .propuestas .screen.contrapeso .text p, .propuestas .screen.contrapeso .text ol li {
+      margin: 0 2em;
+      padding: 0.7em 1em;
+      padding-bottom: 0.3em; }
+    .propuestas .screen.democratica .text ol li, .propuestas .screen.sostenible .text ol li, .propuestas .screen.incluyente .text ol li, .propuestas .screen.personas .text ol li, .propuestas .screen.excelencia .text ol li, .propuestas .screen.contrapeso .text ol li {
+      margin-top: 0; }
+    .propuestas .screen.democratica .text p.mas, .propuestas .screen.democratica .text li.mas, .propuestas .screen.democratica .text p.menos, .propuestas .screen.democratica .text li.menos, .propuestas .screen.sostenible .text p.mas, .propuestas .screen.sostenible .text li.mas, .propuestas .screen.sostenible .text p.menos, .propuestas .screen.sostenible .text li.menos, .propuestas .screen.incluyente .text p.mas, .propuestas .screen.incluyente .text li.mas, .propuestas .screen.incluyente .text p.menos, .propuestas .screen.incluyente .text li.menos, .propuestas .screen.personas .text p.mas, .propuestas .screen.personas .text li.mas, .propuestas .screen.personas .text p.menos, .propuestas .screen.personas .text li.menos, .propuestas .screen.excelencia .text p.mas, .propuestas .screen.excelencia .text li.mas, .propuestas .screen.excelencia .text p.menos, .propuestas .screen.excelencia .text li.menos, .propuestas .screen.contrapeso .text p.mas, .propuestas .screen.contrapeso .text li.mas, .propuestas .screen.contrapeso .text p.menos, .propuestas .screen.contrapeso .text li.menos {
+      cursor: pointer; }
+      .propuestas .screen.democratica .text p.mas span.mas span.label, .propuestas .screen.democratica .text li.mas span.mas span.label, .propuestas .screen.democratica .text p.menos span.mas span.label, .propuestas .screen.democratica .text li.menos span.mas span.label, .propuestas .screen.sostenible .text p.mas span.mas span.label, .propuestas .screen.sostenible .text li.mas span.mas span.label, .propuestas .screen.sostenible .text p.menos span.mas span.label, .propuestas .screen.sostenible .text li.menos span.mas span.label, .propuestas .screen.incluyente .text p.mas span.mas span.label, .propuestas .screen.incluyente .text li.mas span.mas span.label, .propuestas .screen.incluyente .text p.menos span.mas span.label, .propuestas .screen.incluyente .text li.menos span.mas span.label, .propuestas .screen.personas .text p.mas span.mas span.label, .propuestas .screen.personas .text li.mas span.mas span.label, .propuestas .screen.personas .text p.menos span.mas span.label, .propuestas .screen.personas .text li.menos span.mas span.label, .propuestas .screen.excelencia .text p.mas span.mas span.label, .propuestas .screen.excelencia .text li.mas span.mas span.label, .propuestas .screen.excelencia .text p.menos span.mas span.label, .propuestas .screen.excelencia .text li.menos span.mas span.label, .propuestas .screen.contrapeso .text p.mas span.mas span.label, .propuestas .screen.contrapeso .text li.mas span.mas span.label, .propuestas .screen.contrapeso .text p.menos span.mas span.label, .propuestas .screen.contrapeso .text li.menos span.mas span.label {
+        display: none; }
+      .propuestas .screen.democratica .text p.mas:hover, .propuestas .screen.democratica .text li.mas:hover, .propuestas .screen.democratica .text p.menos:hover, .propuestas .screen.democratica .text li.menos:hover, .propuestas .screen.sostenible .text p.mas:hover, .propuestas .screen.sostenible .text li.mas:hover, .propuestas .screen.sostenible .text p.menos:hover, .propuestas .screen.sostenible .text li.menos:hover, .propuestas .screen.incluyente .text p.mas:hover, .propuestas .screen.incluyente .text li.mas:hover, .propuestas .screen.incluyente .text p.menos:hover, .propuestas .screen.incluyente .text li.menos:hover, .propuestas .screen.personas .text p.mas:hover, .propuestas .screen.personas .text li.mas:hover, .propuestas .screen.personas .text p.menos:hover, .propuestas .screen.personas .text li.menos:hover, .propuestas .screen.excelencia .text p.mas:hover, .propuestas .screen.excelencia .text li.mas:hover, .propuestas .screen.excelencia .text p.menos:hover, .propuestas .screen.excelencia .text li.menos:hover, .propuestas .screen.contrapeso .text p.mas:hover, .propuestas .screen.contrapeso .text li.mas:hover, .propuestas .screen.contrapeso .text p.menos:hover, .propuestas .screen.contrapeso .text li.menos:hover {
+        background: #eee;
+        /*span.mas span.label {display:inline}*/ }
+        .propuestas .screen.democratica .text p.mas:hover a.leer-mas, .propuestas .screen.democratica .text li.mas:hover a.leer-mas, .propuestas .screen.democratica .text p.menos:hover a.leer-mas, .propuestas .screen.democratica .text li.menos:hover a.leer-mas, .propuestas .screen.sostenible .text p.mas:hover a.leer-mas, .propuestas .screen.sostenible .text li.mas:hover a.leer-mas, .propuestas .screen.sostenible .text p.menos:hover a.leer-mas, .propuestas .screen.sostenible .text li.menos:hover a.leer-mas, .propuestas .screen.incluyente .text p.mas:hover a.leer-mas, .propuestas .screen.incluyente .text li.mas:hover a.leer-mas, .propuestas .screen.incluyente .text p.menos:hover a.leer-mas, .propuestas .screen.incluyente .text li.menos:hover a.leer-mas, .propuestas .screen.personas .text p.mas:hover a.leer-mas, .propuestas .screen.personas .text li.mas:hover a.leer-mas, .propuestas .screen.personas .text p.menos:hover a.leer-mas, .propuestas .screen.personas .text li.menos:hover a.leer-mas, .propuestas .screen.excelencia .text p.mas:hover a.leer-mas, .propuestas .screen.excelencia .text li.mas:hover a.leer-mas, .propuestas .screen.excelencia .text p.menos:hover a.leer-mas, .propuestas .screen.excelencia .text li.menos:hover a.leer-mas, .propuestas .screen.contrapeso .text p.mas:hover a.leer-mas, .propuestas .screen.contrapeso .text li.mas:hover a.leer-mas, .propuestas .screen.contrapeso .text p.menos:hover a.leer-mas, .propuestas .screen.contrapeso .text li.menos:hover a.leer-mas {
+          background: #ccc; }
+        .propuestas .screen.democratica .text p.mas:hover a.leer-mas:hover, .propuestas .screen.democratica .text li.mas:hover a.leer-mas:hover, .propuestas .screen.democratica .text p.menos:hover a.leer-mas:hover, .propuestas .screen.democratica .text li.menos:hover a.leer-mas:hover, .propuestas .screen.sostenible .text p.mas:hover a.leer-mas:hover, .propuestas .screen.sostenible .text li.mas:hover a.leer-mas:hover, .propuestas .screen.sostenible .text p.menos:hover a.leer-mas:hover, .propuestas .screen.sostenible .text li.menos:hover a.leer-mas:hover, .propuestas .screen.incluyente .text p.mas:hover a.leer-mas:hover, .propuestas .screen.incluyente .text li.mas:hover a.leer-mas:hover, .propuestas .screen.incluyente .text p.menos:hover a.leer-mas:hover, .propuestas .screen.incluyente .text li.menos:hover a.leer-mas:hover, .propuestas .screen.personas .text p.mas:hover a.leer-mas:hover, .propuestas .screen.personas .text li.mas:hover a.leer-mas:hover, .propuestas .screen.personas .text p.menos:hover a.leer-mas:hover, .propuestas .screen.personas .text li.menos:hover a.leer-mas:hover, .propuestas .screen.excelencia .text p.mas:hover a.leer-mas:hover, .propuestas .screen.excelencia .text li.mas:hover a.leer-mas:hover, .propuestas .screen.excelencia .text p.menos:hover a.leer-mas:hover, .propuestas .screen.excelencia .text li.menos:hover a.leer-mas:hover, .propuestas .screen.contrapeso .text p.mas:hover a.leer-mas:hover, .propuestas .screen.contrapeso .text li.mas:hover a.leer-mas:hover, .propuestas .screen.contrapeso .text p.menos:hover a.leer-mas:hover, .propuestas .screen.contrapeso .text li.menos:hover a.leer-mas:hover {
+          background: #555; }
+    .propuestas .screen.democratica .text p.mas span.hidden, .propuestas .screen.democratica .text p.mas span.menos, .propuestas .screen.democratica .text li.mas span.hidden, .propuestas .screen.democratica .text li.mas span.menos, .propuestas .screen.sostenible .text p.mas span.hidden, .propuestas .screen.sostenible .text p.mas span.menos, .propuestas .screen.sostenible .text li.mas span.hidden, .propuestas .screen.sostenible .text li.mas span.menos, .propuestas .screen.incluyente .text p.mas span.hidden, .propuestas .screen.incluyente .text p.mas span.menos, .propuestas .screen.incluyente .text li.mas span.hidden, .propuestas .screen.incluyente .text li.mas span.menos, .propuestas .screen.personas .text p.mas span.hidden, .propuestas .screen.personas .text p.mas span.menos, .propuestas .screen.personas .text li.mas span.hidden, .propuestas .screen.personas .text li.mas span.menos, .propuestas .screen.excelencia .text p.mas span.hidden, .propuestas .screen.excelencia .text p.mas span.menos, .propuestas .screen.excelencia .text li.mas span.hidden, .propuestas .screen.excelencia .text li.mas span.menos, .propuestas .screen.contrapeso .text p.mas span.hidden, .propuestas .screen.contrapeso .text p.mas span.menos, .propuestas .screen.contrapeso .text li.mas span.hidden, .propuestas .screen.contrapeso .text li.mas span.menos {
+      display: none; }
+    .propuestas .screen.democratica .text p.mas span.mas, .propuestas .screen.democratica .text li.mas span.mas, .propuestas .screen.sostenible .text p.mas span.mas, .propuestas .screen.sostenible .text li.mas span.mas, .propuestas .screen.incluyente .text p.mas span.mas, .propuestas .screen.incluyente .text li.mas span.mas, .propuestas .screen.personas .text p.mas span.mas, .propuestas .screen.personas .text li.mas span.mas, .propuestas .screen.excelencia .text p.mas span.mas, .propuestas .screen.excelencia .text li.mas span.mas, .propuestas .screen.contrapeso .text p.mas span.mas, .propuestas .screen.contrapeso .text li.mas span.mas {
+      display: inline; }
+    .propuestas .screen.democratica .text p a, .propuestas .screen.democratica .text ol li a, .propuestas .screen.sostenible .text p a, .propuestas .screen.sostenible .text ol li a, .propuestas .screen.incluyente .text p a, .propuestas .screen.incluyente .text ol li a, .propuestas .screen.personas .text p a, .propuestas .screen.personas .text ol li a, .propuestas .screen.excelencia .text p a, .propuestas .screen.excelencia .text ol li a, .propuestas .screen.contrapeso .text p a, .propuestas .screen.contrapeso .text ol li a {
+      color: #000; }
+    .propuestas .screen.democratica .text p.menos span.hidden, .propuestas .screen.democratica .text p.menos span.menos, .propuestas .screen.democratica .text li.menos span.hidden, .propuestas .screen.democratica .text li.menos span.menos, .propuestas .screen.sostenible .text p.menos span.hidden, .propuestas .screen.sostenible .text p.menos span.menos, .propuestas .screen.sostenible .text li.menos span.hidden, .propuestas .screen.sostenible .text li.menos span.menos, .propuestas .screen.incluyente .text p.menos span.hidden, .propuestas .screen.incluyente .text p.menos span.menos, .propuestas .screen.incluyente .text li.menos span.hidden, .propuestas .screen.incluyente .text li.menos span.menos, .propuestas .screen.personas .text p.menos span.hidden, .propuestas .screen.personas .text p.menos span.menos, .propuestas .screen.personas .text li.menos span.hidden, .propuestas .screen.personas .text li.menos span.menos, .propuestas .screen.excelencia .text p.menos span.hidden, .propuestas .screen.excelencia .text p.menos span.menos, .propuestas .screen.excelencia .text li.menos span.hidden, .propuestas .screen.excelencia .text li.menos span.menos, .propuestas .screen.contrapeso .text p.menos span.hidden, .propuestas .screen.contrapeso .text p.menos span.menos, .propuestas .screen.contrapeso .text li.menos span.hidden, .propuestas .screen.contrapeso .text li.menos span.menos {
+      display: inline-block; }
+    .propuestas .screen.democratica .text p.menos span.hidden, .propuestas .screen.democratica .text li.menos span.hidden, .propuestas .screen.sostenible .text p.menos span.hidden, .propuestas .screen.sostenible .text li.menos span.hidden, .propuestas .screen.incluyente .text p.menos span.hidden, .propuestas .screen.incluyente .text li.menos span.hidden, .propuestas .screen.personas .text p.menos span.hidden, .propuestas .screen.personas .text li.menos span.hidden, .propuestas .screen.excelencia .text p.menos span.hidden, .propuestas .screen.excelencia .text li.menos span.hidden, .propuestas .screen.contrapeso .text p.menos span.hidden, .propuestas .screen.contrapeso .text li.menos span.hidden {
+      margin: 0.5em 0; }
+    .propuestas .screen.democratica .text p.menos a.leer-mas, .propuestas .screen.democratica .text li.menos a.leer-mas, .propuestas .screen.sostenible .text p.menos a.leer-mas, .propuestas .screen.sostenible .text li.menos a.leer-mas, .propuestas .screen.incluyente .text p.menos a.leer-mas, .propuestas .screen.incluyente .text li.menos a.leer-mas, .propuestas .screen.personas .text p.menos a.leer-mas, .propuestas .screen.personas .text li.menos a.leer-mas, .propuestas .screen.excelencia .text p.menos a.leer-mas, .propuestas .screen.excelencia .text li.menos a.leer-mas, .propuestas .screen.contrapeso .text p.menos a.leer-mas, .propuestas .screen.contrapeso .text li.menos a.leer-mas {
+      background: #ccc; }
+    .propuestas .screen.democratica .text p.menos span.mas, .propuestas .screen.democratica .text li.menos span.mas, .propuestas .screen.sostenible .text p.menos span.mas, .propuestas .screen.sostenible .text li.menos span.mas, .propuestas .screen.incluyente .text p.menos span.mas, .propuestas .screen.incluyente .text li.menos span.mas, .propuestas .screen.personas .text p.menos span.mas, .propuestas .screen.personas .text li.menos span.mas, .propuestas .screen.excelencia .text p.menos span.mas, .propuestas .screen.excelencia .text li.menos span.mas, .propuestas .screen.contrapeso .text p.menos span.mas, .propuestas .screen.contrapeso .text li.menos span.mas {
+      display: none; }
+.propuestas .screen.personas .text h2, .propuestas .screen.excelencia .text h2, .propuestas .screen.contrapeso .text h2 {
+  background: #ECFCF8; }
+.propuestas .screen.personas .text h1, .propuestas .screen.excelencia .text h1, .propuestas .screen.contrapeso .text h1 {
+  background: #BBDAD3; }
+.propuestas .screen .copy {
+  font-size: 1.2em;
+  position: relative;
+  margin: 0 2em;
+  margin-top: 2em; }
+  .propuestas .screen .copy span.hidden, .propuestas .screen .copy span.menos {
+    display: none; }
+  .propuestas .screen .copy a.leer-mas {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black;
+    background: #eee;
+    display: inline-block;
+    padding: 0.1em 0.4em;
+    /*user-select:none; -o-user-select:none; -moz-user-select:none; -khtml-user-select:none; -webkit-user-select:none;*/
+    margin-left: 0.2em;
+    vertical-align: top;
+    font-family: "FF Meta W01", Helvetica, Arial, sans-serif; }
+    .propuestas .screen .copy a.leer-mas:hover {
+      text-decoration: underline;
+      color: #fff; }
+  .propuestas .screen .copy .propuestas, .propuestas .screen .copy p strong {
+    font-weight: bold;
+    font-size: 1.2em; }
+  .propuestas .screen .copy li strong {
+    font-weight: bold;
+    color: #379088; }
+  .propuestas .screen .copy b {
+    color: black; }
+  .propuestas .screen .copy .left, .propuestas .screen .copy .right {
+    display: inline-block;
+    vertical-align: top; }
+  .propuestas .screen .copy .left {
+    width: 30%;
+    text-align: center; }
+    .propuestas .screen .copy .left img {
+      height: 200px; }
+  .propuestas .screen .copy .right {
+    width: 60%; }
 
-/************************** PRINCIPIOS **************************/
+/************************** ;PRINCIPIOS **************************/
 .principios {
   vertical-align: top; }
   .principios .pedro-kumamoto {
@@ -1147,11 +1261,10 @@ body {
     width: 69%;
     display: inline-block;
     vertical-align: top; }
-    .principios .screen .text .fb-mockup {
+    .principios .screen .text .fb {
       background: #e9eaed;
       text-align: center;
       border-top: 1px solid #ccc;
-      height: 550px;
       overflow: hidden;
       text-align: center;
       position: absolute;
@@ -1252,84 +1365,45 @@ body {
     .principios .screen.transparencia .media {
       background: #e48d88; }
 
-/************************** MENU **************************/
-#menu {
-  position: absolute;
-  bottom: 15%;
-  left: 0;
-  z-index: 2;
-  font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  font-size: 1.3em;
-  counter-reset: item -1; }
-  #menu a {
-    color: #fff;
-    display: block;
-    margin: 0;
-    height: 2.5em; }
-    #menu a strong {
-      display: inline-block; }
-    #menu a::before {
-      background: #555;
-      width: 2em;
-      height: 1.6em;
-      padding: 0.5em 0;
-      text-align: center;
-      display: inline-block;
-      content: counter(item);
-      box-shadow: 2px 2px 5px #ccc;
-      counter-increment: item; }
-    #menu a strong {
-      display: none;
-      background: #aaa;
-      padding: 0.5em 1em;
-      text-transform: uppercase; }
-      #menu a strong span {
-        font-weight: 200; }
-    #menu a:nth-child(odd)::before {
-      background: #777; }
-    #menu a:nth-of-type(1):before {
-      content: '\2191';
-      background: #eee;
-      color: #333; }
-    #menu a.active::before {
-      content: '\2192';
-      background-color: yellow;
-      color: #333; }
-    #menu a:hover::before {
-      background: red;
-      content: counter(item); }
-    #menu a:hover strong {
-      display: inline-block;
-      background: blue; }
-
-/************************** COMPROMISOS **************************/
-.compromisos .pedro-kumamoto {
+/************************** ;COMPROMISOS **************************/
+.compromisos .header {
   margin-top: 2em;
-  margin-left: 4em; }
-  .compromisos .pedro-kumamoto .kumalogo {
-    float: left;
-    margin-right: 2.5em;
-    height: 12em;
-    margin-top: 5px;
-    position: relative;
-    z-index: 2; }
-  .compromisos .pedro-kumamoto h1 {
-    padding-top: 0;
-    margin-top: 0;
-    font-size: 10em;
-    line-height: 0.6em;
-    font-family: "Lemon/Milk", Helvetica, Arial;
-    margin-bottom: 0;
-    position: relative;
-    color: transparent;
-    text-align: left; }
-    .compromisos .pedro-kumamoto h1 img {
-      height: 0.5em;
-      vertical-align: middle; }
+  margin-bottom: 6em; }
+  .compromisos .header .pedro-kumamoto {
+    width: 60em;
+    padding-left: 4em;
+    margin: 0 auto;
+    display: inline-block;
+    vertical-align: middle; }
+    .compromisos .header .pedro-kumamoto .kumalogo {
+      float: left;
+      margin-right: 2.5em;
+      height: 12em;
+      margin-top: 0.2em;
+      position: relative;
+      z-index: 2; }
+    .compromisos .header .pedro-kumamoto h1 {
+      padding-top: 0;
+      margin-top: 0;
+      font-size: 10em;
+      line-height: 0.6em;
+      font-family: "Lemon/Milk", Helvetica, Arial;
+      margin-bottom: 0;
+      position: relative;
+      color: transparent;
+      text-align: left; }
+      .compromisos .header .pedro-kumamoto h1 img {
+        height: 0.5em;
+        vertical-align: middle; }
+  .compromisos .header .where {
+    display: inline-block;
+    vertical-align: middle; }
+    .compromisos .header .where h2 {
+      text-transform: none;
+      font-size: 7em; }
 .compromisos h2 {
   font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
-  font-weight: normal;
+  font-weight: 200;
   font-size: 5em;
   text-align: left;
   margin: 0;
@@ -1362,13 +1436,12 @@ body {
       width: 100%; }
   .compromisos .screen.toc {
     text-align: left;
-    background: #fff; }
-    .compromisos .screen.toc h2 {
-      color: #c87072; }
+    background: #fff;
+    /*h2 {color:rgb(200, 112, 114);}*/ }
     .compromisos .screen.toc p {
       font-family: Helvetica;
       font-size: 1.5em;
-      width: 80%;
+      width: 30em;
       margin: 1.5em auto;
       text-align: left; }
       .compromisos .screen.toc p a, .compromisos .screen.toc p strong {
@@ -1377,15 +1450,40 @@ body {
         color: #379088; }
     .compromisos .screen.toc div.toc {
       text-align: left;
-      margin-left: 10%; }
-      .compromisos .screen.toc div.toc a.campanha, .compromisos .screen.toc div.toc a.congreso {
-        display: block;
+      margin-top: 8em; }
+      .compromisos .screen.toc div.toc a {
+        display: inline-block;
+        width: 49.9%;
         font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
-        font-size: 4em;
+        font-size: 5em;
+        font-weight: 200;
         text-transform: uppercase;
         text-decoration: none;
         margin: 0;
         color: black; }
+        .compromisos .screen.toc div.toc a span {
+          position: relative;
+          width: 2em;
+          display: inline-block; }
+          .compromisos .screen.toc div.toc a span img {
+            vertical-align: middle;
+            height: 3em;
+            margin: 0 1em;
+            position: absolute; }
+      .compromisos .screen.toc div.toc a.en-campanha {
+        background: #EACCCC;
+        text-align: right; }
+        .compromisos .screen.toc div.toc a.en-campanha img {
+          text-align: right;
+          top: -2em;
+          left: -0.8em; }
+      .compromisos .screen.toc div.toc a.en-el-congreso {
+        background: #DAECE8; }
+        .compromisos .screen.toc div.toc a.en-el-congreso span {
+          width: 3.5em; }
+          .compromisos .screen.toc div.toc a.en-el-congreso span img {
+            top: -2em;
+            left: -0.8em; }
   .compromisos .screen .infografia {
     width: 30%;
     height: 100%;
@@ -1465,77 +1563,63 @@ body {
       .compromisos .screen .text.leer-mas li {
         margin-top: 1em;
         margin-bottom: 1em; }
-      .compromisos .screen .text.leer-mas .fb-mockup {
+      .compromisos .screen .text.leer-mas .fb {
         display: none; }
-    .compromisos .screen .text .fb-mockup {
+    .compromisos .screen .text .fb {
       background: #e9eaed;
       text-align: center;
       border-top: 1px solid #ccc;
-      height: 500px;
       overflow: hidden; }
 
+/************************** ;NAVBAR **************************/
 .navbar {
   background: transparent;
   position: absolute;
   bottom: 0;
   overflow: hidden;
-  height: 5em;
+  height: 9.3em;
   width: 100%; }
   .navbar a {
     text-transform: uppercase;
     display: inline-block;
-    line-height: 1em;
-    height: 5em;
-    font-size: 4.5em;
+    line-height: 1.15em;
+    height: 5.6em;
+    font-size: 5.5em;
     text-decoration: none;
     color: #4A746D;
     float: left;
     text-align: center;
-    width: 25%;
+    width: 33.3333%;
     text-align: center;
     font-weight: 200;
     font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
     position: relative;
-    bottom: 0;
+    bottom: -12em;
     z-index: 1;
     user-select: none;
     -o-user-select: none;
     -moz-user-select: none;
     -khtml-user-select: none;
-    -webkit-user-select: none;
-    /*&.principios, &.propuestas, &.compromisos {*/
-    /*img { height:90px; margin-right:15px; margin-top:-15px; vertical-align:middle}*/
-    /*}*/ }
-    .navbar a.home {
-      background: #fff;
-      color: black;
-      font-size: 3.5em;
-      line-height: 1em;
-      font-family: "Lemon/Milk";
-      letter-spacing: 2px; }
-      .navbar a.home img.kumalogo {
-        height: 1em;
-        vertical-align: middle;
-        margin-right: 0.3em;
-        margin-top: 0.2em;
-        display: inline-block; }
-      .navbar a.home:hover {
-        background: #000;
-        color: #fff; }
+    -webkit-user-select: none; }
     .navbar a.principios {
-      background: #67B2A4;
-      /*img {height:50px}*/ }
+      background: #67B2A4; }
     .navbar a.propuestas {
       background: #4E7B74;
       color: #283F3A;
-      font-weight: bold; }
+      font-weight: bold;
+      height: 6em;
+      font-size: 6.7em;
+      line-height: 1.3em;
+      box-shadow: 0 10px 30px #1B342F;
+      z-index: 2; }
     .navbar a.compromisos {
       background: #67B2A4;
-      letter-spacing: -2px;
-      /*img {height:75px; margin-top:-5px}*/ }
-    .navbar a:hover {
+      letter-spacing: -2px; }
+    .navbar a:hover, .navbar a.active {
       background: #CD5560;
       color: #fff; }
+    .navbar a.principios, .navbar a.compromisos {
+      margin-top: 0.4em; }
   .navbar.principios a.principios {
     background: #9b4b52;
     color: #fff; }
@@ -1545,23 +1629,3 @@ body {
   .navbar.propuestas a.propuestas {
     background: #9b4b52;
     color: #fff; }
-
-.navbar.home {
-  height: 9.3em; }
-  .navbar.home a {
-    bottom: -12em;
-    font-size: 5.6em;
-    height: 5em;
-    width: 33.33333%;
-    line-height: 1.15em; }
-    .navbar.home a.home {
-      display: none; }
-    .navbar.home a.propuestas {
-      font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
-      font-weight: bold;
-      height: 6em;
-      font-size: 6.7em;
-      line-height: 1.3em;
-      box-shadow: 0 10px 30px #1B342F; }
-    .navbar.home a.principios, .navbar.home a.compromisos {
-      margin-top: 0.4em; }
