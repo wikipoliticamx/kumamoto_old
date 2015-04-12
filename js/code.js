@@ -21,10 +21,14 @@ var KUMA = {
 		}
 	},
 	fullPage: {
-		boot:function() {
+		boot:function() { var o = KUMA.fullPage.options;
 			if($('#fullpage.splash').length == 0) {
 				KUMA.fullPage.extractAnchors();
+				o.afterLoad = KUMA.fullPage.onEnter;
+				o.onLeave = KUMA.fullPage.onLeave;
 				$('#fullpage').fullpage( KUMA.fullPage.options );
+			} else {
+				$('#goodbye').addClass('emerge');
 			}
 		},
 		extractAnchors:function() {
@@ -34,15 +38,39 @@ var KUMA = {
 			});
 			KUMA.fullPage.options.anchors = anchors;
 		},
+		onEnter:function(anchorLink, index) {
+			var a = KUMA.fullPage.options.anchors;
+			console.log('anchorLink', anchorLink);
+			//console.log('a', a);
+			if(anchorLink == a[a.length-1]) {
+				$('#goodbye').addClass('emerge');
+			} else {
+				$('#goodbye').removeClass('emerge');
+			}
+		},
+		onLeave:function(anchorLink, index, slideIndex, direction) {
+			var a = KUMA.fullPage.options.anchors;
+			//console.log('anchorLink', anchorLink);
+			//console.log('a', a);
+			if(anchorLink == a[a.length-2]) {
+				$('#goodbye').css('display', 'none');
+			}
+		},
 		options:{
 			//Navigation
 			menu: '#menu',
 			//anchors:['firstSlide', 'secondSlide'],
 			navigation: false,
+			//navigationPosition:'right',
 			css3:true,
 			animateAnchor:false,
 			verticalCentered: false,
-			keyboardScrolling:true
+			recordHistory:true,
+			//scrollOverflow:true,
+			keyboardScrolling:true,
+			loopHorizontal:true,
+			//responsive:900,
+			fixedElements:'#goodbye'
 			//navigationPosition: 'right',
 			//navigationTooltips: ['firstSlide', 'secondSlide'],
 			//showActiveTooltips: true,
@@ -87,7 +115,7 @@ var KUMA = {
 			['luis-2', 'Juntos podemos recuperar el control del pais y cambiar los paradigmas que <b>secuestran</b> la política. Es nuestro deber como Ciudadanos Mexicanos.', 3, 0],
 			['luis-3', 'Dando lo mejor de mí, habrá un cambio; si somos muchos, es más probable. Tirar el <b>muro</b> es prioridad, hacerlo en equipo es gusto.', 3, 1],
 			['mariana', 'Sé que todos <b>de la mano</b> podemos lograr un cambio real. Actuemos juntos y logremos la politica que merecemos', 3, 3],
-			//['marce', '', 3, 2],
+			['marce', 'Porque la política trabajando con ellos es un ejercicio colectivo de generosidad.', 3, 2],
 			['mina', 'Porque quienes le estamos dando nuestro apoyo, aun siendo camaradas, lo tendremos en la mira. Y Kumamoto lo sabe y busca esa <b>crítica</b> que hace crecer.', 3, 6],
 			['miguel', 'Para generar un cambio, alguien debe tirar <b>la primer ficha</b> del dominó.', 3, 5],
 			['nayeli', '<b>Ser joven</b> significa ser dueños de nuestra vida, de nuestro presente y estar dispuestos a desafiar nuestro porvenir.', 3, 7],
@@ -109,7 +137,7 @@ var KUMA = {
 		],
 		emerge:function() { var i = 0;
 			_(KUMA.nosotros.miembros).chain().shuffle().each(function(miembro) { i+=1; var nombre = miembro[0], xq = miembro[1];
-				KUMA.motion.emerge( {el:'.screen.nosotros .galaxia a[data-name='+nombre+']', 
+				KUMA.motion.emerge( {el:'.screen.nosotros .galaxia div.wiki[data-name='+nombre+']', 
 					duration: _([200, 300, 400, 500, 600, 700, 800, 900, 1000]).shuffle()[0],
 					timeout:_([500, 1000, 1500, 2000]).shuffle()[0]
 				} );
@@ -117,9 +145,8 @@ var KUMA = {
 		},
 		boot:function() { var galaxia = $('.screen.nosotros .galaxia'), i = 0;
 			_(KUMA.nosotros.miembros).chain().shuffle().first(32).each(function(miembro) { i+=1; var nombre = miembro[0], xq = miembro[1], x = miembro[2], y = miembro[3];
-				galaxia.append('<a href="javascript:void(null)" data-name="'+nombre+'" data-why="'+xq+'"><span>'+nombre.replace(/\-\d/,'').replace(/-/,' ')+'</span><img src="/img/dot.png" style="background-position:'+(y*-150)+'px '+(x*-150)+'px" /></a>');
-				
-				var face = galaxia.find('a:last');
+				galaxia.append('<div class="wiki" data-name="'+nombre+'" data-why="'+xq+'"><span>'+nombre.replace(/\-\d/,'').replace(/-/,' ')+'</span><img src="/img/dot.png" style="background-position:'+(y*-150)+'px '+(x*-150)+'px" /></div>');
+				var face = galaxia.find('div.wiki:last');
 
 				if(xq) {
 					new Opentip(face, '<strong>ESTOY AQUÍ PORQUE:</strong><span>'+xq, {
@@ -137,7 +164,7 @@ var KUMA = {
 				}
 
 				if(i==16) {
-					$('.screen.nosotros h1').detach().insertAfter('.screen.nosotros .galaxia a:eq('+(i-1)+')')
+					$('.screen.nosotros h1').detach().insertAfter('.screen.nosotros .galaxia div.wiki:eq('+(i-1)+')')
 				}
 			});
 		}
@@ -154,6 +181,8 @@ var KUMA = {
 				  duration: arg.duration | 500
 				});
 			}, arg.timeout);
+		},
+		goodbye:function() {
 		},
 		cover:function() { var c = $('.screen:first');
 			var emerge = KUMA.motion.emerge;
@@ -176,7 +205,7 @@ var KUMA = {
 				animate( {el:c.find('a.principios'), translateY:'-12em', duration:800});
 				animate( {el:c.find('a.compromisos'), translateY:'-12em', duration:600});
 				animate( {el:c.find('a.propuestas'), translateY:'-12em', duration:1200});
-				animate( {el:c.find('.kitkumamoto'), translateX:-400, duration:1200});
+				animate( {el:c.find('.kitkumamoto'), translateX:'-33em', duration:1200});
 			}, 1500);
 			setTimeout(function() {
 				c.find('img.kumafoto, h3 span').css('transition', 'none');
@@ -197,7 +226,7 @@ var KUMA = {
 	},
 	gif:{
 		boot:function() {
-			$('.video').each(function() {
+			$('.screen .video').each(function() {
 				KUMA.screen.backgroundWithin($(this).find('img'), $(this)); 
 			});
 		}
@@ -230,7 +259,7 @@ var KUMA = {
 			if(p) {
 				p.playVideo();
 				if($('.soundToggle.muted').length > 0) {
-					console.log('mute');
+					//console.log('mute');
 					p.mute() 
 				}
 			}
@@ -239,7 +268,7 @@ var KUMA = {
 			if(p) {
 				p.pauseVideo();
 				if($('.soundToggle.unMuted').length > 0) {
-					console.log('unmute');
+					//console.log('unmute');
 					KUMA.player.unMute() 
 				}
 			}
@@ -311,12 +340,12 @@ var KUMA = {
 			scenes['medios'] = new ScrollMagic.Scene({
 				triggerElement: '.screen.medios'
 			}).on("enter", function(e) {
-				animate({el:'.screen.medios .medio.maspormas', translateX:1500, duration:800});
-				animate({el:'.screen.medios .medio.milenio', translateX:-1500, duration:600});
-				animate({el:'.screen.medios .medio.informador', translateX:1500, duration:1200});
+				animate({el:'.screen.medios .medio.maspormas', translateX:'96em', duration:800});
+				animate({el:'.screen.medios .medio.milenio', translateX:'-96em', duration:600});
+				animate({el:'.screen.medios .medio.informador', translateX:'96em', duration:1200});
 				$('.medios .citas strong').css('color', 'rgb(200, 112, 114)');
 				setTimeout(function() {
-					animate({el:'.screen.medios .carton', translateX:300, duration:1200});
+					animate({el:'.screen.medios .carton', translateX:'26em', duration:1200});
 				}, 2000);
 				_($('.screen.medios .logos a')).chain().shuffle().each(function(logo) {
 					emerge( {el:logo, 
@@ -378,12 +407,12 @@ var KUMA = {
 			}
 
 			var prop = img.width()/img.height();
-			if(img.attr('src').match(/samanta/)) {
-				console.log('ch', container.height());
-				console.log('cw', container.width());
-				console.log('iw', img.width());
-				console.log('ih', img.height());
-			}
+			//if(img.attr('src').match(/benji/)) {
+				//console.log('ch', container.height());
+				//console.log('cw', container.width());
+				//console.log('iw', img.width());
+				//console.log('ih', img.height());
+			//}
 
 			if( (container.height()*prop) >= container.width()) {
 				css = {
@@ -457,11 +486,15 @@ var KUMA = {
 
 			if((where == 'home') || (where == 'splash')) {
 				KUMA.screen.cover();
+				KUMA.screen.backgroundWithin($('.yo-kuma .foto img'), $('.yo-kuma .foto'));
 			} else {
 				if(where == 'propuestas') {
 					$('.video, .text, .fb, .screen').css('height', $(window).height());
 					KUMA.screen.backgroundWithin($('img.ciudad'), $('.screen.ciudad'));
 					KUMA.screen.backgroundWithin($('img.gobierno'), $('.screen.gobierno'));
+				} else if(where == 'compromisos') {
+					$('.screen.bienvenida').css('height', $(window).height());
+					KUMA.screen.backgroundWithin($('img.kuma-benji'), $('.screen.bienvenida'));
 				}
 			}
 		},

@@ -1,27 +1,57 @@
+$crema:#f6f1e9;
 body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#fff}
 
-/************************** MENU **************************/
-#menu {position:absolute; bottom:15%; left:0; z-index:2; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:normal; font-size:2em; counter-reset:item -1;
-	a { color:#fff; display:block; margin:0; height:2.5em;
+/************************** ;MENU **************************/
+#menu {position:absolute; bottom:15%; left:0; z-index:2; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:2em; counter-reset:item -1; line-height:1em;
+	a { color:#fff; display:block; margin:0; height:2em; overflow:hidden;
 		strong {display:inline-block}
 
 		&::before { background:#67B2A4; width:2em; height:1.6em; padding:0.5em 0; text-align:center; display:inline-block;
 			content:counter(item);
-			box-shadow:2px 2px 5px #555;
+			/*box-shadow:2px 2px 5px #555;*/
 			counter-increment:item;
 		}
 		strong {display:none; background:#aaa; padding:0.5em 1em; text-transform:uppercase;
 			span {font-weight:200}
 		}
 
-		&:nth-child(odd)::before {background:#67B2A4}
-		// see https://css-tricks.com/snippets/html/glyphs/
-		&:nth-of-type(1):before {content:'\2191'; /*background:#eee;*/ color:#333} //uarr
-		&.active::before {content:'\2192'; background-color:#4E7B74; color:#fff} //rarr
-		&:hover {
-			&::before {background:#CD5560; content:counter(item)}
-			strong {display:inline-block; background:#4E7B74}
+		/*&:nth-child(odd)::before {background-color:#8FC8BD}*/
+
+		// Propuestas:
+		&.uva {
+			&.pausa::before {background:#EACCCC; color:#555}
+			&::before {background:#F7E4E4; color:#555}
 		}
+		&.esmeralda {
+			&.pausa::before {background:#BBDAD3; color:#555}
+			&::before {background:#ECFCF8; color:#555}
+		}
+
+		&:nth-of-type(1)::before {
+			/*content:'\2191'; [>background:#eee;<] color:#333*/
+			content:'';
+			background:url(/img/logos/kumalogo-sin-texto.png) no-repeat 0 0;
+			background-size:100%;
+			background-color:black;
+			/*box-shadow:none;*/
+		} //uarr
+		&:nth-of-type(1).active {
+			visibility:hidden;
+		}
+		&.active::before {content:'\2192'; background-color:#4E7B74 !important; color:#fff !important} //rarr
+		&:hover {
+			&::before {background:#CD5560 !important; content:counter(item); color:#fff !important}
+			strong {display:inline-block; vertical-align:top; background:#4E7B74}
+		}
+
+		// Principios:
+		&.inteligencia-colectiva::before {background:#B7D8D4}
+		&.participacion-ciudadana::before {background:#C2DBE4}
+		&.apertura:before {background:#B4B4BB}
+		&.innovacion::before {background:#EDAC9C}
+		&.perspectiva-de-genero::before {background:#E8A3A7}
+		&.derechos-humanos::before {background:#EDC2D4}
+		&.transparencia::before {background:#DBCCE0}
 	}
 }
 
@@ -59,29 +89,8 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				}
 			}
 		}
-		.kitkumamoto {position:absolute; bottom:30px; right:-480px; text-align:center; padding:0; width:400px; background-size:300px auto; text-decoration:none; color:black; 
+		.kitkumamoto {position:absolute; bottom:4.5em; right:-40em; text-align:center; padding:0; width:33.3em; background-size:33.3em auto; text-decoration:none; color:black; z-index:3;
 			img {width:33em}
-			&:hover {
-				transform:scale(1.3, 1.3); 
-			}
-		}
-		.goodbye { position:absolute; bottom:0; background:#333; height:5em; line-height:4em; width:100%; text-align:center; color:#fff; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; z-index:2;
-			h1 {display:inline-block; margin:0; font-size:2.5em; height:100%; margin-right:2.5em; vertical-align:middle;
-				span {display:inline-block; margin-top:0.1em}
-			}
-			span.linea-kumamoto {font-size:2em; 
-				a {color:#fff !important; text-decoration:none}
-				strong {text-transform:uppercase; font-weight:200; margin-left:0.8em; vertical-align:middle; display:inline-block}
-			}
-			img {vertical-align:middle; height:2.5em}
-			img.whatsapp {height:1.25em}
-			.redes {display:inline-block; margin:0 2em; padding:0 1em; margin-right:4em;
-				img {margin-right:1.1em}
-				.fb { margin-right:10.5em;
-					img {position:absolute; height:8em; top:-2.6em}
-				}
-			}
-			.wikipolitica {display:inline-block; }
 		}
 		&.portrait {
 			.copy { padding-top:1.5em;
@@ -131,22 +140,15 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				}
 			}
 		}
-		.redes {position:absolute; top:30px; right:30px; width:110px; line-height:30px; z-index:2;
-			img {width:30px; opacity:0; -webkit-filter:grayscale(1)}
+		.redes {position:absolute; top:2.5em; right:2.5em; width:9.2em; line-height:2.5em; z-index:2;
+			img {width:2.5em; opacity:0; -webkit-filter:grayscale(1)}
 			a {
-				&.fb img {width:60px; float:left; margin-right:10px}
+				&.fb img {width:5em; float:left; margin-right:0.8em}
 				&:hover img {-webkit-filter:grayscale(0)}
 			}
 		}
-		.kitkumamoto {position:absolute; bottom:63px; right:-480px; text-align:center; padding:0; width:400px; height:400px; background-size:300px auto; text-decoration:none; color:black; color:white;
-			&:hover {
-				transform:scale(1.3, 1.3); 
-				color:rgb(216, 130, 131);
-			}
-
-			img {width:400px;}
-			em {display:block; margin-top:-320px; margin-left:-20px; font-size:30px; font-style:normal; font-family:"Besom"; text-transform:uppercase}
-			strong {font-size:45px; margin-top:5px; margin-left:-20px; display:block; font-family:"Besom"; display:block}
+		.kitkumamoto {position:absolute; bottom:4.5em; right:-40em; text-align:center; padding:0; width:33.3em; background-size:33.3em auto; text-decoration:none; color:black; z-index:3;
+			img {width:33em}
 		}
 		&.portrait {
 			.copy { padding-top:1.5em;
@@ -210,7 +212,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 
 	/* NOSOTROS */
 	$faceSide:12.5em;
-	&.nosotros { background:#f6f1e9; color:white; text-align:center;
+	&.nosotros { background:$crema; color:white; text-align:center;
 		h1 { font-family:"FF Meta W01", Helvetica, Arial, sans-serif; color:#000; text-align:center; margin:0; font-size:7em; display:inline-block; line-height:1.7em; vertical-align:middle; width:8.2em; text-transform:uppercase; position:relative;
 			img {height:1.5em; vertical-align:middle}
 			a {position:absolute; bottom:0; font-size:0.4em; line-height:1em; right:60px; font-weight:200; color:#999; text-decoration:none;
@@ -221,8 +223,8 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			.azulejo-top, .azulejo-bottom {position:absolute; z-index:1; width:110%; left:-2%}
 				.azulejo-bottom {bottom:-6%}
 				.azulejo-top {top:-6%}
-			& > a { display:inline-block; width:$faceSide; height:$faceSide; margin:1em 3.3em; text-align:center; position:relative; text-decoration:none; z-index:2;
-				vertical-align:middle;
+			div.wiki { display:inline-block; width:$faceSide; height:$faceSide; margin:1em 3.3em; text-align:center; position:relative; text-decoration:none; z-index:2;
+				vertical-align:middle; cursor:pointer;
 				opacity:0; transition: all 0.2s ease;
 
 				span {color:white; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:700; text-transform:uppercase; font-size:2.5em; position:absolute; bottom:0.2em; line-height:1em;
@@ -242,6 +244,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 						/*-webkit-filter:blur(0) grayscale(0);*/
 					}
 					span {visibility:visible}
+
 				}
 			}
 		}
@@ -249,30 +252,37 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 
 	/* MEDIOS */
 	&.medios { background:#fff; z-index:2;
-		h1 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:7em; text-align:center; margin-top:20px; margin-bottom:30px; text-transform:uppercase; letter-spacing:0;
+		h1 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:7em; text-align:center; margin-top:0.2em; margin-bottom:0.35em; text-transform:uppercase; letter-spacing:0;
 			strong {font-family:"FF Meta W01", Helvetica, Arial, sans-serif}
 		}
-		.carton { position:absolute; left:-340px; top:320px; z-index:5;
-			img {width:25em; box-shadow:0.2em 0.2em 0.2em #aaa; -webkit-filter:grayscale(0); transform:rotate(-10deg); transition: all 1s ease; position:relative; left:0}
-			&:hover {
-				img {-webkit-filter:grayscale(0); transform:scale(1.3,1.3) rotate(0deg); left:100px; }
+		.carton { position:absolute; left:-28em; top:27em; z-index:5;
+			img {width:25em; box-shadow:0.2em 0.2em 0.2em #aaa; transition: all 1s ease; position:relative; left:0;
+				transform:rotate(-10deg); -ms-transform:rotate(-10deg); -webkit-transform:rotate(-10deg);
 			}
-			&.carton9abr {top:10em}
+			&.carton9abr {top:10em; 
+				img {transform:rotate(10deg); -ms-transform:rotate(10deg); -webkit-transform:rotate(10deg);}
+			}
+			&:hover, &.carton9abr:hover {
+				img {
+					left:8.3em;
+					transform:scale(1.3,1.3) rotate(0); -ms-transform:scale(1.3,1.3) rotate(0); -webkit-transform:scale(1.3,1.3) rotate(0);
+				}
+			}
 		}
-		.logos { text-align:center; margin:0 auto; margin-top:30px; width:90%; 
+		.logos { text-align:center; margin:0 auto; margin-top:2.5em; width:90%; 
 			a { opacity:0; }
-			img {height:50px; display:inline-block; margin:10px 20px; vertical-align:middle; -webkit-filter:grayscale(0); transition: all 0.2s ease;}
+			img {height:4.16em; display:inline-block; margin:0.8em 1.66em; vertical-align:middle; transition: all 0.2s ease;}
 			a:hover {
-				img {-webkit-filter:grayscale(0); transform:scale(1.3, 1.3)}
+				img { transform:scale(1.3,1.3); -ms-transform:scale(1.3,1.3); -webkit-transform:scale(1.3,1.3); }
 			}
 			a.void {cursor:default}
 		}
-		.citas { display:block; width:100%; font-size:1.3em; margin:0 auto; padding:10px 0; position:relative; background:#f6f1e9;
+		.citas { display:block; width:100%; font-size:1.3em; margin:0 auto; padding:0.64em 0; position:relative; background:$crema;
 			.medio {text-decoration:none; color:black; overflow:hidden; text-align:center; font-family:"L Futura W01", Helvetica; display:block; margin:0; position:relative;
 				a {text-decoration:none; color:#000}
 				.copy { display:inline-block; width:40em; vertical-align:top; 
 					a { padding:1em; display:inline-block; text-align:left; width:40em; vertical-align:top;
-						.source { text-align:right; color:#999; margin-top:10px;
+						.source { text-align:right; color:#999; margin-top:0.64em;
 							em {color:#379088}
 						}
 						&:hover {background:#fff}
@@ -280,17 +290,19 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 					}
 				}
 				.asesor {display:none}
-				div.logo {display:inline-block; width:25%; text-align:right; height:5em;
-					img {width:25em; margin-top:1em; margin-right:2em; -webkit-filter:grayscale(0); transition: all 0.2s ease;}
+				div.logo {display:inline-block; width:25%; text-align:right; height:3.2em;
+					img {width:25em; margin-top:1em; margin-right:2em; transition: all 0.2s ease;}
 				}
-				&.maspormas {left:-1500px;
+				&.maspormas {left:-96em;
 					div.logo img {width:20em; margin-right:4em}
 				}
-				&.milenio {left:1500px}
-				&.informador {left:-1500px}
+				&.milenio {left:96em}
+				&.informador {left:-96em}
 				&:hover {
 					div.logo {
-						img {-webkit-filter:grayscale(0); transform:scale(1.1, 1.1)}
+						img {
+							transform:scale(1.1,1.1) rotate(0); -ms-transform:scale(1.1,1.1) rotate(0); -webkit-transform:scale(1.3,1.3) rotate(0);
+						}
 					}
 				}
 			}
@@ -298,7 +310,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 	}
 
 	/* ASESORES */
-	&.asesores { text-align:center; background:#f6f1e9; z-index:1; position:relative;
+	&.asesores { text-align:center; background:$crema; z-index:1; position:relative;
 		h1 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:7em; text-align:center; margin:0; text-transform:uppercase;
 			position:absolute; top:20px; left:0; z-index:2; color:#000; text-align:center; width:100%;
 			strong {font-family:"FF Meta W01", Helvetica, Arial, sans-serif}
@@ -315,16 +327,16 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 	}
 
 	/* ACERCA DE */
-	&.acercade { text-align:center; background:#f6f1e9; z-index:1; position:relative;
+	&.acercade { text-align:center; background:$crema; z-index:1; position:relative;
 		h1 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:7em; text-align:center; margin:0; text-transform:uppercase; opacity:0;
 			position:absolute; top:20px; left:0; z-index:2; color:#fff; width:50%; text-align:center;
 			strong {font-family:"FF Meta W01", Helvetica, Arial, sans-serif}
 		}
 		.yo-kuma { overflow:hidden;
-			.foto { width:50%; float:left; text-align:right; overflow:hidden;
-				img {width:100%; -webkit-filter:grayscale(1); transition: all 2s ease;}
+			.foto { width:50%; overflow:hidden; float:left; text-align:right;
+				img {height:100%; position:relative; top:0; left:0; /*-webkit-filter:grayscale(1); transition: all 2s ease;*/}
 			}
-			.copy { width:50%; float:left; text-align:left; position:relative; font-family:"L Futura W01", Helvetica;
+			.copy { width:50%; float:left; text-align:left; position:relative; font-family:"L Futura W01", Helvetica; overflow:hidden;
 				strong, b {transition: all 2s ease;}
 				p {width:70%; text-align:left; font-size:1.5em; margin-left:7em;}
 				p:nth-of-type(1) { margin-top:4.5em; }
@@ -349,84 +361,62 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				}
 			}
 		}
-
-		.goodbye { position:absolute; bottom:0; background:#333; height:5em; line-height:4em; width:100%; text-align:center; color:#fff; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; z-index:2;
-			h1 {display:inline-block; margin:0; margin-bottom:0.2em; font-size:2.5em; height:100%; margin-right:2.5em; vertical-align:middle;
-				span {display:inline-block; margin-top:0.1em}
-			}
-			span.linea-kumamoto {font-size:2em; 
-				a {color:#fff !important; text-decoration:none}
-				strong {text-transform:uppercase; font-weight:200; margin-left:0.8em; vertical-align:middle; display:inline-block}
-			}
-			img {vertical-align:middle; height:2.5em}
-			img.whatsapp {height:1.25em}
-			.redes {display:inline-block; margin:0 2em; padding:0 1em; margin-right:4em;
-				img {margin-right:1.1em}
-				.fb { margin-right:10.5em;
-					img {position:absolute; top:-2.6em}
-				}
-			}
-			.wikipolitica {display:inline-block; }
-		}
 	}
 }
 
 /************************** ;PROPUESTAS **************************/
 .propuestas {
-	.screen {
+	.screen {background:$crema;
 		p strong {color:rgb(200, 112, 114);}
 		ol {margin-top:0;
 			strong {color:#379088}
 		}
-
-		.header {margin-top:2em; margin-bottom:2em;
-			.pedro-kumamoto {width:60em; padding-left:4em; margin:0 auto; display:inline-block; vertical-align:middle;
-				.kumalogo {float:left; margin-right:2.5em; height:12em; margin-top:0.2em; position:relative; z-index:2}
-				h1 {padding-top:0; margin-top:0; font-size:10em; line-height:0.6em; font-family:"Lemon/Milk", Helvetica, Arial; margin-bottom:0; 
-					position:relative; color:transparent; text-align:left;
-					img {height:0.5em; vertical-align:middle}
-				}
-			}
-			.where { display:inline-block; vertical-align:middle;
-			}
-		}
 		h1 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:7em; text-align:center; margin:0;
 			z-index:2; color:#000; width:100%; text-align:center; margin-top:0; line-height:1em;
-			strong {font-family:"FF Meta W01", Helvetica, Arial, sans-serif}
 		}
-		&.toc {
-			a {text-decoration:none;
-				img {height:3em; vertical-align:middle}
-			}
-			h2 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:3.5em; font-weight:200; text-transform:uppercase;
-				a {color:black; line-height:3.5em; background:#EACCCC; display:block; }
-				strong {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:bold}
-				margin-bottom:0.2em;
-			}
-			h3 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:2.5em; width:100%; text-align:left; margin:0; font-weight:200;
-				a {color:black; line-height:4em; display:block;
-					span {display:inline-block; width:6em; text-align:center}
-					&:hover {background:#eee}
-				}
-				strong {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:bold}
-			}
+		&.toc {position:relative;
 			.ciudad, .gobierno {width:49.9%; display:inline-block; text-align:center; vertical-align:top;
+				h2 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:3.5em; font-weight:200; text-transform:uppercase; margin-bottom:0.2em;
+					a {
+						color:black; display:block; line-height:2em;
+						background:#EACCCC -webkit-linear-gradient(right, #EACCCC, $crema);
+					}
+					strong {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:bold}
+					span {width:4.4em; display:inline-block; position:relative;
+						img {vertical-align:middle; height:3em; margin:0; position:absolute; top:-2.1em}
+					}
+				}
+				h3 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:2.5em; width:100%; text-align:left; margin:0; font-weight:200;
+					a {color:black; height:1.7em; display:block; margin:1.9em 0;
+						span {display:inline-block; width:6em; text-align:center; position:relative; 
+							img {position:absolute; top:-2em; left:0.8em}
+						}
+						&:hover {background:#dfd8ce}
+					}
+					strong {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:bold}
+				}
+				a {text-decoration:none;
+					img {height:3em; vertical-align:middle}
+				}
 			}
 			.ciudad {
 				h2, h3 {text-align:right;}
-				h2 a img {margin-right:1em; margin-left:0.5em}
+				h2 a img {margin-left:0.5em; left:0}
 				h3 a img {margin-right:1em}
 			}
 			.gobierno {
 				h2 {text-align:left;
-					a {background:#DAECE8;
-						img {margin-left:0.8em; margin-right:0.3em}
+					a {
+						background:#DAECE8 -webkit-linear-gradient(left, #DAECE8, $crema);
+						img {margin-left:0.8em; margin-right:0.6em; left:-0.2em;}
 					}
 				}
+				h3 a span img {left:1.8em}
+				h3.contrapeso a img {height:2.2em; top:-1.5em}
 			}
 		}
 		&.ciudad, &.gobierno {
-			h1 {position:absolute; top:1em; left:0; font-size:9em; 
+			h1 {position:absolute; top:1em; left:0; font-size:9em;  color:black;
 				/*text-shadow:0.03em 0.03em white;*/
 				img {height:2.5em; vertical-align:middle}
 			}
@@ -439,7 +429,6 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		}
 		&.gobierno { position:relative;
 			h1 {position:absolute;  z-index:2; }
-			div.copy {left:4em; right:auto; }
 		}
 		&.democratica, &.sostenible, &.incluyente, &.personas, &.excelencia, &.contrapeso {background:#eee;
 			.video, .fb, .text {width:33%; display:inline-block; vertical-align:top; height:100%; overflow:hidden}
@@ -451,63 +440,29 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			}
 			.fb { background:#e9eaed; text-align:center;}
 			.fb img {width:511px}
-			.text {background:#fff;
+			.text {background:$crema; 
 				h2 {text-transform:uppercase; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:3em; width:100%; 
-					margin-top:0; margin-bottom:0; padding:0.2em 0; font-weight:normal;
-					background:#F7E4E4; text-align:center;
+					margin-top:0.5em; margin-bottom:0; padding:0.2em 0; font-weight:200;
+					background:$crema; text-align:center;
 					img {height:1.5em; vertical-align:middle}
 					a {text-decoration:none; color:#000}
 				}
-				h1 {text-align:center; margin-left:0; margin-top:0; padding:0.4em 0; padding-top:0.2em; font-size:5em; background:#EACCCC; line-height:0.9em}
+				h1 {text-align:center; margin-left:0; margin-top:0; padding:0.4em 0; padding-top:0.2em; font-size:5em; background:#EACCCC -webkit-linear-gradient(left, $crema, #EACCCC, $crema); line-height:0.9em}
 				div.icono { margin:2em auto; text-align:center;
 					img {width:30%}
 				}
 				p, ol li {margin:0 2em; padding:0.7em 1em; padding-bottom:0.3em}
-				ol li {margin-top:0;}
+				p {margin:0; padding:1.5em 3em; padding-left:5em}
 
-				p.mas, li.mas, p.menos, li.menos { cursor:pointer;
-					span.mas span.label {display:none}
-					&:hover {background:#eee;
-						a.leer-mas {background:#ccc}
-						a.leer-mas:hover {background:#555}
-						/*span.mas span.label {display:inline}*/
-					}
-				}
-				p.mas, li.mas {
-					span.hidden, span.menos {display:none}
-					span.mas {display:inline}
-				}
-				p a, ol li a {color:#000}
-				p.menos, li.menos {
-					span.hidden, span.menos {display:inline-block}
-					span.hidden {margin:0.5em 0}
-					a.leer-mas {background:#ccc}
-					span.mas {display:none}
-				}
+				ol li {margin-top:0; margin-left:4em}
+
 			}
 		}
 		&.personas, &.excelencia, &.contrapeso {
 			.text {
-				h2 {background:#ECFCF8}
-				h1 {background:#BBDAD3}
+				h2 {background:$crema}
+				h1 {background:#BBDAD3 -webkit-linear-gradient(left, $crema, #BBDAD3, $crema);}
 			}
-		}
-		.copy { font-size:1.2em; position:relative; margin:0 2em; margin-top:2em;
-			span.hidden, span.menos {display:none}
-			a.leer-mas { text-transform:uppercase; text-decoration:none; color:black; background:#eee; display:inline-block; padding:0.1em 0.4em;
-				/*user-select:none; -o-user-select:none; -moz-user-select:none; -khtml-user-select:none; -webkit-user-select:none;*/
-				margin-left:0.2em; vertical-align:top; font-family:"FF Meta W01", Helvetica, Arial, sans-serif;
-				&:hover {text-decoration:underline; color:#fff; }
-			}
-			.propuestas, p strong {font-weight:bold; font-size:1.2em}
-			li strong {font-weight:bold; color:#379088}
-			b {color:black}
-
-			.left, .right {display:inline-block; vertical-align:top}
-			.left {width:30%; text-align:center;
-				img {height:200px;}
-			}
-			.right {width:60%}
 		}
 	}
 }
@@ -521,127 +476,141 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			img {height:0.5em; vertical-align:middle}
 		}
 	}
-	h2 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:normal; font-size:5em; text-align:center; margin:0.7em 0; text-transform:uppercase; color:#000; text-align:center; }
+	h2 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:normal; font-size:5em; text-align:center; margin:0.7em 0; color:#000; text-align:center; }
 	.screen {
-		.media { width:30%; height:100%; display:inline-block; text-align:center;
-			img {width:80%; margin-top:200px}
-		}
 		.text { width:69%; display:inline-block; vertical-align:top;
-			.fb { background:#e9eaed; text-align:center; border-top:1px solid #ccc; overflow:hidden; text-align:center; position:absolute; bottom:0; width:69%}
+		}
+		.fb {width:30%; display:inline-block; vertical-align:top; height:100%; overflow:hidden; max-width:550px; background:#e9eaed; text-align:center;
+			img {width:511px}
 		}
 
-		&.toc {background:#c8c8a8;
+		&.toc {background:$crema;
 			h2 {font-size:6em; color:white; margin:0; text-align:left}
-			.lista {background:#b3b397; width:100%; padding:30px 0; margin:30px 0; text-align:center;
-				a { display:inline-block; margin:0; font-size:3.5em; line-height:1.7em; width:23em; color:#000; text-decoration:none; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; text-transform:uppercase; text-align:left;
-					img {width:1.2em; vertical-align:middle; margin-right:50px; margin-left:130px; margin-top:5px}
-					&.colectiva {background:#edd172;
-						&:hover {background:#d5bc66}
+			.lista {width:100%; padding:30px 0; margin:30px 0; text-align:center;
+				a { display:inline-block; margin:0.5em 0; font-size:3.5em; line-height:1.7em; color:#000; text-decoration:none; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; text-align:left;
+					span {width:4em; display:inline-block; text-align:center; position:relative;
+						img {height:2.5em; vertical-align:middle; position:absolute; top:-1.5em; left:0.3em}
 					}
-					&.participacion {background:#cef19a;
-						&:hover {background:#b9d88a}
+					&.colectiva {background:#B7D8D4 -webkit-linear-gradient(left, $crema, #B7D8D4);
+						span {width:4.5em;}
+						&:hover {background:#5fc5b8 -webkit-linear-gradient(left, $crema, #5fc5b8)}
 					}
-					&.apertura {background:#facdab;
-						&:hover {background:#e0b899}
+					&.participacion {background:#C2DBE4 -webkit-linear-gradient(left, $crema, #C2DBE4);
+						&:hover {background:#8cb7c7 -webkit-linear-gradient(left, $crema, #8cb7c7)}
 					}
-					&.innovacion {background:#a7dca6;
-						&:hover {background:#96c595}
+					&.apertura {background:#B4B4BB -webkit-linear-gradient(left, $crema, #B4B4BB);
+						&:hover {background:#626264 -webkit-linear-gradient(left, $crema, #626264); color:white}
 					}
-					&.genero {background:#db5a3d;
-						&:hover {background:#c55137}
+					&.innovacion {background:#EDAC9C -webkit-linear-gradient(left, $crema, #EDAC9C);
+						&:hover {background:#d6765e -webkit-linear-gradient(left, $crema, #d6765e)}
 					}
-					&.derechos {background:#c2263f;
-						&:hover {background:#ae223a}
+					&.genero {background:#E8A3A7 -webkit-linear-gradient(right, $crema, #E8A3A7);
+						&:hover {background:#c8595f -webkit-linear-gradient(right, $crema, #c8595f)}
 					}
-					&.transparencia {background:#fe9c98;
-						&:hover {background:#e48d88}
+					&.derechos {background:#EDC2D4 -webkit-linear-gradient(right, $crema, #EDC2D4);
+						&:hover {background:#d98ead -webkit-linear-gradient(right, $crema, #d98ead)}
 					}
+					&.transparencia {background:#DBCCE0 -webkit-linear-gradient(right, $crema, #DBCCE0);
+						&:hover {background:#b8a6be -webkit-linear-gradient(righ, $crema, #b8a6be)}
+					}
+				}
+				.left, .right {width:49%; display:inline-block; vertical-align:top; text-align:left}
+				.left {text-align:right;
+					a {text-align:right; padding-left:1em;
+						&.apertura img {left:0.6em}
+						&.innovacion img {left:0.7em}
+					}
+				}
+				.right {
+					a {padding-right:1em; margin-left:1em}
 				}
 			}
 		}
 
-		&.colectiva, &.participacion, &.apertura, &.innovacion, &.genero, &.derechos, &.transparencia {
-			h1 {margin-top:50px; margin-bottom:30px; font-size:6em}
-			p {font-size:1.7em; width:80%; margin:0 auto}
+		&.colectiva, &.participacion, &.apertura, &.innovacion, &.genero, &.derechos, &.transparencia { background:$crema;
+			p {font-size:1.7em; width:60%; margin:0 auto; margin-bottom:1em}
+			h2 {line-height:1.1em; padding-bottom:0.2em; margin-top:0}
+			h3 {text-transform:uppercase; font-weight:200; text-align:center; width:100%; margin:0; padding:0.5em 0; padding-top:1.5em; font-size:3em}
+			.text {
+				.icono {text-align:center;
+					img {margin-top:4em; width:35em}
+				}
+			}
 		}
 		
-		&.colectiva { background:#edd172;
-			.media {background:#d5bc66}
+		&.colectiva { 
+			h2 {background:#5fc5b8 -webkit-linear-gradient(left, $crema, #5fc5b8, $crema);}
 		}
-		&.participacion { background:#cef19a;
-			.media {background:#b9d88a}
+		&.participacion {
+			h2 {background:#8cb7c7 -webkit-linear-gradient(left, $crema, #8cb7c7, $crema);}
 		}
-		&.apertura { background:#facdab;
-			.media {background:#e0b899}
+		&.apertura {
+			h2 {background:#626264 -webkit-linear-gradient(left, $crema, #626264, $crema); color:white;}
 		}
-		&.innovacion { background:#a7dca6;
-			.media {background:#96c595}
+		&.innovacion {
+			h2 {background:#d6765e -webkit-linear-gradient(left, $crema, #d6765e, $crema);}
 		}
-		&.genero { background:#db5a3d;
-			.media {background:#c55137}
+		&.genero {
+			h2 {background:#c8595f -webkit-linear-gradient(left, $crema, #c8595f, $crema);}
 		}
-		&.derechos { background:#c2263f;
-			.media {background:#ae223a}
+		&.derechos {
+			h2 {background:#d98ead -webkit-linear-gradient(left, $crema, #d98ead, $crema);}
 		}
-		&.transparencia { background:#fe9c98;
-			.media {background:#e48d88}
+		&.transparencia {
+			h2 {background:#b8a6be -webkit-linear-gradient(left, $crema, #b8a6be, $crema);}
 		}
 	}
 }
 
 /************************** ;COMPROMISOS **************************/
 .compromisos {
-	.header {margin-top:2em; margin-bottom:6em;
-		.pedro-kumamoto {width:60em; padding-left:4em; margin:0 auto; display:inline-block; vertical-align:middle;
-			.kumalogo {float:left; margin-right:2.5em; height:12em; margin-top:0.2em; position:relative; z-index:2}
-			h1 {padding-top:0; margin-top:0; font-size:10em; line-height:0.6em; font-family:"Lemon/Milk", Helvetica, Arial; margin-bottom:0; 
-				position:relative; color:transparent; text-align:left;
-				img {height:0.5em; vertical-align:middle}
-			}
-		}
-		.where { display:inline-block; vertical-align:middle;
-			h2 {text-transform:none; font-size:7em}
-		}
-	}
-	h2 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:5em; text-align:left; margin:0; text-transform:uppercase;
-		color:#000; width:100%; text-align:left;
-	}
-	h3 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:3em; text-align:left; margin:0; text-transform:uppercase;
-		color:#000; width:100%; text-align:center; text-align:left;
-	}
-	.screen { background:#e9eaed; overflow:hidden;
+	.screen { background:$crema; overflow:hidden;
 		.video { width:30%; height:100%; display:inline-block; text-align:center; background:#fff; overflow:hidden;
 			img {width:100%}
 		}
-		&.toc { text-align:left; background:#fff;
+		
+		.fb, .text {display:inline-block; vertical-align:top; height:100%; overflow:hidden}
+			.video {width:28%}
+			.text {width:70%}
+		.fb {max-width:550px; background:#e9eaed; text-align:center;
+			img {width:511px}
+		}
+
+		&.toc { text-align:left; background:$crema;
 			/*h2 {color:rgb(200, 112, 114);}*/
 			p { font-family:Helvetica; font-size:1.5em; width:30em; margin:1.5em auto; text-align:left;
 				a, strong {color:rgb(200, 112, 114);}
 				b {color:#379088}
 			}
 			div.toc {text-align:left; margin-top:8em;
-				a {display:inline-block; width:49.9%; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:5em; font-weight:200; text-transform:uppercase; text-decoration:none; margin:0; color:black; 
-					span {position:relative; width:2em; display:inline-block;
-						img {vertical-align:middle; height:3em; margin:0 1em; position:absolute;}
+				a {display:inline-block; width:49.9%; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:5em; font-weight:200; text-decoration:none; margin:0; color:black; 
+					span {position:relative; width:4.5em; display:inline-block;
+						img {vertical-align:middle; height:2.5em; margin:0 1em; position:absolute;}
 					}
 				}
-				a.en-campanha { background:#EACCCC; text-align:right;
+				a.en-campanha { text-align:right;
+					background:#EACCCC -webkit-linear-gradient(right, #EACCCC, $crema);
 					img {text-align:right; top:-2em; left:-0.8em}
 				}
-				a.en-el-congreso {background:#DAECE8;
-					span {width:3.5em;
-						img {top:-2em; left:-0.8em}
+				a.en-el-congreso {text-align:left;
+					background:#DAECE8 -webkit-linear-gradient(left, #DAECE8, $crema);
+					span {width:4.5em;
+						img {top:-2em; left:0}
 					}
 				}
 			}
 		}
-		.infografia { width:30%; height:100%; display:inline-block; text-align:center; background:#B3D7DA;
-			img {width:80%; margin-top:5em}
-		}
-		.text { width:69%; display:inline-block; vertical-align:top; background:#fff;
-			h3 {margin-left:1.7em; margin-top:0.6em}
-			h2 {text-align:left; margin-left:1em; line-height:1em}
-			ol { font-size:1.5em; font-family:Helvetica; margin:0 auto; margin-top:2em; margin-left:6em; counter-reset:item; width:60%; 
+		/*.infografia { width:30%; height:100%; display:inline-block; text-align:center; background:#B3D7DA;*/
+			/*img {width:80%; margin-top:5em}*/
+		/*}*/
+		.text { width:69%; display:inline-block; vertical-align:top; background:$crema;
+			h2 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:5em; text-align:left; margin:0;
+				color:#000; width:100%; text-align:center; padding-left:1em; line-height:1.5em;
+			}
+			h3 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:3em; text-align:center; margin:0; 
+				text-transform:uppercase; color:#000; width:100%; text-align:center; margin-left:1.7em; margin-top:0.3em; margin-bottom:0.2em;
+			}
+			ol { font-size:1.5em; font-family:Helvetica; margin:0 auto; margin-top:2em; counter-reset:item; width:60%; 
 				&.congreso {counter-reset:item 8;}
 				li:before {
 					content: counter(item) ". ";
@@ -649,52 +618,188 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				   color: #999;
 					display:inline-block;
 					width:3em;
-					padding-left:.5em;
-					margin-left:-4em;
+					padding-right:1em;
+					margin-left:-4.5em;
 					text-align:right;
 				}
-				li {margin:0.5em 0; display:block;
-					a, strong {color:rgb(200, 112, 114);}
+				li {padding:0.5em 1em; display:block; line-height:1.2em;
+					strong {color:rgb(200, 112, 114);}
+				}
+				span.hidden {font-size:0.9em; padding-left:2em; }
+				li.menos {
+					a.leer-mas {margin-left:2em}
 				}
 			}
+			/*span.hidden, span.menos {display:none}*/
+			/*span.hidden {font-size:80%}*/
+			/*a.leer-mas { text-transform:uppercase; text-decoration:none; color:black; background:#e9eaed; display:inline-block; padding:.5em 1em; font-size:0.7em;*/
+				/*font-family:"FF Meta W01", Helvetica, Arial, sans-serif;*/
+				/*&:hover {text-decoration:underline; background:#555; color:#fff;}*/
+			/*}*/
+			/*&.leer-mas {height:100%;*/
+				/*span.hidden, span.menos {display:inline}*/
+				/*span.summary {display:none}*/
+				/*a.leer-mas {background:#ccc}*/
+				/*span.mas {display:none}*/
+				/*ol {font-size:1.4em;}*/
+				/*li {margin-top:1em; margin-bottom:1em}*/
+				/*.fb {display:none}*/
+			/*}*/
+			/*.fb { background:#e9eaed; text-align:center; border-top:1px solid #ccc; overflow:hidden}*/
+		}
+		&.campanha, &.congreso {
+			.icono { text-align:center; margin-top:5em;
+				img {height:20em;}
+			}
+		}
+		&.campanha {
+			h2 {
+				background:#EACCCC -webkit-linear-gradient(left, $crema, #EACCCC, $crema);
+			}
+		}
+		&.congreso {
+			h2 {
+				background:#BBDAD3 -webkit-linear-gradient(left, $crema, #BBDAD3, $crema);
+			}
+		}
+		&.bienvenida {position:relative;
+			img.kuma-benji {position:absolute; top:0; left:0}
+			div.copy {position:absolute; bottom:3em; right:4em; z-index:2; background-color:rgba(255, 255, 255, 1);
+				padding:1em 3em; font-size:1.5em; font-family:"L Futura W01", Helvetica; width:30em;
+				strong {color:rgb(200, 112, 114); font-size:1em}
+				b {color:#379088}
+			}
+		}
+	}
+}
+
+/************************** ;LEER MAS **************************/
+.propuestas, .compromisos {
+	.copy, .text {
+		p.mas, li.mas, p.menos, li.menos { cursor:pointer;
+			span.mas span.label {display:none}
+			&:hover {background:#dfd8ce;
+				a.leer-mas {background:#b4b0ab}
+				a.leer-mas:hover {background:#8b8884; text-decoration:none}
+				/*span.mas span.label {display:inline}*/
+			}
+		}
+		p.mas, li.mas {
 			span.hidden, span.menos {display:none}
-			span.hidden {font-size:80%}
-			a.leer-mas { text-transform:uppercase; text-decoration:none; color:black; background:#e9eaed; display:inline-block; padding:.5em 1em; font-size:1.4em;
-				margin-left:10em; margin-top:1em; font-family:"FF Meta W01", Helvetica, Arial, sans-serif;
-				&:hover {text-decoration:underline; background:#555; color:#fff;}
-			}
-			&.leer-mas {height:100%;
-				span.hidden, span.menos {display:inline}
-				span.summary {display:none}
-				a.leer-mas {background:#ccc}
-				span.mas {display:none}
-				ol {font-size:1.4em;}
-				li {margin-top:1em; margin-bottom:1em}
-				.fb {display:none}
-			}
-			.fb { background:#e9eaed; text-align:center; border-top:1px solid #ccc; overflow:hidden}
+			span.mas {display:inline}
+		}
+		p a, ol li a {color:#000; font-weight:200}
+		p.menos, li.menos {
+			span.hidden, span.menos {display:inline-block}
+			span.hidden {margin:0.5em 0}
+			a.leer-mas {background:#ccc}
+			span.mas {display:none}
+		}
+		a.leer-mas { text-transform:uppercase; text-decoration:none; color:black; background:#E0DCD5; display:inline-block; padding:0 0.4em; padding-bottom:0.1em;
+			/*user-select:none; -o-user-select:none; -moz-user-select:none; -khtml-user-select:none; -webkit-user-select:none;*/
+			margin-left:0.2em; vertical-align:top; font-family:"FF Meta W01", Helvetica, Arial, sans-serif;
+			&:hover {text-decoration:underline; color:#fff; }
+		}
+		.propuestas, p strong {font-weight:bold; font-size:1.2em; }
+		p.propuestas {padding:0.7em 2em; padding-left:4em; margin-top:1em}
+		li strong {font-weight:bold; color:#379088}
+	}
+			
+	
+	.copy { font-size:1.2em; position:relative; margin:0; margin-top:1em;}
+	.text {
+		span.hidden i {font-style:normal; display:block}
+		span.hidden, span.menos {display:none}
+		b {color:black}
+
+		.left, .right {display:inline-block; vertical-align:top}
+		.left {width:30%; text-align:center;
+			img {height:200px;}
+		}
+		.right {width:60%}
+	}
+}
+
+
+/************************** ;HEADER **************************/
+.header {padding-top:6em; padding-bottom:4em; position:relative; z-index:2; font-size:1em;
+	.azulejo-top {position:absolute; z-index:1; width:110%; left:-2%; top:-22%;
+		-moz-transform: scaleX(-1); -o-transform: scaleX(-1); -webkit-transform: scaleX(-1); transform: scaleX(-1); filter: FlipH; -ms-filter: "FlipH";
+	}
+	.pedro-kumamoto {width:49.5%; padding-left:4em; margin:0 auto; display:inline-block; vertical-align:middle; position:relative; z-index:2;
+		.kumalogo {float:left; margin-right:2.5em; height:12em; margin-top:0.2em; position:relative; z-index:3}
+		h1 {padding-top:0; margin-top:0; font-size:10em; line-height:0.6em; font-family:"Lemon/Milk", Helvetica, Arial; margin-bottom:0; 
+			position:relative; color:transparent; text-align:left;
+			img {height:0.5em; vertical-align:middle}
+		}
+	}
+	.where { width:45%; display:inline-block; vertical-align:middle; position:relative; z-index:2;
+		h1 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:7em; text-align:center; margin:0;
+			z-index:2; color:#000; width:100%; text-align:center; margin-top:0; line-height:1em;
+		}
+	}
+}
+
+#fullpage {
+	&.compromisos {
+		.where {
+			.compromisos {display:inline-block}
+			.propuestas, .principios {display:none}
+		}
+	}
+	&.propuestas {
+		.where {
+			.propuestas {display:inline-block}
+			.compromisos, .principios {display:none}
+		}
+	}
+	&.principios {
+		.where {
+			.principios {display:inline-block}
+			.propuestas, .compromisos {display:none}
 		}
 	}
 }
 
 /************************** ;NAVBAR **************************/
-.navbar {background:transparent; position:absolute; bottom:0; overflow:hidden; height:9.3em; width:100%; 
-	a {text-transform:uppercase; display:inline-block; line-height:1.15em; height:5.6em; font-size:5.5em; text-decoration:none; color:#4A746D; float:left; text-align:center; width:33.3333%; text-align:center; font-weight:200; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; position:relative; bottom:-12em; z-index:1;
+.navbar {background:transparent; position:absolute; bottom:0; overflow:hidden; height:9.3em; width:100%; z-index:4;
+	a {text-transform:uppercase; display:inline-block; line-height:1.15em; height:5.6em; font-size:5.5em; text-decoration:none; color:#4A746D; float:left; text-align:center; width:33%; text-align:center; font-weight:200; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; position:relative; bottom:-12em; z-index:1;
 		user-select:none; -o-user-select:none; -moz-user-select:none; -khtml-user-select:none; -webkit-user-select:none;
 
 		&.principios  {background:#67B2A4; }
-		&.propuestas  {background:#4E7B74; color:#283F3A; font-weight:bold; height:6em; font-size:6.7em; line-height:1.3em; box-shadow:0 10px 30px #1B342F; z-index:2}
-		&.compromisos {background:#67B2A4; letter-spacing:-2px; }
+		&.propuestas  {background:#4E7B74; color:#283F3A; font-weight:bold; height:6em; font-size:6.7em; line-height:1.3em; box-shadow:0 0.12em 0.36em #1B342F; z-index:2}
+		&.compromisos {background:#67B2A4; letter-spacing:-0.03em; }
 		&:hover, &.active {background:#CD5560; color:#fff; }
 		&.principios, &.compromisos { margin-top:0.4em; }
 	}
-	&.principios {
+	a.principios { width:30%;
 		a.principios {background:#9b4b52; color:#fff;}
 	}
-	&.compromisos {
+	a.compromisos {
 		a.compromisos {background:#9b4b52; color:#fff;}
 	}
-	&.propuestas {
+	a.propuestas {width:37%;
 		a.propuestas {background:#9b4b52; color:#fff;}
 	}
+}
+
+/************************** ;GOODBYE **************************/
+#goodbye { position:absolute; bottom:-8em; background:#333; height:5em; line-height:4em; width:100%; text-align:center; color:#fff; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; z-index:10; transition:all 1s ease;
+	&.emerge {bottom:0}
+	h1 {display:inline-block; margin:0; font-size:2.5em; height:100%; margin-right:2.5em; vertical-align:middle;
+		span {display:inline-block; margin-top:0.1em}
+	}
+	span.linea-kumamoto {font-size:2em; 
+		a {color:#fff !important; text-decoration:none}
+		strong {text-transform:uppercase; font-weight:200; margin-left:0.8em; vertical-align:middle; display:inline-block}
+	}
+	img {vertical-align:middle; height:2.5em}
+	img.whatsapp {height:1.25em}
+	.redes {display:inline-block; margin:0 2em; padding:0 1em; margin-right:4em;
+		img {margin-right:1.1em}
+		.fb { margin-right:10.5em;
+			img {position:absolute; height:8em; top:-2.6em}
+		}
+	}
+	.wikipolitica {display:inline-block; }
 }

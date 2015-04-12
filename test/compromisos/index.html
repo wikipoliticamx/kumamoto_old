@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 	<title>Mis Compromisos | Pedro Kumamoto | Ocupemos la ciudad, habitemos la política</title>
 	<meta name="description" content="Soy Pedro Kumamoto, el primer candidato sin partidos al Congreso de Jalisco. Soy candidato independiente a diputado local para el distrito 10 de Zapopan porque creo que las personas debemos estar al centro de la política.">
@@ -15,6 +15,7 @@
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 	<script src="/js/underscore-min.js"></script>
+	<!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.6.4/vendors/jquery.slimscroll.js"></script>-->
 	<script type="text/javascript" src="/js/jquery.fullPage.min.js"></script>
 
 	<script type='text/javascript' src="https://www.google.com/jsapi"></script>
@@ -55,24 +56,36 @@
 
 <div id="menu">
 	<a href="#inicio" data-menuanchor="inicio"><strong>Inicio</strong></a>
-	<a href="#en-campaña" data-menuanchor="en-campaña"><strong><span>En</span> Campaña</strong></a>
-	<a href="#en-el-congreso" data-menuanchor="en-el-congreso"><strong><span>En el</span> Congreso</strong></a>
+	<a href="#en-campaña" data-menuanchor="en-campaña" class="uva"><strong><span>En</span> Campaña</strong></a>
+	<a href="#quien-iba-a-creer" data-menuanchor="quien-iba-a-creer"><strong><span>¿</span>Quién <span>iba a creer?</span></strong></a>
+	<a href="#en-el-congreso" data-menuanchor="en-el-congreso" class="esmeralda"><strong><span>En el</span> Congreso</strong></a>
 </div>
 
 <div id="fullpage" class="compromisos">
 	<div class="section screen toc">
 		<div class="header">
-			<div class="pedro-kumamoto">
-				<a href="/test/">
-					<img class="kumalogo" src="/img/logos/kumalogo-sin-texto.png" />
-					<h1 class="pedro"><img src="/img/type/pedro.png" /></h1>
-					<h1 class="kumamoto"><img src="/img/type/kumamoto.png" /></h1>
-				</a>
+	<img class="azulejo-top" src="/img/nosotros/azulejo-top-28k.png">
+	<div class="pedro-kumamoto">
+		<a href="/test/">
+			<img class="kumalogo" src="/img/logos/kumalogo-sin-texto.png" />
+			<h1 class="pedro"><img src="/img/type/pedro.png" /></h1>
+			<h1 class="kumamoto"><img src="/img/type/kumamoto.png" /></h1>
+		</a>
+	</div>
+	<div class="where">
+		<h1>
+			<div class="propuestas">
+				Mis <strong>propuestas</strong>
 			</div>
-			<div class="where">
-				<h2 class="mis-propuestas">Mis <strong>Compromisos</strong></h2>
+			<div class="compromisos">
+				Mis <strong>Compromisos</strong>
 			</div>
-		</div>
+			<div class="principios">
+				Mis <strong>Principios</strong>
+			</div>
+		</h1>
+	</div>
+</div>
 
 		<p>
 			Esta candidatura independiente es parte de un esfuerzo por construir una <b>democracia real</b> en nuestro estado, donde sean las personas y no los partidos políticos o grupos de poder las que tomen las decisiones de la vida pública.
@@ -85,10 +98,9 @@
 		<div class="toc">
 			<a class="en-campanha" href="#en-campaña">
 				En <strong>campaña</strong>
-				<span><img src="/img/compromisos/ocupantes.png" /></span>
-			</a>
-			<a class="en-el-congreso" href="#en-el-congreso">
-				<span><img src="/img/compromisos/en-el-congreso.png" /></span>
+				<span><img src="/img/compromisos/campaña.png" /></span>
+			</a><a class="en-el-congreso" href="#en-el-congreso">
+				<span><img src="/img/compromisos/congreso.png" /></span>
 				En el <strong>congreso</strong>
 			</a>
 		</div>
@@ -99,11 +111,12 @@
 </div>
 
 	</div>
-
-	<div class="section screen campaña">
+	<div class="section screen campanha">
 		<div class="text">
-			<h3>Mis compromisos</h3>
-			<h2>En <strong>campaña</strong></h2>
+			<h3>Mis <strong>compromisos</strong></h3>
+			<h2>
+				En <strong>campaña</strong>
+			</h2>
 			<ol>
 				<li>
 					<span class="summary">
@@ -163,19 +176,24 @@
 					</span>
 				</li>
 			</ol>
+			<div class="icono"><img src="/img/compromisos/campaña.png" /></div>
 		</div>
 		<div class="fb">
-			<img src="/img/compromisos/fb-mockup.jpg" />
+			<img src="/img/fb-mockup.jpg" />
 		</div>
-		<div class="infografia">
-			<img src="/img/compromisos/campanha.png" />
+	</div>
+
+	<div class="section screen bienvenida">
+		<img class="kuma-benji" src="/img/compromisos/kuma-benji.jpg" style="width:2000px; height:1333px" />
+		<div class="copy">
+			<p>¿<b>Quién iba a creer</b> que lograríamos cada una de las exigencias para completar el registro?</p>
+			<p>¿Quién estaba dispuesto a creer que en cuarenta días juntaríamos siete mil 500 firmas tocando puerta tras puerta?</p>
+			<p>¿Quién iba a creer que necesitaríamos ejecutar nada más siete mil pesos para lograrlo?</p>
+			<p>A los que no creían y que aún no creen prefiero decirles que <strong>esto ya empezó</strong>, que podemos decir con seguridad que hoy ya está mejor y que va a estar mejor cuando decidan creer y se sumen</p>
 		</div>
 	</div>
 
 	<div class="section screen congreso">
-		<div class="infografia">
-			<img src="/img/compromisos/en-congreso.jpg" />
-		</div>
 		<div class="text">
 			<h3>Mis compromisos</h3>
 			<h2>En el <strong>congreso</strong></h2>
@@ -201,7 +219,7 @@
 						<b>Renunciaré</b> a todo tipo de <strong>prestaciones</strong> mayores a las de la ley.
 					</span>
 					<span class="hidden">
-						<b>Renunciaré</b> a todo tipo de <strong>prestaciones</strong> mayores a las de cualquier trabajador. Actualmente los diputados tienen prestaciones como: Servicio médico, servicios privados de seguridad, pago de celulares y servicios de transporte. Creo que si los obreros, los empresarios y las distintas clases trabajadoras del país no cuentan con estos privilegios, yo no tengo por qué tenerlos.
+						Actualmente los diputados tienen prestaciones como: servicio médico, servicios privados de seguridad, pago de celulares y servicios de transporte. Creo que si los obreros, los empresarios y las distintas clases trabajadoras del país no cuentan con estos <b>privilegios</b>, yo no tengo por qué tenerlos.
 					</span>
 				</li>
 				<li>
@@ -233,7 +251,7 @@
 						<b>Haré públicos</b> los <strong>gastos</strong> de mi oficina legislativa.
 					</span>
 					<span class="hidden">
-						<b>Haré públicos</b> los <strong>gastos</strong> de mi oficina legislativa. Creo que la gente tiene derecho de saber en qué, por qué y para qué realizo los gastos en mi oficina legislativa. La transparencia debe ser una constante y una bandera de campaña.
+						Creo que la gente tiene derecho de saber en qué, por qué y para qué realizo los gastos en mi oficina legislativa. La transparencia debe ser una constante y una bandera de campaña.
 					</span>
 				</li>
 				<li>
@@ -249,7 +267,7 @@
 						<b>Tendré</b> un <strong>teléfono público</strong>.
 					</span>
 					<span class="hidden">
-						Actualmente, la comunicación con nuestros legisladores es algo inexistente, algo repleto de muros. Es por eso que <b>haré</b> público mi <strong>teléfono</strong>, <strong>redes sociales</strong> y <strong>mi correo</strong>. Esto con la finalidad de crear un enlace directo entre representante y representados, para que el diálogo y el debate puedan ser decisivos en mi toma de decisiones.
+						Actualmente, la comunicación con nuestros legisladores es algo inexistente, algo repleto de muros. Es por eso que haré <b>público</b> mi <strong>teléfono</strong>, <strong>redes sociales</strong> y <strong>mi correo</strong>. Esto con la finalidad de crear un enlace directo entre representante y representados, para que el diálogo y el debate puedan ser decisivos en mi toma de decisiones.
 					</span>
 				</li>
 				<li>
@@ -257,16 +275,43 @@
 						<b>Publicaré</b> <strong>informes de gestión</strong> semestrales.
 					</span>
 					<span class="hidden">
-						<b>Publicaré</b> mensualmente <strong>informes de gestión</strong>. Los habitantes tienen derecho a ver cuáles han sido los avances legislativos. Esto será de manera austera, priorizando la acción legislativa y no utilizándolo como un medio de propaganda que pueda ir en contra de la ley.
+						Los habitantes tienen derecho a ver cuáles han sido los <b>avances</b> legislativos. Esto será de manera austera, priorizando la acción legislativa y no utilizándolo como un medio de propaganda que pueda ir en contra de la ley.
 					</span>
 				</li>
 			</ol>
+			<div class="icono"><img src="/img/compromisos/congreso.png" /></div>
 		</div>
 		<div class="fb">
-			<img src="/img/compromisos/fb-mockup.jpg" />
+			<img src="/img/fb-mockup.jpg" />
 		</div>
 	</div>
 </div>
+<div id="goodbye">
+	<h1><span>CONTÁCTANOS:</span></h1>
+	<span class="linea-kumamoto">
+		<img class="whatsapp" src="/img/logos/whatsapp.png" /> <strong>Línea Kumamoto</strong> <a href="tel:+523315135549">33 1513 5549</a>
+	</span>
+	<div class="redes">
+		<a class="fb" href="https://www.facebook.com/PedroKumamoto" /><img src="/img/logos/fb.png" /></a>
+		<a class="twitter" href="https://twitter.com/pkumamoto" /><img src="/img/logos/twitter.png" /></a>
+		<a class="instagram" href="https://instagram.com/pkumamoto/" /><img src="/img/logos/instagram.png" /></a>
+	</div>
+	<div class="wikipolitica"> 
+		<a href="https://www.facebook.com/pages/Wikipol%C3%ADtica-Jalisco/1492178621017984">
+			<img src="/img/logos/wikipolitica-sin-texto.png" />
+		</a>
+	</div>
+</div>
+
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-61493763-1', 'auto');
+	  ga('send', 'pageview');
+	</script>
 
 </body>
 </html>
