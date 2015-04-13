@@ -1243,25 +1243,13 @@ body {
   /*.infografia { width:30%; height:100%; display:inline-block; text-align:center; background:#B3D7DA;*/
   /*img {width:80%; margin-top:5em}*/
   /*}*/ }
-  .compromisos .screen .video {
-    width: 30%;
-    height: 100%;
-    display: inline-block;
-    text-align: center;
-    background: #fff;
-    overflow: hidden; }
-    .compromisos .screen .video img {
-      width: 100%; }
   .compromisos .screen .fb, .compromisos .screen .text {
     display: inline-block;
     vertical-align: top;
     height: 100%;
     overflow: hidden; }
-  .compromisos .screen .video {
-    width: 28%; }
-  .compromisos .screen .text {
-    width: 70%; }
   .compromisos .screen .fb {
+    width: 30%;
     max-width: 550px;
     background: #e9eaed;
     text-align: center; }
@@ -1318,7 +1306,7 @@ body {
             top: -2em;
             left: 0; }
   .compromisos .screen .text {
-    width: 69%;
+    width: 69.5%;
     display: inline-block;
     vertical-align: top;
     background: #f6f1e9;
@@ -1341,7 +1329,7 @@ body {
     .compromisos .screen .text h2 {
       font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
       font-weight: 200;
-      font-size: 5em;
+      font-size: 6em;
       text-align: left;
       margin: 0;
       color: #000;
