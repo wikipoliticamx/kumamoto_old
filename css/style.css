@@ -1403,6 +1403,8 @@ body {
     background: #eacccc -webkit-linear-gradient(left, #f6f1e9, #eacccc, #f6f1e9); }
   .compromisos .screen.congreso h2 {
     background: #bbdad3 -webkit-linear-gradient(left, #f6f1e9, #bbdad3, #f6f1e9); }
+  .compromisos .screen.congreso .icono {
+    margin-top: 1.3em; }
   .compromisos .screen.bienvenida {
     position: relative; }
     .compromisos .screen.bienvenida img.kuma-benji {
