@@ -39,10 +39,13 @@ var KUMA = {
 			KUMA.fullPage.options.anchors = anchors;
 		},
 		onEnter:function(anchorLink, index) {
-			var a = KUMA.fullPage.options.anchors;
-			console.log('anchorLink', anchorLink);
-			//console.log('a', a);
-			if(anchorLink == a[a.length-1]) {
+			if(KUMA.where == 'home') {
+			}
+			KUMA.fullPage.sayGoodbye(anchorLink);
+		},
+		sayGoodbye:function(anchorLink) {
+			var anchors = KUMA.fullPage.options.anchors;
+			if(anchorLink == anchors[anchors.length-1]) {
 				$('#goodbye').addClass('emerge');
 			} else {
 				$('#goodbye').removeClass('emerge');
@@ -71,11 +74,6 @@ var KUMA = {
 			loopHorizontal:true,
 			//responsive:900,
 			fixedElements:'#goodbye'
-			//navigationPosition: 'right',
-			//navigationTooltips: ['firstSlide', 'secondSlide'],
-			//showActiveTooltips: true,
-			//slidesNavigation: true,
-			//slidesNavPosition: 'bottom',
 		}
 	},
 	// ----------------------
@@ -291,6 +289,9 @@ var KUMA = {
 			$(this).addClass('active');
 		}
 	},
+	// -------------------
+	// ****** VIDEO ******
+	// -------------------
 	scroll:{
 		boot:function() {
 			// init controller
