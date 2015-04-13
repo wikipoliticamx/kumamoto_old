@@ -1123,8 +1123,8 @@ body {
       text-align: left; }
     .principios .screen.toc .lista {
       width: 100%;
-      padding: 30px 0;
-      margin: 30px 0;
+      padding: 0;
+      margin: 0;
       text-align: center; }
       .principios .screen.toc .lista a {
         display: inline-block;
@@ -1160,8 +1160,7 @@ body {
         .principios .screen.toc .lista a.apertura {
           background: #b4b4bb -webkit-linear-gradient(left, #f6f1e9, #b4b4bb); }
           .principios .screen.toc .lista a.apertura:hover {
-            background: #626264 -webkit-linear-gradient(left, #f6f1e9, #626264);
-            color: white; }
+            background: #626264 -webkit-linear-gradient(left, #f6f1e9, #626264); }
         .principios .screen.toc .lista a.innovacion {
           background: #edac9c -webkit-linear-gradient(left, #f6f1e9, #edac9c); }
           .principios .screen.toc .lista a.innovacion:hover {
@@ -1177,7 +1176,7 @@ body {
         .principios .screen.toc .lista a.transparencia {
           background: #dbcce0 -webkit-linear-gradient(right, #f6f1e9, #dbcce0); }
           .principios .screen.toc .lista a.transparencia:hover {
-            background: #b8a6be -webkit-linear-gradient(righ, #f6f1e9, #b8a6be); }
+            background: #b8a6be -webkit-linear-gradient(right, #f6f1e9, #b8a6be); }
       .principios .screen.toc .lista .left, .principios .screen.toc .lista .right {
         width: 49%;
         display: inline-block;
@@ -1195,13 +1194,21 @@ body {
       .principios .screen.toc .lista .right a {
         padding-right: 1em;
         margin-left: 1em; }
+        .principios .screen.toc .lista .right a img {
+          left: 0.8em; }
+        .principios .screen.toc .lista .right a.genero img {
+          left: 0.6em; }
   .principios .screen.colectiva, .principios .screen.participacion, .principios .screen.apertura, .principios .screen.innovacion, .principios .screen.genero, .principios .screen.derechos, .principios .screen.transparencia {
     background: #f6f1e9; }
     .principios .screen.colectiva p, .principios .screen.participacion p, .principios .screen.apertura p, .principios .screen.innovacion p, .principios .screen.genero p, .principios .screen.derechos p, .principios .screen.transparencia p {
-      font-size: 1.7em;
+      font-size: 1.5em;
       width: 60%;
       margin: 0 auto;
-      margin-bottom: 1em; }
+      margin-bottom: 0.6em; }
+      .principios .screen.colectiva p strong, .principios .screen.participacion p strong, .principios .screen.apertura p strong, .principios .screen.innovacion p strong, .principios .screen.genero p strong, .principios .screen.derechos p strong, .principios .screen.transparencia p strong {
+        font-size: 1.2em;
+        display: block;
+        margin-bottom: 0.6em; }
     .principios .screen.colectiva h2, .principios .screen.participacion h2, .principios .screen.apertura h2, .principios .screen.innovacion h2, .principios .screen.genero h2, .principios .screen.derechos h2, .principios .screen.transparencia h2 {
       line-height: 1.1em;
       padding-bottom: 0.2em;
@@ -1227,14 +1234,22 @@ body {
   .principios .screen.apertura h2 {
     background: #626264 -webkit-linear-gradient(left, #f6f1e9, #626264, #f6f1e9);
     color: white; }
+  .principios .screen.apertura .text .icono img {
+    width: 30em; }
   .principios .screen.innovacion h2 {
     background: #d6765e -webkit-linear-gradient(left, #f6f1e9, #d6765e, #f6f1e9); }
+  .principios .screen.innovacion .text .icono img {
+    width: 30em; }
   .principios .screen.genero h2 {
     background: #c8595f -webkit-linear-gradient(left, #f6f1e9, #c8595f, #f6f1e9); }
   .principios .screen.derechos h2 {
     background: #d98ead -webkit-linear-gradient(left, #f6f1e9, #d98ead, #f6f1e9); }
+  .principios .screen.derechos .text .icono img {
+    width: 30em; }
   .principios .screen.transparencia h2 {
     background: #b8a6be -webkit-linear-gradient(left, #f6f1e9, #b8a6be, #f6f1e9); }
+  .principios .screen.transparencia .text .icono img {
+    width: 30em; }
 
 /************************** ;COMPROMISOS **************************/
 .compromisos .screen {

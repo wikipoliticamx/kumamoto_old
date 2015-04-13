@@ -486,7 +486,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 
 		&.toc {background:$crema;
 			h2 {font-size:6em; color:white; margin:0; text-align:left}
-			.lista {width:100%; padding:30px 0; margin:30px 0; text-align:center;
+			.lista {width:100%; padding:0; margin:0; text-align:center;
 				a { display:inline-block; margin:0.5em 0; font-size:3.5em; line-height:1.7em; color:#000; text-decoration:none; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; text-align:left;
 					span {width:4em; display:inline-block; text-align:center; position:relative;
 						img {height:2.5em; vertical-align:middle; position:absolute; top:-1.5em; left:0.3em}
@@ -499,7 +499,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 						&:hover {background:#8cb7c7 -webkit-linear-gradient(left, $crema, #8cb7c7)}
 					}
 					&.apertura {background:#B4B4BB -webkit-linear-gradient(left, $crema, #B4B4BB);
-						&:hover {background:#626264 -webkit-linear-gradient(left, $crema, #626264); color:white}
+						&:hover {background:#626264 -webkit-linear-gradient(left, $crema, #626264);}
 					}
 					&.innovacion {background:#EDAC9C -webkit-linear-gradient(left, $crema, #EDAC9C);
 						&:hover {background:#d6765e -webkit-linear-gradient(left, $crema, #d6765e)}
@@ -511,7 +511,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 						&:hover {background:#d98ead -webkit-linear-gradient(right, $crema, #d98ead)}
 					}
 					&.transparencia {background:#DBCCE0 -webkit-linear-gradient(right, $crema, #DBCCE0);
-						&:hover {background:#b8a6be -webkit-linear-gradient(righ, $crema, #b8a6be)}
+						&:hover {background:#b8a6be -webkit-linear-gradient(right, $crema, #b8a6be)}
 					}
 				}
 				.left, .right {width:49%; display:inline-block; vertical-align:top; text-align:left}
@@ -522,13 +522,18 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 					}
 				}
 				.right {
-					a {padding-right:1em; margin-left:1em}
+					a {padding-right:1em; margin-left:1em;
+						img {left:0.8em}
+						&.genero img {left:0.6em}
+					}
 				}
 			}
 		}
 
 		&.colectiva, &.participacion, &.apertura, &.innovacion, &.genero, &.derechos, &.transparencia { background:$crema;
-			p {font-size:1.7em; width:60%; margin:0 auto; margin-bottom:1em}
+			p {font-size:1.5em; width:60%; margin:0 auto; margin-bottom:0.6em;
+				strong {font-size:1.2em; display:block; margin-bottom:0.6em}
+			}
 			h2 {line-height:1.1em; padding-bottom:0.2em; margin-top:0}
 			h3 {text-transform:uppercase; font-weight:200; text-align:center; width:100%; margin:0; padding:0.5em 0; padding-top:1.5em; font-size:3em}
 			.text {
@@ -546,18 +551,22 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		}
 		&.apertura {
 			h2 {background:#626264 -webkit-linear-gradient(left, $crema, #626264, $crema); color:white;}
+			.text .icono img {width:30em}
 		}
 		&.innovacion {
 			h2 {background:#d6765e -webkit-linear-gradient(left, $crema, #d6765e, $crema);}
+			.text .icono img {width:30em}
 		}
 		&.genero {
 			h2 {background:#c8595f -webkit-linear-gradient(left, $crema, #c8595f, $crema);}
 		}
 		&.derechos {
 			h2 {background:#d98ead -webkit-linear-gradient(left, $crema, #d98ead, $crema);}
+			.text .icono img {width:30em}
 		}
 		&.transparencia {
 			h2 {background:#b8a6be -webkit-linear-gradient(left, $crema, #b8a6be, $crema);}
+			.text .icono img {width:30em}
 		}
 	}
 }
