@@ -34,7 +34,10 @@ body {
       display: inline-block;
       content: counter(item);
       /*box-shadow:2px 2px 5px #555;*/
-      counter-increment: item; }
+      counter-increment: item;
+      border-right: 1px solid #777; }
+    #menu a:last-of-type(1)::before {
+      border-bottom: 1px solid #777; }
     #menu a strong {
       display: none;
       background: #aaa;
@@ -55,12 +58,14 @@ body {
       background: #ECFCF8;
       color: #555; }
     #menu a:nth-of-type(1)::before {
-      /*content:'\2191'; [>background:#eee;<] color:#333*/
-      content: '';
-      background: url(/img/logos/kumalogo-sin-texto.png) no-repeat 0 0;
-      background-size: 100%;
-      background-color: black;
-      /*box-shadow:none;*/ }
+      content: '\2191';
+      background: #eee;
+      color: #333;
+      /*content:'';*/
+      /*background:url(/img/logos/kumalogo-sin-texto.png) no-repeat 0 0;*/
+      /*background-size:100%;*/
+      /*background-color:black;*/
+      /*[>box-shadow:none;<]*/ }
     #menu a:nth-of-type(1).active {
       visibility: hidden; }
     #menu a.active::before {
@@ -706,7 +711,7 @@ body {
         .screen.medios .citas .medio:hover div.logo img {
           transform: scale(1.1, 1.1) rotate(0);
           -ms-transform: scale(1.1, 1.1) rotate(0);
-          -webkit-transform: scale(1.3, 1.3) rotate(0); }
+          -webkit-transform: scale(1.1, 1.1) rotate(0); }
   .screen.asesores {
     text-align: center;
     background: #f6f1e9;
@@ -785,6 +790,7 @@ body {
           position: relative;
           top: 0;
           left: 0;
+          margin-top: 12em;
           /*-webkit-filter:grayscale(1); transition: all 2s ease;*/ }
       .screen.acercade .yo-kuma .copy {
         width: 50%;
@@ -1222,34 +1228,36 @@ body {
       padding: 0.5em 0;
       padding-top: 1.5em;
       font-size: 3em; }
-    .principios .screen.colectiva .text .icono, .principios .screen.participacion .text .icono, .principios .screen.apertura .text .icono, .principios .screen.innovacion .text .icono, .principios .screen.genero .text .icono, .principios .screen.derechos .text .icono, .principios .screen.transparencia .text .icono {
+    .principios .screen.colectiva .text > .icono, .principios .screen.participacion .text > .icono, .principios .screen.apertura .text > .icono, .principios .screen.innovacion .text > .icono, .principios .screen.genero .text > .icono, .principios .screen.derechos .text > .icono, .principios .screen.transparencia .text > .icono {
       text-align: center; }
-      .principios .screen.colectiva .text .icono img, .principios .screen.participacion .text .icono img, .principios .screen.apertura .text .icono img, .principios .screen.innovacion .text .icono img, .principios .screen.genero .text .icono img, .principios .screen.derechos .text .icono img, .principios .screen.transparencia .text .icono img {
+      .principios .screen.colectiva .text > .icono img, .principios .screen.participacion .text > .icono img, .principios .screen.apertura .text > .icono img, .principios .screen.innovacion .text > .icono img, .principios .screen.genero .text > .icono img, .principios .screen.derechos .text > .icono img, .principios .screen.transparencia .text > .icono img {
         margin-top: 4em;
         width: 35em; }
   .principios .screen.colectiva h2 {
     background: #5fc5b8 -webkit-linear-gradient(left, #f6f1e9, #5fc5b8, #f6f1e9); }
+  .principios .screen.colectiva .text > .icono img {
+    width: 40em; }
   .principios .screen.participacion h2 {
     background: #8cb7c7 -webkit-linear-gradient(left, #f6f1e9, #8cb7c7, #f6f1e9); }
   .principios .screen.apertura h2 {
     background: #626264 -webkit-linear-gradient(left, #f6f1e9, #626264, #f6f1e9);
     color: white; }
-  .principios .screen.apertura .text .icono img {
+  .principios .screen.apertura .text > .icono img {
     width: 30em; }
   .principios .screen.innovacion h2 {
     background: #d6765e -webkit-linear-gradient(left, #f6f1e9, #d6765e, #f6f1e9); }
-  .principios .screen.innovacion .text .icono img {
+  .principios .screen.innovacion .text > .icono img {
     width: 30em; }
   .principios .screen.genero h2 {
     background: #c8595f -webkit-linear-gradient(left, #f6f1e9, #c8595f, #f6f1e9); }
   .principios .screen.derechos h2 {
     background: #d98ead -webkit-linear-gradient(left, #f6f1e9, #d98ead, #f6f1e9); }
-  .principios .screen.derechos .text .icono img {
+  .principios .screen.derechos .text > .icono img {
     width: 30em; }
   .principios .screen.transparencia h2 {
     background: #b8a6be -webkit-linear-gradient(left, #f6f1e9, #b8a6be, #f6f1e9); }
-  .principios .screen.transparencia .text .icono img {
-    width: 30em; }
+  .principios .screen.transparencia .text > .icono img {
+    width: 25em; }
 
 /************************** ;COMPROMISOS **************************/
 .compromisos .screen {
@@ -1394,11 +1402,21 @@ body {
         padding-left: 2em; }
       .compromisos .screen .text ol li.menos a.leer-mas {
         margin-left: 2em; }
+  .compromisos .screen.campanha .nota-fb img, .compromisos .screen.congreso .nota-fb img {
+    width: 1.5em;
+    vertical-align: middle; }
   .compromisos .screen.campanha .icono, .compromisos .screen.congreso .icono {
     text-align: center;
     margin-top: 5em; }
     .compromisos .screen.campanha .icono img, .compromisos .screen.congreso .icono img {
       height: 20em; }
+  .compromisos .screen.campanha .text .hidden .icono, .compromisos .screen.congreso .text .hidden .icono {
+    margin-top: 0; }
+    .compromisos .screen.campanha .text .hidden .icono img, .compromisos .screen.congreso .text .hidden .icono img {
+      height: 3em;
+      float: left;
+      margin-left: -4em;
+      margin-top: 1em; }
   .compromisos .screen.campanha h2 {
     background: #eacccc -webkit-linear-gradient(left, #f6f1e9, #eacccc, #f6f1e9); }
   .compromisos .screen.congreso h2 {
@@ -1530,26 +1548,40 @@ body {
     vertical-align: middle;
     position: relative;
     z-index: 2; }
-    .header .pedro-kumamoto .kumalogo {
-      float: left;
-      margin-right: 2.5em;
-      height: 12em;
-      margin-top: 0.2em;
-      position: relative;
-      z-index: 3; }
-    .header .pedro-kumamoto h1 {
-      padding-top: 0;
-      margin-top: 0;
-      font-size: 10em;
-      line-height: 0.6em;
-      font-family: "Lemon/Milk", Helvetica, Arial;
-      margin-bottom: 0;
-      position: relative;
-      color: transparent;
-      text-align: left; }
-      .header .pedro-kumamoto h1 img {
-        height: 0.5em;
-        vertical-align: middle; }
+    .header .pedro-kumamoto a {
+      text-decoration: none;
+      color: black; }
+      .header .pedro-kumamoto a .kumalogo {
+        float: left;
+        margin-right: 2.5em;
+        height: 14.5em;
+        margin-top: 0.2em;
+        position: relative;
+        z-index: 3; }
+      .header .pedro-kumamoto a h1 {
+        padding-top: 0;
+        margin-top: 0;
+        font-size: 10em;
+        line-height: 0.6em;
+        font-family: "Lemon/Milk", Helvetica, Arial;
+        margin-bottom: 0;
+        position: relative;
+        color: transparent;
+        text-align: left; }
+        .header .pedro-kumamoto a h1 img {
+          height: 0.5em;
+          vertical-align: middle; }
+      .header .pedro-kumamoto a h2 {
+        padding-top: 0;
+        margin-top: 0.4em;
+        font-size: 2em;
+        line-height: 0.6em;
+        font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
+        margin-bottom: 0;
+        font-weight: 200;
+        color: black; }
+      .header .pedro-kumamoto a:hover {
+        text-decoration: underline; }
   .header .where {
     width: 45%;
     display: inline-block;

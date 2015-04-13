@@ -3,13 +3,19 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 
 /************************** ;MENU **************************/
 #menu {position:absolute; bottom:15%; left:0; z-index:2; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:2em; counter-reset:item -1; line-height:1em;
-	a { color:#fff; display:block; margin:0; height:2em; overflow:hidden;
+	a { color:#fff; display:block; margin:0; height:2em; overflow:hidden; 
 		strong {display:inline-block}
 
 		&::before { background:#67B2A4; width:2em; height:1.6em; padding:0.5em 0; text-align:center; display:inline-block;
 			content:counter(item);
 			/*box-shadow:2px 2px 5px #555;*/
 			counter-increment:item;
+			border-right:1px solid #777;
+		}
+		&:last-of-type(1) {
+			&::before {
+				border-bottom:1px solid #777;
+			}
 		}
 		strong {display:none; background:#aaa; padding:0.5em 1em; text-transform:uppercase;
 			span {font-weight:200}
@@ -28,12 +34,12 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		}
 
 		&:nth-of-type(1)::before {
-			/*content:'\2191'; [>background:#eee;<] color:#333*/
-			content:'';
-			background:url(/img/logos/kumalogo-sin-texto.png) no-repeat 0 0;
-			background-size:100%;
-			background-color:black;
-			/*box-shadow:none;*/
+			content:'\2191'; background:#eee; color:#333;
+			/*content:'';*/
+			/*background:url(/img/logos/kumalogo-sin-texto.png) no-repeat 0 0;*/
+			/*background-size:100%;*/
+			/*background-color:black;*/
+			/*[>box-shadow:none;<]*/
 		} //uarr
 		&:nth-of-type(1).active {
 			visibility:hidden;
@@ -301,7 +307,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				&:hover {
 					div.logo {
 						img {
-							transform:scale(1.1,1.1) rotate(0); -ms-transform:scale(1.1,1.1) rotate(0); -webkit-transform:scale(1.3,1.3) rotate(0);
+							transform:scale(1.1,1.1) rotate(0); -ms-transform:scale(1.1,1.1) rotate(0); -webkit-transform:scale(1.1,1.1) rotate(0);
 						}
 					}
 				}
@@ -334,7 +340,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		}
 		.yo-kuma { overflow:hidden;
 			.foto { width:50%; overflow:hidden; float:left; text-align:right;
-				img {height:100%; position:relative; top:0; left:0; /*-webkit-filter:grayscale(1); transition: all 2s ease;*/}
+				img {height:100%; position:relative; top:0; left:0; margin-top:12em; /*-webkit-filter:grayscale(1); transition: all 2s ease;*/}
 			}
 			.copy { width:50%; float:left; text-align:left; position:relative; font-family:"L Futura W01", Helvetica; overflow:hidden;
 				strong, b {transition: all 2s ease;}
@@ -536,37 +542,36 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			}
 			h2 {line-height:1.1em; padding-bottom:0.2em; margin-top:0}
 			h3 {text-transform:uppercase; font-weight:200; text-align:center; width:100%; margin:0; padding:0.5em 0; padding-top:1.5em; font-size:3em}
-			.text {
-				.icono {text-align:center;
-					img {margin-top:4em; width:35em}
-				}
+			.text > .icono {text-align:center;
+				img {margin-top:4em; width:35em}
 			}
 		}
 		
 		&.colectiva { 
 			h2 {background:#5fc5b8 -webkit-linear-gradient(left, $crema, #5fc5b8, $crema);}
+			.text > .icono img {width:40em}
 		}
 		&.participacion {
 			h2 {background:#8cb7c7 -webkit-linear-gradient(left, $crema, #8cb7c7, $crema);}
 		}
 		&.apertura {
 			h2 {background:#626264 -webkit-linear-gradient(left, $crema, #626264, $crema); color:white;}
-			.text .icono img {width:30em}
+			.text > .icono img {width:30em}
 		}
 		&.innovacion {
 			h2 {background:#d6765e -webkit-linear-gradient(left, $crema, #d6765e, $crema);}
-			.text .icono img {width:30em}
+			.text > .icono img {width:30em}
 		}
 		&.genero {
 			h2 {background:#c8595f -webkit-linear-gradient(left, $crema, #c8595f, $crema);}
 		}
 		&.derechos {
 			h2 {background:#d98ead -webkit-linear-gradient(left, $crema, #d98ead, $crema);}
-			.text .icono img {width:30em}
+			.text > .icono img {width:30em}
 		}
 		&.transparencia {
 			h2 {background:#b8a6be -webkit-linear-gradient(left, $crema, #b8a6be, $crema);}
-			.text .icono img {width:30em}
+			.text > .icono img {width:25em}
 		}
 	}
 }
@@ -651,8 +656,14 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			/*.fb { background:#e9eaed; text-align:center; border-top:1px solid #ccc; overflow:hidden}*/
 		}
 		&.campanha, &.congreso {
+			.nota-fb img {width:1.5em; vertical-align:middle}
 			.icono { text-align:center; margin-top:5em;
 				img {height:20em;}
+			}
+			.text .hidden .icono {margin-top:0;
+				img {
+					height:3em; float:left; margin-left:-4em; margin-top:1em;
+				}
 			}
 		}
 		&.campanha {
@@ -731,10 +742,16 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		-moz-transform: scaleX(-1); -o-transform: scaleX(-1); -webkit-transform: scaleX(-1); transform: scaleX(-1); filter: FlipH; -ms-filter: "FlipH";
 	}
 	.pedro-kumamoto {width:49.5%; padding-left:4em; margin:0 auto; display:inline-block; vertical-align:middle; position:relative; z-index:2;
-		.kumalogo {float:left; margin-right:2.5em; height:12em; margin-top:0.2em; position:relative; z-index:3}
-		h1 {padding-top:0; margin-top:0; font-size:10em; line-height:0.6em; font-family:"Lemon/Milk", Helvetica, Arial; margin-bottom:0; 
-			position:relative; color:transparent; text-align:left;
-			img {height:0.5em; vertical-align:middle}
+		a {text-decoration:none; color:black;
+			.kumalogo {float:left; margin-right:2.5em; height:14.5em; margin-top:0.2em; position:relative; z-index:3}
+			h1 {padding-top:0; margin-top:0; font-size:10em; line-height:0.6em; font-family:"Lemon/Milk", Helvetica, Arial; margin-bottom:0; 
+				position:relative; color:transparent; text-align:left;
+				img {height:0.5em; vertical-align:middle}
+			}
+			h2 {padding-top:0; margin-top:0.4em; font-size:2em; line-height:0.6em; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; margin-bottom:0; 
+				font-weight:200; color:black;
+			}
+			&:hover {text-decoration:underline}
 		}
 	}
 	.where { width:45%; display:inline-block; vertical-align:middle; position:relative; z-index:2;
