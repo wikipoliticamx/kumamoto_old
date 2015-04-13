@@ -921,7 +921,8 @@ body {
           color: black;
           height: 1.7em;
           display: block;
-          margin: 1.9em 0; }
+          margin: 1.9em 0;
+          background: #e2dacf -webkit-linear-gradient(left, #f6f1e9, #e2dacf); }
           .propuestas .screen.toc .ciudad h3 a span, .propuestas .screen.toc .gobierno h3 a span {
             display: inline-block;
             width: 6em;
@@ -932,7 +933,7 @@ body {
               top: -2em;
               left: 0.8em; }
           .propuestas .screen.toc .ciudad h3 a:hover, .propuestas .screen.toc .gobierno h3 a:hover {
-            background: #dfd8ce; }
+            background: #c5b39a -webkit-linear-gradient(left, #f6f1e9, #c5b39a); }
         .propuestas .screen.toc .ciudad h3 strong, .propuestas .screen.toc .gobierno h3 strong {
           font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
           font-weight: bold; }
@@ -956,8 +957,12 @@ body {
           margin-left: 0.8em;
           margin-right: 0.6em;
           left: -0.2em; }
-    .propuestas .screen.toc .gobierno h3 a span img {
-      left: 1.8em; }
+    .propuestas .screen.toc .gobierno h3 a {
+      background: #e2dacf -webkit-linear-gradient(right, #f6f1e9, #e2dacf); }
+      .propuestas .screen.toc .gobierno h3 a span img {
+        left: 1.8em; }
+      .propuestas .screen.toc .gobierno h3 a:hover {
+        background: #c5b39a -webkit-linear-gradient(right, #f6f1e9, #c5b39a); }
     .propuestas .screen.toc .gobierno h3.contrapeso a img {
       height: 2.2em;
       top: -1.5em; }
@@ -1037,7 +1042,10 @@ body {
         text-align: center; }
         .propuestas .screen.democratica .text h2 img, .propuestas .screen.sostenible .text h2 img, .propuestas .screen.incluyente .text h2 img, .propuestas .screen.personas .text h2 img, .propuestas .screen.excelencia .text h2 img, .propuestas .screen.contrapeso .text h2 img {
           height: 1.5em;
-          vertical-align: middle; }
+          vertical-align: middle;
+          margin-right: 0.3em; }
+          .propuestas .screen.democratica .text h2 img.kumalogo, .propuestas .screen.sostenible .text h2 img.kumalogo, .propuestas .screen.incluyente .text h2 img.kumalogo, .propuestas .screen.personas .text h2 img.kumalogo, .propuestas .screen.excelencia .text h2 img.kumalogo, .propuestas .screen.contrapeso .text h2 img.kumalogo {
+            margin-left: 0.5em; }
         .propuestas .screen.democratica .text h2 a, .propuestas .screen.sostenible .text h2 a, .propuestas .screen.incluyente .text h2 a, .propuestas .screen.personas .text h2 a, .propuestas .screen.excelencia .text h2 a, .propuestas .screen.contrapeso .text h2 a {
           text-decoration: none;
           color: #000; }
@@ -1074,29 +1082,6 @@ body {
 /************************** ;PRINCIPIOS **************************/
 .principios {
   vertical-align: top; }
-  .principios .pedro-kumamoto {
-    margin-top: 0;
-    margin-left: 4em; }
-    .principios .pedro-kumamoto .kumalogo {
-      float: left;
-      margin-right: 2.5em;
-      height: 12em;
-      margin-top: 5px;
-      position: relative;
-      z-index: 2; }
-    .principios .pedro-kumamoto h1 {
-      padding-top: 0;
-      margin-top: 0;
-      font-size: 10em;
-      line-height: 0.6em;
-      font-family: "Lemon/Milk", Helvetica, Arial;
-      margin-bottom: 0;
-      position: relative;
-      color: transparent;
-      text-align: left; }
-      .principios .pedro-kumamoto h1 img {
-        height: 0.5em;
-        vertical-align: middle; }
   .principios h2 {
     font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
     font-weight: normal;
@@ -1122,7 +1107,7 @@ body {
       width: 511px; }
   .principios .screen.toc {
     background: #f6f1e9; }
-    .principios .screen.toc h2 {
+    .principios .screen.toc .ciudad h2 {
       font-size: 6em;
       color: white;
       margin: 0;
@@ -1306,7 +1291,7 @@ body {
         color: black; }
         .compromisos .screen.toc div.toc a span {
           position: relative;
-          width: 4.5em;
+          width: 4.8em;
           display: inline-block; }
           .compromisos .screen.toc div.toc a span img {
             vertical-align: middle;
@@ -1318,16 +1303,17 @@ body {
         background: #eacccc -webkit-linear-gradient(right, #eacccc, #f6f1e9); }
         .compromisos .screen.toc div.toc a.en-campanha img {
           text-align: right;
-          top: -2em;
-          left: -0.8em; }
+          height: 2.1em;
+          top: -1.5em;
+          left: -0.7em; }
       .compromisos .screen.toc div.toc a.en-el-congreso {
         text-align: left;
         background: #daece8 -webkit-linear-gradient(left, #daece8, #f6f1e9); }
         .compromisos .screen.toc div.toc a.en-el-congreso span {
-          width: 4.5em; }
+          width: 4em; }
           .compromisos .screen.toc div.toc a.en-el-congreso span img {
             top: -2em;
-            left: 0; }
+            left: -0.2em; }
   .compromisos .screen .text {
     width: 69.5%;
     display: inline-block;
@@ -1571,13 +1557,16 @@ body {
         .header .pedro-kumamoto a h1 img {
           height: 0.5em;
           vertical-align: middle; }
+        .header .pedro-kumamoto a h1.kumamoto {
+          font-size: 11em; }
       .header .pedro-kumamoto a h2 {
         padding-top: 0;
         margin-top: 0.4em;
-        font-size: 2em;
+        font-size: 1.6em;
         line-height: 0.6em;
         font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
         margin-bottom: 0;
+        text-align: left;
         font-weight: 200;
         color: black; }
       .header .pedro-kumamoto a:hover {

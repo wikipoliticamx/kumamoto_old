@@ -393,11 +393,11 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 					}
 				}
 				h3 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:2.5em; width:100%; text-align:left; margin:0; font-weight:200;
-					a {color:black; height:1.7em; display:block; margin:1.9em 0;
+					a {color:black; height:1.7em; display:block; margin:1.9em 0; background:#E2DACF -webkit-linear-gradient(left, $crema, #E2DACF);
 						span {display:inline-block; width:6em; text-align:center; position:relative; 
 							img {position:absolute; top:-2em; left:0.8em}
 						}
-						&:hover {background:#dfd8ce}
+						&:hover {background:#C5B39A -webkit-linear-gradient(left, $crema, #C5B39A)}
 					}
 					strong {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:bold}
 				}
@@ -417,8 +417,13 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 						img {margin-left:0.8em; margin-right:0.6em; left:-0.2em;}
 					}
 				}
-				h3 a span img {left:1.8em}
-				h3.contrapeso a img {height:2.2em; top:-1.5em}
+				h3 {
+					a { background:#E2DACF -webkit-linear-gradient(right, $crema, #E2DACF);
+						span img {left:1.8em}
+						&:hover {background:#C5B39A -webkit-linear-gradient(right, $crema, #C5B39A);}
+					}
+					&.contrapeso a img {height:2.2em; top:-1.5em}
+				}
 			}
 		}
 		&.ciudad, &.gobierno {
@@ -450,7 +455,9 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				h2 {text-transform:uppercase; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:3em; width:100%; 
 					margin-top:0.5em; margin-bottom:0; padding:0.2em 0; font-weight:200;
 					background:$crema; text-align:center;
-					img {height:1.5em; vertical-align:middle}
+					img {height:1.5em; vertical-align:middle; margin-right:0.3em;
+						&.kumalogo {margin-left:0.5em}
+					}
 					a {text-decoration:none; color:#000}
 				}
 				h1 {text-align:center; margin-left:0; margin-top:0; padding:0.4em 0; padding-top:0.2em; font-size:5em; background:#EACCCC -webkit-linear-gradient(left, $crema, #EACCCC, $crema); line-height:0.9em}
@@ -475,13 +482,6 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 
 /************************** ;PRINCIPIOS **************************/
 .principios { vertical-align:top;
-	.pedro-kumamoto { margin-top:0; margin-left:4em;
-		.kumalogo {float:left; margin-right:2.5em; height:12em; margin-top:5px; position:relative; z-index:2}
-		h1 {padding-top:0; margin-top:0; font-size:10em; line-height:0.6em; font-family:"Lemon/Milk", Helvetica, Arial; margin-bottom:0; 
-			position:relative; color:transparent; text-align:left;
-			img {height:0.5em; vertical-align:middle}
-		}
-	}
 	h2 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:normal; font-size:5em; text-align:center; margin:0.7em 0; color:#000; text-align:center; }
 	.screen {
 		.text { width:69%; display:inline-block; vertical-align:top;
@@ -491,7 +491,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		}
 
 		&.toc {background:$crema;
-			h2 {font-size:6em; color:white; margin:0; text-align:left}
+			.ciudad h2 {font-size:6em; color:white; margin:0; text-align:left}
 			.lista {width:100%; padding:0; margin:0; text-align:center;
 				a { display:inline-block; margin:0.5em 0; font-size:3.5em; line-height:1.7em; color:#000; text-decoration:none; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; text-align:left;
 					span {width:4em; display:inline-block; text-align:center; position:relative;
@@ -592,18 +592,18 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			}
 			div.toc {text-align:left; margin-top:8em;
 				a {display:inline-block; width:49.9%; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:5em; font-weight:200; text-decoration:none; margin:0; color:black; 
-					span {position:relative; width:4.5em; display:inline-block;
+					span {position:relative; width:4.8em; display:inline-block;
 						img {vertical-align:middle; height:2.5em; margin:0 1em; position:absolute;}
 					}
 				}
 				a.en-campanha { text-align:right;
 					background:#EACCCC -webkit-linear-gradient(right, #EACCCC, $crema);
-					img {text-align:right; top:-2em; left:-0.8em}
+					img {text-align:right; height:2.1em; top:-1.5em; left:-0.7em}
 				}
 				a.en-el-congreso {text-align:left;
 					background:#DAECE8 -webkit-linear-gradient(left, #DAECE8, $crema);
-					span {width:4.5em;
-						img {top:-2em; left:0}
+					span {width:4em;
+						img {top:-2em; left:-0.2em}
 					}
 				}
 			}
@@ -747,8 +747,9 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			h1 {padding-top:0; margin-top:0; font-size:10em; line-height:0.6em; font-family:"Lemon/Milk", Helvetica, Arial; margin-bottom:0; 
 				position:relative; color:transparent; text-align:left;
 				img {height:0.5em; vertical-align:middle}
+				&.kumamoto {font-size:11em}
 			}
-			h2 {padding-top:0; margin-top:0.4em; font-size:2em; line-height:0.6em; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; margin-bottom:0; 
+			h2 {padding-top:0; margin-top:0.4em; font-size:1.6em; line-height:0.6em; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; margin-bottom:0; text-align:left;
 				font-weight:200; color:black;
 			}
 			&:hover {text-decoration:underline}
