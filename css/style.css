@@ -1094,6 +1094,17 @@ body {
     width: 69%;
     display: inline-block;
     vertical-align: top; }
+    .principios .screen .text h2 {
+      font-size: 4.5em;
+      padding-left: 1.9em; }
+    .principios .screen .text a.inicio {
+      text-decoration: none;
+      color: #000; }
+    .principios .screen .text img.kumalogo {
+      position: absolute;
+      height: 10em;
+      left: 19.3em;
+      top: 4em; }
   .principios .screen .fb {
     width: 30%;
     display: inline-block;
@@ -1203,13 +1214,16 @@ body {
     .principios .screen.colectiva h2, .principios .screen.participacion h2, .principios .screen.apertura h2, .principios .screen.innovacion h2, .principios .screen.genero h2, .principios .screen.derechos h2, .principios .screen.transparencia h2 {
       line-height: 1.1em;
       padding-bottom: 0.2em;
-      margin-top: 0; }
+      margin-top: 0;
+      text-align: left;
+      padding-left: 7.05em; }
     .principios .screen.colectiva h3, .principios .screen.participacion h3, .principios .screen.apertura h3, .principios .screen.innovacion h3, .principios .screen.genero h3, .principios .screen.derechos h3, .principios .screen.transparencia h3 {
       text-transform: uppercase;
       font-weight: 200;
-      text-align: center;
+      text-align: left;
       width: 100%;
       margin: 0;
+      margin-left: 10.6em;
       padding: 0.5em 0;
       padding-top: 1.5em;
       font-size: 3em; }
@@ -1335,6 +1349,13 @@ body {
     /*.fb {display:none}*/
     /*}*/
     /*.fb { background:#e9eaed; text-align:center; border-top:1px solid #ccc; overflow:hidden}*/ }
+    .compromisos .screen .text a.inicio {
+      text-decoration: none; }
+    .compromisos .screen .text img.kumalogo {
+      position: absolute;
+      height: 10em;
+      left: 25em;
+      top: 3em; }
     .compromisos .screen .text h2 {
       font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
       font-weight: 200;
@@ -1365,7 +1386,7 @@ body {
       margin: 0 auto;
       margin-top: 2em;
       counter-reset: item;
-      width: 60%; }
+      width: 65%; }
       .compromisos .screen .text ol.congreso {
         counter-reset: item 8; }
       .compromisos .screen .text ol li:before {
@@ -1385,7 +1406,8 @@ body {
           color: #c87072; }
       .compromisos .screen .text ol span.hidden {
         font-size: 0.9em;
-        padding-left: 2em; }
+        padding-left: 2em;
+        padding-right: 1em; }
       .compromisos .screen .text ol li.menos a.leer-mas {
         margin-left: 2em; }
   .compromisos .screen.campanha .nota-fb img, .compromisos .screen.congreso .nota-fb img {

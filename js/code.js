@@ -487,7 +487,9 @@ var KUMA = {
 
 			if((where == 'home') || (where == 'splash')) {
 				KUMA.screen.cover();
+				$('.screen').css('height', $(window).height());
 				KUMA.screen.backgroundWithin($('.yo-kuma .foto img'), $('.yo-kuma .foto'));
+				KUMA.screen.backgroundWithin($('.screen.mapa a.mapa img'), $('.screen.mapa'));
 			} else {
 				if(where == 'propuestas') {
 					$('.video, .text, .fb, .screen').css('height', $(window).height());
