@@ -1071,6 +1071,8 @@ body {
         margin: 0;
         padding: 1.5em 3em;
         padding-left: 5em; }
+      .propuestas .screen.democratica .text p.propuestas, .propuestas .screen.sostenible .text p.propuestas, .propuestas .screen.incluyente .text p.propuestas, .propuestas .screen.personas .text p.propuestas, .propuestas .screen.excelencia .text p.propuestas, .propuestas .screen.contrapeso .text p.propuestas {
+        padding: 0.5em 4.1em; }
       .propuestas .screen.democratica .text ol li, .propuestas .screen.sostenible .text ol li, .propuestas .screen.incluyente .text ol li, .propuestas .screen.personas .text ol li, .propuestas .screen.excelencia .text ol li, .propuestas .screen.contrapeso .text ol li {
         margin-top: 0;
         margin-left: 4em; }
