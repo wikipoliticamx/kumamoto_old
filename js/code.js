@@ -128,7 +128,7 @@ var KUMA = {
 			['sofia-1', 'La política la construimos <b>todos</b> y estando informados e involucrados podremos generar verdadera política y prácticas más incluyentes y benéficas para la mayoría.', 4, 6],
 			//['sofia-2', '', 4, 7],
 			['susy', 'Necesitamos preguntarnos qué sigue <b>después</b> de nuestro hartazgo. Nadie lo hará por nosotros.', 4, 8],
-			['diego', 'A falta de una opción digna y auténtica, ahora podemos construir una colectivamente, como <b>nunca</b> se ha intentado y cuando más necesita.', 1, 6],
+			['diego', 'A falta de una opción digna y auténtica, ahora podemos construir una colectivamente, como <b>nunca</b> se ha intentado y cuando más se necesita.', 1, 6],
 			//['tanya', '', 4, 9],
 			['alberto', 'Estoy aquí porque creo que mi generación se perdió en la cotidianidad y <b>conformismo</b>. Confío en Kuma y su equipo para hacer mejor las cosas.', 0, 1],
 			['mariela', 'La mejor manera de acrecentar nuestra democracia es hacerla <b>nuestra</b>. De los ciudadanos. Necesitamos caminar en esa dirección aquí y ahora.', 3, 4]
@@ -170,8 +170,8 @@ var KUMA = {
 			var scale = KUMA.em/12,
 				w = 1500,
 				h = 750;
-			console.log( 'em', KUMA.em);
-			console.log('scale('+scale+','+scale+')');
+			//console.log( 'em', KUMA.em);
+			//console.log('scale('+scale+','+scale+')');
 
 			$('.screen.nosotros .galaxia div.wiki img').each(function() { var img = $(this), x = img.data('x'), y = img.data('y');
 				//console.log( 'x', x );

@@ -64,7 +64,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 /* INDEX */
 /* SCREEN */
 .screen {
-	background:#fff; width:100%; height:100%; position:relative; overflow:hidden;
+	background:$crema url(/img/ui/kumatile.jpg); width:100%; height:100%; position:relative; overflow:hidden;
 
 	/* SPLASH */
 	&.splash {
@@ -201,7 +201,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			h1 {font-size:5.6em; line-height:1.11em; margin:0; margin-right:0.8em; margin-top:2.5; position:relative; top:0.2em; display:inline-block; text-transform:uppercase; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; text-align:left;
 				span { opacity:0; position:relative; display:inline-block; transition:all 8s ease;
 					&.muros {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:500}
-					&.si {font-size:150%; top:1.25em; color:rgb(152, 95, 96); font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:bold}
+					&.si {font-size:150%; top:0.2em; color:rgb(152, 95, 96); font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:bold}
 				}
 				div {margin-left:3em}
 			}
@@ -218,7 +218,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 
 	/* NOSOTROS */
 	$faceSide:12.5em;
-	&.nosotros { background:$crema; color:white; text-align:center;
+	&.nosotros { background:$crema url(/img/ui/kumatile.jpg); color:white; text-align:center;
 		h1 { font-family:"FF Meta W01", Helvetica, Arial, sans-serif; color:#000; text-align:center; margin:0; font-size:7em; display:inline-block; line-height:1em; vertical-align:middle; width:8.2em; text-transform:uppercase; position:relative;
 			img {height:1.5em; vertical-align:middle}
 			a {position:absolute; bottom:0; font-size:0.4em; line-height:1em; right:1.5em; font-weight:200; color:#999; text-decoration:none;
@@ -258,14 +258,15 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 	}
 
 	/* ;NOS ASESORAN */
-	&.asesores { text-align:center; background:$crema; background-repeat:no-repeat; background-position:right top; background-size:auto 100%; z-index:1; position:relative;
+	&.asesores { text-align:center; background:$crema url(/img/ui/kumatile.jpg); z-index:1; position:relative;
+		.asesores-bkg {position:absolute; top:0; background-size:auto 100%; right:0}
 		h1 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:7em; text-align:center; margin:0; text-transform:uppercase;
 			left:0; z-index:2; color:#000; text-align:center; width:100%;
 			strong {font-family:"FF Meta W01", Helvetica, Arial, sans-serif}
 		}
 		div.asesores {margin:0 auto;
-			.asesor {margin-bottom:0.5em; 
-				.portrait {display:inline-block; text-align:right; width:10em;
+			.asesor {margin-bottom:0.5em; position:relative;
+				.portrait {display:inline-block; text-align:right; width:10em; position:relative;
 					img {height:8em; margin-right:2em; border:1px solid #999}
 				}
 				.bio {display:inline-block; max-width:14em; vertical-align:top; text-align:center;
@@ -277,7 +278,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 					}
 				}
 				p {display:inline-block; text-align:right; width:22em; vertical-align:middle; margin-top:0; text-align:left; font-size:130%}
-				.card {background:white; display:inline-block; padding-top:0.6em; margin-bottom:0.5em; vertical-align:middle;
+				.card {background:white; display:inline-block; padding-top:0.6em; margin-bottom:0.5em; vertical-align:middle; position:relative;
 					box-shadow:0.2em 0.2em 0.4em #ccc;
 				}
 			}
@@ -293,6 +294,15 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				em {margin-top:1em}
 				span.name {margin-top:0.5em}
 			}
+
+			.center, .left .card, .right .card {
+				a.twitter { position:absolute; bottom:-1em; left:50%; margin-left:-1em; z-index:2;
+					img {width:2em; height:auto; border:none; margin-right:0}
+				}
+			}
+			.left .card { a.twitter { left:23%; bottom:-1.2em; margin-left:1em; } }
+			.right .card { a.twitter { left:auto; right:23%; bottom:-1.2em; margin-left:1em; } }
+
 			.left {text-align:right; width:47.5%; padding-right:1%; border-right:1px solid #999; margin-right:1%;
 				.asesor {
 					.portrait {margin-left:0.5em}
@@ -349,7 +359,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			}
 			a.void {cursor:default}
 		}
-		.citas { display:block; width:100%; font-size:1.3em; margin:0 auto; padding:0.64em 0; position:relative; background:$crema;
+		.citas { display:block; width:100%; font-size:1.3em; margin:0 auto; padding:0.64em 0; position:relative; background:$crema url(/img/ui/kumatile.jpg); 
 			.medio {text-decoration:none; color:black; overflow:hidden; text-align:center; font-family:"L Futura W01", Helvetica; display:block; margin:0; position:relative;
 				a {text-decoration:none; color:#000}
 				.copy { display:inline-block; width:40em; vertical-align:top; 
@@ -382,7 +392,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 	}
 
 	/* ACERCA DE */
-	&.acercade { text-align:center; background:$crema; z-index:1; position:relative;
+	&.acercade { text-align:center; background:$crema url(/img/ui/kumatile.jpg); z-index:1; position:relative;
 		h1 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:7em; text-align:center; margin:0; text-transform:uppercase; opacity:0;
 			position:absolute; top:0.2em; left:0; z-index:2; color:#fff; width:50%; text-align:center;
 			strong {font-family:"FF Meta W01", Helvetica, Arial, sans-serif}
@@ -421,7 +431,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 
 /************************** ;PROPUESTAS **************************/
 .propuestas {
-	.screen {background:$crema;
+	.screen {
 		p strong {color:rgb(200, 112, 114);}
 		ol {margin-top:0;
 			strong {color:#379088}
@@ -500,7 +510,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			}
 			.fb { background:#e9eaed; text-align:center;}
 			.fb img {width:511px}
-			.text {background:$crema; 
+			.text {background:$crema url(/img/ui/kumatile.jpg);  
 				h2 {text-transform:uppercase; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:3em; width:100%; 
 					margin-top:0.5em; margin-bottom:0; padding:0.2em 0; font-weight:200;
 					background:$crema; text-align:center;
@@ -542,7 +552,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			img {width:511px}
 		}
 
-		&.toc {background:$crema;
+		&.toc {
 			.ciudad h2 {font-size:6em; color:white; margin:0; text-align:left}
 			.lista {width:100%; padding:0; margin:0; text-align:center;
 				a { display:inline-block; margin:0.5em 0; font-size:3.5em; line-height:1.7em; color:#000; text-decoration:none; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; text-align:left;
@@ -588,7 +598,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			}
 		}
 
-		&.colectiva, &.participacion, &.apertura, &.innovacion, &.genero, &.derechos, &.transparencia { background:$crema;
+		&.colectiva, &.participacion, &.apertura, &.innovacion, &.genero, &.derechos, &.transparencia {
 			p {font-size:1.5em; width:60%; margin:0 auto; margin-bottom:0.6em;
 				strong {font-size:1.2em; display:block; margin-bottom:0.6em}
 			}
@@ -630,13 +640,13 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 
 /************************** ;COMPROMISOS **************************/
 .compromisos {
-	.screen { background:$crema; overflow:hidden;
+	.screen { overflow:hidden;
 		.fb, .text {display:inline-block; vertical-align:top; height:100%; overflow:hidden}
 		.fb {width:30%; max-width:550px; background:#e9eaed; text-align:center;
 			img {width:511px}
 		}
 
-		&.toc { text-align:left; background:$crema;
+		&.toc { text-align:left;
 			/*h2 {color:rgb(200, 112, 114);}*/
 			p { font-family:Helvetica; font-size:1.5em; width:30em; margin:1.5em auto; text-align:left;
 				a, strong {color:rgb(200, 112, 114);}
@@ -663,7 +673,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		/*.infografia { width:30%; height:100%; display:inline-block; text-align:center; background:#B3D7DA;*/
 			/*img {width:80%; margin-top:5em}*/
 		/*}*/
-		.text { width:69.5%; display:inline-block; vertical-align:top; background:$crema;
+		.text { width:69.5%; display:inline-block; vertical-align:top;
 			a.inicio {text-decoration:none}
 			img.kumalogo {position:absolute; height:10em; left:25em; top:3em}
 			h2 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:6em; text-align:left; margin:0;

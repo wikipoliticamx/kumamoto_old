@@ -98,7 +98,7 @@ body {
 /* INDEX */
 /* SCREEN */
 .screen {
-  background: #fff;
+  background: #f6f1e9 url(/img/ui/kumatile.jpg);
   width: 100%;
   height: 100%;
   position: relative;
@@ -475,7 +475,7 @@ body {
             font-weight: 500; }
           .screen.video .copy h1 span.si {
             font-size: 150%;
-            top: 1.25em;
+            top: 0.2em;
             color: #985f60;
             font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
             font-weight: bold; }
@@ -505,7 +505,7 @@ body {
           .screen.video .copy p a:hover {
             text-decoration: underline; }
   .screen.nosotros {
-    background: #f6f1e9;
+    background: #f6f1e9 url(/img/ui/kumatile.jpg);
     color: white;
     text-align: center; }
     .screen.nosotros h1 {
@@ -596,12 +596,14 @@ body {
             visibility: visible; }
   .screen.asesores {
     text-align: center;
-    background: #f6f1e9;
-    background-repeat: no-repeat;
-    background-position: right top;
-    background-size: auto 100%;
+    background: #f6f1e9 url(/img/ui/kumatile.jpg);
     z-index: 1;
     position: relative; }
+    .screen.asesores .asesores-bkg {
+      position: absolute;
+      top: 0;
+      background-size: auto 100%;
+      right: 0; }
     .screen.asesores h1 {
       font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
       font-weight: 200;
@@ -619,11 +621,13 @@ body {
     .screen.asesores div.asesores {
       margin: 0 auto; }
       .screen.asesores div.asesores .asesor {
-        margin-bottom: 0.5em; }
+        margin-bottom: 0.5em;
+        position: relative; }
         .screen.asesores div.asesores .asesor .portrait {
           display: inline-block;
           text-align: right;
-          width: 10em; }
+          width: 10em;
+          position: relative; }
           .screen.asesores div.asesores .asesor .portrait img {
             height: 8em;
             margin-right: 2em;
@@ -661,6 +665,7 @@ body {
           padding-top: 0.6em;
           margin-bottom: 0.5em;
           vertical-align: middle;
+          position: relative;
           box-shadow: 0.2em 0.2em 0.4em #ccc; }
       .screen.asesores div.asesores .center {
         display: block;
@@ -694,6 +699,26 @@ body {
           margin-top: 1em; }
         .screen.asesores div.asesores .left span.name, .screen.asesores div.asesores .right span.name {
           margin-top: 0.5em; }
+      .screen.asesores div.asesores .center a.twitter, .screen.asesores div.asesores .left .card a.twitter, .screen.asesores div.asesores .right .card a.twitter {
+        position: absolute;
+        bottom: -1em;
+        left: 50%;
+        margin-left: -1em;
+        z-index: 2; }
+        .screen.asesores div.asesores .center a.twitter img, .screen.asesores div.asesores .left .card a.twitter img, .screen.asesores div.asesores .right .card a.twitter img {
+          width: 2em;
+          height: auto;
+          border: none;
+          margin-right: 0; }
+      .screen.asesores div.asesores .left .card a.twitter {
+        left: 23%;
+        bottom: -1.2em;
+        margin-left: 1em; }
+      .screen.asesores div.asesores .right .card a.twitter {
+        left: auto;
+        right: 23%;
+        bottom: -1.2em;
+        margin-left: 1em; }
       .screen.asesores div.asesores .left {
         text-align: right;
         width: 47.5%;
@@ -796,7 +821,7 @@ body {
       margin: 0 auto;
       padding: 0.64em 0;
       position: relative;
-      background: #f6f1e9; }
+      background: #f6f1e9 url(/img/ui/kumatile.jpg); }
       .screen.medios .citas .medio {
         text-decoration: none;
         color: black;
@@ -856,7 +881,7 @@ body {
           -webkit-transform: scale(1.1, 1.1) rotate(0); }
   .screen.acercade {
     text-align: center;
-    background: #f6f1e9;
+    background: #f6f1e9 url(/img/ui/kumatile.jpg);
     z-index: 1;
     position: relative; }
     .screen.acercade h1 {
@@ -957,227 +982,225 @@ body {
           transform: scale(1.2, 1.2); }
 
 /************************** ;PROPUESTAS **************************/
-.propuestas .screen {
-  background: #f6f1e9; }
-  .propuestas .screen p strong {
-    color: #c87072; }
-  .propuestas .screen ol {
-    margin-top: 0; }
-    .propuestas .screen ol strong {
-      color: #379088; }
-  .propuestas .screen h1 {
-    font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
-    font-weight: 200;
-    font-size: 7em;
+.propuestas .screen p strong {
+  color: #c87072; }
+.propuestas .screen ol {
+  margin-top: 0; }
+  .propuestas .screen ol strong {
+    color: #379088; }
+.propuestas .screen h1 {
+  font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
+  font-weight: 200;
+  font-size: 7em;
+  text-align: center;
+  margin: 0;
+  z-index: 2;
+  color: #000;
+  width: 100%;
+  text-align: center;
+  margin-top: 0;
+  line-height: 1em; }
+.propuestas .screen.toc {
+  position: relative; }
+  .propuestas .screen.toc .ciudad, .propuestas .screen.toc .gobierno {
+    width: 49.9%;
+    display: inline-block;
     text-align: center;
-    margin: 0;
-    z-index: 2;
-    color: #000;
-    width: 100%;
-    text-align: center;
-    margin-top: 0;
-    line-height: 1em; }
-  .propuestas .screen.toc {
-    position: relative; }
-    .propuestas .screen.toc .ciudad, .propuestas .screen.toc .gobierno {
-      width: 49.9%;
-      display: inline-block;
-      text-align: center;
-      vertical-align: top; }
-      .propuestas .screen.toc .ciudad h2, .propuestas .screen.toc .gobierno h2 {
+    vertical-align: top; }
+    .propuestas .screen.toc .ciudad h2, .propuestas .screen.toc .gobierno h2 {
+      font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
+      font-size: 3.5em;
+      font-weight: 200;
+      text-transform: uppercase;
+      margin-bottom: 0.2em; }
+      .propuestas .screen.toc .ciudad h2 a, .propuestas .screen.toc .gobierno h2 a {
+        color: black;
+        display: block;
+        line-height: 2em;
+        background: #eacccc -webkit-linear-gradient(right, #eacccc, #f6f1e9); }
+      .propuestas .screen.toc .ciudad h2 strong, .propuestas .screen.toc .gobierno h2 strong {
         font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
-        font-size: 3.5em;
-        font-weight: 200;
-        text-transform: uppercase;
-        margin-bottom: 0.2em; }
-        .propuestas .screen.toc .ciudad h2 a, .propuestas .screen.toc .gobierno h2 a {
-          color: black;
-          display: block;
-          line-height: 2em;
-          background: #eacccc -webkit-linear-gradient(right, #eacccc, #f6f1e9); }
-        .propuestas .screen.toc .ciudad h2 strong, .propuestas .screen.toc .gobierno h2 strong {
-          font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
-          font-weight: bold; }
-        .propuestas .screen.toc .ciudad h2 span, .propuestas .screen.toc .gobierno h2 span {
-          width: 4.4em;
-          display: inline-block;
-          position: relative; }
-          .propuestas .screen.toc .ciudad h2 span img, .propuestas .screen.toc .gobierno h2 span img {
-            vertical-align: middle;
-            height: 3em;
-            margin: 0;
-            position: absolute;
-            top: -2.1em; }
-      .propuestas .screen.toc .ciudad h3, .propuestas .screen.toc .gobierno h3 {
-        font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
-        font-size: 2.5em;
-        width: 100%;
-        text-align: left;
-        margin: 0;
-        font-weight: 200; }
-        .propuestas .screen.toc .ciudad h3 a, .propuestas .screen.toc .gobierno h3 a {
-          color: black;
-          height: 1.7em;
-          display: block;
-          margin: 1.9em 0;
-          background: #e2dacf -webkit-linear-gradient(left, #f6f1e9, #e2dacf); }
-          .propuestas .screen.toc .ciudad h3 a span, .propuestas .screen.toc .gobierno h3 a span {
-            display: inline-block;
-            width: 6em;
-            text-align: center;
-            position: relative; }
-            .propuestas .screen.toc .ciudad h3 a span img, .propuestas .screen.toc .gobierno h3 a span img {
-              position: absolute;
-              top: -2em;
-              left: 0.8em; }
-          .propuestas .screen.toc .ciudad h3 a:hover, .propuestas .screen.toc .gobierno h3 a:hover {
-            background: #c5b39a -webkit-linear-gradient(left, #f6f1e9, #c5b39a); }
-        .propuestas .screen.toc .ciudad h3 strong, .propuestas .screen.toc .gobierno h3 strong {
-          font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
-          font-weight: bold; }
-      .propuestas .screen.toc .ciudad a, .propuestas .screen.toc .gobierno a {
-        text-decoration: none; }
-        .propuestas .screen.toc .ciudad a img, .propuestas .screen.toc .gobierno a img {
-          height: 3em;
-          vertical-align: middle; }
-    .propuestas .screen.toc .ciudad h2, .propuestas .screen.toc .ciudad h3 {
-      text-align: right; }
-    .propuestas .screen.toc .ciudad h2 a img {
-      margin-left: 0.5em;
-      left: 0; }
-    .propuestas .screen.toc .ciudad h3 a img {
-      margin-right: 1em; }
-    .propuestas .screen.toc .gobierno h2 {
-      text-align: left; }
-      .propuestas .screen.toc .gobierno h2 a {
-        background: #daece8 -webkit-linear-gradient(left, #daece8, #f6f1e9); }
-        .propuestas .screen.toc .gobierno h2 a img {
-          margin-left: 0.8em;
-          margin-right: 0.6em;
-          left: -0.2em; }
-    .propuestas .screen.toc .gobierno h3 a {
-      background: #e2dacf -webkit-linear-gradient(right, #f6f1e9, #e2dacf); }
-      .propuestas .screen.toc .gobierno h3 a span img {
-        left: 1.8em; }
-      .propuestas .screen.toc .gobierno h3 a:hover {
-        background: #c5b39a -webkit-linear-gradient(right, #f6f1e9, #c5b39a); }
-    .propuestas .screen.toc .gobierno h3.contrapeso a img {
-      height: 2.2em;
-      top: -1.5em; }
-  .propuestas .screen.ciudad h1, .propuestas .screen.gobierno h1 {
-    position: absolute;
-    top: 1em;
-    left: 0;
-    font-size: 9em;
-    color: black;
-    /*text-shadow:0.03em 0.03em white;*/ }
-    .propuestas .screen.ciudad h1 img, .propuestas .screen.gobierno h1 img {
-      height: 2.5em;
-      vertical-align: middle; }
-  .propuestas .screen.ciudad img.gobierno, .propuestas .screen.ciudad img.ciudad, .propuestas .screen.gobierno img.gobierno, .propuestas .screen.gobierno img.ciudad {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-    height: 100%; }
-  .propuestas .screen.ciudad div.copy, .propuestas .screen.gobierno div.copy {
-    position: absolute;
-    bottom: 3em;
-    right: 4em;
-    z-index: 2;
-    background-color: white;
-    padding: 1em 3em;
-    font-size: 1.4em;
-    font-family: "L Futura W01", Helvetica;
-    width: 30em; }
-    .propuestas .screen.ciudad div.copy strong, .propuestas .screen.gobierno div.copy strong {
-      font-size: 1em; }
-    .propuestas .screen.ciudad div.copy b, .propuestas .screen.gobierno div.copy b {
-      color: #379088; }
-  .propuestas .screen.gobierno {
-    position: relative; }
-    .propuestas .screen.gobierno h1 {
-      position: absolute;
-      z-index: 2; }
-  .propuestas .screen.democratica, .propuestas .screen.sostenible, .propuestas .screen.incluyente, .propuestas .screen.personas, .propuestas .screen.excelencia, .propuestas .screen.contrapeso {
-    background: #eee; }
-    .propuestas .screen.democratica .video, .propuestas .screen.democratica .fb, .propuestas .screen.democratica .text, .propuestas .screen.sostenible .video, .propuestas .screen.sostenible .fb, .propuestas .screen.sostenible .text, .propuestas .screen.incluyente .video, .propuestas .screen.incluyente .fb, .propuestas .screen.incluyente .text, .propuestas .screen.personas .video, .propuestas .screen.personas .fb, .propuestas .screen.personas .text, .propuestas .screen.excelencia .video, .propuestas .screen.excelencia .fb, .propuestas .screen.excelencia .text, .propuestas .screen.contrapeso .video, .propuestas .screen.contrapeso .fb, .propuestas .screen.contrapeso .text {
-      width: 33%;
-      display: inline-block;
-      vertical-align: top;
-      height: 100%;
-      overflow: hidden; }
-    .propuestas .screen.democratica .video, .propuestas .screen.sostenible .video, .propuestas .screen.incluyente .video, .propuestas .screen.personas .video, .propuestas .screen.excelencia .video, .propuestas .screen.contrapeso .video {
-      width: 28%; }
-    .propuestas .screen.democratica .text, .propuestas .screen.sostenible .text, .propuestas .screen.incluyente .text, .propuestas .screen.personas .text, .propuestas .screen.excelencia .text, .propuestas .screen.contrapeso .text {
-      width: 38%; }
-    .propuestas .screen.democratica .fb, .propuestas .screen.sostenible .fb, .propuestas .screen.incluyente .fb, .propuestas .screen.personas .fb, .propuestas .screen.excelencia .fb, .propuestas .screen.contrapeso .fb {
-      max-width: 550px; }
-    .propuestas .screen.democratica .video, .propuestas .screen.sostenible .video, .propuestas .screen.incluyente .video, .propuestas .screen.personas .video, .propuestas .screen.excelencia .video, .propuestas .screen.contrapeso .video {
-      background: #ccc;
-      position: relative; }
-      .propuestas .screen.democratica .video img, .propuestas .screen.sostenible .video img, .propuestas .screen.incluyente .video img, .propuestas .screen.personas .video img, .propuestas .screen.excelencia .video img, .propuestas .screen.contrapeso .video img {
-        position: absolute;
-        top: 0;
-        left: 0; }
-    .propuestas .screen.democratica .fb, .propuestas .screen.sostenible .fb, .propuestas .screen.incluyente .fb, .propuestas .screen.personas .fb, .propuestas .screen.excelencia .fb, .propuestas .screen.contrapeso .fb {
-      background: #e9eaed;
-      text-align: center; }
-    .propuestas .screen.democratica .fb img, .propuestas .screen.sostenible .fb img, .propuestas .screen.incluyente .fb img, .propuestas .screen.personas .fb img, .propuestas .screen.excelencia .fb img, .propuestas .screen.contrapeso .fb img {
-      width: 511px; }
-    .propuestas .screen.democratica .text, .propuestas .screen.sostenible .text, .propuestas .screen.incluyente .text, .propuestas .screen.personas .text, .propuestas .screen.excelencia .text, .propuestas .screen.contrapeso .text {
-      background: #f6f1e9; }
-      .propuestas .screen.democratica .text h2, .propuestas .screen.sostenible .text h2, .propuestas .screen.incluyente .text h2, .propuestas .screen.personas .text h2, .propuestas .screen.excelencia .text h2, .propuestas .screen.contrapeso .text h2 {
-        text-transform: uppercase;
-        font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
-        font-size: 3em;
-        width: 100%;
-        margin-top: 0.5em;
-        margin-bottom: 0;
-        padding: 0.2em 0;
-        font-weight: 200;
-        background: #f6f1e9;
-        text-align: center; }
-        .propuestas .screen.democratica .text h2 img, .propuestas .screen.sostenible .text h2 img, .propuestas .screen.incluyente .text h2 img, .propuestas .screen.personas .text h2 img, .propuestas .screen.excelencia .text h2 img, .propuestas .screen.contrapeso .text h2 img {
-          height: 1.5em;
+        font-weight: bold; }
+      .propuestas .screen.toc .ciudad h2 span, .propuestas .screen.toc .gobierno h2 span {
+        width: 4.4em;
+        display: inline-block;
+        position: relative; }
+        .propuestas .screen.toc .ciudad h2 span img, .propuestas .screen.toc .gobierno h2 span img {
           vertical-align: middle;
-          margin-right: 0.3em; }
-          .propuestas .screen.democratica .text h2 img.kumalogo, .propuestas .screen.sostenible .text h2 img.kumalogo, .propuestas .screen.incluyente .text h2 img.kumalogo, .propuestas .screen.personas .text h2 img.kumalogo, .propuestas .screen.excelencia .text h2 img.kumalogo, .propuestas .screen.contrapeso .text h2 img.kumalogo {
-            margin-left: 0.5em; }
-        .propuestas .screen.democratica .text h2 a, .propuestas .screen.sostenible .text h2 a, .propuestas .screen.incluyente .text h2 a, .propuestas .screen.personas .text h2 a, .propuestas .screen.excelencia .text h2 a, .propuestas .screen.contrapeso .text h2 a {
-          text-decoration: none;
-          color: #000; }
-      .propuestas .screen.democratica .text h1, .propuestas .screen.sostenible .text h1, .propuestas .screen.incluyente .text h1, .propuestas .screen.personas .text h1, .propuestas .screen.excelencia .text h1, .propuestas .screen.contrapeso .text h1 {
-        text-align: center;
-        margin-left: 0;
-        margin-top: 0;
-        padding: 0.4em 0;
-        padding-top: 0.2em;
-        font-size: 5em;
-        background: #eacccc -webkit-linear-gradient(left, #f6f1e9, #eacccc, #f6f1e9);
-        line-height: 0.9em; }
-      .propuestas .screen.democratica .text div.icono, .propuestas .screen.sostenible .text div.icono, .propuestas .screen.incluyente .text div.icono, .propuestas .screen.personas .text div.icono, .propuestas .screen.excelencia .text div.icono, .propuestas .screen.contrapeso .text div.icono {
-        margin: 2em auto;
-        text-align: center; }
-        .propuestas .screen.democratica .text div.icono img, .propuestas .screen.sostenible .text div.icono img, .propuestas .screen.incluyente .text div.icono img, .propuestas .screen.personas .text div.icono img, .propuestas .screen.excelencia .text div.icono img, .propuestas .screen.contrapeso .text div.icono img {
-          width: 30%; }
-      .propuestas .screen.democratica .text p, .propuestas .screen.democratica .text ol li, .propuestas .screen.sostenible .text p, .propuestas .screen.sostenible .text ol li, .propuestas .screen.incluyente .text p, .propuestas .screen.incluyente .text ol li, .propuestas .screen.personas .text p, .propuestas .screen.personas .text ol li, .propuestas .screen.excelencia .text p, .propuestas .screen.excelencia .text ol li, .propuestas .screen.contrapeso .text p, .propuestas .screen.contrapeso .text ol li {
-        margin: 0 2em;
-        padding: 0.7em 1em;
-        padding-bottom: 0.3em; }
-      .propuestas .screen.democratica .text p, .propuestas .screen.sostenible .text p, .propuestas .screen.incluyente .text p, .propuestas .screen.personas .text p, .propuestas .screen.excelencia .text p, .propuestas .screen.contrapeso .text p {
-        margin: 0;
-        padding: 1.5em 3em;
-        padding-left: 5em; }
-      .propuestas .screen.democratica .text p.propuestas, .propuestas .screen.sostenible .text p.propuestas, .propuestas .screen.incluyente .text p.propuestas, .propuestas .screen.personas .text p.propuestas, .propuestas .screen.excelencia .text p.propuestas, .propuestas .screen.contrapeso .text p.propuestas {
-        padding: 0.5em 4.1em; }
-      .propuestas .screen.democratica .text ol li, .propuestas .screen.sostenible .text ol li, .propuestas .screen.incluyente .text ol li, .propuestas .screen.personas .text ol li, .propuestas .screen.excelencia .text ol li, .propuestas .screen.contrapeso .text ol li {
-        margin-top: 0;
-        margin-left: 4em; }
-  .propuestas .screen.personas .text h2, .propuestas .screen.excelencia .text h2, .propuestas .screen.contrapeso .text h2 {
-    background: #f6f1e9; }
-  .propuestas .screen.personas .text h1, .propuestas .screen.excelencia .text h1, .propuestas .screen.contrapeso .text h1 {
-    background: #bbdad3 -webkit-linear-gradient(left, #f6f1e9, #bbdad3, #f6f1e9); }
+          height: 3em;
+          margin: 0;
+          position: absolute;
+          top: -2.1em; }
+    .propuestas .screen.toc .ciudad h3, .propuestas .screen.toc .gobierno h3 {
+      font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
+      font-size: 2.5em;
+      width: 100%;
+      text-align: left;
+      margin: 0;
+      font-weight: 200; }
+      .propuestas .screen.toc .ciudad h3 a, .propuestas .screen.toc .gobierno h3 a {
+        color: black;
+        height: 1.7em;
+        display: block;
+        margin: 1.9em 0;
+        background: #e2dacf -webkit-linear-gradient(left, #f6f1e9, #e2dacf); }
+        .propuestas .screen.toc .ciudad h3 a span, .propuestas .screen.toc .gobierno h3 a span {
+          display: inline-block;
+          width: 6em;
+          text-align: center;
+          position: relative; }
+          .propuestas .screen.toc .ciudad h3 a span img, .propuestas .screen.toc .gobierno h3 a span img {
+            position: absolute;
+            top: -2em;
+            left: 0.8em; }
+        .propuestas .screen.toc .ciudad h3 a:hover, .propuestas .screen.toc .gobierno h3 a:hover {
+          background: #c5b39a -webkit-linear-gradient(left, #f6f1e9, #c5b39a); }
+      .propuestas .screen.toc .ciudad h3 strong, .propuestas .screen.toc .gobierno h3 strong {
+        font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
+        font-weight: bold; }
+    .propuestas .screen.toc .ciudad a, .propuestas .screen.toc .gobierno a {
+      text-decoration: none; }
+      .propuestas .screen.toc .ciudad a img, .propuestas .screen.toc .gobierno a img {
+        height: 3em;
+        vertical-align: middle; }
+  .propuestas .screen.toc .ciudad h2, .propuestas .screen.toc .ciudad h3 {
+    text-align: right; }
+  .propuestas .screen.toc .ciudad h2 a img {
+    margin-left: 0.5em;
+    left: 0; }
+  .propuestas .screen.toc .ciudad h3 a img {
+    margin-right: 1em; }
+  .propuestas .screen.toc .gobierno h2 {
+    text-align: left; }
+    .propuestas .screen.toc .gobierno h2 a {
+      background: #daece8 -webkit-linear-gradient(left, #daece8, #f6f1e9); }
+      .propuestas .screen.toc .gobierno h2 a img {
+        margin-left: 0.8em;
+        margin-right: 0.6em;
+        left: -0.2em; }
+  .propuestas .screen.toc .gobierno h3 a {
+    background: #e2dacf -webkit-linear-gradient(right, #f6f1e9, #e2dacf); }
+    .propuestas .screen.toc .gobierno h3 a span img {
+      left: 1.8em; }
+    .propuestas .screen.toc .gobierno h3 a:hover {
+      background: #c5b39a -webkit-linear-gradient(right, #f6f1e9, #c5b39a); }
+  .propuestas .screen.toc .gobierno h3.contrapeso a img {
+    height: 2.2em;
+    top: -1.5em; }
+.propuestas .screen.ciudad h1, .propuestas .screen.gobierno h1 {
+  position: absolute;
+  top: 1em;
+  left: 0;
+  font-size: 9em;
+  color: black;
+  /*text-shadow:0.03em 0.03em white;*/ }
+  .propuestas .screen.ciudad h1 img, .propuestas .screen.gobierno h1 img {
+    height: 2.5em;
+    vertical-align: middle; }
+.propuestas .screen.ciudad img.gobierno, .propuestas .screen.ciudad img.ciudad, .propuestas .screen.gobierno img.gobierno, .propuestas .screen.gobierno img.ciudad {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100%; }
+.propuestas .screen.ciudad div.copy, .propuestas .screen.gobierno div.copy {
+  position: absolute;
+  bottom: 3em;
+  right: 4em;
+  z-index: 2;
+  background-color: white;
+  padding: 1em 3em;
+  font-size: 1.4em;
+  font-family: "L Futura W01", Helvetica;
+  width: 30em; }
+  .propuestas .screen.ciudad div.copy strong, .propuestas .screen.gobierno div.copy strong {
+    font-size: 1em; }
+  .propuestas .screen.ciudad div.copy b, .propuestas .screen.gobierno div.copy b {
+    color: #379088; }
+.propuestas .screen.gobierno {
+  position: relative; }
+  .propuestas .screen.gobierno h1 {
+    position: absolute;
+    z-index: 2; }
+.propuestas .screen.democratica, .propuestas .screen.sostenible, .propuestas .screen.incluyente, .propuestas .screen.personas, .propuestas .screen.excelencia, .propuestas .screen.contrapeso {
+  background: #eee; }
+  .propuestas .screen.democratica .video, .propuestas .screen.democratica .fb, .propuestas .screen.democratica .text, .propuestas .screen.sostenible .video, .propuestas .screen.sostenible .fb, .propuestas .screen.sostenible .text, .propuestas .screen.incluyente .video, .propuestas .screen.incluyente .fb, .propuestas .screen.incluyente .text, .propuestas .screen.personas .video, .propuestas .screen.personas .fb, .propuestas .screen.personas .text, .propuestas .screen.excelencia .video, .propuestas .screen.excelencia .fb, .propuestas .screen.excelencia .text, .propuestas .screen.contrapeso .video, .propuestas .screen.contrapeso .fb, .propuestas .screen.contrapeso .text {
+    width: 33%;
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+    overflow: hidden; }
+  .propuestas .screen.democratica .video, .propuestas .screen.sostenible .video, .propuestas .screen.incluyente .video, .propuestas .screen.personas .video, .propuestas .screen.excelencia .video, .propuestas .screen.contrapeso .video {
+    width: 28%; }
+  .propuestas .screen.democratica .text, .propuestas .screen.sostenible .text, .propuestas .screen.incluyente .text, .propuestas .screen.personas .text, .propuestas .screen.excelencia .text, .propuestas .screen.contrapeso .text {
+    width: 38%; }
+  .propuestas .screen.democratica .fb, .propuestas .screen.sostenible .fb, .propuestas .screen.incluyente .fb, .propuestas .screen.personas .fb, .propuestas .screen.excelencia .fb, .propuestas .screen.contrapeso .fb {
+    max-width: 550px; }
+  .propuestas .screen.democratica .video, .propuestas .screen.sostenible .video, .propuestas .screen.incluyente .video, .propuestas .screen.personas .video, .propuestas .screen.excelencia .video, .propuestas .screen.contrapeso .video {
+    background: #ccc;
+    position: relative; }
+    .propuestas .screen.democratica .video img, .propuestas .screen.sostenible .video img, .propuestas .screen.incluyente .video img, .propuestas .screen.personas .video img, .propuestas .screen.excelencia .video img, .propuestas .screen.contrapeso .video img {
+      position: absolute;
+      top: 0;
+      left: 0; }
+  .propuestas .screen.democratica .fb, .propuestas .screen.sostenible .fb, .propuestas .screen.incluyente .fb, .propuestas .screen.personas .fb, .propuestas .screen.excelencia .fb, .propuestas .screen.contrapeso .fb {
+    background: #e9eaed;
+    text-align: center; }
+  .propuestas .screen.democratica .fb img, .propuestas .screen.sostenible .fb img, .propuestas .screen.incluyente .fb img, .propuestas .screen.personas .fb img, .propuestas .screen.excelencia .fb img, .propuestas .screen.contrapeso .fb img {
+    width: 511px; }
+  .propuestas .screen.democratica .text, .propuestas .screen.sostenible .text, .propuestas .screen.incluyente .text, .propuestas .screen.personas .text, .propuestas .screen.excelencia .text, .propuestas .screen.contrapeso .text {
+    background: #f6f1e9 url(/img/ui/kumatile.jpg); }
+    .propuestas .screen.democratica .text h2, .propuestas .screen.sostenible .text h2, .propuestas .screen.incluyente .text h2, .propuestas .screen.personas .text h2, .propuestas .screen.excelencia .text h2, .propuestas .screen.contrapeso .text h2 {
+      text-transform: uppercase;
+      font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
+      font-size: 3em;
+      width: 100%;
+      margin-top: 0.5em;
+      margin-bottom: 0;
+      padding: 0.2em 0;
+      font-weight: 200;
+      background: #f6f1e9;
+      text-align: center; }
+      .propuestas .screen.democratica .text h2 img, .propuestas .screen.sostenible .text h2 img, .propuestas .screen.incluyente .text h2 img, .propuestas .screen.personas .text h2 img, .propuestas .screen.excelencia .text h2 img, .propuestas .screen.contrapeso .text h2 img {
+        height: 1.5em;
+        vertical-align: middle;
+        margin-right: 0.3em; }
+        .propuestas .screen.democratica .text h2 img.kumalogo, .propuestas .screen.sostenible .text h2 img.kumalogo, .propuestas .screen.incluyente .text h2 img.kumalogo, .propuestas .screen.personas .text h2 img.kumalogo, .propuestas .screen.excelencia .text h2 img.kumalogo, .propuestas .screen.contrapeso .text h2 img.kumalogo {
+          margin-left: 0.5em; }
+      .propuestas .screen.democratica .text h2 a, .propuestas .screen.sostenible .text h2 a, .propuestas .screen.incluyente .text h2 a, .propuestas .screen.personas .text h2 a, .propuestas .screen.excelencia .text h2 a, .propuestas .screen.contrapeso .text h2 a {
+        text-decoration: none;
+        color: #000; }
+    .propuestas .screen.democratica .text h1, .propuestas .screen.sostenible .text h1, .propuestas .screen.incluyente .text h1, .propuestas .screen.personas .text h1, .propuestas .screen.excelencia .text h1, .propuestas .screen.contrapeso .text h1 {
+      text-align: center;
+      margin-left: 0;
+      margin-top: 0;
+      padding: 0.4em 0;
+      padding-top: 0.2em;
+      font-size: 5em;
+      background: #eacccc -webkit-linear-gradient(left, #f6f1e9, #eacccc, #f6f1e9);
+      line-height: 0.9em; }
+    .propuestas .screen.democratica .text div.icono, .propuestas .screen.sostenible .text div.icono, .propuestas .screen.incluyente .text div.icono, .propuestas .screen.personas .text div.icono, .propuestas .screen.excelencia .text div.icono, .propuestas .screen.contrapeso .text div.icono {
+      margin: 2em auto;
+      text-align: center; }
+      .propuestas .screen.democratica .text div.icono img, .propuestas .screen.sostenible .text div.icono img, .propuestas .screen.incluyente .text div.icono img, .propuestas .screen.personas .text div.icono img, .propuestas .screen.excelencia .text div.icono img, .propuestas .screen.contrapeso .text div.icono img {
+        width: 30%; }
+    .propuestas .screen.democratica .text p, .propuestas .screen.democratica .text ol li, .propuestas .screen.sostenible .text p, .propuestas .screen.sostenible .text ol li, .propuestas .screen.incluyente .text p, .propuestas .screen.incluyente .text ol li, .propuestas .screen.personas .text p, .propuestas .screen.personas .text ol li, .propuestas .screen.excelencia .text p, .propuestas .screen.excelencia .text ol li, .propuestas .screen.contrapeso .text p, .propuestas .screen.contrapeso .text ol li {
+      margin: 0 2em;
+      padding: 0.7em 1em;
+      padding-bottom: 0.3em; }
+    .propuestas .screen.democratica .text p, .propuestas .screen.sostenible .text p, .propuestas .screen.incluyente .text p, .propuestas .screen.personas .text p, .propuestas .screen.excelencia .text p, .propuestas .screen.contrapeso .text p {
+      margin: 0;
+      padding: 1.5em 3em;
+      padding-left: 5em; }
+    .propuestas .screen.democratica .text p.propuestas, .propuestas .screen.sostenible .text p.propuestas, .propuestas .screen.incluyente .text p.propuestas, .propuestas .screen.personas .text p.propuestas, .propuestas .screen.excelencia .text p.propuestas, .propuestas .screen.contrapeso .text p.propuestas {
+      padding: 0.5em 4.1em; }
+    .propuestas .screen.democratica .text ol li, .propuestas .screen.sostenible .text ol li, .propuestas .screen.incluyente .text ol li, .propuestas .screen.personas .text ol li, .propuestas .screen.excelencia .text ol li, .propuestas .screen.contrapeso .text ol li {
+      margin-top: 0;
+      margin-left: 4em; }
+.propuestas .screen.personas .text h2, .propuestas .screen.excelencia .text h2, .propuestas .screen.contrapeso .text h2 {
+  background: #f6f1e9; }
+.propuestas .screen.personas .text h1, .propuestas .screen.excelencia .text h1, .propuestas .screen.contrapeso .text h1 {
+  background: #bbdad3 -webkit-linear-gradient(left, #f6f1e9, #bbdad3, #f6f1e9); }
 
 /************************** ;PRINCIPIOS **************************/
 .principios {
@@ -1216,122 +1239,118 @@ body {
     text-align: center; }
     .principios .screen .fb img {
       width: 511px; }
-  .principios .screen.toc {
-    background: #f6f1e9; }
-    .principios .screen.toc .ciudad h2 {
-      font-size: 6em;
-      color: white;
-      margin: 0;
-      text-align: left; }
-    .principios .screen.toc .lista {
-      width: 100%;
-      padding: 0;
-      margin: 0;
-      text-align: center; }
-      .principios .screen.toc .lista a {
-        display: inline-block;
-        margin: 0.5em 0;
-        font-size: 3.5em;
-        line-height: 1.7em;
-        color: #000;
-        text-decoration: none;
-        font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
-        font-weight: 200;
-        text-align: left; }
-        .principios .screen.toc .lista a span {
-          width: 4em;
-          display: inline-block;
-          text-align: center;
-          position: relative; }
-          .principios .screen.toc .lista a span img {
-            height: 2.5em;
-            vertical-align: middle;
-            position: absolute;
-            top: -1.5em;
-            left: 0.3em; }
-        .principios .screen.toc .lista a.colectiva {
-          background: #b7d8d4 -webkit-linear-gradient(left, #f6f1e9, #b7d8d4); }
-          .principios .screen.toc .lista a.colectiva span {
-            width: 4.5em; }
-          .principios .screen.toc .lista a.colectiva:hover {
-            background: #5fc5b8 -webkit-linear-gradient(left, #f6f1e9, #5fc5b8); }
-        .principios .screen.toc .lista a.participacion {
-          background: #c2dbe4 -webkit-linear-gradient(left, #f6f1e9, #c2dbe4); }
-          .principios .screen.toc .lista a.participacion:hover {
-            background: #8cb7c7 -webkit-linear-gradient(left, #f6f1e9, #8cb7c7); }
-        .principios .screen.toc .lista a.apertura {
-          background: #b4b4bb -webkit-linear-gradient(left, #f6f1e9, #b4b4bb); }
-          .principios .screen.toc .lista a.apertura:hover {
-            background: #626264 -webkit-linear-gradient(left, #f6f1e9, #626264); }
-        .principios .screen.toc .lista a.innovacion {
-          background: #edac9c -webkit-linear-gradient(left, #f6f1e9, #edac9c); }
-          .principios .screen.toc .lista a.innovacion:hover {
-            background: #d6765e -webkit-linear-gradient(left, #f6f1e9, #d6765e); }
-        .principios .screen.toc .lista a.genero {
-          background: #e8a3a7 -webkit-linear-gradient(right, #f6f1e9, #e8a3a7); }
-          .principios .screen.toc .lista a.genero:hover {
-            background: #c8595f -webkit-linear-gradient(right, #f6f1e9, #c8595f); }
-        .principios .screen.toc .lista a.derechos {
-          background: #edc2d4 -webkit-linear-gradient(right, #f6f1e9, #edc2d4); }
-          .principios .screen.toc .lista a.derechos:hover {
-            background: #d98ead -webkit-linear-gradient(right, #f6f1e9, #d98ead); }
-        .principios .screen.toc .lista a.transparencia {
-          background: #dbcce0 -webkit-linear-gradient(right, #f6f1e9, #dbcce0); }
-          .principios .screen.toc .lista a.transparencia:hover {
-            background: #b8a6be -webkit-linear-gradient(right, #f6f1e9, #b8a6be); }
-      .principios .screen.toc .lista .left, .principios .screen.toc .lista .right {
-        width: 49%;
-        display: inline-block;
-        vertical-align: top;
-        text-align: left; }
-      .principios .screen.toc .lista .left {
-        text-align: right; }
-        .principios .screen.toc .lista .left a {
-          text-align: right;
-          padding-left: 1em; }
-          .principios .screen.toc .lista .left a.apertura img {
-            left: 0.6em; }
-          .principios .screen.toc .lista .left a.innovacion img {
-            left: 0.7em; }
-      .principios .screen.toc .lista .right a {
-        padding-right: 1em;
-        margin-left: 1em; }
-        .principios .screen.toc .lista .right a img {
-          left: 0.8em; }
-        .principios .screen.toc .lista .right a.genero img {
-          left: 0.6em; }
-  .principios .screen.colectiva, .principios .screen.participacion, .principios .screen.apertura, .principios .screen.innovacion, .principios .screen.genero, .principios .screen.derechos, .principios .screen.transparencia {
-    background: #f6f1e9; }
-    .principios .screen.colectiva p, .principios .screen.participacion p, .principios .screen.apertura p, .principios .screen.innovacion p, .principios .screen.genero p, .principios .screen.derechos p, .principios .screen.transparencia p {
-      font-size: 1.5em;
-      width: 60%;
-      margin: 0 auto;
-      margin-bottom: 0.6em; }
-      .principios .screen.colectiva p strong, .principios .screen.participacion p strong, .principios .screen.apertura p strong, .principios .screen.innovacion p strong, .principios .screen.genero p strong, .principios .screen.derechos p strong, .principios .screen.transparencia p strong {
-        font-size: 1.2em;
-        display: block;
-        margin-bottom: 0.6em; }
-    .principios .screen.colectiva h2, .principios .screen.participacion h2, .principios .screen.apertura h2, .principios .screen.innovacion h2, .principios .screen.genero h2, .principios .screen.derechos h2, .principios .screen.transparencia h2 {
-      line-height: 1.1em;
-      padding-bottom: 0.2em;
-      margin-top: 0;
-      text-align: left;
-      padding-left: 7.05em; }
-    .principios .screen.colectiva h3, .principios .screen.participacion h3, .principios .screen.apertura h3, .principios .screen.innovacion h3, .principios .screen.genero h3, .principios .screen.derechos h3, .principios .screen.transparencia h3 {
-      text-transform: uppercase;
+  .principios .screen.toc .ciudad h2 {
+    font-size: 6em;
+    color: white;
+    margin: 0;
+    text-align: left; }
+  .principios .screen.toc .lista {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    text-align: center; }
+    .principios .screen.toc .lista a {
+      display: inline-block;
+      margin: 0.5em 0;
+      font-size: 3.5em;
+      line-height: 1.7em;
+      color: #000;
+      text-decoration: none;
+      font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
       font-weight: 200;
-      text-align: left;
-      width: 100%;
-      margin: 0;
-      margin-left: 10.6em;
-      padding: 0.5em 0;
-      padding-top: 1.5em;
-      font-size: 3em; }
-    .principios .screen.colectiva .text > .icono, .principios .screen.participacion .text > .icono, .principios .screen.apertura .text > .icono, .principios .screen.innovacion .text > .icono, .principios .screen.genero .text > .icono, .principios .screen.derechos .text > .icono, .principios .screen.transparencia .text > .icono {
-      text-align: center; }
-      .principios .screen.colectiva .text > .icono img, .principios .screen.participacion .text > .icono img, .principios .screen.apertura .text > .icono img, .principios .screen.innovacion .text > .icono img, .principios .screen.genero .text > .icono img, .principios .screen.derechos .text > .icono img, .principios .screen.transparencia .text > .icono img {
-        margin-top: 4em;
-        width: 35em; }
+      text-align: left; }
+      .principios .screen.toc .lista a span {
+        width: 4em;
+        display: inline-block;
+        text-align: center;
+        position: relative; }
+        .principios .screen.toc .lista a span img {
+          height: 2.5em;
+          vertical-align: middle;
+          position: absolute;
+          top: -1.5em;
+          left: 0.3em; }
+      .principios .screen.toc .lista a.colectiva {
+        background: #b7d8d4 -webkit-linear-gradient(left, #f6f1e9, #b7d8d4); }
+        .principios .screen.toc .lista a.colectiva span {
+          width: 4.5em; }
+        .principios .screen.toc .lista a.colectiva:hover {
+          background: #5fc5b8 -webkit-linear-gradient(left, #f6f1e9, #5fc5b8); }
+      .principios .screen.toc .lista a.participacion {
+        background: #c2dbe4 -webkit-linear-gradient(left, #f6f1e9, #c2dbe4); }
+        .principios .screen.toc .lista a.participacion:hover {
+          background: #8cb7c7 -webkit-linear-gradient(left, #f6f1e9, #8cb7c7); }
+      .principios .screen.toc .lista a.apertura {
+        background: #b4b4bb -webkit-linear-gradient(left, #f6f1e9, #b4b4bb); }
+        .principios .screen.toc .lista a.apertura:hover {
+          background: #626264 -webkit-linear-gradient(left, #f6f1e9, #626264); }
+      .principios .screen.toc .lista a.innovacion {
+        background: #edac9c -webkit-linear-gradient(left, #f6f1e9, #edac9c); }
+        .principios .screen.toc .lista a.innovacion:hover {
+          background: #d6765e -webkit-linear-gradient(left, #f6f1e9, #d6765e); }
+      .principios .screen.toc .lista a.genero {
+        background: #e8a3a7 -webkit-linear-gradient(right, #f6f1e9, #e8a3a7); }
+        .principios .screen.toc .lista a.genero:hover {
+          background: #c8595f -webkit-linear-gradient(right, #f6f1e9, #c8595f); }
+      .principios .screen.toc .lista a.derechos {
+        background: #edc2d4 -webkit-linear-gradient(right, #f6f1e9, #edc2d4); }
+        .principios .screen.toc .lista a.derechos:hover {
+          background: #d98ead -webkit-linear-gradient(right, #f6f1e9, #d98ead); }
+      .principios .screen.toc .lista a.transparencia {
+        background: #dbcce0 -webkit-linear-gradient(right, #f6f1e9, #dbcce0); }
+        .principios .screen.toc .lista a.transparencia:hover {
+          background: #b8a6be -webkit-linear-gradient(right, #f6f1e9, #b8a6be); }
+    .principios .screen.toc .lista .left, .principios .screen.toc .lista .right {
+      width: 49%;
+      display: inline-block;
+      vertical-align: top;
+      text-align: left; }
+    .principios .screen.toc .lista .left {
+      text-align: right; }
+      .principios .screen.toc .lista .left a {
+        text-align: right;
+        padding-left: 1em; }
+        .principios .screen.toc .lista .left a.apertura img {
+          left: 0.6em; }
+        .principios .screen.toc .lista .left a.innovacion img {
+          left: 0.7em; }
+    .principios .screen.toc .lista .right a {
+      padding-right: 1em;
+      margin-left: 1em; }
+      .principios .screen.toc .lista .right a img {
+        left: 0.8em; }
+      .principios .screen.toc .lista .right a.genero img {
+        left: 0.6em; }
+  .principios .screen.colectiva p, .principios .screen.participacion p, .principios .screen.apertura p, .principios .screen.innovacion p, .principios .screen.genero p, .principios .screen.derechos p, .principios .screen.transparencia p {
+    font-size: 1.5em;
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 0.6em; }
+    .principios .screen.colectiva p strong, .principios .screen.participacion p strong, .principios .screen.apertura p strong, .principios .screen.innovacion p strong, .principios .screen.genero p strong, .principios .screen.derechos p strong, .principios .screen.transparencia p strong {
+      font-size: 1.2em;
+      display: block;
+      margin-bottom: 0.6em; }
+  .principios .screen.colectiva h2, .principios .screen.participacion h2, .principios .screen.apertura h2, .principios .screen.innovacion h2, .principios .screen.genero h2, .principios .screen.derechos h2, .principios .screen.transparencia h2 {
+    line-height: 1.1em;
+    padding-bottom: 0.2em;
+    margin-top: 0;
+    text-align: left;
+    padding-left: 7.05em; }
+  .principios .screen.colectiva h3, .principios .screen.participacion h3, .principios .screen.apertura h3, .principios .screen.innovacion h3, .principios .screen.genero h3, .principios .screen.derechos h3, .principios .screen.transparencia h3 {
+    text-transform: uppercase;
+    font-weight: 200;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    margin-left: 10.6em;
+    padding: 0.5em 0;
+    padding-top: 1.5em;
+    font-size: 3em; }
+  .principios .screen.colectiva .text > .icono, .principios .screen.participacion .text > .icono, .principios .screen.apertura .text > .icono, .principios .screen.innovacion .text > .icono, .principios .screen.genero .text > .icono, .principios .screen.derechos .text > .icono, .principios .screen.transparencia .text > .icono {
+    text-align: center; }
+    .principios .screen.colectiva .text > .icono img, .principios .screen.participacion .text > .icono img, .principios .screen.apertura .text > .icono img, .principios .screen.innovacion .text > .icono img, .principios .screen.genero .text > .icono img, .principios .screen.derechos .text > .icono img, .principios .screen.transparencia .text > .icono img {
+      margin-top: 4em;
+      width: 35em; }
   .principios .screen.colectiva h2 {
     background: #5fc5b8 -webkit-linear-gradient(left, #f6f1e9, #5fc5b8, #f6f1e9); }
   .principios .screen.colectiva .text > .icono img {
@@ -1360,7 +1379,6 @@ body {
 
 /************************** ;COMPROMISOS **************************/
 .compromisos .screen {
-  background: #f6f1e9;
   overflow: hidden;
   /*.infografia { width:30%; height:100%; display:inline-block; text-align:center; background:#B3D7DA;*/
   /*img {width:80%; margin-top:5em}*/
@@ -1379,7 +1397,6 @@ body {
       width: 511px; }
   .compromisos .screen.toc {
     text-align: left;
-    background: #f6f1e9;
     /*h2 {color:rgb(200, 112, 114);}*/ }
     .compromisos .screen.toc p {
       font-family: Helvetica;
@@ -1432,7 +1449,6 @@ body {
     width: 69.5%;
     display: inline-block;
     vertical-align: top;
-    background: #f6f1e9;
     /*span.hidden, span.menos {display:none}*/
     /*span.hidden {font-size:80%}*/
     /*a.leer-mas { text-transform:uppercase; text-decoration:none; color:black; background:#e9eaed; display:inline-block; padding:.5em 1em; font-size:0.7em;*/
