@@ -293,11 +293,17 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			.left, .right {width:49.5%; display:inline-block; vertical-align:top; 
 				em {margin-top:1em}
 				span.name {margin-top:0.5em}
+				p {font-size:1.2em}
 			}
 
-			.center, .left .card, .right .card {
+			.center .asesor, .left .card, .right .card {
 				a.twitter { position:absolute; bottom:-1em; left:50%; margin-left:-1em; z-index:2;
 					img {width:2em; height:auto; border:none; margin-right:0}
+				}
+				border:1px solid transparent;
+				&:hover {
+					border:1px solid #ccc;
+					transform:scale(1.3,1.3); -ms-transform:scale(1.3,1.3); -webkit-transform:scale(1.3,1.3); z-index:5;
 				}
 			}
 			.left .card { a.twitter { left:23%; bottom:-1.2em; margin-left:1em; } }
@@ -307,8 +313,8 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				.asesor {
 					.portrait {margin-left:0.5em}
 					p {text-align:right; 
-						background:#E7DBCB -webkit-linear-gradient(left, $crema, #E7DBCB);
-						padding:0.8em; font-size:1.1em; padding-left:0;
+						background:-webkit-linear-gradient(left, transparent, #CBBFAE);
+						padding:0.8em; padding-left:0;
 					}
 				}
 				.card {margin-left:1em;
@@ -324,8 +330,9 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 						img {margin-right:0;}
 					}
 					p {
-						background:#E7DBCB -webkit-linear-gradient(right, $crema, #E7DBCB);
-						padding:0.8em; font-size:1.1em; padding-right:0;
+						background:-webkit-linear-gradient(right, transparent, #CBBFAE);
+						background:-moz-linear-gradient(right, transparent, #CBBFAE);
+						padding:0.8em; padding-right:0;
 					}
 				}
 			}
