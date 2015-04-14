@@ -432,12 +432,12 @@ var KUMA = {
 			}
 
 			var prop = img.width()/img.height();
-			//if(img.attr('src').match(/benji/)) {
-				//console.log('ch', container.height());
-				//console.log('cw', container.width());
-				//console.log('iw', img.width());
-				//console.log('ih', img.height());
-			//}
+			if(img.attr('src').match(/robert/)) {
+				console.log('ch', container.height());
+				console.log('cw', container.width());
+				console.log('iw', img.width());
+				console.log('ih', img.height());
+			}
 
 			if( (container.height()*prop) >= container.width()) {
 				css = {
