@@ -550,7 +550,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 .principios { vertical-align:top;
 	h2 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:normal; font-size:5em; text-align:center; margin:0.7em 0; color:#000; text-align:center; }
 	.screen {
-		.text { width:69%; display:inline-block; vertical-align:top;
+		.text { width:69%; height:100%; display:inline-block; vertical-align:top; position:relative;
 			h2 {font-size:4.5em; padding-left:1.9em}
 			a.inicio {text-decoration:none; color:#000}
 			img.kumalogo {position:absolute; height:10em; left:19.3em; top:4em}
@@ -605,7 +605,10 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			}
 		}
 
-		&.colectiva, &.participacion, &.apertura, &.innovacion, &.genero, &.derechos, &.transparencia {
+		&.colectiva, &.participacion, &.apertura, &.innovacion, &.genero, &.derechos, &.transparencia {position:relative;
+			.confetti {text-align:center; display:block;
+				img {width:35em; margin:1em 0; margin-top:0.4em}
+			}
 			p {font-size:1.5em; width:60%; margin:0 auto; margin-bottom:0.6em;
 				strong {font-size:1.2em; display:block; margin-bottom:0.6em}
 			}

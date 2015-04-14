@@ -1224,8 +1224,10 @@ body {
     text-align: center; }
   .principios .screen .text {
     width: 69%;
+    height: 100%;
     display: inline-block;
-    vertical-align: top; }
+    vertical-align: top;
+    position: relative; }
     .principios .screen .text h2 {
       font-size: 4.5em;
       padding-left: 1.9em; }
@@ -1330,36 +1332,45 @@ body {
         left: 0.8em; }
       .principios .screen.toc .lista .right a.genero img {
         left: 0.6em; }
-  .principios .screen.colectiva p, .principios .screen.participacion p, .principios .screen.apertura p, .principios .screen.innovacion p, .principios .screen.genero p, .principios .screen.derechos p, .principios .screen.transparencia p {
-    font-size: 1.5em;
-    width: 60%;
-    margin: 0 auto;
-    margin-bottom: 0.6em; }
-    .principios .screen.colectiva p strong, .principios .screen.participacion p strong, .principios .screen.apertura p strong, .principios .screen.innovacion p strong, .principios .screen.genero p strong, .principios .screen.derechos p strong, .principios .screen.transparencia p strong {
-      font-size: 1.2em;
-      display: block;
+  .principios .screen.colectiva, .principios .screen.participacion, .principios .screen.apertura, .principios .screen.innovacion, .principios .screen.genero, .principios .screen.derechos, .principios .screen.transparencia {
+    position: relative; }
+    .principios .screen.colectiva .confetti, .principios .screen.participacion .confetti, .principios .screen.apertura .confetti, .principios .screen.innovacion .confetti, .principios .screen.genero .confetti, .principios .screen.derechos .confetti, .principios .screen.transparencia .confetti {
+      text-align: center;
+      display: block; }
+      .principios .screen.colectiva .confetti img, .principios .screen.participacion .confetti img, .principios .screen.apertura .confetti img, .principios .screen.innovacion .confetti img, .principios .screen.genero .confetti img, .principios .screen.derechos .confetti img, .principios .screen.transparencia .confetti img {
+        width: 35em;
+        margin: 1em 0;
+        margin-top: 0.4em; }
+    .principios .screen.colectiva p, .principios .screen.participacion p, .principios .screen.apertura p, .principios .screen.innovacion p, .principios .screen.genero p, .principios .screen.derechos p, .principios .screen.transparencia p {
+      font-size: 1.5em;
+      width: 60%;
+      margin: 0 auto;
       margin-bottom: 0.6em; }
-  .principios .screen.colectiva h2, .principios .screen.participacion h2, .principios .screen.apertura h2, .principios .screen.innovacion h2, .principios .screen.genero h2, .principios .screen.derechos h2, .principios .screen.transparencia h2 {
-    line-height: 1.1em;
-    padding-bottom: 0.2em;
-    margin-top: 0;
-    text-align: left;
-    padding-left: 7.05em; }
-  .principios .screen.colectiva h3, .principios .screen.participacion h3, .principios .screen.apertura h3, .principios .screen.innovacion h3, .principios .screen.genero h3, .principios .screen.derechos h3, .principios .screen.transparencia h3 {
-    text-transform: uppercase;
-    font-weight: 200;
-    text-align: left;
-    width: 100%;
-    margin: 0;
-    margin-left: 10.6em;
-    padding: 0.5em 0;
-    padding-top: 1.5em;
-    font-size: 3em; }
-  .principios .screen.colectiva .text > .icono, .principios .screen.participacion .text > .icono, .principios .screen.apertura .text > .icono, .principios .screen.innovacion .text > .icono, .principios .screen.genero .text > .icono, .principios .screen.derechos .text > .icono, .principios .screen.transparencia .text > .icono {
-    text-align: center; }
-    .principios .screen.colectiva .text > .icono img, .principios .screen.participacion .text > .icono img, .principios .screen.apertura .text > .icono img, .principios .screen.innovacion .text > .icono img, .principios .screen.genero .text > .icono img, .principios .screen.derechos .text > .icono img, .principios .screen.transparencia .text > .icono img {
-      margin-top: 4em;
-      width: 35em; }
+      .principios .screen.colectiva p strong, .principios .screen.participacion p strong, .principios .screen.apertura p strong, .principios .screen.innovacion p strong, .principios .screen.genero p strong, .principios .screen.derechos p strong, .principios .screen.transparencia p strong {
+        font-size: 1.2em;
+        display: block;
+        margin-bottom: 0.6em; }
+    .principios .screen.colectiva h2, .principios .screen.participacion h2, .principios .screen.apertura h2, .principios .screen.innovacion h2, .principios .screen.genero h2, .principios .screen.derechos h2, .principios .screen.transparencia h2 {
+      line-height: 1.1em;
+      padding-bottom: 0.2em;
+      margin-top: 0;
+      text-align: left;
+      padding-left: 7.05em; }
+    .principios .screen.colectiva h3, .principios .screen.participacion h3, .principios .screen.apertura h3, .principios .screen.innovacion h3, .principios .screen.genero h3, .principios .screen.derechos h3, .principios .screen.transparencia h3 {
+      text-transform: uppercase;
+      font-weight: 200;
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      margin-left: 10.6em;
+      padding: 0.5em 0;
+      padding-top: 1.5em;
+      font-size: 3em; }
+    .principios .screen.colectiva .text > .icono, .principios .screen.participacion .text > .icono, .principios .screen.apertura .text > .icono, .principios .screen.innovacion .text > .icono, .principios .screen.genero .text > .icono, .principios .screen.derechos .text > .icono, .principios .screen.transparencia .text > .icono {
+      text-align: center; }
+      .principios .screen.colectiva .text > .icono img, .principios .screen.participacion .text > .icono img, .principios .screen.apertura .text > .icono img, .principios .screen.innovacion .text > .icono img, .principios .screen.genero .text > .icono img, .principios .screen.derechos .text > .icono img, .principios .screen.transparencia .text > .icono img {
+        margin-top: 4em;
+        width: 35em; }
   .principios .screen.colectiva h2 {
     background: #5fc5b8 -webkit-linear-gradient(left, #f6f1e9, #5fc5b8, #f6f1e9); }
   .principios .screen.colectiva .text > .icono img {
