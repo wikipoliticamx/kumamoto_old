@@ -554,7 +554,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 
 				ol li {margin-top:0; margin-left:4em}
 				.confetti {text-align:center; display:block;
-					img {width:35em; margin:1em 0; margin-top:0.4em}
+					img {width:35em; margin:1em 0; margin-top:0.4em;}
 				}
 			}
 		}
@@ -727,12 +727,13 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				   color: #999;
 					display:inline-block;
 					width:3em;
-					padding-right:1em;
-					margin-left:-4.5em;
+					float:left;
+					margin-left:-7em;
 					text-align:right;
 				}
 				li {padding:0.5em 1em; display:block; line-height:1.2em;
 					strong {color:rgb(200, 112, 114);}
+					img.bullet {float:left; width:1.5em; margin-left:-3em;}
 				}
 				span.hidden {font-size:0.9em; padding-left:2em; padding-right:1em}
 				li.menos {

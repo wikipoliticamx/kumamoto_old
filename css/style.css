@@ -1573,8 +1573,8 @@ body {
         color: #999;
         display: inline-block;
         width: 3em;
-        padding-right: 1em;
-        margin-left: -4.5em;
+        float: left;
+        margin-left: -7em;
         text-align: right; }
       .compromisos .screen .text ol li {
         padding: 0.5em 1em;
@@ -1582,6 +1582,10 @@ body {
         line-height: 1.2em; }
         .compromisos .screen .text ol li strong {
           color: #c87072; }
+        .compromisos .screen .text ol li img.bullet {
+          float: left;
+          width: 1.5em;
+          margin-left: -3em; }
       .compromisos .screen .text ol span.hidden {
         font-size: 0.9em;
         padding-left: 2em;

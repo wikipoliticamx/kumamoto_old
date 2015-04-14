@@ -414,9 +414,16 @@ var KUMA = {
 			});
 		},
 		toggle:function() { var that = $(this);
+			KUMA.that = that;
 			if(that.hasClass('mas')) {
+				that.parents('.screen').find('p, li').each(function() {
+					if($(this).hasClass('menos')) { 
+						$(this).removeClass('menos').addClass('mas');
+					}
+				});
 				that.removeClass('mas').addClass('menos');
 			} else {
+			console.log('comernos a besos!');
 				that.removeClass('menos').addClass('mas');
 			}
 		}
