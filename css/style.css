@@ -1237,6 +1237,13 @@ body {
     .propuestas .screen.democratica .text ol li, .propuestas .screen.sostenible .text ol li, .propuestas .screen.incluyente .text ol li, .propuestas .screen.personas .text ol li, .propuestas .screen.excelencia .text ol li, .propuestas .screen.contrapeso .text ol li {
       margin-top: 0;
       margin-left: 4em; }
+    .propuestas .screen.democratica .text .confetti, .propuestas .screen.sostenible .text .confetti, .propuestas .screen.incluyente .text .confetti, .propuestas .screen.personas .text .confetti, .propuestas .screen.excelencia .text .confetti, .propuestas .screen.contrapeso .text .confetti {
+      text-align: center;
+      display: block; }
+      .propuestas .screen.democratica .text .confetti img, .propuestas .screen.sostenible .text .confetti img, .propuestas .screen.incluyente .text .confetti img, .propuestas .screen.personas .text .confetti img, .propuestas .screen.excelencia .text .confetti img, .propuestas .screen.contrapeso .text .confetti img {
+        width: 35em;
+        margin: 1em 0;
+        margin-top: 0.4em; }
 .propuestas .screen.personas .text h2, .propuestas .screen.excelencia .text h2, .propuestas .screen.contrapeso .text h2 {
   background: transparent; }
 .propuestas .screen.personas .text h1, .propuestas .screen.excelencia .text h1, .propuestas .screen.contrapeso .text h1 {
