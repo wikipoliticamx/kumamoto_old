@@ -451,7 +451,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				h2 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:3.5em; font-weight:200; text-transform:uppercase; margin-bottom:0.2em;
 					a {
 						color:black; display:block; line-height:2em;
-						background:#EACCCC -webkit-linear-gradient(right, #EACCCC, $crema);
+						background:-webkit-linear-gradient(right, #EACCCC, transparent);
 					}
 					strong {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:bold}
 					span {width:4.4em; display:inline-block; position:relative;
@@ -459,11 +459,11 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 					}
 				}
 				h3 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:2.5em; width:100%; text-align:left; margin:0; font-weight:200;
-					a {color:black; height:1.7em; display:block; margin:1.9em 0; background:#E2DACF -webkit-linear-gradient(left, $crema, #E2DACF);
+					a {color:black; height:1.7em; display:block; margin:1.9em 0; background:-webkit-linear-gradient(left, transparent, #E2DACF);
 						span {display:inline-block; width:6em; text-align:center; position:relative; 
 							img {position:absolute; top:-2em; left:0.8em}
 						}
-						&:hover {background:#C5B39A -webkit-linear-gradient(left, $crema, #C5B39A)}
+						&:hover {background:-webkit-linear-gradient(left, transparent, #C5B39A)}
 					}
 					strong {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:bold}
 				}
@@ -474,19 +474,25 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			.ciudad {
 				h2, h3 {text-align:right;}
 				h2 a img {margin-left:0.5em; left:0}
+				h2 a:hover {
+					background:-webkit-linear-gradient(right, #D86D74, transparent);
+				}
 				h3 a img {margin-right:1em}
 			}
 			.gobierno {
 				h2 {text-align:left;
 					a {
-						background:#DAECE8 -webkit-linear-gradient(left, #DAECE8, $crema);
+						background:-webkit-linear-gradient(left, #DAECE8, transparent);
 						img {margin-left:0.8em; margin-right:0.6em; left:-0.2em;}
+						&:hover {
+							background:-webkit-linear-gradient(left, #93D2C8, transparent);
+						}
 					}
 				}
 				h3 {
-					a { background:#E2DACF -webkit-linear-gradient(right, $crema, #E2DACF);
+					a { background:-webkit-linear-gradient(right, transparent, #E2DACF);
 						span img {left:1.8em}
-						&:hover {background:#C5B39A -webkit-linear-gradient(right, $crema, #C5B39A);}
+						&:hover {background:-webkit-linear-gradient(right, transparent, #C5B39A);}
 					}
 					&.contrapeso a img {height:2.2em; top:-1.5em}
 				}
@@ -513,20 +519,20 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				.text {width:38%}
 				.fb {max-width:550px}
 			.video {background:#ccc; position:relative;
-				img {position:absolute; top:0; left:0}
+				img {position:absolute; top:0; left:0; width:720; height:1280px}
 			}
 			.fb { background:#e9eaed; text-align:center;}
 			.fb img {width:511px}
 			.text {background:$crema url(/img/ui/kumatile.jpg);  
 				h2 {text-transform:uppercase; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:3em; width:100%; 
 					margin-top:0.5em; margin-bottom:0; padding:0.2em 0; font-weight:200;
-					background:$crema; text-align:center;
+					background:transparent; text-align:center;
 					img {height:1.5em; vertical-align:middle; margin-right:0.3em;
 						&.kumalogo {margin-left:0.5em}
 					}
 					a {text-decoration:none; color:#000; }
 				}
-				h1 {text-align:center; margin-left:0; margin-top:0; padding:0.4em 0; padding-top:0.2em; font-size:5em; background:#EACCCC -webkit-linear-gradient(left, $crema, #EACCCC, $crema); line-height:0.9em}
+				h1 {text-align:center; margin-left:0; margin-top:0; padding:0.4em 0; padding-top:0.2em; font-size:5em; background:-webkit-linear-gradient(left, transparent, #EACCCC, transparent); line-height:0.9em}
 				div.icono { margin:2em auto; text-align:center;
 					img {width:30%}
 				}
@@ -539,8 +545,8 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		}
 		&.personas, &.excelencia, &.contrapeso {
 			.text {
-				h2 {background:$crema}
-				h1 {background:#BBDAD3 -webkit-linear-gradient(left, $crema, #BBDAD3, $crema);}
+				h2 {background:transparent}
+				h1 {background:webkit-linear-gradient(left, transparent, #BBDAD3, transparent);}
 			}
 		}
 	}
@@ -566,27 +572,27 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 					span {width:4em; display:inline-block; text-align:center; position:relative;
 						img {height:2.5em; vertical-align:middle; position:absolute; top:-1.5em; left:0.3em}
 					}
-					&.colectiva {background:#B7D8D4 -webkit-linear-gradient(left, $crema, #B7D8D4);
+					&.colectiva {background:-webkit-linear-gradient(left, transparent, #B7D8D4);
 						span {width:4.5em;}
-						&:hover {background:#5fc5b8 -webkit-linear-gradient(left, $crema, #5fc5b8)}
+						&:hover {background:-webkit-linear-gradient(left, transparent, #5fc5b8)}
 					}
-					&.participacion {background:#C2DBE4 -webkit-linear-gradient(left, $crema, #C2DBE4);
-						&:hover {background:#8cb7c7 -webkit-linear-gradient(left, $crema, #8cb7c7)}
+					&.participacion {background:-webkit-linear-gradient(left, transparent, #C2DBE4);
+						&:hover {background:-webkit-linear-gradient(left, transparent, #8cb7c7)}
 					}
-					&.apertura {background:#B4B4BB -webkit-linear-gradient(left, $crema, #B4B4BB);
-						&:hover {background:#626264 -webkit-linear-gradient(left, $crema, #626264);}
+					&.apertura {background:-webkit-linear-gradient(left, transparent, #B4B4BB);
+						&:hover {background:-webkit-linear-gradient(left, transparent, #626264);}
 					}
-					&.innovacion {background:#EDAC9C -webkit-linear-gradient(left, $crema, #EDAC9C);
-						&:hover {background:#d6765e -webkit-linear-gradient(left, $crema, #d6765e)}
+					&.innovacion {background:-webkit-linear-gradient(left, transparent, #EDAC9C);
+						&:hover {background:-webkit-linear-gradient(left, transparent, #d6765e)}
 					}
-					&.genero {background:#E8A3A7 -webkit-linear-gradient(right, $crema, #E8A3A7);
-						&:hover {background:#c8595f -webkit-linear-gradient(right, $crema, #c8595f)}
+					&.genero {background:-webkit-linear-gradient(right, transparent, #E8A3A7);
+						&:hover {background:-webkit-linear-gradient(right, transparent, #c8595f)}
 					}
-					&.derechos {background:#EDC2D4 -webkit-linear-gradient(right, $crema, #EDC2D4);
-						&:hover {background:#d98ead -webkit-linear-gradient(right, $crema, #d98ead)}
+					&.derechos {background:-webkit-linear-gradient(right, transparent, #EDC2D4);
+						&:hover {background:-webkit-linear-gradient(right, transparent, #d98ead)}
 					}
-					&.transparencia {background:#DBCCE0 -webkit-linear-gradient(right, $crema, #DBCCE0);
-						&:hover {background:#b8a6be -webkit-linear-gradient(right, $crema, #b8a6be)}
+					&.transparencia {background:-webkit-linear-gradient(right, transparent, #DBCCE0);
+						&:hover {background:-webkit-linear-gradient(right, transparent, #b8a6be)}
 					}
 				}
 				.left, .right {width:49%; display:inline-block; vertical-align:top; text-align:left}
@@ -620,29 +626,29 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		}
 		
 		&.colectiva { 
-			h2 {background:#5fc5b8 -webkit-linear-gradient(left, $crema, #5fc5b8, $crema);}
+			h2 {background:-webkit-linear-gradient(left, transparent, #5fc5b8, transparent);}
 			.text > .icono img {width:40em}
 		}
 		&.participacion {
-			h2 {background:#8cb7c7 -webkit-linear-gradient(left, $crema, #8cb7c7, $crema);}
+			h2 {background:-webkit-linear-gradient(left, transparent, #8cb7c7, transparent);}
 		}
 		&.apertura {
-			h2 {background:#626264 -webkit-linear-gradient(left, $crema, #626264, $crema); color:white;}
+			h2 {background:-webkit-linear-gradient(left, transparent, #626264, transparent); color:white;}
 			.text > .icono img {width:30em}
 		}
 		&.innovacion {
-			h2 {background:#d6765e -webkit-linear-gradient(left, $crema, #d6765e, $crema);}
+			h2 {background:-webkit-linear-gradient(left, transparent, #d6765e, transparent);}
 			.text > .icono img {width:30em}
 		}
 		&.genero {
-			h2 {background:#c8595f -webkit-linear-gradient(left, $crema, #c8595f, $crema);}
+			h2 {background:-webkit-linear-gradient(left, transparent, #c8595f, transparent);}
 		}
 		&.derechos {
-			h2 {background:#d98ead -webkit-linear-gradient(left, $crema, #d98ead, $crema);}
+			h2 {background:-webkit-linear-gradient(left, transparent, #d98ead, transparent);}
 			.text > .icono img {width:30em}
 		}
 		&.transparencia {
-			h2 {background:#b8a6be -webkit-linear-gradient(left, $crema, #b8a6be, $crema);}
+			h2 {background:-webkit-linear-gradient(left, transparent, #b8a6be, transparent);}
 			.text > .icono img {width:25em}
 		}
 	}
@@ -669,13 +675,19 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 					}
 				}
 				a.en-campanha { text-align:right;
-					background:#EACCCC -webkit-linear-gradient(right, #EACCCC, $crema);
+					background:-webkit-linear-gradient(right, #EACCCC, transparent);
 					img {text-align:right; height:2.1em; top:-1.5em; left:-0.7em}
+					&:hover {
+						background:-webkit-linear-gradient(right, #D86D74, transparent);
+					}
 				}
 				a.en-el-congreso {text-align:left;
-					background:#DAECE8 -webkit-linear-gradient(left, #DAECE8, $crema);
+					background:-webkit-linear-gradient(left, #DAECE8, transparent);
 					span {width:4em;
 						img {top:-2em; left:-0.2em}
+					}
+					&:hover {
+						background:-webkit-linear-gradient(left, #93D2C8, transparent);
 					}
 				}
 			}
@@ -742,12 +754,12 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		}
 		&.campanha {
 			h2 {
-				background:#EACCCC -webkit-linear-gradient(left, $crema, #EACCCC, $crema);
+				background:-webkit-linear-gradient(left, transparent, #EACCCC, transparent);
 			}
 		}
 		&.congreso {
 			h2 {
-				background:#BBDAD3 -webkit-linear-gradient(left, $crema, #BBDAD3, $crema);
+				background:-webkit-linear-gradient(left, transparent, #BBDAD3, transparent);
 			}
 			.icono {margin-top:1.3em}
 		}

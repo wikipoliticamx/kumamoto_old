@@ -1026,7 +1026,7 @@ body {
         color: black;
         display: block;
         line-height: 2em;
-        background: #eacccc -webkit-linear-gradient(right, #eacccc, #f6f1e9); }
+        background: -webkit-linear-gradient(right, #eacccc, transparent); }
       .propuestas .screen.toc .ciudad h2 strong, .propuestas .screen.toc .gobierno h2 strong {
         font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
         font-weight: bold; }
@@ -1052,7 +1052,7 @@ body {
         height: 1.7em;
         display: block;
         margin: 1.9em 0;
-        background: #e2dacf -webkit-linear-gradient(left, #f6f1e9, #e2dacf); }
+        background: -webkit-linear-gradient(left, transparent, #e2dacf); }
         .propuestas .screen.toc .ciudad h3 a span, .propuestas .screen.toc .gobierno h3 a span {
           display: inline-block;
           width: 6em;
@@ -1063,7 +1063,7 @@ body {
             top: -2em;
             left: 0.8em; }
         .propuestas .screen.toc .ciudad h3 a:hover, .propuestas .screen.toc .gobierno h3 a:hover {
-          background: #c5b39a -webkit-linear-gradient(left, #f6f1e9, #c5b39a); }
+          background: -webkit-linear-gradient(left, transparent, #c5b39a); }
       .propuestas .screen.toc .ciudad h3 strong, .propuestas .screen.toc .gobierno h3 strong {
         font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
         font-weight: bold; }
@@ -1077,22 +1077,26 @@ body {
   .propuestas .screen.toc .ciudad h2 a img {
     margin-left: 0.5em;
     left: 0; }
+  .propuestas .screen.toc .ciudad h2 a:hover {
+    background: -webkit-linear-gradient(right, #d86d74, transparent); }
   .propuestas .screen.toc .ciudad h3 a img {
     margin-right: 1em; }
   .propuestas .screen.toc .gobierno h2 {
     text-align: left; }
     .propuestas .screen.toc .gobierno h2 a {
-      background: #daece8 -webkit-linear-gradient(left, #daece8, #f6f1e9); }
+      background: -webkit-linear-gradient(left, #daece8, transparent); }
       .propuestas .screen.toc .gobierno h2 a img {
         margin-left: 0.8em;
         margin-right: 0.6em;
         left: -0.2em; }
+      .propuestas .screen.toc .gobierno h2 a:hover {
+        background: -webkit-linear-gradient(left, #93d2c8, transparent); }
   .propuestas .screen.toc .gobierno h3 a {
-    background: #e2dacf -webkit-linear-gradient(right, #f6f1e9, #e2dacf); }
+    background: -webkit-linear-gradient(right, transparent, #e2dacf); }
     .propuestas .screen.toc .gobierno h3 a span img {
       left: 1.8em; }
     .propuestas .screen.toc .gobierno h3 a:hover {
-      background: #c5b39a -webkit-linear-gradient(right, #f6f1e9, #c5b39a); }
+      background: -webkit-linear-gradient(right, transparent, #c5b39a); }
   .propuestas .screen.toc .gobierno h3.contrapeso a img {
     height: 2.2em;
     top: -1.5em; }
@@ -1151,7 +1155,9 @@ body {
     .propuestas .screen.democratica .video img, .propuestas .screen.sostenible .video img, .propuestas .screen.incluyente .video img, .propuestas .screen.personas .video img, .propuestas .screen.excelencia .video img, .propuestas .screen.contrapeso .video img {
       position: absolute;
       top: 0;
-      left: 0; }
+      left: 0;
+      width: 720;
+      height: 1280px; }
   .propuestas .screen.democratica .fb, .propuestas .screen.sostenible .fb, .propuestas .screen.incluyente .fb, .propuestas .screen.personas .fb, .propuestas .screen.excelencia .fb, .propuestas .screen.contrapeso .fb {
     background: #e9eaed;
     text-align: center; }
@@ -1168,7 +1174,7 @@ body {
       margin-bottom: 0;
       padding: 0.2em 0;
       font-weight: 200;
-      background: #f6f1e9;
+      background: transparent;
       text-align: center; }
       .propuestas .screen.democratica .text h2 img, .propuestas .screen.sostenible .text h2 img, .propuestas .screen.incluyente .text h2 img, .propuestas .screen.personas .text h2 img, .propuestas .screen.excelencia .text h2 img, .propuestas .screen.contrapeso .text h2 img {
         height: 1.5em;
@@ -1186,7 +1192,7 @@ body {
       padding: 0.4em 0;
       padding-top: 0.2em;
       font-size: 5em;
-      background: #eacccc -webkit-linear-gradient(left, #f6f1e9, #eacccc, #f6f1e9);
+      background: -webkit-linear-gradient(left, transparent, #eacccc, transparent);
       line-height: 0.9em; }
     .propuestas .screen.democratica .text div.icono, .propuestas .screen.sostenible .text div.icono, .propuestas .screen.incluyente .text div.icono, .propuestas .screen.personas .text div.icono, .propuestas .screen.excelencia .text div.icono, .propuestas .screen.contrapeso .text div.icono {
       margin: 2em auto;
@@ -1207,9 +1213,9 @@ body {
       margin-top: 0;
       margin-left: 4em; }
 .propuestas .screen.personas .text h2, .propuestas .screen.excelencia .text h2, .propuestas .screen.contrapeso .text h2 {
-  background: #f6f1e9; }
+  background: transparent; }
 .propuestas .screen.personas .text h1, .propuestas .screen.excelencia .text h1, .propuestas .screen.contrapeso .text h1 {
-  background: #bbdad3 -webkit-linear-gradient(left, #f6f1e9, #bbdad3, #f6f1e9); }
+  background: webkit-linear-gradient(left, transparent, #bbdad3, transparent); }
 
 /************************** ;PRINCIPIOS **************************/
 .principios {
@@ -1282,35 +1288,35 @@ body {
           top: -1.5em;
           left: 0.3em; }
       .principios .screen.toc .lista a.colectiva {
-        background: #b7d8d4 -webkit-linear-gradient(left, #f6f1e9, #b7d8d4); }
+        background: -webkit-linear-gradient(left, transparent, #b7d8d4); }
         .principios .screen.toc .lista a.colectiva span {
           width: 4.5em; }
         .principios .screen.toc .lista a.colectiva:hover {
-          background: #5fc5b8 -webkit-linear-gradient(left, #f6f1e9, #5fc5b8); }
+          background: -webkit-linear-gradient(left, transparent, #5fc5b8); }
       .principios .screen.toc .lista a.participacion {
-        background: #c2dbe4 -webkit-linear-gradient(left, #f6f1e9, #c2dbe4); }
+        background: -webkit-linear-gradient(left, transparent, #c2dbe4); }
         .principios .screen.toc .lista a.participacion:hover {
-          background: #8cb7c7 -webkit-linear-gradient(left, #f6f1e9, #8cb7c7); }
+          background: -webkit-linear-gradient(left, transparent, #8cb7c7); }
       .principios .screen.toc .lista a.apertura {
-        background: #b4b4bb -webkit-linear-gradient(left, #f6f1e9, #b4b4bb); }
+        background: -webkit-linear-gradient(left, transparent, #b4b4bb); }
         .principios .screen.toc .lista a.apertura:hover {
-          background: #626264 -webkit-linear-gradient(left, #f6f1e9, #626264); }
+          background: -webkit-linear-gradient(left, transparent, #626264); }
       .principios .screen.toc .lista a.innovacion {
-        background: #edac9c -webkit-linear-gradient(left, #f6f1e9, #edac9c); }
+        background: -webkit-linear-gradient(left, transparent, #edac9c); }
         .principios .screen.toc .lista a.innovacion:hover {
-          background: #d6765e -webkit-linear-gradient(left, #f6f1e9, #d6765e); }
+          background: -webkit-linear-gradient(left, transparent, #d6765e); }
       .principios .screen.toc .lista a.genero {
-        background: #e8a3a7 -webkit-linear-gradient(right, #f6f1e9, #e8a3a7); }
+        background: -webkit-linear-gradient(right, transparent, #e8a3a7); }
         .principios .screen.toc .lista a.genero:hover {
-          background: #c8595f -webkit-linear-gradient(right, #f6f1e9, #c8595f); }
+          background: -webkit-linear-gradient(right, transparent, #c8595f); }
       .principios .screen.toc .lista a.derechos {
-        background: #edc2d4 -webkit-linear-gradient(right, #f6f1e9, #edc2d4); }
+        background: -webkit-linear-gradient(right, transparent, #edc2d4); }
         .principios .screen.toc .lista a.derechos:hover {
-          background: #d98ead -webkit-linear-gradient(right, #f6f1e9, #d98ead); }
+          background: -webkit-linear-gradient(right, transparent, #d98ead); }
       .principios .screen.toc .lista a.transparencia {
-        background: #dbcce0 -webkit-linear-gradient(right, #f6f1e9, #dbcce0); }
+        background: -webkit-linear-gradient(right, transparent, #dbcce0); }
         .principios .screen.toc .lista a.transparencia:hover {
-          background: #b8a6be -webkit-linear-gradient(right, #f6f1e9, #b8a6be); }
+          background: -webkit-linear-gradient(right, transparent, #b8a6be); }
     .principios .screen.toc .lista .left, .principios .screen.toc .lista .right {
       width: 49%;
       display: inline-block;
@@ -1372,28 +1378,28 @@ body {
         margin-top: 4em;
         width: 35em; }
   .principios .screen.colectiva h2 {
-    background: #5fc5b8 -webkit-linear-gradient(left, #f6f1e9, #5fc5b8, #f6f1e9); }
+    background: -webkit-linear-gradient(left, transparent, #5fc5b8, transparent); }
   .principios .screen.colectiva .text > .icono img {
     width: 40em; }
   .principios .screen.participacion h2 {
-    background: #8cb7c7 -webkit-linear-gradient(left, #f6f1e9, #8cb7c7, #f6f1e9); }
+    background: -webkit-linear-gradient(left, transparent, #8cb7c7, transparent); }
   .principios .screen.apertura h2 {
-    background: #626264 -webkit-linear-gradient(left, #f6f1e9, #626264, #f6f1e9);
+    background: -webkit-linear-gradient(left, transparent, #626264, transparent);
     color: white; }
   .principios .screen.apertura .text > .icono img {
     width: 30em; }
   .principios .screen.innovacion h2 {
-    background: #d6765e -webkit-linear-gradient(left, #f6f1e9, #d6765e, #f6f1e9); }
+    background: -webkit-linear-gradient(left, transparent, #d6765e, transparent); }
   .principios .screen.innovacion .text > .icono img {
     width: 30em; }
   .principios .screen.genero h2 {
-    background: #c8595f -webkit-linear-gradient(left, #f6f1e9, #c8595f, #f6f1e9); }
+    background: -webkit-linear-gradient(left, transparent, #c8595f, transparent); }
   .principios .screen.derechos h2 {
-    background: #d98ead -webkit-linear-gradient(left, #f6f1e9, #d98ead, #f6f1e9); }
+    background: -webkit-linear-gradient(left, transparent, #d98ead, transparent); }
   .principios .screen.derechos .text > .icono img {
     width: 30em; }
   .principios .screen.transparencia h2 {
-    background: #b8a6be -webkit-linear-gradient(left, #f6f1e9, #b8a6be, #f6f1e9); }
+    background: -webkit-linear-gradient(left, transparent, #b8a6be, transparent); }
   .principios .screen.transparencia .text > .icono img {
     width: 25em; }
 
@@ -1451,20 +1457,24 @@ body {
             position: absolute; }
       .compromisos .screen.toc div.toc a.en-campanha {
         text-align: right;
-        background: #eacccc -webkit-linear-gradient(right, #eacccc, #f6f1e9); }
+        background: -webkit-linear-gradient(right, #eacccc, transparent); }
         .compromisos .screen.toc div.toc a.en-campanha img {
           text-align: right;
           height: 2.1em;
           top: -1.5em;
           left: -0.7em; }
+        .compromisos .screen.toc div.toc a.en-campanha:hover {
+          background: -webkit-linear-gradient(right, #d86d74, transparent); }
       .compromisos .screen.toc div.toc a.en-el-congreso {
         text-align: left;
-        background: #daece8 -webkit-linear-gradient(left, #daece8, #f6f1e9); }
+        background: -webkit-linear-gradient(left, #daece8, transparent); }
         .compromisos .screen.toc div.toc a.en-el-congreso span {
           width: 4em; }
           .compromisos .screen.toc div.toc a.en-el-congreso span img {
             top: -2em;
             left: -0.2em; }
+        .compromisos .screen.toc div.toc a.en-el-congreso:hover {
+          background: -webkit-linear-gradient(left, #93d2c8, transparent); }
   .compromisos .screen .text {
     width: 69.5%;
     display: inline-block;
@@ -1562,9 +1572,9 @@ body {
       margin-left: -4em;
       margin-top: 1em; }
   .compromisos .screen.campanha h2 {
-    background: #eacccc -webkit-linear-gradient(left, #f6f1e9, #eacccc, #f6f1e9); }
+    background: -webkit-linear-gradient(left, transparent, #eacccc, transparent); }
   .compromisos .screen.congreso h2 {
-    background: #bbdad3 -webkit-linear-gradient(left, #f6f1e9, #bbdad3, #f6f1e9); }
+    background: -webkit-linear-gradient(left, transparent, #bbdad3, transparent); }
   .compromisos .screen.congreso .icono {
     margin-top: 1.3em; }
   .compromisos .screen.bienvenida {
