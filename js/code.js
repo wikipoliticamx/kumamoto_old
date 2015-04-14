@@ -143,9 +143,8 @@ var KUMA = {
 		},
 		boot:function() { var galaxia = $('.screen.nosotros .galaxia'), i = 0;
 			_(KUMA.nosotros.miembros).chain().shuffle().first(32).each(function(miembro) { i+=1; var nombre = miembro[0], xq = miembro[1], x = miembro[2], y = miembro[3];
-				galaxia.append('<div class="wiki" data-name="'+nombre+'" data-why="'+xq+'"><span>'+nombre.replace(/\-\d/,'').replace(/-/,' ')+'</span><img src="/img/dot.png" style="background-position:'+(y*-150)+'px '+(x*-150)+'px" /></div>');
+				galaxia.append('<div class="wiki" data-name="'+nombre+'" data-why="'+xq+'"><span>'+nombre.replace(/\-\d/,'').replace(/-/,' ')+'</span><img src="/img/dot.png" style="background-position:'+(y*-150)+'px '+(x*-150)+'px" data-x="'+x+'" data-y="'+y+'" /></div>');
 				var face = galaxia.find('div.wiki:last');
-
 				if(xq) {
 					new Opentip(face, '<strong>ESTOY AQUÍ PORQUE:</strong><span>'+xq, {
 						target:true,
@@ -165,6 +164,30 @@ var KUMA = {
 					$('.screen.nosotros h1').detach().insertAfter('.screen.nosotros .galaxia div.wiki:eq('+(i-1)+')')
 				}
 			});
+			KUMA.nosotros.adjust();
+		},
+		adjust:function() {
+			var scale = KUMA.em/12,
+				w = 1500,
+				h = 750;
+			console.log( 'em', KUMA.em);
+			console.log('scale('+scale+','+scale+')');
+
+			$('.screen.nosotros .galaxia div.wiki img').each(function() { var img = $(this), x = img.data('x'), y = img.data('y');
+				//console.log( 'x', x );
+				//console.log( 'y', y );
+				img.css( {
+					'background-size':(w*scale)+'px '+(h*scale)+'px',
+					'background-position':(y*-150*scale)+'px '+(x*-150*scale)+'px'
+				});
+			});
+					
+			//$('.screen.nosotros .galaxia div.wiki img').css({
+				//transform:'scale('+scale+','+scale+')',
+				//'-ms-transform':'scale('+scale+','+scale+')',
+				//'-webkit-transform':'scale('+scale+','+scale+')'
+			//});
+			
 		}
 	},
 	// --------------------
@@ -401,6 +424,7 @@ var KUMA = {
 	// -------------------
 	// ****** SCREEN ******
 	// -------------------
+	em:12,
 	screen:{
 		backgroundWithin:function(img, container){ var css;
 			if(typeof container == 'undefined') {
@@ -483,7 +507,8 @@ var KUMA = {
 			}
 		},
 		adjust:function() { var where = KUMA.where;
-			$('body').css('font-size', ($(window).width()/140)+'px');
+			KUMA.em = ($(window).width()/140);
+			$('body').css('font-size', KUMA.em+'px');
 
 			if((where == 'home') || (where == 'splash')) {
 				KUMA.screen.cover();
@@ -500,6 +525,7 @@ var KUMA = {
 					KUMA.screen.backgroundWithin($('img.kuma-benji'), $('.screen.bienvenida'));
 				}
 			}
+			KUMA.nosotros.adjust();
 		},
 		boot:function() {
 			KUMA.screen.adjust();

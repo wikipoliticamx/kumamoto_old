@@ -176,20 +176,20 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 	}
 
 	/* VIDEO */
-	&.video { background-color:#ADDFD7; color:black; text-align:center; position:relative;
+	&.video { background-color:#ADDFD7; color:black; text-align:center; position:relative; background-repeat:no-repeat; background-position:center top; background-size:100%;
 		.theater {overflow:hidden; background:#000/*#607F8C*/; width:100%; position:absolute; top:0;
-			#ytplayer {width:100%; margin:0 auto; display:inline-block; position:absolute; top:60px; transition:all 0.2s ease;}
-			.sidebar { position:absolute; width:200px; right:0; top:0; height:100%; overflow:auto; text-align:center;
-				.soundToggle { height:80px; width:80px; margin-top:60px; margin-bottom:30px; position:relative; display:inline-block; overflow:hidden; transition: all 0.2s ease; cursor:pointer;
-					img {height:80px; }
+			#ytplayer {width:100%; margin:0 auto; display:inline-block; position:absolute; top:5em; transition:all 0.2s ease;}
+			.sidebar { position:absolute; width:16.6em; right:0; top:0; height:100%; overflow:auto; text-align:center;
+				.soundToggle { height:6.6em; width:6.6em; margin-top:5em; margin-bottom:2.5em; position:relative; display:inline-block; overflow:hidden; transition: all 0.2s ease; cursor:pointer;
+					img {height:6.6em; }
 					&.muted img {position:absolute; top:0; left:0}
-					&.unMuted img {position:absolute; top:0; left:-80px}
+					&.unMuted img {position:absolute; top:0; left:-6.6em}
 					&:hover {
 						transform:scale(1.3,1.3);
 					}
 				}
 				.thumbs {
-					img {width:200px; height:111px; display:inline-block; margin:10px 5px; -webkit-filter:grayscale(1); cursor:pointer;
+					img {width:16.666em; height:9.25em; display:inline-block; margin:0.83em 0.41em; -webkit-filter:grayscale(1); cursor:pointer;
 						background-repeat:no-repeat;
 						&:hover, &.active { -webkit-filter:grayscale(0); opacity:1; }
 					}
@@ -201,7 +201,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			h1 {font-size:5.6em; line-height:1.11em; margin:0; margin-right:0.8em; margin-top:2.5; position:relative; top:0.2em; display:inline-block; text-transform:uppercase; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; text-align:left;
 				span { opacity:0; position:relative; display:inline-block; transition:all 8s ease;
 					&.muros {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:500}
-					&.si {font-size:150%; top:15px; color:rgb(152, 95, 96); font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:bold}
+					&.si {font-size:150%; top:1.25em; color:rgb(152, 95, 96); font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:bold}
 				}
 				div {margin-left:3em}
 			}
@@ -219,19 +219,20 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 	/* NOSOTROS */
 	$faceSide:12.5em;
 	&.nosotros { background:$crema; color:white; text-align:center;
-		h1 { font-family:"FF Meta W01", Helvetica, Arial, sans-serif; color:#000; text-align:center; margin:0; font-size:7em; display:inline-block; line-height:1.7em; vertical-align:middle; width:8.2em; text-transform:uppercase; position:relative;
+		h1 { font-family:"FF Meta W01", Helvetica, Arial, sans-serif; color:#000; text-align:center; margin:0; font-size:7em; display:inline-block; line-height:1em; vertical-align:middle; width:8.2em; text-transform:uppercase; position:relative;
 			img {height:1.5em; vertical-align:middle}
-			a {position:absolute; bottom:0; font-size:0.4em; line-height:1em; right:60px; font-weight:200; color:#999; text-decoration:none;
+			a {position:absolute; bottom:0; font-size:0.4em; line-height:1em; right:1.5em; font-weight:200; color:#999; text-decoration:none;
 				&:hover {color:rgb(152, 95, 96)}
 			}
 		}
-		.galaxia {text-align:center; display:inline-block; vertical-align:middle; line-height:initial;
+		.galaxia {text-align:center; display:inline-block; vertical-align:middle; line-height:initial; margin-top:2em;
 			.azulejo-top, .azulejo-bottom {position:absolute; z-index:1; width:110%; left:-2%}
 				.azulejo-bottom {bottom:-6%}
 				.azulejo-top {top:-6%}
-			div.wiki { display:inline-block; width:$faceSide; height:$faceSide; margin:1em 3.3em; text-align:center; position:relative; text-decoration:none; z-index:2;
+			div.wiki { display:inline-block; width:$faceSide; height:$faceSide; margin:0.5em 3.3em; text-align:center; position:relative; text-decoration:none; z-index:2; font-size:1em;
 				vertical-align:middle; cursor:pointer;
-				opacity:0; transition: all 0.2s ease;
+				opacity:0; 
+				/*transition: all 0.2s ease;*/
 
 				span {color:white; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:700; text-transform:uppercase; font-size:2.5em; position:absolute; bottom:0.2em; line-height:1em;
 					visibility:hidden;
@@ -240,17 +241,82 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 					z-index:2;
 				}
 				img {width:$faceSide; height:$faceSide; position:relative; z-index:1; border-radius:1.6em; 
-					box-shadow:2px 2px 3px #999; 
+					box-shadow:0.15em 0.15em 0.2em #999; 
 					/*-webkit-filter:blur(5px) grayscale(1);*/
 				}
 				&:hover {
 					/*transform:scale(1.3,1.3);*/
 					img {
-						box-shadow:2px 2px 3px #555; vertical-align:middle; 
+						box-shadow:0.15em 0.15em 0.2em #555; vertical-align:middle; 
 						/*-webkit-filter:blur(0) grayscale(0);*/
 					}
 					span {visibility:visible}
 
+				}
+			}
+		}
+	}
+
+	/* ;NOS ASESORAN */
+	&.asesores { text-align:center; background:$crema; background-repeat:no-repeat; background-position:right top; background-size:auto 100%; z-index:1; position:relative;
+		h1 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:7em; text-align:center; margin:0; text-transform:uppercase;
+			left:0; z-index:2; color:#000; text-align:center; width:100%;
+			strong {font-family:"FF Meta W01", Helvetica, Arial, sans-serif}
+		}
+		div.asesores {margin:0 auto;
+			.asesor {margin-bottom:0.5em; 
+				.portrait {display:inline-block; text-align:right; width:10em;
+					img {height:8em; margin-right:2em; border:1px solid #999}
+				}
+				.bio {display:inline-block; max-width:14em; vertical-align:top; text-align:center;
+					span.name {display:block; font-size:1.2em; color:rgb(200, 112, 114); text-transform:uppercase; font-weight:200}
+					em {display:block; margin:0.6em 0.6em 0 0.6em; color:#777;
+						a {color:#777;
+							&:hover {text-decoration:underline}
+						}
+					}
+				}
+				p {display:inline-block; text-align:right; width:22em; vertical-align:middle; margin-top:0; text-align:left; font-size:130%}
+				.card {background:white; display:inline-block; padding-top:0.6em; margin-bottom:0.5em; vertical-align:middle;
+					box-shadow:0.2em 0.2em 0.4em #ccc;
+				}
+			}
+			.center {display:block; text-align:center; margin-bottom:1em;
+				.asesor {display:inline-block; max-width:15em; text-align:center; margin-bottom:1em; vertical-align:top; background:white;
+					padding:1.5em 1em; margin-right:1.5em; box-shadow:0.2em 0.2em 0.4em #ccc;
+					img {margin-right:0; height:10em}
+					.bio {display:block; width:100%; margin-top:0.5em; text-align:center;}
+					p {display:none;}
+				}
+			}
+			.left, .right {width:49.5%; display:inline-block; vertical-align:top; 
+				em {margin-top:1em}
+				span.name {margin-top:0.5em}
+			}
+			.left {text-align:right; width:47.5%; padding-right:1%; border-right:1px solid #999; margin-right:1%;
+				.asesor {
+					.portrait {margin-left:0.5em}
+					p {text-align:right; 
+						background:#E7DBCB -webkit-linear-gradient(left, $crema, #E7DBCB);
+						padding:0.8em; font-size:1.1em; padding-left:0;
+					}
+				}
+				.card {margin-left:1em;
+					img {margin-bottom:0.4em; margin-right:0.8em;}
+				}
+			}
+			.right {text-align:left;
+				.card {margin-right:1em;
+					img {margin-bottom:0.4em; margin-left:0.8em;}
+				}
+				.asesor {text-align:left;
+					.portrait {text-align:left; 
+						img {margin-right:0;}
+					}
+					p {
+						background:#E7DBCB -webkit-linear-gradient(right, $crema, #E7DBCB);
+						padding:0.8em; font-size:1.1em; padding-right:0;
+					}
 				}
 			}
 		}
@@ -315,27 +381,10 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		}
 	}
 
-	/* ASESORES */
-	&.asesores { text-align:center; background:$crema; z-index:1; position:relative;
-		h1 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:7em; text-align:center; margin:0; text-transform:uppercase;
-			position:absolute; top:20px; left:0; z-index:2; color:#000; text-align:center; width:100%;
-			strong {font-family:"FF Meta W01", Helvetica, Arial, sans-serif}
-		}
-		div.asesores {margin-top:100px;
-			.asesor {
-				img {height:100px; margin-right:10px}
-				.bio {display:inline-block; width:250px; height:100px; vertical-align:top; text-align:left; 
-					strong {display:block; font-size:150%;}
-				}
-				p {display:inline-block; height:100px; width:400px; vertical-align:top; margin-top:0; margin-bottom:30px; text-align:left; font-size:130%}
-			}
-		}
-	}
-
 	/* ACERCA DE */
 	&.acercade { text-align:center; background:$crema; z-index:1; position:relative;
 		h1 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:7em; text-align:center; margin:0; text-transform:uppercase; opacity:0;
-			position:absolute; top:20px; left:0; z-index:2; color:#fff; width:50%; text-align:center;
+			position:absolute; top:0.2em; left:0; z-index:2; color:#fff; width:50%; text-align:center;
 			strong {font-family:"FF Meta W01", Helvetica, Arial, sans-serif}
 		}
 		.yo-kuma { overflow:hidden;
@@ -458,7 +507,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 					img {height:1.5em; vertical-align:middle; margin-right:0.3em;
 						&.kumalogo {margin-left:0.5em}
 					}
-					a {text-decoration:none; color:#000}
+					a {text-decoration:none; color:#000; }
 				}
 				h1 {text-align:center; margin-left:0; margin-top:0; padding:0.4em 0; padding-top:0.2em; font-size:5em; background:#EACCCC -webkit-linear-gradient(left, $crema, #EACCCC, $crema); line-height:0.9em}
 				div.icono { margin:2em auto; text-align:center;
@@ -469,7 +518,6 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				p.propuestas {padding:0.5em 4.1em}
 
 				ol li {margin-top:0; margin-left:4em}
-
 			}
 		}
 		&.personas, &.excelencia, &.contrapeso {
@@ -625,7 +673,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				text-transform:uppercase; color:#000; width:100%; text-align:center; margin-left:1.7em; margin-top:0.3em; margin-bottom:0.2em;
 			}
 			ol { font-size:1.5em; font-family:Helvetica; margin:0 auto; margin-top:2em; counter-reset:item; width:65%; 
-				&.congreso {counter-reset:item 8;}
+				&.congreso {counter-reset:item 7;}
 				li:before {
 					content: counter(item) ". ";
 					counter-increment: item;
@@ -709,7 +757,9 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			span.hidden, span.menos {display:none}
 			span.mas {display:inline}
 		}
-		p a, ol li a {color:#000; font-weight:200}
+		p a, ol li a {color:#000; font-weight:200;
+			&:hover, &:hover b, &:hover strong { color:rgb(200, 112, 114); }
+		}
 		p.menos, li.menos {
 			span.hidden, span.menos {display:inline-block}
 			span.hidden {margin:0.5em 0}
