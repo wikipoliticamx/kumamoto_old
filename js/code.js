@@ -530,18 +530,20 @@ var KUMA = {
 				screen.maxCenterWithinContainer($('.yo-kuma .foto img'), $('.yo-kuma .foto'));
 				screen.maxCenterWithinContainer($('.screen.mapa a.mapa img'), $('.screen.mapa'));
 			} else {
+				var fbWidth = Math.min(Math.max(data.w*0.3, 450), 550);
 				if(where == 'propuestas') {
 					screen.propuestas();
+					$('.screen .fb').css('width', fbWidth );
+					$('.screen .text').css('width', ((data.w - fbWidth)*0.6)-5 );
+					$('.screen .video').css('width', ((data.w - fbWidth)*0.4)-5 );
+
 				} else if(where == 'compromisos') {
 					$('.screen.bienvenida').css('height', data.h);
 
-					var fbWidth = Math.min(Math.max(data.w, 450), 550);
-					$('.screen .fb').css('width', fbWidth );
-					$('.screen .text').css('width', data.w-fbWidth-5 );
-
 					screen.maxCenterWithinContainer($('img.kuma-benji'), $('.screen.bienvenida'));
 				} else if(where == 'principios') {
-					var fbWidth = Math.min(Math.max(data.w, 450), 550);
+				}
+				if((where=='principios') && (where=='compromisos')) {
 					$('.screen .fb').css('width', fbWidth );
 					$('.screen .text').css('width', data.w-fbWidth-5 );
 				}

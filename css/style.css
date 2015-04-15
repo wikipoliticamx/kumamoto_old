@@ -1185,8 +1185,10 @@ body {
     width: 28%; }
   .propuestas .screen.democratica .text, .propuestas .screen.sostenible .text, .propuestas .screen.incluyente .text, .propuestas .screen.personas .text, .propuestas .screen.excelencia .text, .propuestas .screen.contrapeso .text {
     width: 38%; }
-  .propuestas .screen.democratica .fb, .propuestas .screen.sostenible .fb, .propuestas .screen.incluyente .fb, .propuestas .screen.personas .fb, .propuestas .screen.excelencia .fb, .propuestas .screen.contrapeso .fb {
-    max-width: 550px; }
+  .propuestas .screen.democratica .fb .fb-container, .propuestas .screen.sostenible .fb .fb-container, .propuestas .screen.incluyente .fb .fb-container, .propuestas .screen.personas .fb .fb-container, .propuestas .screen.excelencia .fb .fb-container, .propuestas .screen.contrapeso .fb .fb-container {
+    width: 95%;
+    margin: 0 auto;
+    margin-top: 1em; }
   .propuestas .screen.democratica .video, .propuestas .screen.sostenible .video, .propuestas .screen.incluyente .video, .propuestas .screen.personas .video, .propuestas .screen.excelencia .video, .propuestas .screen.contrapeso .video {
     background: #ccc;
     position: relative; }
@@ -1198,6 +1200,7 @@ body {
       height: 1280px; }
   .propuestas .screen.democratica .fb, .propuestas .screen.sostenible .fb, .propuestas .screen.incluyente .fb, .propuestas .screen.personas .fb, .propuestas .screen.excelencia .fb, .propuestas .screen.contrapeso .fb {
     background: #e9eaed;
+    border-left: 1px solid #ccc;
     text-align: center; }
   .propuestas .screen.democratica .fb img, .propuestas .screen.sostenible .fb img, .propuestas .screen.incluyente .fb img, .propuestas .screen.personas .fb img, .propuestas .screen.excelencia .fb img, .propuestas .screen.contrapeso .fb img {
     width: 511px; }
@@ -1298,9 +1301,13 @@ body {
     overflow: hidden;
     max-width: 550px;
     background: #e9eaed;
-    text-align: center; }
-    .principios .screen .fb img {
-      width: 511px; }
+    text-align: center;
+    border-left: 1px solid #ccc;
+    /*img {width:511px}*/ }
+    .principios .screen .fb .fb-container {
+      width: 95%;
+      margin: 0 auto;
+      margin-top: 1em; }
   .principios .screen.toc .ciudad h2 {
     font-size: 6em;
     color: white;
@@ -1465,9 +1472,10 @@ body {
     background: #e9eaed;
     border-left: 1px solid #aaa;
     text-align: center;
-    overflow: scroll;
-    /*.fb-like, .fb-comments {margin:0 1em}*/ }
-    .compromisos .screen .fb .fb-like {
+    overflow: scroll; }
+    .compromisos .screen .fb .fb-container {
+      width: 95%;
+      margin: 0 auto;
       margin-top: 1em; }
   .compromisos .screen.toc {
     text-align: left;

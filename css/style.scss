@@ -533,11 +533,13 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			.video, .fb, .text {width:33%; display:inline-block; vertical-align:top; height:100%; overflow:hidden}
 				.video {width:28%}
 				.text {width:38%}
-				.fb {max-width:550px}
+				.fb {
+					.fb-container {width:95%; margin:0 auto; margin-top:1em}
+				}
 			.video {background:#ccc; position:relative;
 				img {position:absolute; top:0; left:0; width:720px; height:1280px}
 			}
-			.fb { background:#e9eaed; text-align:center;}
+			.fb { background:#e9eaed; border-left:1px solid #ccc; text-align:center;}
 			.fb img {width:511px}
 			.text {background:$crema url(/img/ui/kumatile.jpg);  
 				h2 {text-transform:uppercase; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:3em; width:100%; 
@@ -580,8 +582,9 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			a.inicio {text-decoration:none; color:#000}
 			img.kumalogo {position:absolute; height:10em; left:19.3em; top:4em}
 		}
-		.fb {width:30%; display:inline-block; vertical-align:top; height:100%; overflow:hidden; max-width:550px; background:#e9eaed; text-align:center;
-			img {width:511px}
+		.fb {width:30%; display:inline-block; vertical-align:top; height:100%; overflow:hidden; max-width:550px; background:#e9eaed; text-align:center; border-left:1px solid #ccc;
+			/*img {width:511px}*/
+			.fb-container {width:95%; margin:0 auto; margin-top:1em}
 		}
 
 		&.toc {
@@ -678,8 +681,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 	.screen { overflow:hidden;
 		.fb, .text {display:inline-block; vertical-align:top; height:100%; overflow:hidden}
 		.fb {width:30%; max-width:550px; background:#e9eaed; border-left:1px solid #aaa; text-align:center; overflow:scroll;
-			.fb-like {margin-top:1em;}
-			/*.fb-like, .fb-comments {margin:0 1em}*/
+			.fb-container {width:95%; margin:0 auto; margin-top:1em}
 		}
 
 		&.toc { text-align:left;
