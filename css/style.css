@@ -401,6 +401,11 @@ body {
       width: 100%;
       position: absolute;
       top: 0; }
+      .screen.video .theater .date {
+        color: #555;
+        font-size: 1.1em;
+        padding-top: 2em;
+        text-align: right; }
       .screen.video .theater #ytplayer {
         width: 100%;
         margin: 0 auto;
@@ -416,7 +421,7 @@ body {
         height: 100%;
         overflow: auto;
         text-align: center; }
-        .screen.video .theater .sidebar .soundToggle {
+        .screen.video .theater .sidebar .soundToggle, .screen.video .theater .sidebar .replay {
           height: 6.6em;
           width: 6.6em;
           margin-top: 5em;
@@ -426,18 +431,20 @@ body {
           overflow: hidden;
           transition: all 0.2s ease;
           cursor: pointer; }
-          .screen.video .theater .sidebar .soundToggle img {
+          .screen.video .theater .sidebar .soundToggle img, .screen.video .theater .sidebar .replay img {
             height: 6.6em; }
-          .screen.video .theater .sidebar .soundToggle.muted img {
+          .screen.video .theater .sidebar .soundToggle.muted img, .screen.video .theater .sidebar .replay.muted img {
             position: absolute;
             top: 0;
             left: 0; }
-          .screen.video .theater .sidebar .soundToggle.unMuted img {
+          .screen.video .theater .sidebar .soundToggle.unMuted img, .screen.video .theater .sidebar .replay.unMuted img {
             position: absolute;
             top: 0;
             left: -6.6em; }
-          .screen.video .theater .sidebar .soundToggle:hover {
+          .screen.video .theater .sidebar .soundToggle:hover, .screen.video .theater .sidebar .replay:hover {
             transform: scale(1.3, 1.3); }
+        .screen.video .theater .sidebar .replay {
+          margin-left: 2em; }
         .screen.video .theater .sidebar .thumbs img {
           width: 16.666em;
           height: 9.25em;
@@ -445,10 +452,11 @@ body {
           margin: 0.83em 0.41em;
           -webkit-filter: grayscale(1);
           cursor: pointer;
-          background-repeat: no-repeat; }
+          border: 1px solid transparent; }
           .screen.video .theater .sidebar .thumbs img:hover, .screen.video .theater .sidebar .thumbs img.active {
             -webkit-filter: grayscale(0);
-            opacity: 1; }
+            opacity: 1;
+            border: 1px solid white; }
     .screen.video .copy {
       position: absolute;
       bottom: 3.5em;
