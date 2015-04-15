@@ -42,7 +42,7 @@ var KUMA = {
 		onEnter:function(anchorLink, index) {
 			if(KUMA.where == 'home') {
 				//console.log(anchorLink);
-				var screen = $('.screen'
+				//var screen = $('.screen'
 			}
 			KUMA.fullPage.sayGoodbye(anchorLink);
 		},

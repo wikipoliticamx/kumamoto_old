@@ -5,12 +5,11 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-	<title>Privacidad | Pedro Kumamoto | Ocupemos la ciudad, habitemos la poltica</title>
-	<meta name="description" content="Soy Pedro Kumamoto, el primer candidato sin partidos al Congreso de Jalisco. Soy candidato independiente a diputado local para el distrito 10 de Zapopan porque creo que las personas debemos estar al centro de la poltica.">
+	<title>Privacidad | Pedro Kumamoto | Ocupemos la ciudad, habitemos la política</title>
+	<meta name="description" content="Soy Pedro Kumamoto, el primer candidato sin partidos al Congreso de Jalisco. Soy candidato independiente a diputado local para el distrito 10 de Zapopan porque creo que las personas debemos estar al centro de la política.">
 
 	<link rel="stylesheet" type="text/css" href="/css/style.css" />
 	<link rel="stylesheet" type="text/css" href="/css/jquery.fullPage.css" />
-   <!--<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto">-->
 	<link type="text/css" rel="stylesheet" href="http://fast.fonts.net/cssapi/88451c70-275f-495a-9532-5f67b61be709.css"/>
 
 	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -20,31 +19,36 @@
 
 	<script type='text/javascript' src="https://www.google.com/jsapi"></script>
 
-	<script src="/js/animate-min.js"></script>
+	<script type="text/javascript" src="/js/animate-min.js"></script>
 	<!--<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.14.2/TweenMax.min.js"></script>-->
-	<script src="/js/ScrollMagic.min.js"></script>
-	<script src="/js/opentip-jquery.min.js"></script>
+	<script type="text/javascript" src="/js/ScrollMagic.min.js"></script>
+
+	<!-- OpenTip -->
+	<script type="text/javascript" src="/js/opentip-jquery.min.js"></script>
 	<link href="/css/opentip.css" rel="stylesheet" type="text/css" />
 
-	<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-	<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-	<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-	<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-	<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-	<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-	<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-	<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-	<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-	<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-	<link rel="manifest" href="/manifest.json">
-	<meta name="msapplication-TileColor" content="#ffffff">
-	<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-	<meta name="theme-color" content="#ffffff">
+	<script type="text/javascript" src="/js/code.js"></script>
 
-	<script src="/js/code.js"></script>
+	<!-- favicon -->
+		<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+
+	<!-- YouTube -->
 	<script>
 		// Load the IFrame Player API code asynchronously.
 		var tag = document.createElement('script');
@@ -56,8 +60,8 @@
 		// YouTube player after the API code downloads.
 		function onYouTubeIframeAPIReady() {
 			KUMA.player = new YT.Player('ytplayer', {
-				videoId: $('.screen.video .sidebar .thumbs img:first').attr('data-youtube'),
-					playerVars:{
+				videoId: $('.screen.video .sidebar .thumbs img:first').data('youtube'),
+				playerVars:{
 					controls:'0',
 					showinfo:'0',
 				},
@@ -73,11 +77,11 @@
 
 
 <div id="fullpage" class="privacidad">
-	<p>Wikipoltica D10, A.C. con domicilio en la calle Jos Guadalupe Montenegro 1917, esquina calle progreso, Colonia Moderna, C.P. 44190, en la ciudad de Guadalajara, Jalisco emite el siguiente aviso de privacidad, por medio del cual se da a conocer la utilizacin, procesos, modificaciones y transmisiones de que sean objeto los datos recabados por esta asociacin.</p>
+	<p>Wikipolítica D10, A.C. con domicilio en la calle José Guadalupe Montenegro 1917, esquina calle progreso, Colonia Moderna, C.P. 44190, en la ciudad de Guadalajara, Jalisco emite el siguiente aviso de privacidad, por medio del cual se da a conocer la utilización, procesos, modificaciones y transmisiones de que sean objeto los datos recabados por esta asociación.</p>
 
-	<p>El objetivo de la solicitud de datos personales es el de respaldar de manera autnoma y pacfica al C. Jos Pedro Kumamoto Aguilar en su candidatura independiente a diputado local por el principio de mayora relativa en el distrito 10 del Estado de Jalisco, para el proceso electoral local ordinario 2014-2015, tal y como lo exige la convocatoria emitida el 8 de diciembre de 2014 por el Instituto Electoral y de Participacin Ciudadana del Estado de Jalisco.</p>
+	<p>El objetivo de la solicitud de datos personales es el de respaldar de manera autónoma y pacífica al C. José Pedro Kumamoto Aguilar en su candidatura independiente a diputado local por el principio de mayoría relativa en el distrito 10 del Estado de Jalisco, para el proceso electoral local ordinario 2014-2015, tal y como lo exige la convocatoria emitida el 8 de diciembre de 2014 por el Instituto Electoral y de Participación Ciudadana del Estado de Jalisco.</p>
 
-	<p>Los datos que les sern solicitados son los siguiente: </p>
+	<p>Los datos que les serán solicitados son los siguiente: </p>
 
 	<ul>
 	  <li>Nombre completo</li>
@@ -85,44 +89,44 @@
 	  <li>Edad</li>
 	  <li>Fecha de nacimiento</li>
 	  <li>Sexo</li>
-	  <li>Fotografa</li>
+	  <li>Fotografía</li>
 	  <li>Firma</li>
 	  <li>Huella digital</li>
 	  <li>Clave de elector</li>
-	  <li>Clave nica de Registro de Poblacin</li>
+	  <li>Clave Única de Registro de Población</li>
 	  <li>Folio de credencial para votar</li>
 	  <li>Localidad</li>
-	  <li>Seccin</li>
-	  <li>Fecha de emisin y vigencia de la credencial para votar</li>
-	  <li>Ao de registro de la credencial para votar</li>
-	  <li>Cdigo de Reconocimiento ptico de Caracteres de la credencial para votar</li>
+	  <li>Sección</li>
+	  <li>Fecha de emisión y vigencia de la credencial para votar</li>
+	  <li>Año de registro de la credencial para votar</li>
+	  <li>Código de Reconocimiento Óptico de Caracteres de la credencial para votar</li>
 	</ul>
 
-	<p>El responsable del resguardo y cuidado de sus datos personales ser Alejandra Parra Crdenas, a quien puede contactar por medio de correo electrnico a la direccin <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#097;&#108;&#101;&#112;&#097;&#114;&#114;&#097;&#099;&#064;&#119;&#105;&#107;&#105;&#112;&#111;&#108;&#116;&#105;&#099;&#097;&#046;&#109;&#120;">&#097;&#108;&#101;&#112;&#097;&#114;&#114;&#097;&#099;&#064;&#119;&#105;&#107;&#105;&#112;&#111;&#108;&#116;&#105;&#099;&#097;&#046;&#109;&#120;</a>.</p>
+	<p>El responsable del resguardo y cuidado de sus datos personales será Alejandra Parra Cárdenas, a quien puede contactar por medio de correo electrónico a la dirección <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#097;&#108;&#101;&#112;&#097;&#114;&#114;&#097;&#099;&#064;&#119;&#105;&#107;&#105;&#112;&#111;&#108;í&#116;&#105;&#099;&#097;&#046;&#109;&#120;">&#097;&#108;&#101;&#112;&#097;&#114;&#114;&#097;&#099;&#064;&#119;&#105;&#107;&#105;&#112;&#111;&#108;í&#116;&#105;&#099;&#097;&#046;&#109;&#120;</a>.</p>
 
-	<p>Las personas que tendrn acceso a sus datos personales dentro de la Asociacin Civil por ser absolutamente indispensable para alcanzar el objetivo detallado en este aviso de privacidad sern las siguientes:</p>
+	<p>Las personas que tendrán acceso a sus datos personales dentro de la Asociación Civil por ser absolutamente indispensable para alcanzar el objetivo detallado en este aviso de privacidad serán las siguientes:</p>
 
 	<ul>
-	  <li>Luca Petersen Fuentes</li>
+	  <li>Lucía Petersen Fuentes</li>
 	  <li>Rodrigo Cerda Cornejo</li>
-	  <li>Luis Fernando Gazcn Melchor</li>
-	  <li>Alejandra Parra Crdenas</li>
+	  <li>Luis Fernando Gazcón Melchor</li>
+	  <li>Alejandra Parra Cárdenas</li>
 	</ul>
 
-	<p>Sus datos personales sern incluidos en una base de datos electrnica a la que tendrn acceso nicamente las personas sealadas en el presente aviso de privacidad, misma que ser protegida con contraseas. Sus datos sern recabados de manera presencial por nuestros brigadistas, mismos quienes tienen estrictamente prohibido quedarse con copia de sus datos personales una vez que han sido integrados a la base de datos.</p>
+	<p>Sus datos personales serán incluidos en una base de datos electrónica a la que tendrán acceso únicamente las personas señaladas en el presente aviso de privacidad, misma que será protegida con contraseñas. Sus datos serán recabados de manera presencial por nuestros brigadistas, mismos quienes tienen estrictamente prohibido quedarse con copia de sus datos personales una vez que han sido integrados a la base de datos.</p>
 
-	<p>Los datos recabados sern transferidos nicamente al Instituto Electoral y de Participacin Ciudadana del Estado de Jalisco, mismo que cuenta con un convenio de colaboracin con el Instituto Nacional Electoral para el tratamiento de sus datos. Para cualquier otra transferencia de datos se le requerir su consentimiento expreso.</p>
+	<p>Los datos recabados serán transferidos únicamente al Instituto Electoral y de Participación Ciudadana del Estado de Jalisco, mismo que cuenta con un convenio de colaboración con el Instituto Nacional Electoral para el tratamiento de sus datos. Para cualquier otra transferencia de datos se le requerirá su consentimiento expreso.</p>
 
-	<p>Se le informa que de conformidad con la sentencia de fecha 10 de diciembre de 2014 emitida por el Tribunal Electoral del Poder Judicial de la Federacin, misma que resolvi los recursos de apelacin 203 y 213, as como en el juicio para la proteccin de los derechos poltico-electorales del ciudadano 2782, todos del 2014, se resolvi que los datos personales de los ciudadanos que respaldan a los candidatos independientes no podrn ser publicados por el Instituto Nacional Electoral.</p>
+	<p>Se le informa que de conformidad con la sentencia de fecha 10 de diciembre de 2014 emitida por el Tribunal Electoral del Poder Judicial de la Federación, misma que resolvió los recursos de apelación 203 y 213, así como en el juicio para la protección de los derechos político-electorales del ciudadano 2782, todos del 2014, se resolvió que los datos personales de los ciudadanos que respaldan a los candidatos independientes no podrán ser publicados por el Instituto Nacional Electoral.</p>
 
-	<p>En caso de que usted quiera limitar el uso o divulgacin de sus datos personales, revocar su consentimiento o ejercer sus derechos de acceso, rectificacin, cancelacin u oposicin, favor de enviar su solicitud mediante escrito libre al correo <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#075;&#117;&#109;&#097;&#109;&#111;&#116;&#111;&#046;&#100;&#105;&#115;&#116;&#114;&#105;&#116;&#111;&#049;&#048;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">&#075;&#117;&#109;&#097;&#109;&#111;&#116;&#111;&#046;&#100;&#105;&#115;&#116;&#114;&#105;&#116;&#111;&#049;&#048;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;</a> o al telfono 3315135549.</p>
+	<p>En caso de que usted quiera limitar el uso o divulgación de sus datos personales, revocar su consentimiento o ejercer sus derechos de acceso, rectificación, cancelación u oposición, favor de enviar su solicitud mediante escrito libre al correo <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#075;&#117;&#109;&#097;&#109;&#111;&#116;&#111;&#046;&#100;&#105;&#115;&#116;&#114;&#105;&#116;&#111;&#049;&#048;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;">&#075;&#117;&#109;&#097;&#109;&#111;&#116;&#111;&#046;&#100;&#105;&#115;&#116;&#114;&#105;&#116;&#111;&#049;&#048;&#064;&#103;&#109;&#097;&#105;&#108;&#046;&#099;&#111;&#109;</a> o al teléfono 3315135549.</p>
 
-	<p>Le informamos que en el sitio web http://kumamoto.mx/ podr consultar los cambios realizados al presente aviso de privacidad.</p>
+	<p>Le informamos que en el sitio web http://kumamoto.mx/ podrá consultar los cambios realizados al presente aviso de privacidad.</p>
 </div>
 <div id="goodbye">
-	<h1><span>CONTCTANOS:</span></h1>
+	<h1><span>CONTÁCTANOS:</span></h1>
 	<span class="linea-kumamoto">
-		<img class="whatsapp" src="/img/logos/whatsapp.png" /> <strong>Lnea Kumamoto</strong> <a href="tel:+523315135549">33 1513 5549</a>
+		<img class="whatsapp" src="/img/logos/whatsapp.png" /> <strong>Línea Kumamoto</strong> <a href="tel:+523315135549">33 1513 5549</a>
 	</span>
 	<div class="redes">
 		<a class="fb" href="https://www.facebook.com/PedroKumamoto" /><img src="/img/logos/fb.png" /></a>
