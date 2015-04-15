@@ -15,7 +15,8 @@ body {
   font-weight: 200;
   font-size: 2em;
   counter-reset: item -1;
-  line-height: 1em; }
+  line-height: 1em;
+  display: none; }
   #menu a {
     color: #fff;
     display: block;
@@ -1464,7 +1465,8 @@ body {
     background: #e9eaed;
     border-left: 1px solid #aaa;
     text-align: center;
-    overflow: scroll; }
+    overflow: scroll;
+    /*.fb-like, .fb-comments {margin:0 1em}*/ }
     .compromisos .screen .fb .fb-like {
       margin-top: 1em; }
   .compromisos .screen.toc {
@@ -1546,7 +1548,7 @@ body {
     .compromisos .screen .text img.kumalogo {
       position: absolute;
       height: 10em;
-      left: 25em;
+      left: 14em;
       top: 3em; }
     .compromisos .screen .text h2 {
       font-family: "FF Meta W01", Helvetica, Arial, sans-serif;

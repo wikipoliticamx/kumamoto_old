@@ -534,7 +534,16 @@ var KUMA = {
 					screen.propuestas();
 				} else if(where == 'compromisos') {
 					$('.screen.bienvenida').css('height', data.h);
+
+					var fbWidth = Math.min(Math.max(data.w, 450), 550);
+					$('.screen .fb').css('width', fbWidth );
+					$('.screen .text').css('width', data.w-fbWidth-5 );
+
 					screen.maxCenterWithinContainer($('img.kuma-benji'), $('.screen.bienvenida'));
+				} else if(where == 'principios') {
+					var fbWidth = Math.min(Math.max(data.w, 450), 550);
+					$('.screen .fb').css('width', fbWidth );
+					$('.screen .text').css('width', data.w-fbWidth-5 );
 				}
 			}
 			KUMA.nosotros.adjust();
