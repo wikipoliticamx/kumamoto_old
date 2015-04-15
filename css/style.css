@@ -1897,7 +1897,7 @@ body {
     margin: 0;
     font-size: 2.5em;
     height: 100%;
-    margin-right: 2.5em;
+    margin-right: 1.5em;
     vertical-align: middle; }
     #goodbye h1 span {
       display: inline-block;
@@ -1910,7 +1910,7 @@ body {
     #goodbye span.linea-kumamoto strong {
       text-transform: uppercase;
       font-weight: 200;
-      margin-left: 0.8em;
+      margin-left: 0.4em;
       vertical-align: middle;
       display: inline-block; }
   #goodbye img {
@@ -1922,7 +1922,7 @@ body {
     display: inline-block;
     margin: 0 2em;
     padding: 0 1em;
-    margin-right: 4em; }
+    margin-right: 1.5em; }
     #goodbye .redes img {
       margin-right: 1.1em; }
     #goodbye .redes .fb {
@@ -1931,5 +1931,13 @@ body {
         position: absolute;
         height: 8em;
         top: -2.6em; }
+  #goodbye span.correo {
+    font-size: 1.5em;
+    margin-right: 1.5em;
+    display: inline-block; }
+    #goodbye span.correo a {
+      color: #fff !important;
+      text-decoration: none;
+      font-weight: 200; }
   #goodbye .wikipolitica {
     display: inline-block; }

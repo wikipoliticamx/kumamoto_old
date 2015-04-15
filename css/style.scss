@@ -912,20 +912,23 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 /************************** ;GOODBYE **************************/
 #goodbye { position:absolute; bottom:-8em; background:#333; height:5em; line-height:4em; width:100%; text-align:center; color:#fff; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; z-index:10; transition:all 1s ease;
 	&.emerge {bottom:0}
-	h1 {display:inline-block; margin:0; font-size:2.5em; height:100%; margin-right:2.5em; vertical-align:middle;
+	h1 {display:inline-block; margin:0; font-size:2.5em; height:100%; margin-right:1.5em; vertical-align:middle;
 		span {display:inline-block; margin-top:0.1em}
 	}
 	span.linea-kumamoto {font-size:2em; 
 		a {color:#fff !important; text-decoration:none}
-		strong {text-transform:uppercase; font-weight:200; margin-left:0.8em; vertical-align:middle; display:inline-block}
+		strong {text-transform:uppercase; font-weight:200; margin-left:0.4em; vertical-align:middle; display:inline-block}
 	}
 	img {vertical-align:middle; height:2.5em}
 	img.whatsapp {height:1.25em}
-	.redes {display:inline-block; margin:0 2em; padding:0 1em; margin-right:4em;
+	.redes {display:inline-block; margin:0 2em; padding:0 1em; margin-right:1.5em;
 		img {margin-right:1.1em}
 		.fb { margin-right:10.5em;
 			img {position:absolute; height:8em; top:-2.6em}
 		}
+	}
+	span.correo {font-size:1.5em; margin-right:1.5em; display:inline-block;
+		a {color:#fff !important; text-decoration:none; font-weight:200}
 	}
 	.wikipolitica {display:inline-block; }
 }

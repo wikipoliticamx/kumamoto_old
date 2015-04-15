@@ -39,27 +39,78 @@ var KUMA = {
 			});
 			KUMA.fullPage.options.anchors = anchors;
 		},
-		onEnter:function(anchorLink, index) {
-			if(KUMA.where == 'home') {
-				//console.log(anchorLink);
-				//var screen = $('.screen'
+		scroll:{
+			home:{
+				once:function(section){ var emerge = KUMA.motion.emerge;
+					if(section == 'video') {
+						emerge( {el:'.screen.video h1 .los', duration:300, timeout:200} );
+						emerge( {el:'.screen.video h1 .muros', duration:600, timeout:500} );
+						emerge( {el:'.screen.video h1 .si', duration:600, timeout:1000} );
+						emerge( {el:'.screen.video h1 .caen', duration:600, timeout:1500} );
+						emerge( {el:'.screen.video p', duration:900, timeout:500} );
+						$('.screen.video p strong').css('color', 'rgb(152, 95, 96)');
+					} else if(section == 'nosotros') {
+						KUMA.nosotros.emerge();
+					} else if(section == 'lo-que-se-dice-de-nosotros') {
+						animate({el:'.screen.medios .medio.yonofui', translateX:'96em', duration:800});
+						animate({el:'.screen.medios .medio.milenio', translateX:'-96em', duration:600});
+						animate({el:'.screen.medios .medio.informador', translateX:'96em', duration:1200});
+						$('.medios .citas strong').css('color', 'rgb(200, 112, 114)');
+						setTimeout(function() {
+							animate({el:'.screen.medios .carton', translateX:'26em', duration:1200});
+						}, 2000);
+						_($('.screen.medios .logos a')).chain().shuffle().each(function(logo) {
+							emerge( {el:logo, 
+								duration: _([200, 300, 400, 500, 600, 700, 800, 900, 1000]).shuffle()[0],
+								timeout:_([500, 1000, 1500, 2000]).shuffle()[0]
+							} );
+						});
+					} else if(section == 'soy-pedro') {
+						emerge( {el:'.screen.acercade h1', duration:600, timeout:500} );
+						$('.screen.acercade p strong').css('color', 'rgb(200, 112, 114)');
+						$('.screen.acercade p b').css('color', '#379088');
+						$('.screen.acercade img.soy-pedro').css('-webkit-filter', 'grayscale(0)');
+					} else if(section == 'distrito-10') {
+						animate({el:'.screen.mapa .copy', translateX:-360, duration:600});
+					}
+				},
+				always:function(section) {
+					if(section == 'inicio') {
+					} else if(section == 'video') {
+						console.log('play!');
+						KUMA.video.play();
+					}
+				}
 			}
-			KUMA.fullPage.sayGoodbye(anchorLink);
 		},
-		sayGoodbye:function(anchorLink) {
-			var anchors = KUMA.fullPage.options.anchors;
-			if(anchorLink == anchors[anchors.length-1]) {
+		onEnter:function(section, index) { 
+			var screen = $('.screen:eq('+index+')');
+			if(KUMA.where == 'home') {
+				if(!screen.data('already')) { //first time
+					KUMA.fullPage.scroll.home.once(section);
+					screen.data('already', true);
+				}
+				KUMA.fullPage.scroll.home.always(section);
+			}
+			KUMA.fullPage.sayGoodbye(section);
+		},
+		sayGoodbye:function(section) {
+			var sections = KUMA.fullPage.options.anchors;
+			//console.log('goodbye!', section);
+			if(section == sections[sections.length-1]) {
 				$('#goodbye').addClass('emerge');
 			} else {
 				$('#goodbye').removeClass('emerge');
 			}
 		},
-		onLeave:function(anchorLink, index, slideIndex, direction) {
-			var a = KUMA.fullPage.options.anchors;
-			//console.log('anchorLink', anchorLink);
-			//console.log('a', a);
-			if(anchorLink == a[a.length-2]) {
-				$('#goodbye').css('display', 'none');
+		onLeave:function(anchor, index, slideIndex, direction) {
+			var sections = KUMA.fullPage.options.anchors, 
+				section = sections[anchor-1];
+			//console.log('leaving section', section);
+			//console.log('leaving index', index);
+			//console.log('leaving anchor', anchor);
+			if(section == 'video') {
+				KUMA.video.pause();
 			}
 		},
 		options:{
@@ -249,23 +300,31 @@ var KUMA = {
 		ready:function() { var p = KUMA.player;
 			p.playVideo();
 			p.pauseVideo();
+			KUMA.video.afterReady && KUMA.video.afterReady();
 		},
 		soundToggle:function() { var p = KUMA.player;
 			if(p.isMuted()) {
 				p.unMute();
-				$(this).addClass('unmuted').removeClass('muted');
+				$(this).addClass('unMuted').removeClass('muted');
 			} else {
 				p.mute();
 				$(this).addClass('muted').removeClass('unMuted');
 			}
 		},
+		_play:function() { var p = KUMA.player;
+			p.playVideo();
+			if($('.soundToggle.muted').length > 0) {
+				//console.log('mute');
+				p.mute() 
+			}
+		},
 		play:function() { var p = KUMA.player;
-			if(p && p.playVideo) {
-				p.playVideo();
-				if($('.soundToggle.muted').length > 0) {
-					//console.log('mute');
-					p.mute() 
-				}
+			if(p) {
+				console.log('play with p');
+				KUMA.video._play();
+			} else {
+				console.log('play with NO p');
+				KUMA.video.afterReady = KUMA.video._play;
 			}
 		},
 		pause:function() { var p = KUMA.player;
@@ -293,96 +352,6 @@ var KUMA = {
 			KUMA.player.loadVideoById( $(this).attr('data-youtube') );
 			$('.screen.video .thumbs img').removeClass('active');
 			$(this).addClass('active');
-		}
-	},
-	// -------------------
-	// ****** SCROLL ******
-	// -------------------
-	scroll:{
-		boot:function() {
-			// init controller
-			var controller = new ScrollMagic.Controller(),
-				emerge = KUMA.motion.emerge,
-				scenes = {};
-
-			// COVER
-			scenes['cover'] =  new ScrollMagic.Scene({
-				triggerElement: '.screen.cover .redes',
-				reverse: true
-			}).on("enter", function(e) {
-				KUMA.video.pause();
-			});
-
-			// VIDEO
-			scenes['video'] =  new ScrollMagic.Scene({
-				triggerElement: '.screen.video .sidebar',
-				reverse: true
-			}) .on("enter", function(e) {
-				KUMA.video.play();
-			});
-
-
-			// VIDEO copy
-			scenes['videoCopy'] = new ScrollMagic.Scene({
-				triggerElement: '.screen.video .',
-				triggerHook: 'onEnter'
-			}).on("enter", function(e) {
-				emerge( {el:'.screen.video h1 .los', duration:300, timeout:200} );
-				emerge( {el:'.screen.video h1 .muros', duration:600, timeout:500} );
-				emerge( {el:'.screen.video h1 .si', duration:600, timeout:1000} );
-				emerge( {el:'.screen.video h1 .caen', duration:600, timeout:1500} );
-				emerge( {el:'.screen.video p', duration:900, timeout:500} );
-				$('.screen.video p strong').css('color', 'rgb(152, 95, 96)');
-			});
-
-			// NOSOTROS
-			scenes['nosotros'] = new ScrollMagic.Scene({
-				triggerElement: '.screen.nosotros'
-			}).on("enter", function(e) {
-				KUMA.nosotros.emerge();
-				KUMA.video.pause();
-			});
-
-			// MEDIOS
-			scenes['medios'] = new ScrollMagic.Scene({
-				triggerElement: '.screen.medios'
-			}).on("enter", function(e) {
-				animate({el:'.screen.medios .medio.yonofui', translateX:'96em', duration:800});
-				animate({el:'.screen.medios .medio.milenio', translateX:'-96em', duration:600});
-				animate({el:'.screen.medios .medio.informador', translateX:'96em', duration:1200});
-				$('.medios .citas strong').css('color', 'rgb(200, 112, 114)');
-				setTimeout(function() {
-					animate({el:'.screen.medios .carton', translateX:'26em', duration:1200});
-				}, 2000);
-				_($('.screen.medios .logos a')).chain().shuffle().each(function(logo) {
-					emerge( {el:logo, 
-						duration: _([200, 300, 400, 500, 600, 700, 800, 900, 1000]).shuffle()[0],
-						timeout:_([500, 1000, 1500, 2000]).shuffle()[0]
-					} );
-				});
-			});
-
-			// ACERCA DE
-			scenes['acercade'] = new ScrollMagic.Scene({
-				triggerElement: '.screen.acercade'
-			}).on("enter", function(e) {
-				emerge( {el:'.screen.acercade h1', duration:600, timeout:500} );
-				$('.screen.acercade p strong').css('color', 'rgb(200, 112, 114)');
-				$('.screen.acercade p b').css('color', '#379088');
-				$('.screen.acercade img.soy-pedro').css('-webkit-filter', 'grayscale(0)');
-			});
-
-			// MAPA
-			scenes['mapa'] = new ScrollMagic.Scene({
-				triggerElement: '.screen.mapa'
-			}).on("enter", function(e) {
-				animate({el:'.screen.mapa .copy', translateX:-360, duration:600});
-				$('.screen.mapa .copy').css('right', 'grayscale(0)');
-			});
-
-			_(scenes).each(function(scene, name) {
-				scene.addTo( controller );
-			});
 		}
 	},
 	// -------------------
@@ -476,7 +445,7 @@ var KUMA = {
 			$('.screen.video .sidebar').css('width', (data.w - KUMA.video.width)/2);
 
 			if($('#fullpage.home').length > 0) {
-				KUMA.scroll.boot();
+				//KUMA.scroll.boot();
 			}
 		},
 		propuestas:function() {
