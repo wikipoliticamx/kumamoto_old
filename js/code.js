@@ -476,12 +476,12 @@ var KUMA = {
 			}
 		},
 		propuestas:function() {
-			$('.video, .text, .fb, .screen').css('height', data.h);
+			$('.video, .text, .fb, .screen').css('height', KUMA.data.h);
 			$('.screen .video').each(function() {
 				KUMA.screen.maxCenterWithinContainer($(this).find('img'), $(this)); 
 			});
-			screen.maxCenterWithinContainer($('img.ciudad'), $('.screen.ciudad'));
-			screen.maxCenterWithinContainer($('img.gobierno'), $('.screen.gobierno'));
+			KUMA.screen.maxCenterWithinContainer($('img.ciudad'), $('.screen.ciudad'));
+			KUMA.screen.maxCenterWithinContainer($('img.gobierno'), $('.screen.gobierno'));
 		},
 		detect:{
 			portraitLandscape:function() { var data = KUMA.data;
