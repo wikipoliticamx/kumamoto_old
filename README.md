@@ -3,6 +3,8 @@ Kumamoto.mx
 
 Rediseño de [http://kumamoto.mx](Kumamoto.mx).
 
+Por lo pronto raiz es una splash page de "Proximamente" pero la pagina se puede consultar ya en http://kumamoto.mx/test/
+
 El HTML es generado con Ruby desde otro repositorio privado ([Kumamoto-Source](https://github.com/wikipoliticamx/kumamoto-source)) asi que no vale la pena modificarlo aqui.
 
 Use `ruby -run -ehttpd . -p8000` on the directory to run it on a local webserver.
@@ -15,6 +17,7 @@ Plugins
 * [ScrollMagic](http://janpaepke.github.io/ScrollMagic/)
 * [bendc/animate](https://github.com/bendc/animate)
 * [fullPage](http://alvarotrigo.com/fullPage/)
+* [OpenTip](https://github.com/enyo/opentip)
 
 Reading material
 ----------------

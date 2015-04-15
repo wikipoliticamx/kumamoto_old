@@ -19,19 +19,21 @@ var KUMA = {
 			}
 		}
 	},
+	// ----------------------
+	// ****** NOSOTROS ******
+	// ----------------------
 	fullPage: {
 		boot:function() { var o = KUMA.fullPage.options;
 			if($('#fullpage.splash').length == 0) {
 				KUMA.fullPage.extractAnchors();
 				o.afterLoad = KUMA.fullPage.onEnter;
 				o.onLeave = KUMA.fullPage.onLeave;
-				$('#fullpage').fullpage( KUMA.fullPage.options );
+				$('#fullpage').fullpage( o );
 			} else {
 				$('#goodbye').addClass('emerge');
 			}
 		},
-		extractAnchors:function() {
-			var anchors = [];
+		extractAnchors:function() { var anchors = [];
 			$('#menu a').each(function() {
 				anchors.push( $(this).data('menuanchor') );
 			});
@@ -39,6 +41,8 @@ var KUMA = {
 		},
 		onEnter:function(anchorLink, index) {
 			if(KUMA.where == 'home') {
+				//console.log(anchorLink);
+				var screen = $('.screen'
 			}
 			KUMA.fullPage.sayGoodbye(anchorLink);
 		},
@@ -121,7 +125,7 @@ var KUMA = {
 			['paola', 'Estoy convencida que este proyecto es un medio de empoderamiento del ciudadano, por la <b>valentía</b> de levantar la voz y actuar', 4, 0],
 			['pau', 'Tenemos que dejar a un lado la indiferencia y empezar a involucrarnos para poder tener la democracia que nos <b>merecemos</b>.', 4, 1],
 			['pepe', 'El primer paso para humanizar nuestra sociedad es volver a <b>enamorarnos</b> de la política.', 4, 3],
-			//['quique', 'Por re-encontrarme con ese concepto tan vapuelado hoy en dia....democracia', 0, 0],
+			//['quique', 'Por re-encontrarme con ese concepto tan vapuleado hoy en dia....democracia', 0, 0],
 			['roberto', 'Ocupar es más que un lema, es <b>devolver</b> la toma de decisiones a la ciudadanía sobre su futuro y la ciudad que queremos.', 4, 4],
 			['rodrigo', 'Creo que debemos de crear la politica que haga posible la <b>vida en común</b>. Nuestra realidad demanda de nosotros actuar aquí y ahora.', 4, 5],
 			['sofia-1', 'La política la construimos <b>todos</b> y estando informados e involucrados podremos generar verdadera política y prácticas más incluyentes y benéficas para la mayoría.', 4, 6],
@@ -167,26 +171,15 @@ var KUMA = {
 		},
 		adjust:function() {
 			var scale = KUMA.data.em/12,
-				w = 1500,
-				h = 750;
-			//console.log( 'em', KUMA.em);
-			//console.log('scale('+scale+','+scale+')');
+				w = 1500, //sprite width
+				h = 750; //sprite height
 
 			$('.screen.nosotros .galaxia div.wiki img').each(function() { var img = $(this), x = img.data('x'), y = img.data('y');
-				//console.log( 'x', x );
-				//console.log( 'y', y );
 				img.css( {
 					'background-size':(w*scale)+'px '+(h*scale)+'px',
 					'background-position':(y*-150*scale)+'px '+(x*-150*scale)+'px'
 				});
 			});
-					
-			//$('.screen.nosotros .galaxia div.wiki img').css({
-				//transform:'scale('+scale+','+scale+')',
-				//'-ms-transform':'scale('+scale+','+scale+')',
-				//'-webkit-transform':'scale('+scale+','+scale+')'
-			//});
-			
 		}
 	},
 	// --------------------
