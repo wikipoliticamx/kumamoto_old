@@ -15,8 +15,7 @@ body {
   font-weight: 200;
   font-size: 2em;
   counter-reset: item -1;
-  line-height: 1em;
-  display: none; }
+  line-height: 1em; }
   #menu a {
     color: #fff;
     display: block;
