@@ -1462,9 +1462,11 @@ body {
     width: 30%;
     max-width: 550px;
     background: #e9eaed;
-    text-align: center; }
-    .compromisos .screen .fb img {
-      width: 511px; }
+    border-left: 1px solid #aaa;
+    text-align: center;
+    overflow: scroll; }
+    .compromisos .screen .fb .fb-like {
+      margin-top: 1em; }
   .compromisos .screen.toc {
     text-align: left;
     /*h2 {color:rgb(200, 112, 114);}*/ }
@@ -1899,7 +1901,7 @@ body {
   z-index: 10;
   transition: all 1s ease; }
   #goodbye.emerge {
-    bottom: 0; }
+    bottom: -0.4em; }
   #goodbye h1 {
     display: inline-block;
     margin: 0;

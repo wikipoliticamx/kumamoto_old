@@ -123,6 +123,7 @@ var KUMA = {
 			verticalCentered: false,
 			recordHistory:true,
 			//scrollOverflow:true,
+			//scrollBar:true, //this shouldn't break everything but it does!
 			keyboardScrolling:true,
 			loopHorizontal:true,
 			//responsive:900,

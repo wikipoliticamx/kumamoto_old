@@ -677,8 +677,8 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 .compromisos {
 	.screen { overflow:hidden;
 		.fb, .text {display:inline-block; vertical-align:top; height:100%; overflow:hidden}
-		.fb {width:30%; max-width:550px; background:#e9eaed; text-align:center;
-			img {width:511px}
+		.fb {width:30%; max-width:550px; background:#e9eaed; border-left:1px solid #aaa; text-align:center; overflow:scroll;
+			.fb-like {margin-top:1em;}
 		}
 
 		&.toc { text-align:left;
@@ -915,7 +915,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 
 /************************** ;GOODBYE **************************/
 #goodbye { position:absolute; bottom:-8em; background:#333; height:5em; line-height:4em; width:100%; text-align:center; color:#fff; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; z-index:10; transition:all 1s ease;
-	&.emerge {bottom:0}
+	&.emerge {bottom:-0.4em}
 	h1 {display:inline-block; margin:0; font-size:2.5em; height:100%; margin-right:1.5em; vertical-align:middle;
 		span {display:inline-block; margin-top:0.1em}
 	}
