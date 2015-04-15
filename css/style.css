@@ -88,11 +88,11 @@ body {
       background: #B4B4BB; }
     #menu a.innovacion::before {
       background: #EDAC9C; }
-    #menu a.perspectiva-de-genero::before {
+    #menu a.transparencia::before {
       background: #E8A3A7; }
     #menu a.derechos-humanos::before {
       background: #EDC2D4; }
-    #menu a.transparencia::before {
+    #menu a.perspectiva-de-genero::before {
       background: #DBCCE0; }
 
 /* INDEX */
@@ -1212,25 +1212,30 @@ body {
       width: 100%;
       margin-top: 0.5em;
       margin-bottom: 0;
+      margin-left: 10em;
       padding: 0.2em 0;
       font-weight: 200;
       background: transparent;
-      text-align: center; }
+      text-align: left; }
       .propuestas .screen.democratica .text h2 img, .propuestas .screen.sostenible .text h2 img, .propuestas .screen.incluyente .text h2 img, .propuestas .screen.personas .text h2 img, .propuestas .screen.excelencia .text h2 img, .propuestas .screen.contrapeso .text h2 img {
         height: 1.5em;
         vertical-align: middle;
         margin-right: 0.3em; }
-        .propuestas .screen.democratica .text h2 img.kumalogo, .propuestas .screen.sostenible .text h2 img.kumalogo, .propuestas .screen.incluyente .text h2 img.kumalogo, .propuestas .screen.personas .text h2 img.kumalogo, .propuestas .screen.excelencia .text h2 img.kumalogo, .propuestas .screen.contrapeso .text h2 img.kumalogo {
-          margin-left: 0.5em; }
       .propuestas .screen.democratica .text h2 a, .propuestas .screen.sostenible .text h2 a, .propuestas .screen.incluyente .text h2 a, .propuestas .screen.personas .text h2 a, .propuestas .screen.excelencia .text h2 a, .propuestas .screen.contrapeso .text h2 a {
         text-decoration: none;
         color: #000; }
+        .propuestas .screen.democratica .text h2 a img.kumalogo, .propuestas .screen.sostenible .text h2 a img.kumalogo, .propuestas .screen.incluyente .text h2 a img.kumalogo, .propuestas .screen.personas .text h2 a img.kumalogo, .propuestas .screen.excelencia .text h2 a img.kumalogo, .propuestas .screen.contrapeso .text h2 a img.kumalogo {
+          position: absolute;
+          height: 4em;
+          left: 5em;
+          top: 0.5em; }
     .propuestas .screen.democratica .text h1, .propuestas .screen.sostenible .text h1, .propuestas .screen.incluyente .text h1, .propuestas .screen.personas .text h1, .propuestas .screen.excelencia .text h1, .propuestas .screen.contrapeso .text h1 {
-      text-align: center;
+      text-align: left;
       margin-left: 0;
       margin-top: 0;
       padding: 0.4em 0;
       padding-top: 0.2em;
+      padding-left: 6em;
       font-size: 5em;
       background: -webkit-linear-gradient(left, transparent, #eacccc, transparent);
       line-height: 0.9em; }
@@ -1238,7 +1243,7 @@ body {
       margin: 2em auto;
       text-align: center; }
       .propuestas .screen.democratica .text div.icono img, .propuestas .screen.sostenible .text div.icono img, .propuestas .screen.incluyente .text div.icono img, .propuestas .screen.personas .text div.icono img, .propuestas .screen.excelencia .text div.icono img, .propuestas .screen.contrapeso .text div.icono img {
-        width: 30%; }
+        width: 25em; }
     .propuestas .screen.democratica .text p, .propuestas .screen.democratica .text ol li, .propuestas .screen.sostenible .text p, .propuestas .screen.sostenible .text ol li, .propuestas .screen.incluyente .text p, .propuestas .screen.incluyente .text ol li, .propuestas .screen.personas .text p, .propuestas .screen.personas .text ol li, .propuestas .screen.excelencia .text p, .propuestas .screen.excelencia .text ol li, .propuestas .screen.contrapeso .text p, .propuestas .screen.contrapeso .text ol li {
       margin: 0 2em;
       padding: 0.7em 1em;
@@ -1247,6 +1252,9 @@ body {
       margin: 0;
       padding: 1.5em 3em;
       padding-left: 5em; }
+    .propuestas .screen.democratica .text p, .propuestas .screen.democratica .text ol, .propuestas .screen.sostenible .text p, .propuestas .screen.sostenible .text ol, .propuestas .screen.incluyente .text p, .propuestas .screen.incluyente .text ol, .propuestas .screen.personas .text p, .propuestas .screen.personas .text ol, .propuestas .screen.excelencia .text p, .propuestas .screen.excelencia .text ol, .propuestas .screen.contrapeso .text p, .propuestas .screen.contrapeso .text ol {
+      width: 60%;
+      margin: 0 auto; }
     .propuestas .screen.democratica .text p.propuestas, .propuestas .screen.sostenible .text p.propuestas, .propuestas .screen.incluyente .text p.propuestas, .propuestas .screen.personas .text p.propuestas, .propuestas .screen.excelencia .text p.propuestas, .propuestas .screen.contrapeso .text p.propuestas {
       padding: 0.5em 4.1em; }
     .propuestas .screen.democratica .text ol li, .propuestas .screen.sostenible .text ol li, .propuestas .screen.incluyente .text ol li, .propuestas .screen.personas .text ol li, .propuestas .screen.excelencia .text ol li, .propuestas .screen.contrapeso .text ol li {
@@ -1356,17 +1364,17 @@ body {
         background: -webkit-linear-gradient(left, transparent, #edac9c); }
         .principios .screen.toc .lista a.innovacion:hover {
           background: -webkit-linear-gradient(left, transparent, #d6765e); }
-      .principios .screen.toc .lista a.genero {
+      .principios .screen.toc .lista a.transparencia {
         background: -webkit-linear-gradient(right, transparent, #e8a3a7); }
-        .principios .screen.toc .lista a.genero:hover {
+        .principios .screen.toc .lista a.transparencia:hover {
           background: -webkit-linear-gradient(right, transparent, #c8595f); }
       .principios .screen.toc .lista a.derechos {
         background: -webkit-linear-gradient(right, transparent, #edc2d4); }
         .principios .screen.toc .lista a.derechos:hover {
           background: -webkit-linear-gradient(right, transparent, #d98ead); }
-      .principios .screen.toc .lista a.transparencia {
+      .principios .screen.toc .lista a.genero {
         background: -webkit-linear-gradient(right, transparent, #dbcce0); }
-        .principios .screen.toc .lista a.transparencia:hover {
+        .principios .screen.toc .lista a.genero:hover {
           background: -webkit-linear-gradient(right, transparent, #b8a6be); }
     .principios .screen.toc .lista .left, .principios .screen.toc .lista .right {
       width: 49%;
@@ -1443,16 +1451,16 @@ body {
     background: -webkit-linear-gradient(left, transparent, #d6765e, transparent); }
   .principios .screen.innovacion .text > .icono img {
     width: 30em; }
-  .principios .screen.genero h2 {
+  .principios .screen.transparencia h2 {
     background: -webkit-linear-gradient(left, transparent, #c8595f, transparent); }
+  .principios .screen.transparencia .text > .icono img {
+    width: 25em; }
   .principios .screen.derechos h2 {
     background: -webkit-linear-gradient(left, transparent, #d98ead, transparent); }
   .principios .screen.derechos .text > .icono img {
     width: 30em; }
-  .principios .screen.transparencia h2 {
+  .principios .screen.genero h2 {
     background: -webkit-linear-gradient(left, transparent, #b8a6be, transparent); }
-  .principios .screen.transparencia .text > .icono img {
-    width: 25em; }
 
 /************************** ;COMPROMISOS **************************/
 .compromisos .screen {

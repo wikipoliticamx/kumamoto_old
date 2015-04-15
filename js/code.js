@@ -403,7 +403,7 @@ var KUMA = {
 				});
 				that.removeClass('mas').addClass('menos');
 			} else {
-			console.log('comernos a besos!');
+				//console.log('comernos a besos!');
 				that.removeClass('menos').addClass('mas');
 			}
 		}
@@ -533,9 +533,9 @@ var KUMA = {
 				var fbWidth = Math.min(Math.max(data.w*0.3, 450), 550);
 				if(where == 'propuestas') {
 					screen.propuestas();
-					$('.screen .fb').css('width', fbWidth );
-					$('.screen .text').css('width', ((data.w - fbWidth)*0.6)-5 );
-					$('.screen .video').css('width', ((data.w - fbWidth)*0.4)-5 );
+					//$('.screen .fb').css('width', fbWidth );
+					//$('.screen .text').css('width', ((data.w - fbWidth)*0.6)-5 );
+					//$('.screen .video').css('width', ((data.w - fbWidth)*0.4)-5 );
 
 				} else if(where == 'compromisos') {
 					$('.screen.bienvenida').css('height', data.h);
@@ -543,7 +543,7 @@ var KUMA = {
 					screen.maxCenterWithinContainer($('img.kuma-benji'), $('.screen.bienvenida'));
 				} else if(where == 'principios') {
 				}
-				if((where=='principios') && (where=='compromisos')) {
+				if((where=='propuestas') || (where=='compromisos') || (where=='principios') ) {
 					$('.screen .fb').css('width', fbWidth );
 					$('.screen .text').css('width', data.w-fbWidth-5 );
 				}
