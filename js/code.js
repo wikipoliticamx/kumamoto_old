@@ -69,15 +69,15 @@ var KUMA = {
 						emerge( {el:'.screen.acercade h1', duration:600, timeout:500} );
 						$('.screen.acercade p strong').css('color', 'rgb(200, 112, 114)');
 						$('.screen.acercade p b').css('color', '#379088');
-						$('.screen.acercade img.soy-pedro').css('-webkit-filter', 'grayscale(0)');
+						//$('.screen.acercade img.soy-pedro').css('-webkit-filter', 'grayscale(0)');
 					} else if(section == 'distrito-10') {
-						animate({el:'.screen.mapa .copy', translateX:-360, duration:600});
+						animate({el:'.screen.mapa .copy', translateX:'-30em', duration:600});
 					}
 				},
 				always:function(section) {
 					if(section == 'inicio') {
 					} else if(section == 'video') {
-						KUMA.video.play();
+						(!KUMA.mobile) && KUMA.video.play();
 					}
 				}
 			}
@@ -307,7 +307,7 @@ var KUMA = {
 			}
 		}
 	},
-	mobile: /(iPad|iPhone|iPod)/g.test( navigator.userAgent ),
+	mobile: /(iPad|iPhone|iPod|Android)/g.test( navigator.userAgent ),
 	// -------------------
 	// ****** VIDEO ******
 	// -------------------

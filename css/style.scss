@@ -1,4 +1,5 @@
 $crema:#f6f1e9;
+$transparent:rgb(240, 236, 220);
 @import "bourbon/bourbon";
 
 body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#fff}
@@ -317,7 +318,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				.asesor {
 					.portrait {margin-left:0.5em}
 					p {text-align:right; 
-						@include linear-gradient(to right, transparent, #CBBFAE);
+						@include linear-gradient(to right, $transparent, #CBBFAE);
 						padding:0.8em; padding-left:0;
 					}
 				}
@@ -334,7 +335,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 						img {margin-right:0;}
 					}
 					p {
-						@include linear-gradient(to left, transparent, #CBBFAE);
+						@include linear-gradient(to left, $transparent, #CBBFAE);
 						padding:0.8em; padding-right:0;
 					}
 				}
@@ -416,7 +417,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		}
 		.yo-kuma { overflow:hidden;
 			.foto { width:50%; overflow:hidden; float:left; text-align:right;
-				img {height:100%; position:relative; top:0; left:0; margin-top:12em; /*-webkit-filter:grayscale(1); transition: all 2s ease;*/}
+				img {height:100%; position:relative; top:0; left:0; margin-top:6em; /*-webkit-filter:grayscale(1); transition: all 2s ease;*/}
 			}
 			.copy { width:50%; float:left; text-align:left; position:relative; font-family:"L Futura W01", Helvetica; overflow:hidden;
 				strong, b {@include transition(all 2s ease);}
@@ -432,12 +433,12 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 	&.mapa { background:#555; text-align:center; position:relative;
 		h1 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:4em; text-align:center; text-transform:uppercase; margin:0}
 		h2 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:1.7em; text-align:center; text-transform:uppercase; margin:0}
-		h3 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:2em; text-transform:uppercase; margin-top:40px; margin-bottom:10px}
-		a.mapa img {width:100%; position:absolute; top:-60px; left:0}
-		.copy { position:absolute; top:30px; right:-330px; background:#fff; padding:30px; z-index:3; box-shadow:0px 3px 5px #999;
+		h3 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:2em; text-transform:uppercase; margin-top:3.3em; margin-bottom:0.83em}
+		a.mapa img {width:100%; position:absolute; top:-5em; left:0}
+		.copy { position:absolute; top:2.5em; right:-27.5em; background:#fff; padding:2.5em; z-index:3; box-shadow:0 0.25em 0.417em #999;
 			.data-maps img {
 				@include transition(all 0.2s ease);
-				height:150px; width:98px; margin:10px; background-repeat:no-repeat;
+				height:12.5em; width:8.17em; margin:0.83em; background-repeat:no-repeat;
 				&:hover{ @include transform(scale(1.2)); }
 			}
 		}
@@ -459,7 +460,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				h2 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:3.5em; font-weight:200; text-transform:uppercase; margin-bottom:0.2em;
 					a {
 						color:black; display:block; line-height:2em;
-						@include linear-gradient(to right, transparent, #EACCCC);
+						@include linear-gradient(to right, $transparent, #EACCCC);
 						&:hover {
 							img {@include transform(scale(1.3));}
 						}
@@ -471,12 +472,12 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				}
 				h3 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:2.5em; width:100%; text-align:left; margin:0; font-weight:200;
 					a {color:black; height:1.7em; display:block; margin:1.9em 0; 
-						@include linear-gradient(to right, transparent, #E2DACF);
+						@include linear-gradient(to right, $transparent, #E2DACF);
 						span {display:inline-block; width:6em; text-align:center; position:relative; 
 							img {position:absolute; top:-2em; left:0.8em}
 						}
 						&:hover {
-							@include linear-gradient(to right, transparent, #C5B39A);
+							@include linear-gradient(to right, $transparent, #C5B39A);
 							img {@include transform(scale(1.3));}
 						}
 					}
@@ -490,24 +491,24 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				h2, h3 {text-align:right;}
 				h2 a img {margin-left:0.5em; left:0}
 				h2 a:hover {
-					@include linear-gradient(to right, transparent, #D86D74);
+					@include linear-gradient(to right, $transparent, #D86D74);
 				}
 				h3 a img {margin-right:1em}
 			}
 			.gobierno {
 				h2 {text-align:left;
 					a {
-						@include linear-gradient(to left, transparent, #DAECE8);
+						@include linear-gradient(to left, $transparent, #DAECE8);
 						img {margin-left:0.8em; margin-right:0.6em; left:-0.2em;}
 						&:hover {
-							@include linear-gradient(to left, transparent, #93D2C8);
+							@include linear-gradient(to left, $transparent, #93D2C8);
 						}
 					}
 				}
 				h3 {
-					a { @include linear-gradient(to left, transparent, #E2DACF);
+					a { @include linear-gradient(to left, $transparent, #E2DACF);
 						span img {left:1.8em}
-						&:hover {@include linear-gradient(to left, transparent, #C5B39A);}
+						&:hover {@include linear-gradient(to left, $transparent, #C5B39A);}
 					}
 					&.contrapeso a img {height:2.2em; top:-1.5em}
 				}
@@ -552,7 +553,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 						}
 					}
 				}
-				h1 {text-align:left; margin-left:0; margin-top:0; padding:0.4em 0; padding-top:0.2em; padding-left:6em; font-size:5em; @include linear-gradient(to left, transparent, #EACCCC, transparent);}
+				h1 {text-align:left; margin-left:0; margin-top:0; padding:0.4em 0; padding-top:0.2em; padding-left:6em; font-size:5em; @include linear-gradient(to left, $transparent, #EACCCC, $transparent);}
 				div.icono { margin:2em auto; text-align:center;
 					img {width:25em;
 						&:hover {@include transform(scale(1.2));}
@@ -572,7 +573,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		&.personas, &.excelencia, &.contrapeso {
 			.text {
 				h2 {background:transparent}
-				h1 {@include linear-gradient(to left, transparent, #BBDAD3, transparent);}
+				h1 {@include linear-gradient(to left, $transparent, #BBDAD3, $transparent);}
 			}
 		}
 	}
@@ -603,27 +604,27 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 						img { @include transform(scale(1.2)); }
 					}
 					&.colectiva {
-						@include linear-gradient(to right, transparent, #B7D8D4);
+						@include linear-gradient(to right, $transparent, #B7D8D4);
 						span {width:4.5em;}
-						&:hover {@include linear-gradient(to right, transparent, #5fc5b8);}
+						&:hover {@include linear-gradient(to right, $transparent, #5fc5b8);}
 					}
-					&.participacion {@include linear-gradient(to right, transparent, #C2DBE4);
-						&:hover {@include linear-gradient(to right, transparent, #8cb7c7)}
+					&.participacion {@include linear-gradient(to right, $transparent, #C2DBE4);
+						&:hover {@include linear-gradient(to right, $transparent, #8cb7c7)}
 					}
-					&.apertura {@include linear-gradient(to right, transparent, #B4B4BB);
-						&:hover {@include linear-gradient(to right, transparent, #626264);}
+					&.apertura {@include linear-gradient(to right, $transparent, #B4B4BB);
+						&:hover {@include linear-gradient(to right, $transparent, #626264);}
 					}
-					&.innovacion {@include linear-gradient(to right, transparent, #EDAC9C);
-						&:hover {@include linear-gradient(to right, transparent, #d6765e)}
+					&.innovacion {@include linear-gradient(to right, $transparent, #EDAC9C);
+						&:hover {@include linear-gradient(to right, $transparent, #d6765e)}
 					}
-					&.transparencia {@include linear-gradient(to left, transparent, #E8A3A7);
-						&:hover {@include linear-gradient(to left, transparent, #c8595f)}
+					&.transparencia {@include linear-gradient(to left, $transparent, #E8A3A7);
+						&:hover {@include linear-gradient(to left, $transparent, #c8595f)}
 					}
-					&.derechos {@include linear-gradient(to left, transparent, #EDC2D4);
-						&:hover {@include linear-gradient(to left, transparent, #d98ead)}
+					&.derechos {@include linear-gradient(to left, $transparent, #EDC2D4);
+						&:hover {@include linear-gradient(to left, $transparent, #d98ead)}
 					}
-					&.genero {@include linear-gradient(to left, transparent, #DBCCE0);
-						&:hover {@include linear-gradient(to left, transparent, #b8a6be)}
+					&.genero {@include linear-gradient(to left, $transparent, #DBCCE0);
+						&:hover {@include linear-gradient(to left, $transparent, #b8a6be)}
 					}
 				}
 				.left, .right {width:49%; display:inline-block; vertical-align:top; text-align:left}
@@ -648,7 +649,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			p {font-size:1.5em; width:60%; margin:0 auto; margin-bottom:0.6em;
 				strong {font-size:1.2em; display:block; margin-bottom:0.6em}
 			}
-			h2 {line-height:1.1em; padding-bottom:0.2em; margin-top:0; text-align:left; padding-left:7.05em}
+			h2 {line-height:1.4em; padding-bottom:0.2em; margin-top:0; text-align:left; padding-left:7.05em}
 			h3 {text-transform:uppercase; font-weight:200; text-align:left; width:100%; margin:0; margin-left:10.6em; padding:0.5em 0; padding-top:1.5em; font-size:3em}
 			.text > .icono {text-align:center;
 				img {margin-top:4em; width:35em;
@@ -658,30 +659,30 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		}
 		
 		&.colectiva { 
-			h2 {@include linear-gradient(to left, transparent, #5fc5b8, transparent);}
+			h2 {@include linear-gradient(to left, $transparent, #5fc5b8, $transparent);}
 			.text > .icono img {width:40em}
 		}
 		&.participacion {
-			h2 {@include linear-gradient(to left, transparent, #8cb7c7, transparent);}
+			h2 {@include linear-gradient(to left, $transparent, #8cb7c7, $transparent);}
 		}
 		&.apertura {
-			h2 {@include linear-gradient(to left, transparent, #626264, transparent); color:white;}
+			h2 {@include linear-gradient(to left, $transparent, #626264, $transparent); color:white;}
 			.text > .icono img {width:30em}
 		}
 		&.innovacion {
-			h2 {@include linear-gradient(to left, transparent, #d6765e, transparent);}
+			h2 {@include linear-gradient(to left, $transparent, #d6765e, $transparent);}
 			.text > .icono img {width:30em}
 		}
 		&.transparencia {
-			h2 {@include linear-gradient(to left, transparent, #c8595f, transparent);}
+			h2 {@include linear-gradient(to left, $transparent, #c8595f, $transparent);}
 			.text > .icono img {width:25em}
 		}
 		&.derechos {
-			h2 {@include linear-gradient(to left, transparent, #d98ead, transparent);}
+			h2 {@include linear-gradient(to left, $transparent, #d98ead, $transparent);}
 			.text > .icono img {width:30em}
 		}
 		&.genero {
-			h2 {@include linear-gradient(to left, transparent, #b8a6be, transparent);}
+			h2 {@include linear-gradient(to left, $transparent, #b8a6be, $transparent);}
 		}
 	}
 }
@@ -710,19 +711,19 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 					}
 				}
 				a.en-campanha { text-align:right;
-					@include linear-gradient(to right, transparent, #EACCCC);
+					@include linear-gradient(to right, $transparent, #EACCCC);
 					img {text-align:right; height:2.1em; top:-1.5em; left:-0.7em}
 					&:hover {
-						@include linear-gradient(to right, transparent, #D86D74);
+						@include linear-gradient(to right, $transparent, #D86D74);
 					}
 				}
 				a.en-el-congreso {text-align:left;
-					@include linear-gradient(to left, transparent, #DAECE8);
+					@include linear-gradient(to left, $transparent, #DAECE8);
 					span {width:4em;
 						img {top:-2em; left:-0.2em}
 					}
 					&:hover {
-						@include linear-gradient(to left, transparent, #93D2C8);
+						@include linear-gradient(to left, $transparent, #93D2C8);
 					}
 				}
 			}
@@ -732,12 +733,12 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		/*}*/
 		.text { width:69.5%; display:inline-block; vertical-align:top;
 			a.inicio {text-decoration:none}
-			img.kumalogo {position:absolute; height:10em; left:14em; top:3em}
+			img.kumalogo {position:absolute; height:10em; left:14em; top:4em}
 			h2 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:6em; text-align:left; margin:0;
-				color:#000; width:100%; text-align:center; padding-left:1em; line-height:1.5em;
+				color:#000; width:100%; padding-left:1em; line-height:1.5em; padding-left:4.25em;
 			}
-			h3 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:3em; text-align:center; margin:0; 
-				text-transform:uppercase; color:#000; width:100%; text-align:center; margin-left:1.7em; margin-top:0.3em; margin-bottom:0.2em;
+			h3 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:3em; margin:0; 
+				text-transform:uppercase; color:#000; width:100%; text-align:left; margin-left:8.6em; margin-top:0.8em; margin-bottom:0.2em;
 			}
 			ol { font-size:1.5em; font-family:Helvetica; margin:0 auto; margin-top:2em; counter-reset:item; width:65%; 
 				&.congreso {counter-reset:item 7;}
@@ -792,12 +793,12 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		}
 		&.campanha {
 			h2 {
-				@include linear-gradient(to left, transparent, #EACCCC, transparent);
+				@include linear-gradient(to left, $transparent, #EACCCC, $transparent);
 			}
 		}
 		&.congreso {
 			h2 {
-				@include linear-gradient(to left, transparent, #BBDAD3, transparent);
+				@include linear-gradient(to left, $transparent, #BBDAD3, $transparent);
 			}
 			.icono {margin-top:1.3em}
 		}
