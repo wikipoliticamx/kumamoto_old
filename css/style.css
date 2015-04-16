@@ -720,6 +720,8 @@ body {
         display: block;
         text-align: center;
         margin-bottom: 1em; }
+        .screen.asesores div.asesores .center .top, .screen.asesores div.asesores .center .bottom {
+          display: inline-block; }
         .screen.asesores div.asesores .center .asesor {
           display: inline-block;
           max-width: 15em;
