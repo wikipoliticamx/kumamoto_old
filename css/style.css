@@ -1124,6 +1124,12 @@ body {
         background-color: transparent;
         background-image: -webkit-linear-gradient(left, transparent, #EACCCC);
         background-image: linear-gradient(to right,transparent, #EACCCC); }
+        .propuestas .screen.toc .ciudad h2 a:hover img, .propuestas .screen.toc .gobierno h2 a:hover img {
+          -webkit-transform: scale(1.3);
+          -moz-transform: scale(1.3);
+          -ms-transform: scale(1.3);
+          -o-transform: scale(1.3);
+          transform: scale(1.3); }
       .propuestas .screen.toc .ciudad h2 strong, .propuestas .screen.toc .gobierno h2 strong {
         font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
         font-weight: bold; }
@@ -1165,6 +1171,12 @@ body {
           background-color: transparent;
           background-image: -webkit-linear-gradient(left, transparent, #C5B39A);
           background-image: linear-gradient(to right,transparent, #C5B39A); }
+          .propuestas .screen.toc .ciudad h3 a:hover img, .propuestas .screen.toc .gobierno h3 a:hover img {
+            -webkit-transform: scale(1.3);
+            -moz-transform: scale(1.3);
+            -ms-transform: scale(1.3);
+            -o-transform: scale(1.3);
+            transform: scale(1.3); }
       .propuestas .screen.toc .ciudad h3 strong, .propuestas .screen.toc .gobierno h3 strong {
         font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
         font-weight: bold; }
@@ -1303,6 +1315,12 @@ body {
           height: 4em;
           left: 5em;
           top: 1.2em; }
+        .propuestas .screen.democratica .text h2 a:hover img, .propuestas .screen.sostenible .text h2 a:hover img, .propuestas .screen.incluyente .text h2 a:hover img, .propuestas .screen.personas .text h2 a:hover img, .propuestas .screen.excelencia .text h2 a:hover img, .propuestas .screen.contrapeso .text h2 a:hover img {
+          -webkit-transform: scale(1.1);
+          -moz-transform: scale(1.1);
+          -ms-transform: scale(1.1);
+          -o-transform: scale(1.1);
+          transform: scale(1.1); }
     .propuestas .screen.democratica .text h1, .propuestas .screen.sostenible .text h1, .propuestas .screen.incluyente .text h1, .propuestas .screen.personas .text h1, .propuestas .screen.excelencia .text h1, .propuestas .screen.contrapeso .text h1 {
       text-align: left;
       margin-left: 0;
@@ -1319,6 +1337,12 @@ body {
       text-align: center; }
       .propuestas .screen.democratica .text div.icono img, .propuestas .screen.sostenible .text div.icono img, .propuestas .screen.incluyente .text div.icono img, .propuestas .screen.personas .text div.icono img, .propuestas .screen.excelencia .text div.icono img, .propuestas .screen.contrapeso .text div.icono img {
         width: 25em; }
+        .propuestas .screen.democratica .text div.icono img:hover, .propuestas .screen.sostenible .text div.icono img:hover, .propuestas .screen.incluyente .text div.icono img:hover, .propuestas .screen.personas .text div.icono img:hover, .propuestas .screen.excelencia .text div.icono img:hover, .propuestas .screen.contrapeso .text div.icono img:hover {
+          -webkit-transform: scale(1.2);
+          -moz-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+          -o-transform: scale(1.2);
+          transform: scale(1.2); }
     .propuestas .screen.democratica .text p, .propuestas .screen.democratica .text ol li, .propuestas .screen.sostenible .text p, .propuestas .screen.sostenible .text ol li, .propuestas .screen.incluyente .text p, .propuestas .screen.incluyente .text ol li, .propuestas .screen.personas .text p, .propuestas .screen.personas .text ol li, .propuestas .screen.excelencia .text p, .propuestas .screen.excelencia .text ol li, .propuestas .screen.contrapeso .text p, .propuestas .screen.contrapeso .text ol li {
       margin: 0 2em;
       padding: 0.7em 1em;
@@ -1405,7 +1429,7 @@ body {
     text-align: center; }
     .principios .screen.toc .lista a {
       display: inline-block;
-      margin: 0.5em 0;
+      margin: 0.75em 0;
       font-size: 3.5em;
       line-height: 1.7em;
       color: #000;
@@ -1424,6 +1448,12 @@ body {
           position: absolute;
           top: -1.5em;
           left: 0.3em; }
+      .principios .screen.toc .lista a:hover img {
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        transform: scale(1.2); }
       .principios .screen.toc .lista a.colectiva {
         background-color: transparent;
         background-image: -webkit-linear-gradient(left, transparent, #B7D8D4);
@@ -1501,8 +1531,6 @@ body {
       margin-left: 1em; }
       .principios .screen.toc .lista .right a img {
         left: 0.8em; }
-      .principios .screen.toc .lista .right a.genero img {
-        left: 0.6em; }
   .principios .screen.colectiva, .principios .screen.participacion, .principios .screen.apertura, .principios .screen.innovacion, .principios .screen.genero, .principios .screen.derechos, .principios .screen.transparencia {
     position: relative; }
     .principios .screen.colectiva .confetti, .principios .screen.participacion .confetti, .principios .screen.apertura .confetti, .principios .screen.innovacion .confetti, .principios .screen.genero .confetti, .principios .screen.derechos .confetti, .principios .screen.transparencia .confetti {
@@ -1542,6 +1570,12 @@ body {
       .principios .screen.colectiva .text > .icono img, .principios .screen.participacion .text > .icono img, .principios .screen.apertura .text > .icono img, .principios .screen.innovacion .text > .icono img, .principios .screen.genero .text > .icono img, .principios .screen.derechos .text > .icono img, .principios .screen.transparencia .text > .icono img {
         margin-top: 4em;
         width: 35em; }
+        .principios .screen.colectiva .text > .icono img:hover, .principios .screen.participacion .text > .icono img:hover, .principios .screen.apertura .text > .icono img:hover, .principios .screen.innovacion .text > .icono img:hover, .principios .screen.genero .text > .icono img:hover, .principios .screen.derechos .text > .icono img:hover, .principios .screen.transparencia .text > .icono img:hover {
+          -webkit-transform: scale(1.2);
+          -moz-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+          -o-transform: scale(1.2);
+          transform: scale(1.2); }
   .principios .screen.colectiva h2 {
     background-color: transparent;
     background-image: -webkit-linear-gradient(right, transparent, #5fc5b8, transparent);
@@ -1638,6 +1672,12 @@ body {
             height: 2.5em;
             margin: 0 1em;
             position: absolute; }
+        .compromisos .screen.toc div.toc a:hover img {
+          -webkit-transform: scale(1.2);
+          -moz-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+          -o-transform: scale(1.2);
+          transform: scale(1.2); }
       .compromisos .screen.toc div.toc a.en-campanha {
         text-align: right;
         background-color: transparent;
@@ -1759,6 +1799,12 @@ body {
     margin-top: 5em; }
     .compromisos .screen.campanha .icono img, .compromisos .screen.congreso .icono img {
       height: 20em; }
+      .compromisos .screen.campanha .icono img:hover, .compromisos .screen.congreso .icono img:hover {
+        -webkit-transform: scale(1.2);
+        -moz-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        -o-transform: scale(1.2);
+        transform: scale(1.2); }
   .compromisos .screen.campanha .text .hidden .icono, .compromisos .screen.congreso .text .hidden .icono {
     margin-top: 0; }
     .compromisos .screen.campanha .text .hidden .icono img, .compromisos .screen.congreso .text .hidden .icono img {
@@ -1898,7 +1944,8 @@ body {
     z-index: 2; }
     .header .pedro-kumamoto a {
       text-decoration: none;
-      color: black; }
+      color: black;
+      display: block; }
       .header .pedro-kumamoto a .kumalogo {
         float: left;
         margin-right: 2.5em;
@@ -1932,7 +1979,12 @@ body {
         font-weight: 200;
         color: black; }
       .header .pedro-kumamoto a:hover {
-        text-decoration: underline; }
+        text-decoration: underline;
+        -webkit-transform: scale(1.05);
+        -moz-transform: scale(1.05);
+        -ms-transform: scale(1.05);
+        -o-transform: scale(1.05);
+        transform: scale(1.05); }
   .header .where {
     width: 45%;
     display: inline-block;

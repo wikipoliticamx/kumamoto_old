@@ -236,6 +236,9 @@ var KUMA = {
 				}
 			});
 			KUMA.nosotros.adjust();
+			var tudequevas = 'Sobre cuándo se es ya parte innegable de esta red de voluntarios que es la wiki, Franco de Vita debió haber cantado algo así como:<br /><br /> &laquo;Si le he dado todo lo que tengo,<br /> <nobr>hasta quedar en deuda conmigo misme,</nobr><br /> y todavía preguntas, si soy wiki,<br /> tú de que vas.<br /><br /> Si no hay un minuto de mi tiempo,<br /> que no me pase por el pensamiento,<br /> y todavía preguntas si soy wiki.&raquo;';
+			new Opentip(galaxia.find('h1 img'), tudequevas, {style:'glass'});
+			
 		},
 		adjust:function() {
 			var prop =  $('#fullPage').hasClass('shortWide') ? 0.72 : 0.84; // faceSide / 12.5em
