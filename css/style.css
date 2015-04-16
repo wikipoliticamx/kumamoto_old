@@ -1228,7 +1228,7 @@ body {
           position: absolute;
           height: 4em;
           left: 5em;
-          top: 0.5em; }
+          top: 1.2em; }
     .propuestas .screen.democratica .text h1, .propuestas .screen.sostenible .text h1, .propuestas .screen.incluyente .text h1, .propuestas .screen.personas .text h1, .propuestas .screen.excelencia .text h1, .propuestas .screen.contrapeso .text h1 {
       text-align: left;
       margin-left: 0;
@@ -1251,7 +1251,8 @@ body {
     .propuestas .screen.democratica .text p, .propuestas .screen.sostenible .text p, .propuestas .screen.incluyente .text p, .propuestas .screen.personas .text p, .propuestas .screen.excelencia .text p, .propuestas .screen.contrapeso .text p {
       margin: 0;
       padding: 1.5em 3em;
-      padding-left: 5em; }
+      padding-left: 5em;
+      padding-top: 1em; }
     .propuestas .screen.democratica .text p, .propuestas .screen.democratica .text ol, .propuestas .screen.sostenible .text p, .propuestas .screen.sostenible .text ol, .propuestas .screen.incluyente .text p, .propuestas .screen.incluyente .text ol, .propuestas .screen.personas .text p, .propuestas .screen.personas .text ol, .propuestas .screen.excelencia .text p, .propuestas .screen.excelencia .text ol, .propuestas .screen.contrapeso .text p, .propuestas .screen.contrapeso .text ol {
       width: 60%;
       margin: 0 auto; }
