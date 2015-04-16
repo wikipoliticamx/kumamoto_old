@@ -107,7 +107,7 @@
 }
 
 .opentip-container strong {
-	font-family:"FF Meta W01";
+	font-family:"FF Meta W01", Helvetica, Arial, sans-serif;
 	color:#000;
 	font-weight:700;
 	font-size:1.4em;

@@ -416,7 +416,8 @@ body {
         top: 5em;
         -webkit-transition: all 0.2s ease;
         -moz-transition: all 0.2s ease;
-        transition: all 0.2s ease; }
+        transition: all 0.2s ease;
+        z-index: 1; }
       .screen.video .theater .sidebar {
         position: absolute;
         width: 16.6em;

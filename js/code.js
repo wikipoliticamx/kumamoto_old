@@ -307,16 +307,22 @@ var KUMA = {
 			}
 		}
 	},
+	mobile: /(iPad|iPhone|iPod)/g.test( navigator.userAgent ),
 	// -------------------
 	// ****** VIDEO ******
 	// -------------------
 	video: {
-		boot:function() { var thumbs = 
-			$('.screen.video .thumbs img').click(KUMA.video.load);
-			$('.screen.video .thumbs img:first').addClass('active');
-			$('.screen.video .soundToggle').click(KUMA.video.soundToggle);
-			$('.screen.video .replay').click(function() {
-				KUMA.video.load.call( $('.screen.video .thumbs img.active')[0] );
+		boot:function() { var v = $('.screen.video');
+			v.find('.thumbs img').click(KUMA.video.load);
+			v.find('.thumbs img:first').addClass('active');
+			if(KUMA.mobile) {
+				v.find('.soundToggle').hide();
+			} else {
+				v.find('.soundToggle').click(KUMA.video.soundToggle);
+				$(window).blur( KUMA.video.blur );
+			}
+			v.find('.replay').click(function() {
+				KUMA.video.load.call( v.find('.thumbs img.active')[0] );
 			});
 		},
 		youtube:function() {
@@ -345,24 +351,32 @@ var KUMA = {
 		height:700,
 		width:500,
 		ready:function() { var p = KUMA.player;
-			p.playVideo();
-			p.pauseVideo();
-			KUMA.video.afterReady && KUMA.video.afterReady();
+			if(!KUMA.mobile) {
+				p.playVideo();
+				p.pauseVideo();
+				KUMA.video.afterReady && KUMA.video.afterReady();
+			}
+		},
+		blur:function() { var p = KUMA.player;
+			if(p) {
+				console.log('blur!');
+				p.pauseVideo();
+				(!KUMA.mobile) && p.unMute();
+			}
 		},
 		soundToggle:function() { var p = KUMA.player;
 			if(p.isMuted()) {
-				p.unMute();
+				(!KUMA.mobile) && p.unMute();
 				$(this).addClass('unMuted').removeClass('muted');
 			} else {
-				p.mute();
+				(!KUMA.mobile) && p.mute();
 				$(this).addClass('muted').removeClass('unMuted');
 			}
 		},
 		_play:function() { var p = KUMA.player;
 			p.playVideo();
 			if($('.soundToggle.muted').length > 0) {
-				//console.log('mute');
-				p.mute() 
+				(!KUMA.mobile) && p.mute();
 			}
 		},
 		play:function() { var p = KUMA.player;
@@ -376,8 +390,7 @@ var KUMA = {
 			if(p) {
 				p.pauseVideo();
 				if($('.soundToggle.unMuted').length > 0) {
-					//console.log('unmute');
-					KUMA.player.unMute() 
+					(!KUMA.mobile) && KUMA.player.unMute();
 				}
 			}
 		},
