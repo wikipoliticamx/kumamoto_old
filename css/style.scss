@@ -67,7 +67,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 /* INDEX */
 /* SCREEN */
 .screen {
-	background:$crema url(/img/ui/kumatile.jpg); width:100%; height:100%; position:relative; overflow:hidden; visibility:hidden;
+	background:$crema; width:100%; height:100%; position:relative; overflow:hidden; visibility:hidden;
 
 	/* SPLASH */
 	&.splash {
@@ -179,8 +179,14 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 	/* VIDEO */
 	&.video { background-color:#ADDFD7; color:black; text-align:center; position:relative; background-repeat:no-repeat; background-position:center top; background-size:100%;
 		.theater {overflow:hidden; background:#000/*#607F8C*/; width:100%; position:absolute; top:0;
-			.date {color:#555; font-size:1.1em; padding-top:2em; text-align:right;
-				&:hover {color:white}
+			.fb {position:absolute; @include filter(grayscale(100%)); z-index:5;
+				img {height:5em; }
+				&:hover { @include filter(grayscale(0)); }
+			}
+			.date { font-size:1.1em; padding-top:2em; text-align:right;
+				a {color:#555; text-decoration:none;
+					&:hover {color:white; text-decoration:underline}
+				}
 			}
 			#ytplayer {width:100%; margin:0 auto; display:inline-block; position:absolute; top:5em; @include transition(all 0.2s ease); z-index:1}
 			.sidebar { position:absolute; width:16.6em; right:0; top:0; height:100%; overflow:auto; text-align:center;
@@ -298,7 +304,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			.left, .right {width:49.5%; display:inline-block; vertical-align:top; 
 				em {margin-top:1em}
 				span.name {margin-top:0.5em}
-				p {font-size:1.2em}
+				p {font-size:1.2em; position:relative}
 			}
 
 			.center .asesor, .left .card, .right .card {
@@ -320,6 +326,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 					p {text-align:right; 
 						@include linear-gradient(to right, $transparent, #CBBFAE);
 						padding:0.8em; padding-left:0;
+						left:-40em;
 					}
 				}
 				.card {margin-left:1em;
@@ -335,6 +342,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 						img {margin-right:0;}
 					}
 					p {
+						left:40em;
 						@include linear-gradient(to left, $transparent, #CBBFAE);
 						padding:0.8em; padding-right:0;
 					}
@@ -953,7 +961,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 }
 
 
-/************************** ;RESPONSIVE madness **************************/
+/************************** ;RESPONSIVENESS **************************/
 .shortWide {
 	.screen.nosotros .galaxia div.wiki {
 		width:9em; height:9em; margin:0.7em 2.6em;
@@ -961,3 +969,19 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 	}
 }
 
+.boxy {
+	.screen.video { 
+		.theater {
+			.date {padding-top:1em}
+			#ytplayer {top:3em}
+			.sidebar {width:100%; left:0; right:auto; z-index:2;
+				.thumbs {display:inline-block}
+				.replay {margin-right:2em}
+			}
+		}
+		.copy {
+			p {margin-top:2em}
+			a {display:none}
+		}
+	}
+}

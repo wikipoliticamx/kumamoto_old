@@ -98,7 +98,7 @@ body {
 /* INDEX */
 /* SCREEN */
 .screen {
-  background: #f6f1e9 url(/img/ui/kumatile.jpg);
+  background: #f6f1e9;
   width: 100%;
   height: 100%;
   position: relative;
@@ -401,13 +401,26 @@ body {
       width: 100%;
       position: absolute;
       top: 0; }
+      .screen.video .theater .fb {
+        position: absolute;
+        -webkit-filter: grayscale(100%);
+        filter: grayscale(100%);
+        z-index: 5; }
+        .screen.video .theater .fb img {
+          height: 5em; }
+        .screen.video .theater .fb:hover {
+          -webkit-filter: grayscale(0);
+          filter: grayscale(0); }
       .screen.video .theater .date {
-        color: #555;
         font-size: 1.1em;
         padding-top: 2em;
         text-align: right; }
-        .screen.video .theater .date:hover {
-          color: white; }
+        .screen.video .theater .date a {
+          color: #555;
+          text-decoration: none; }
+          .screen.video .theater .date a:hover {
+            color: white;
+            text-decoration: underline; }
       .screen.video .theater #ytplayer {
         width: 100%;
         margin: 0 auto;
@@ -736,7 +749,8 @@ body {
         .screen.asesores div.asesores .left span.name, .screen.asesores div.asesores .right span.name {
           margin-top: 0.5em; }
         .screen.asesores div.asesores .left p, .screen.asesores div.asesores .right p {
-          font-size: 1.2em; }
+          font-size: 1.2em;
+          position: relative; }
       .screen.asesores div.asesores .center .asesor, .screen.asesores div.asesores .left .card, .screen.asesores div.asesores .right .card {
         border: 1px solid transparent; }
         .screen.asesores div.asesores .center .asesor a.twitter, .screen.asesores div.asesores .left .card a.twitter, .screen.asesores div.asesores .right .card a.twitter {
@@ -781,7 +795,8 @@ body {
           background-image: -webkit-linear-gradient(left, #f0ecdc, #CBBFAE);
           background-image: linear-gradient(to right,#f0ecdc, #CBBFAE);
           padding: 0.8em;
-          padding-left: 0; }
+          padding-left: 0;
+          left: -40em; }
         .screen.asesores div.asesores .left .card {
           margin-left: 1em; }
           .screen.asesores div.asesores .left .card img {
@@ -801,6 +816,7 @@ body {
             .screen.asesores div.asesores .right .asesor .portrait img {
               margin-right: 0; }
           .screen.asesores div.asesores .right .asesor p {
+            left: 40em;
             background-color: #f0ecdc;
             background-image: -webkit-linear-gradient(right, #f0ecdc, #CBBFAE);
             background-image: linear-gradient(to left,#f0ecdc, #CBBFAE);
@@ -2147,7 +2163,7 @@ body {
   #goodbye .wikipolitica {
     display: inline-block; }
 
-/************************** ;RESPONSIVE madness **************************/
+/************************** ;RESPONSIVENESS **************************/
 .shortWide .screen.nosotros .galaxia div.wiki {
   width: 9em;
   height: 9em;
@@ -2155,5 +2171,23 @@ body {
   .shortWide .screen.nosotros .galaxia div.wiki img {
     width: 9em;
     height: 9em; }
+
+.boxy .screen.video .theater .date {
+  padding-top: 1em; }
+.boxy .screen.video .theater #ytplayer {
+  top: 3em; }
+.boxy .screen.video .theater .sidebar {
+  width: 100%;
+  left: 0;
+  right: auto;
+  z-index: 2; }
+  .boxy .screen.video .theater .sidebar .thumbs {
+    display: inline-block; }
+  .boxy .screen.video .theater .sidebar .replay {
+    margin-right: 2em; }
+.boxy .screen.video .copy p {
+  margin-top: 2em; }
+.boxy .screen.video .copy a {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */

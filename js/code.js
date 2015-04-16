@@ -65,6 +65,9 @@ var KUMA = {
 								timeout:_([500, 1000, 1500, 2000]).shuffle()[0]
 							} );
 						});
+					} else if(section == 'nos-asesoran') {
+						animate({el:'.screen.asesores .left p', translateX:'40em', duration:1200});
+						animate({el:'.screen.asesores .right p', translateX:'-40em', duration:1200});
 					} else if(section == 'soy-pedro') {
 						emerge( {el:'.screen.acercade h1', duration:600, timeout:500} );
 						$('.screen.acercade p strong').css('color', 'rgb(200, 112, 114)');
@@ -167,7 +170,7 @@ var KUMA = {
 			['daniel', 'Las decisiones que marcan el rumbo de nuestra ciudad, región o país, deben ser tomadas <b>por y para los ciudadanos</b>, no por los partidos.', 1, 4],
 			['dani', 'Creo que es <b>responsabilidad</b> de todas las personas conscientes de la situación actual del país participar en esta lucha a lado de Kumamoto.', 1, 3],
 			['darlen', 'Me gusta señalar lo que está mal pero también tomo responsabilidad construyendo para cambiarlo. Aquí encontré <b>la forma</b> y <b>las personas</b> para hacerlo.', 1, 5],
-			['david', '', 5, 0],
+			['david', 'Estoy cansado de la situación que atraviesa nuestro país, pero todavía más de ser un simple espectador.', 5, 0],
 			['dulce', 'Para generar un cambio hay que hacer las cosas diferentes, y con un equipo con esta <b>pasión y calidad humana</b> vale la pena intentarlo.', 1, 7],
 			['edgar-1', 'Hacer política no debería ser un estilo de vida sino una <b>práctica diaria</b> para todo aquel que se llame ciudadano.', 1, 8],
 			['edgar-2', 'Este proyecto está haciendo todo lo que considero ético y correcto para actuar políticamente. No participar seria una gran <b>incongruencia</b>.', 1, 9],
@@ -334,7 +337,7 @@ var KUMA = {
 
 			window.onYouTubeIframeAPIReady = function()  {
 				var firstThumb = $('.screen.video .sidebar .thumbs img:first');
-				$('.screen.video .theater .date').html( firstThumb.attr('title') );
+				KUMA.video.updateMeta( firstThumb );
 				KUMA.player = new YT.Player('ytplayer', {
 					videoId: firstThumb.data('youtube'),
 					playerVars:{
@@ -359,7 +362,7 @@ var KUMA = {
 		},
 		blur:function() { var p = KUMA.player;
 			if(p) {
-				console.log('blur!');
+				//console.log('blur!');
 				p.pauseVideo();
 				(!KUMA.mobile) && p.unMute();
 			}
@@ -403,13 +406,21 @@ var KUMA = {
 				} else {
 					$('#ytplayer').css('visibility', 'hidden');
 				}
+			} else if(state.data == 1) {
+				if(!KUMA.player.isMuted()) {
+					$('.screen.video .soundToggle').addClass('unMuted').removeClass('muted');
+				}
 			}
+		},
+		updateMeta:function(thumb) {
+			$('.screen.video .theater .date a').text( thumb.attr('title') ).add('.screen.video .theater .fb').
+					attr('href', thumb.data('fb'));
 		},
 		load:function() {
 			$('#ytplayer').css('visibility', 'visible');
 			KUMA.player.loadVideoById( $(this).attr('data-youtube') );
 			$('.screen.video .thumbs img').removeClass('active');
-			$('.screen.video .theater .date').html( $(this).attr('title') );
+			KUMA.video.updateMeta( $(this) );
 			$(this).addClass('active');
 		}
 	},
@@ -437,7 +448,6 @@ var KUMA = {
 				});
 				that.removeClass('mas').addClass('menos');
 			} else {
-				//console.log('comernos a besos!');
 				that.removeClass('menos').addClass('mas');
 			}
 		}
@@ -482,32 +492,43 @@ var KUMA = {
 			img.css(css);
 		},
 		cover:function() {
-			var data = KUMA.data;
+			var data = KUMA.data, v = KUMA.video, em = KUMA.data.em;
 			data.prop.homeVideo = 1280 / 720; // w/h no more black bars
 
-			KUMA.screen.detect.portraitLandscape();
+			KUMA.screen.detect.coverOrientation();
 
 			$('.screen, .screen.acercade .copy, .screen.acercade .foto').css('height', data.h);
 			$('.screen.nosotros').css('line-height', data.h+'px');
 			$('.screen.cover, .screen.splash').find('img.kumafoto').css( img );
 
-			KUMA.video.height = data.h*0.65;
-			KUMA.video.width = KUMA.video.height * data.prop.homeVideo;
+			v.height = data.h*0.65;
+			v.width = v.height * data.prop.homeVideo;
 
 			$('#ytplayer').css({
-				height: KUMA.video.height,
-				width: KUMA.video.width,
-				left:((data.w-KUMA.video.width)/2) - 20
+				height: v.height,
+				width: v.width,
+				left:((data.w-v.width)/2) - 20
 			});
 
-			$('.screen.video .theater').css('height', KUMA.video.height + parseInt($('#ytplayer').css('top')));
-			var sidebarWidth = (data.w - KUMA.video.width)/2
-			$('.screen.video .sidebar').css('width', sidebarWidth);
-			$('.screen.video .date').css('padding-right', sidebarWidth+30);
+			$('.screen.video .fb').css({
+				left:((data.w-v.width)/2) + v.width - (15*em),
+				top:v.height+(0.5*em)
+			});
 
-			if($('#fullpage.home').length > 0) {
-				//KUMA.scroll.boot();
+			var sidebarWidth = (data.w - v.width)/2
+			$('.screen.video .date').css('padding-right', sidebarWidth+30);
+			var ytplayerBottom = v.height + parseInt($('#ytplayer').css('top'));
+
+			if($('#fullpage.boxy').length > 0) {
+				$('.screen.video .sidebar').css('top', ytplayerBottom - (5*em));
+				ytplayerBottom += (10*em)*1;
+				$('.screen.video .sidebar').css('width', '100%');
+				$('#ytplayer').css('left', $('#ytplayer').css('left')+20+(2*em));
+			} else {
+				$('.screen.video .sidebar').css('top', 0);
+				$('.screen.video .sidebar').css('width', sidebarWidth);
 			}
+			$('.screen.video .theater').css('height', ytplayerBottom);
 		},
 		propuestas:function() {
 			$('.video, .text, .fb, .screen').css('height', KUMA.data.h);
@@ -518,7 +539,7 @@ var KUMA = {
 			KUMA.screen.maxCenterWithinContainer($('img.gobierno'), $('.screen.gobierno'));
 		},
 		detect:{
-			portraitLandscape:function() { var data = KUMA.data;
+			coverOrientation:function() { var data = KUMA.data;
 				data.prop.coverPhoto  = 6016 / 4016; // w/h
 
 				var wCover = data.w*1.3,
@@ -539,14 +560,25 @@ var KUMA = {
 					$('.screen.splash, .screen.cover').removeClass('portrait');
 				}
 			},
-			whatLandscape:function() { var data = KUMA.data;
-				var shortWideProp = 1.815;//1366/696;
-				//console.log( data.prop.screen );
-				if(data.prop.screen >= shortWideProp) {
+			portraitLandscape:function() { var data = KUMA.data;
+				var orientations = 'boxy shortWide portrait',
+					clear = function() {
+						$('#fullpage').removeClass(orientations);
+					},
+					prop = data.prop.screen;
+				clear();
+				if(prop >= 1.815) { //1366/696;
+					console.log('shortWide!', prop);
 					$('#fullpage').addClass('shortWide');
-					console.log( 'shortWide!' );
+				} else if(prop >= 1.5) { //base
+					console.log('normal!', prop);
+				} else if(prop >= 1) {
+					console.log('boxy!', prop);
+					KUMA.data.
+					$('#fullpage').addClass('boxy');
 				} else {
-					$('#fullpage').removeClass('shortWide');
+					console.log('shortWide!', prop);
+					$('#fullpage').addClass('potrait');
 				}
 			}
 		},
@@ -557,6 +589,8 @@ var KUMA = {
 			data.prop.screen = data.w/data.h;
 
 			$('body').css('font-size', data.em+'px');
+
+			screen.detect.portraitLandscape();
 
 			if((where == 'home') || (where == 'splash')) {
 				screen.cover();
@@ -583,7 +617,6 @@ var KUMA = {
 				}
 			}
 			KUMA.nosotros.adjust();
-			screen.detect.whatLandscape();
 
 			$('.screen').css('visibility', 'visible');
 		},
