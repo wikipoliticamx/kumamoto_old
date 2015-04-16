@@ -83,13 +83,28 @@ var KUMA = {
 			}
 		},
 		onEnter:function(section, index) { 
-			var screen = $('.screen:eq('+index+')');
+			var screen = $('.screen:eq('+(index-1)+')');
 			if(KUMA.where == 'home') {
 				if(!screen.data('already')) { //first time
 					KUMA.fullPage.scroll.home.once(section);
 					screen.data('already', true);
 				}
 				KUMA.fullPage.scroll.home.always(section);
+			} else if( _(['principios', 'propuestas', 'compromisos']).contains(KUMA.where) ) {
+				var url = KUMA.root+KUMA.where+'/'+section+'/';
+				if(!screen.data('already')) { //first time
+					//console.log('url', url)
+					KUMA.screen = screen;
+					KUMA.fbContainer = screen.find('.fb-container');
+					screen.find('.fb-container').html(
+						'<div class="fb-like" data-href="'+url+'" data-width="100%" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>'+
+						'<div class="fb-comments" data-href="'+url+'" data-width="100%" data-numposts="15" data-colorscheme="light"></div>'
+					);
+					if (typeof FB !== 'undefined') {
+						FB.XFBML.parse( screen.find('.fb-container')[0] );
+					}
+					screen.data('already', true);
+				}
 			}
 			KUMA.fullPage.sayGoodbye(section);
 		},
