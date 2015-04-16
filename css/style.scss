@@ -72,8 +72,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 	&.splash {
 		img.kumafoto {width:100%; position:absolute; top:0; right:0; -webkit-filter:blur(10px); }
 
-		.copy {padding:2.5em 0 0 2.5em; position:absolute; top:0; width:100%; height:100%; z-index:1;
-			user-select:none; -o-user-select:none; -moz-user-select:none; -khtml-user-select:none; -webkit-user-select:none;
+		.copy {padding:2.5em 0 0 2.5em; position:absolute; top:0; width:100%; height:100%; z-index:1; @include user-select(none);
 
 			.kumalogo {float:left; margin-right:2.5em; height:20em; margin-top:5px; opacity:0; position:relative; z-index:2}
 			
@@ -123,8 +122,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 	&.cover {
 		img.kumafoto {width:100%; position:absolute; top:0; right:0; -webkit-filter:blur(10px); }
 
-		.copy {padding:2.5em 0 0 2.5em; position:absolute; top:0; width:100%; height:100%; z-index:1;
-			user-select:none; -o-user-select:none; -moz-user-select:none; -khtml-user-select:none; -webkit-user-select:none;
+		.copy {padding:2.5em 0 0 2.5em; position:absolute; top:0; width:100%; height:100%; z-index:1; @include user-select(none);
 
 			.kumalogo {float:left; margin-right:2.5em; height:20em; margin-top:5px; opacity:0; position:relative; z-index:2}
 			
@@ -149,10 +147,10 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			}
 		}
 		.redes {position:absolute; top:2.5em; right:2.5em; width:9.2em; line-height:2.5em; z-index:2;
-			img {width:2.5em; opacity:0; -webkit-filter:grayscale(1)}
+			img {width:2.5em; opacity:0; @include filter(grayscale(100%));}
 			a {
 				&.fb img {width:5em; float:left; margin-right:0.8em}
-				&:hover img {-webkit-filter:grayscale(0)}
+				&:hover img {@include filter(grayscale(0));}
 			}
 		}
 		.kitkumamoto {position:absolute; bottom:4.5em; right:-40em; text-align:center; padding:0; width:33.3em; background-size:33.3em auto; text-decoration:none; color:black; z-index:3;
@@ -190,14 +188,14 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 					&.muted img {position:absolute; top:0; left:0}
 					&.unMuted img {position:absolute; top:0; left:-6.6em}
 					&:hover {
-						transform:scale(1.3,1.3);
+						@include transform(scale(1.3));
 					}
 				}
 				.replay {margin-left:2em}
 				.thumbs {
-					img {width:16.666em; height:9.25em; display:inline-block; margin:0.83em 0.41em; -webkit-filter:grayscale(1); cursor:pointer; border:1px solid transparent;
+					img {width:16.666em; height:9.25em; display:inline-block; margin:0.83em 0.41em; @include filter(grayscale(100%)); cursor:pointer; border:1px solid transparent;
 						&:hover, &.active { 
-							-webkit-filter:grayscale(0);
+							@include filter(grayscale(0));
 							opacity:1; border:1px solid white;
 						}
 					}
@@ -249,14 +247,12 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				}
 				img {width:$faceSide; height:$faceSide; position:relative; z-index:1; border:1px solid #aaa; border-radius:1.6em; 
 					box-shadow:0.15em 0.15em 0.2em #999; 
-					/*-webkit-filter:blur(5px) grayscale(1);*/
 				}
 				&:hover {
-					transform:scale(1.3,1.3); z-index:3; 
+					@include transform(scale(1.3)); z-index:3; 
 					transition:all 0.2s ease !important; -moz-transition:all 0.2s ease !important; -webkit-transition:all 0.2s ease !important;
 					img {
 						box-shadow:0.15em 0.15em 0.2em #555; vertical-align:middle; border-color:white;
-						/*-webkit-filter:blur(0) grayscale(0);*/
 					}
 					span {visibility:visible}
 
@@ -311,7 +307,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				border:1px solid transparent;
 				&:hover {
 					border:1px solid #ccc;
-					transform:scale(1.3,1.3); -ms-transform:scale(1.3,1.3); -webkit-transform:scale(1.3,1.3); z-index:5;
+					@include transform(scale(1.3)); z-index:5;
 				}
 			}
 			.left .card { a.twitter { left:23%; bottom:-1.2em; margin-left:1em; } }
@@ -352,16 +348,13 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			strong {font-family:"FF Meta W01", Helvetica, Arial, sans-serif}
 		}
 		.carton { position:absolute; left:-28em; top:27em; z-index:5;
-			img {width:25em; box-shadow:0.2em 0.2em 0.2em #aaa; @include transition(all 1s ease); position:relative; left:0;
-				transform:rotate(-10deg); -ms-transform:rotate(-10deg); -webkit-transform:rotate(-10deg);
-			}
+			img {width:25em; box-shadow:0.2em 0.2em 0.2em #aaa; @include transition(all 1s ease); position:relative; left:0; @include transform(rotate(-10deg)); }
 			&.carton9abr {top:10em; 
-				img {transform:rotate(10deg); -ms-transform:rotate(10deg); -webkit-transform:rotate(10deg);}
+				img { @include transform(rotate(10deg)); }
 			}
 			&:hover, &.carton9abr:hover {
 				img {
-					left:8.3em;
-					transform:scale(1.3,1.3) rotate(0); -ms-transform:scale(1.3,1.3) rotate(0); -webkit-transform:scale(1.3,1.3) rotate(0);
+					left:8.3em; @include transform(scale(1.3) rotate(0));
 				}
 			}
 		}
@@ -369,7 +362,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			a { opacity:0; }
 			img {height:4.16em; display:inline-block; margin:0.8em 1.66em; vertical-align:middle; @include transition(all 0.2s ease);}
 			a:hover {
-				img { transform:scale(1.3,1.3); -ms-transform:scale(1.3,1.3); -webkit-transform:scale(1.3,1.3); }
+				img { @include transform(scale(1.3)); }
 			}
 			a.void {cursor:default}
 		}
@@ -398,7 +391,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				&:hover {
 					div.logo {
 						img {
-							transform:scale(1.1,1.1) rotate(0); -ms-transform:scale(1.1,1.1) rotate(0); -webkit-transform:scale(1.1,1.1) rotate(0);
+							@include transform(scale(1.1) rotate(0));
 						}
 					}
 				}
@@ -408,9 +401,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 							img {width:5em; height:5em; vertical-align:Middle; margin-right:0; margin-left:1em; margin-top:0; border:1px solid #999; z-index:3}
 						}
 					}
-					&:hover div.logo img {
-						transform:scale(1.3,1.3) rotate(0); -ms-transform:scale(1.3,1.3) rotate(0); -webkit-transform:scale(1.3,1.3) rotate(0);
-					}
+					&:hover div.logo img { @include transform(scale(1.3) rotate(0)); }
 					img.twitter {height:1em; float:left; margin-left:-1.9em; margin-top:1em}
 				}
 			}
@@ -447,9 +438,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			.data-maps img {
 				@include transition(all 0.2s ease);
 				height:150px; width:98px; margin:10px; background-repeat:no-repeat;
-				&:hover{
-					transform:scale(1.2,1.2);
-				}
+				&:hover{ @include transform(scale(1.2)); }
 			}
 		}
 	}
@@ -830,7 +819,6 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			span.mas {display:none}
 		}
 		a.leer-mas { text-transform:uppercase; text-decoration:none; color:black; background:#E0DCD5; display:inline-block; padding:0 0.4em; padding-bottom:0.1em;
-			/*user-select:none; -o-user-select:none; -moz-user-select:none; -khtml-user-select:none; -webkit-user-select:none;*/
 			margin-left:0.2em; vertical-align:top; font-family:"FF Meta W01", Helvetica, Arial, sans-serif;
 			&:hover {text-decoration:underline; color:#fff; }
 		}
@@ -854,11 +842,9 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 	}
 }
 
-
 /************************** ;HEADER **************************/
 .header {padding-top:6em; padding-bottom:4em; position:relative; z-index:2; font-size:1em;
 	.azulejo-top {position:absolute; z-index:1; width:110%; left:-2%; top:-22%;
-		-moz-transform: scaleX(-1); -o-transform: scaleX(-1); -webkit-transform: scaleX(-1); transform: scaleX(-1); filter: FlipH; -ms-filter: "FlipH";
 	}
 	.pedro-kumamoto {width:49.5%; padding-left:4em; margin:0 auto; display:inline-block; vertical-align:middle; position:relative; z-index:2;
 		a {text-decoration:none; color:black;
@@ -905,7 +891,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 /************************** ;NAVBAR **************************/
 .navbar {background:transparent; position:absolute; bottom:0; overflow:hidden; height:9.3em; width:100%; z-index:4;
 	a {text-transform:uppercase; display:inline-block; line-height:1.15em; height:5.6em; font-size:5.5em; text-decoration:none; color:#4A746D; float:left; text-align:center; width:33%; text-align:center; font-weight:200; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; position:relative; bottom:-12em; z-index:1;
-		user-select:none; -o-user-select:none; -moz-user-select:none; -khtml-user-select:none; -webkit-user-select:none;
+		@include user-select(none);
 
 		&.principios  {background:#67B2A4; }
 		&.propuestas  {background:#4E7B74; color:#283F3A; font-weight:bold; height:6em; font-size:6.7em; line-height:1.3em; box-shadow:0 0.12em 0.36em #1B342F; z-index:2}

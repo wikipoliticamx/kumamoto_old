@@ -125,11 +125,10 @@ body {
     width: 100%;
     height: 100%;
     z-index: 1;
-    user-select: none;
-    -o-user-select: none;
+    -webkit-user-select: none;
     -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none; }
+    -ms-user-select: none;
+    user-select: none; }
     .screen.splash .copy .kumalogo {
       float: left;
       margin-right: 2.5em;
@@ -254,11 +253,10 @@ body {
     width: 100%;
     height: 100%;
     z-index: 1;
-    user-select: none;
-    -o-user-select: none;
+    -webkit-user-select: none;
     -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none; }
+    -ms-user-select: none;
+    user-select: none; }
     .screen.cover .copy .kumalogo {
       float: left;
       margin-right: 2.5em;
@@ -331,13 +329,15 @@ body {
     .screen.cover .redes img {
       width: 2.5em;
       opacity: 0;
-      -webkit-filter: grayscale(1); }
+      -webkit-filter: grayscale(100%);
+      filter: grayscale(100%); }
     .screen.cover .redes a.fb img {
       width: 5em;
       float: left;
       margin-right: 0.8em; }
     .screen.cover .redes a:hover img {
-      -webkit-filter: grayscale(0); }
+      -webkit-filter: grayscale(0);
+      filter: grayscale(0); }
   .screen.cover .kitkumamoto {
     position: absolute;
     bottom: 4.5em;
@@ -448,7 +448,11 @@ body {
             top: 0;
             left: -6.6em; }
           .screen.video .theater .sidebar .soundToggle:hover, .screen.video .theater .sidebar .replay:hover {
-            transform: scale(1.3, 1.3); }
+            -webkit-transform: scale(1.3);
+            -moz-transform: scale(1.3);
+            -ms-transform: scale(1.3);
+            -o-transform: scale(1.3);
+            transform: scale(1.3); }
         .screen.video .theater .sidebar .replay {
           margin-left: 2em; }
         .screen.video .theater .sidebar .thumbs img {
@@ -456,11 +460,13 @@ body {
           height: 9.25em;
           display: inline-block;
           margin: 0.83em 0.41em;
-          -webkit-filter: grayscale(1);
+          -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
           cursor: pointer;
           border: 1px solid transparent; }
           .screen.video .theater .sidebar .thumbs img:hover, .screen.video .theater .sidebar .thumbs img.active {
             -webkit-filter: grayscale(0);
+            filter: grayscale(0);
             opacity: 1;
             border: 1px solid white; }
     .screen.video .copy {
@@ -606,10 +612,13 @@ body {
           z-index: 1;
           border: 1px solid #aaa;
           border-radius: 1.6em;
-          box-shadow: 0.15em 0.15em 0.2em #999;
-          /*-webkit-filter:blur(5px) grayscale(1);*/ }
+          box-shadow: 0.15em 0.15em 0.2em #999; }
         .screen.nosotros .galaxia div.wiki:hover {
-          transform: scale(1.3, 1.3);
+          -webkit-transform: scale(1.3);
+          -moz-transform: scale(1.3);
+          -ms-transform: scale(1.3);
+          -o-transform: scale(1.3);
+          transform: scale(1.3);
           z-index: 3;
           transition: all 0.2s ease !important;
           -moz-transition: all 0.2s ease !important;
@@ -617,8 +626,7 @@ body {
           .screen.nosotros .galaxia div.wiki:hover img {
             box-shadow: 0.15em 0.15em 0.2em #555;
             vertical-align: middle;
-            border-color: white;
-            /*-webkit-filter:blur(0) grayscale(0);*/ }
+            border-color: white; }
           .screen.nosotros .galaxia div.wiki:hover span {
             visibility: visible; }
   .screen.asesores {
@@ -743,9 +751,11 @@ body {
             margin-right: 0; }
         .screen.asesores div.asesores .center .asesor:hover, .screen.asesores div.asesores .left .card:hover, .screen.asesores div.asesores .right .card:hover {
           border: 1px solid #ccc;
-          transform: scale(1.3, 1.3);
-          -ms-transform: scale(1.3, 1.3);
-          -webkit-transform: scale(1.3, 1.3);
+          -webkit-transform: scale(1.3);
+          -moz-transform: scale(1.3);
+          -ms-transform: scale(1.3);
+          -o-transform: scale(1.3);
+          transform: scale(1.3);
           z-index: 5; }
       .screen.asesores div.asesores .left .card a.twitter {
         left: 23%;
@@ -822,20 +832,26 @@ body {
         transition: all 1s ease;
         position: relative;
         left: 0;
-        transform: rotate(-10deg);
+        -webkit-transform: rotate(-10deg);
+        -moz-transform: rotate(-10deg);
         -ms-transform: rotate(-10deg);
-        -webkit-transform: rotate(-10deg); }
+        -o-transform: rotate(-10deg);
+        transform: rotate(-10deg); }
       .screen.medios .carton.carton9abr {
         top: 10em; }
         .screen.medios .carton.carton9abr img {
-          transform: rotate(10deg);
+          -webkit-transform: rotate(10deg);
+          -moz-transform: rotate(10deg);
           -ms-transform: rotate(10deg);
-          -webkit-transform: rotate(10deg); }
+          -o-transform: rotate(10deg);
+          transform: rotate(10deg); }
       .screen.medios .carton:hover img, .screen.medios .carton.carton9abr:hover img {
         left: 8.3em;
-        transform: scale(1.3, 1.3) rotate(0);
-        -ms-transform: scale(1.3, 1.3) rotate(0);
-        -webkit-transform: scale(1.3, 1.3) rotate(0); }
+        -webkit-transform: scale(1.3) rotate(0);
+        -moz-transform: scale(1.3) rotate(0);
+        -ms-transform: scale(1.3) rotate(0);
+        -o-transform: scale(1.3) rotate(0);
+        transform: scale(1.3) rotate(0); }
     .screen.medios .logos {
       text-align: center;
       margin: 0 auto;
@@ -852,9 +868,11 @@ body {
         -moz-transition: all 0.2s ease;
         transition: all 0.2s ease; }
       .screen.medios .logos a:hover img {
-        transform: scale(1.3, 1.3);
-        -ms-transform: scale(1.3, 1.3);
-        -webkit-transform: scale(1.3, 1.3); }
+        -webkit-transform: scale(1.3);
+        -moz-transform: scale(1.3);
+        -ms-transform: scale(1.3);
+        -o-transform: scale(1.3);
+        transform: scale(1.3); }
       .screen.medios .logos a.void {
         cursor: default; }
     .screen.medios .citas {
@@ -923,9 +941,11 @@ body {
         .screen.medios .citas .medio.informador {
           left: -96em; }
         .screen.medios .citas .medio:hover div.logo img {
-          transform: scale(1.1, 1.1) rotate(0);
-          -ms-transform: scale(1.1, 1.1) rotate(0);
-          -webkit-transform: scale(1.1, 1.1) rotate(0); }
+          -webkit-transform: scale(1.1) rotate(0);
+          -moz-transform: scale(1.1) rotate(0);
+          -ms-transform: scale(1.1) rotate(0);
+          -o-transform: scale(1.1) rotate(0);
+          transform: scale(1.1) rotate(0); }
         .screen.medios .citas .medio.yonofui {
           left: -96em; }
           .screen.medios .citas .medio.yonofui div.logo {
@@ -945,9 +965,11 @@ body {
                 border: 1px solid #999;
                 z-index: 3; }
           .screen.medios .citas .medio.yonofui:hover div.logo img {
-            transform: scale(1.3, 1.3) rotate(0);
-            -ms-transform: scale(1.3, 1.3) rotate(0);
-            -webkit-transform: scale(1.3, 1.3) rotate(0); }
+            -webkit-transform: scale(1.3) rotate(0);
+            -moz-transform: scale(1.3) rotate(0);
+            -ms-transform: scale(1.3) rotate(0);
+            -o-transform: scale(1.3) rotate(0);
+            transform: scale(1.3) rotate(0); }
           .screen.medios .citas .medio.yonofui img.twitter {
             height: 1em;
             float: left;
@@ -1057,7 +1079,11 @@ body {
         margin: 10px;
         background-repeat: no-repeat; }
         .screen.mapa .copy .data-maps img:hover {
-          transform: scale(1.2, 1.2); }
+          -webkit-transform: scale(1.2);
+          -moz-transform: scale(1.2);
+          -ms-transform: scale(1.2);
+          -o-transform: scale(1.2);
+          transform: scale(1.2); }
 
 /************************** ;PROPUESTAS **************************/
 .propuestas .screen p strong {
@@ -1810,7 +1836,6 @@ body {
   display: inline-block;
   padding: 0 0.4em;
   padding-bottom: 0.1em;
-  /*user-select:none; -o-user-select:none; -moz-user-select:none; -khtml-user-select:none; -webkit-user-select:none;*/
   margin-left: 0.2em;
   vertical-align: top;
   font-family: "FF Meta W01", Helvetica, Arial, sans-serif; }
@@ -1862,13 +1887,7 @@ body {
     z-index: 1;
     width: 110%;
     left: -2%;
-    top: -22%;
-    -moz-transform: scaleX(-1);
-    -o-transform: scaleX(-1);
-    -webkit-transform: scaleX(-1);
-    transform: scaleX(-1);
-    filter: FlipH;
-    -ms-filter: "FlipH"; }
+    top: -22%; }
   .header .pedro-kumamoto {
     width: 49.5%;
     padding-left: 4em;
@@ -1972,11 +1991,10 @@ body {
     position: relative;
     bottom: -12em;
     z-index: 1;
-    user-select: none;
-    -o-user-select: none;
+    -webkit-user-select: none;
     -moz-user-select: none;
-    -khtml-user-select: none;
-    -webkit-user-select: none; }
+    -ms-user-select: none;
+    user-select: none; }
     .navbar a.principios {
       background: #67B2A4; }
     .navbar a.propuestas {
