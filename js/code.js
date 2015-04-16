@@ -125,6 +125,8 @@ var KUMA = {
 			//console.log('leaving anchor', anchor);
 			if(section == 'video') {
 				KUMA.video.pause();
+			} else if(section == 'nosotros') {
+				_(Opentip.tips).each(function(tip) { tip.hide(); });
 			}
 		},
 		options:{
@@ -156,7 +158,7 @@ var KUMA = {
 			['alex', 'Utilizaré todas las opciones y oportunidades para ir en contra de <b>lógicas perniciosas</b>. Creando un proyecto de deseo en la realidad.', 0, 3],
 			['alvaro', 'Los partidos actuales <b>no nos representan</b> y si no tomamos los ciudadanos las riendas, ellos las tomarán por nosotros.', 0, 4],
 			['amairani', 'Haré todo lo que esté en mis manos para que los ciudadanos hagamos <b>propia</b> la política, y qué mejor que hacerlo con un equipo como éste.', 0, 5],
-			['ana', 'Quiero demostrar que la política <b>ni apesta ni es <b>grotesca</b>. Quiero retar con una campaña modelo a todos aquellos que lo olvidaron.', 0, 7],
+			['ana', 'Quiero demostrar que la política <b>ni apesta ni es grotesca</b>. Quiero retar con una campaña modelo a todos aquellos que lo olvidaron.', 0, 7],
 			['ana-gaby', '<b>Amo</b> a México mi país. Basta de tolerancia a un gobierno criminal.', 0, 6],
 			['angel', 'Creo necesaria una democracia participativa y austera. El sistema actual debe cambiar, y <b>no</b> lo hará <b>solo</b>.', 0, 8],
 			['benjamin', 'Soy un creyente de que el pais se construye desde la ciudadania. Me <b>motiva</b> trabajar con gente que desea un mejor Mexico.', 1, 0],
@@ -165,6 +167,7 @@ var KUMA = {
 			['daniel', 'Las decisiones que marcan el rumbo de nuestra ciudad, región o país, deben ser tomadas <b>por y para los ciudadanos</b>, no por los partidos.', 1, 4],
 			['dani', 'Creo que es <b>responsabilidad</b> de todas las personas conscientes de la situación actual del país participar en esta lucha a lado de Kumamoto.', 1, 3],
 			['darlen', 'Me gusta señalar lo que está mal pero también tomo responsabilidad construyendo para cambiarlo. Aquí encontré <b>la forma</b> y <b>las personas</b> para hacerlo.', 1, 5],
+			['david', '', 5, 0],
 			['dulce', 'Para generar un cambio hay que hacer las cosas diferentes, y con un equipo con esta <b>pasión y calidad humana</b> vale la pena intentarlo.', 1, 7],
 			['edgar-1', 'Hacer política no debería ser un estilo de vida sino una <b>práctica diaria</b> para todo aquel que se llame ciudadano.', 1, 8],
 			['edgar-2', 'Este proyecto está haciendo todo lo que considero ético y correcto para actuar políticamente. No participar seria una gran <b>incongruencia</b>.', 1, 9],
@@ -188,17 +191,14 @@ var KUMA = {
 			['nayeli', '<b>Ser joven</b> significa ser dueños de nuestra vida, de nuestro presente y estar dispuestos a desafiar nuestro porvenir.', 3, 7],
 			['pabli', 'Quiero tener la oportunidad de <b>incidir</b> en la política, de forma y fondo, desde la innovación y la acción critica.', 3, 8],
 			['pablo', 'Debemos tomar todas las oportunidades posibles para cambiar nuestras realidades. Se trata de creer en nosotros mismos y <b>no en terceros</b>.', 3, 9],
-			['paola', 'Estoy convencida que este proyecto es un medio de empoderamiento del ciudadano, por la <b>valentía</b> de levantar la voz y actuar', 4, 0],
+			['paola', 'Estoy convencida que este proyecto es un medio de empoderamiento del ciudadano, por la <b>valentía</b> de levantar la voz y actuar.', 4, 0],
 			['pau', 'Tenemos que dejar a un lado la indiferencia y empezar a involucrarnos para poder tener la democracia que nos <b>merecemos</b>.', 4, 1],
 			['pepe', 'El primer paso para humanizar nuestra sociedad es volver a <b>enamorarnos</b> de la política.', 4, 3],
-			//['quique', 'Por re-encontrarme con ese concepto tan vapuleado hoy en dia....democracia', 0, 0],
 			['roberto', 'Ocupar es más que un lema, es <b>devolver</b> la toma de decisiones a la ciudadanía sobre su futuro y la ciudad que queremos.', 4, 4],
 			['rodrigo', 'Creo que debemos de crear la politica que haga posible la <b>vida en común</b>. Nuestra realidad demanda de nosotros actuar aquí y ahora.', 4, 5],
 			['sofia-1', 'La política la construimos <b>todos</b> y estando informados e involucrados podremos generar verdadera política y prácticas más incluyentes y benéficas para la mayoría.', 4, 6],
-			//['sofia-2', '', 4, 7],
 			['susy', 'Necesitamos preguntarnos qué sigue <b>después</b> de nuestro hartazgo. Nadie lo hará por nosotros.', 4, 8],
 			['diego', 'A falta de una opción digna y auténtica, ahora podemos construir una colectivamente, como <b>nunca</b> se ha intentado y cuando más se necesita.', 1, 6],
-			//['tanya', '', 4, 9],
 			['alberto', 'Estoy aquí porque creo que mi generación se perdió en la cotidianidad y <b>conformismo</b>. Confío en Kuma y su equipo para hacer mejor las cosas.', 0, 1],
 			['mariela', 'La mejor manera de acrecentar nuestra democracia es hacerla <b>nuestra</b>. De los ciudadanos. Necesitamos caminar en esa dirección aquí y ahora.', 3, 4]
 		],
@@ -210,35 +210,38 @@ var KUMA = {
 				} );
 			});
 		},
+		faceStyle:{ 
+			target:true,
+			delay:0,
+			background:'#fff',
+			borderColor:'#ccc',
+			style:'dark',
+			//'hideTrigger':'closeButton',
+			tipJoint:'left',
+			stem:'left', 
+			stemLength:20,
+			stemBase:20,
+			group:'nosotros'
+		},
 		boot:function() { var galaxia = $('.screen.nosotros .galaxia'), i = 0;
-			_(KUMA.nosotros.miembros).chain().shuffle().first(32).each(function(miembro) { i+=1; var nombre = miembro[0], xq = miembro[1], x = miembro[2], y = miembro[3];
+			_(KUMA.nosotros.miembros).chain().shuffle().each(function(miembro) { i+=1; var nombre = miembro[0], xq = miembro[1], x = miembro[2], y = miembro[3];
 				galaxia.append('<div class="wiki" data-name="'+nombre+'" data-why="'+xq+'"><span>'+nombre.replace(/\-\d/,'').replace(/-/,' ')+'</span><img src="/img/dot.png" style="background-position:'+(y*-150)+'px '+(x*-150)+'px" data-x="'+x+'" data-y="'+y+'" /></div>');
 				var face = galaxia.find('div.wiki:last');
 				if(xq) {
-					new Opentip(face, '<strong>ESTOY AQUÍ PORQUE:</strong><span>'+xq, {
-						target:true,
-						delay:0,
-						background:'#fff',
-						borderColor:'#ccc',
-						style:'dark',
-						//'hideTrigger':'closeButton',
-						tipJoint:'left',
-						stem:'left', 
-						stemLength:20,
-						stemBase:20
-					});
+					new Opentip(face, '<strong>ESTOY AQUÍ PORQUE:</strong><span>'+xq, KUMA.nosotros.faceStyle);
 				}
 
-				if(i==16) {
+				if(i==20) {
 					$('.screen.nosotros h1').detach().insertAfter('.screen.nosotros .galaxia div.wiki:eq('+(i-1)+')')
 				}
 			});
 			KUMA.nosotros.adjust();
 		},
 		adjust:function() {
-			var scale = KUMA.data.em/12,
+			var prop =  $('#fullPage').hasClass('shortWide') ? 0.72 : 0.84; // faceSide / 12.5em
+				scale = (KUMA.data.em/12)*0.84,
 				w = 1500, //sprite width
-				h = 750; //sprite height
+				h = 900; //sprite height
 
 			$('.screen.nosotros .galaxia div.wiki img').each(function() { var img = $(this), x = img.data('x'), y = img.data('y');
 				img.css( {
@@ -521,13 +524,13 @@ var KUMA = {
 				}
 			},
 			whatLandscape:function() { var data = KUMA.data;
-				var shortFatProp = 1.815;//1366/696;
+				var shortWideProp = 1.815;//1366/696;
 				//console.log( data.prop.screen );
-				if(data.prop.screen >= shortFatProp) {
-					$('#fullPage').addClass('shortFat');
-					//console.log( 'shortFat!' );
+				if(data.prop.screen >= shortWideProp) {
+					$('#fullpage').addClass('shortWide');
+					console.log( 'shortWide!' );
 				} else {
-					$('#fullPage').removeClass('shortFat');
+					$('#fullpage').removeClass('shortWide');
 				}
 			}
 		},

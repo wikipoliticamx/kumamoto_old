@@ -1,4 +1,6 @@
 $crema:#f6f1e9;
+@import "bourbon/bourbon";
+
 body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#fff}
 
 /************************** ;MENU **************************/
@@ -178,10 +180,12 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 	/* VIDEO */
 	&.video { background-color:#ADDFD7; color:black; text-align:center; position:relative; background-repeat:no-repeat; background-position:center top; background-size:100%;
 		.theater {overflow:hidden; background:#000/*#607F8C*/; width:100%; position:absolute; top:0;
-			.date {color:#555; font-size:1.1em; padding-top:2em; text-align:right;}
-			#ytplayer {width:100%; margin:0 auto; display:inline-block; position:absolute; top:5em; transition:all 0.2s ease;}
+			.date {color:#555; font-size:1.1em; padding-top:2em; text-align:right;
+				&:hover {color:white}
+			}
+			#ytplayer {width:100%; margin:0 auto; display:inline-block; position:absolute; top:5em; @include transition(all 0.2s ease);}
 			.sidebar { position:absolute; width:16.6em; right:0; top:0; height:100%; overflow:auto; text-align:center;
-				.soundToggle, .replay { height:6.6em; width:6.6em; margin-top:5em; margin-bottom:2.5em; position:relative; display:inline-block; overflow:hidden; transition: all 0.2s ease; cursor:pointer;
+				.soundToggle, .replay { height:6.6em; width:6.6em; margin-top:5em; margin-bottom:2.5em; position:relative; display:inline-block; overflow:hidden; @include transition(all 0.2s ease); cursor:pointer;
 					img {height:6.6em; }
 					&.muted img {position:absolute; top:0; left:0}
 					&.unMuted img {position:absolute; top:0; left:-6.6em}
@@ -203,7 +207,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 
 		.copy {position:absolute; bottom:3.5em; width:100%; 
 			h1 {font-size:5.6em; line-height:1.11em; margin:0; margin-right:0.8em; margin-top:2.5; position:relative; top:0.2em; display:inline-block; text-transform:uppercase; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; text-align:left;
-				span { opacity:0; position:relative; display:inline-block; transition:all 8s ease;
+				span { opacity:0; position:relative; display:inline-block; @include transition(all 8s ease);
 					&.muros {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:500}
 					&.si {font-size:150%; top:0.2em; color:rgb(152, 95, 96); font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:bold}
 				}
@@ -211,7 +215,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			}
 			p {font-family:"L Futura W01", Helvetica; width:30em; color:#000; display:inline-block; margin:0 auto; vertical-align:top; text-align:left; font-size:1.4em; opacity:0;
 				span {display:block; margin:0.5em 0}
-				strong {transition:all 4s ease; }
+				strong {@include transition(all 4s ease); }
 				b {color:rgb(55, 144, 136)}
 				a {color:black; text-decoration:none; font-style:italic;
 					&:hover {text-decoration:underline}
@@ -221,11 +225,11 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 	}
 
 	/* NOSOTROS */
-	$faceSide:12.5em;
+	$faceSide:10.5em;
 	&.nosotros { background:$crema url(/img/ui/kumatile.jpg); color:white; text-align:center;
-		h1 { font-family:"FF Meta W01", Helvetica, Arial, sans-serif; color:#000; text-align:center; margin:0; font-size:7em; display:inline-block; line-height:1em; vertical-align:middle; width:8.2em; text-transform:uppercase; position:relative;
-			img {height:1.5em; vertical-align:middle}
-			a {position:absolute; bottom:0; font-size:0.4em; line-height:1em; right:1.5em; font-weight:200; color:#999; text-decoration:none;
+		h1 { font-family:"FF Meta W01", Helvetica, Arial, sans-serif; color:#000; text-align:center; margin:0; font-size:7em; display:inline-block; line-height:1em; vertical-align:middle; width:10.3em; text-transform:uppercase; position:relative; letter-spacing:0.2em; margin-top:-0.2em;
+			img {height:1.2em; vertical-align:middle}
+			a {position:absolute; bottom:-0.4em; font-size:0.37em; line-height:1em; letter-spacing:0; right:8.2em; font-weight:200; color:#999; text-decoration:none;
 				&:hover {color:rgb(152, 95, 96)}
 			}
 		}
@@ -233,12 +237,11 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			.azulejo-top, .azulejo-bottom {position:absolute; z-index:1; width:110%; left:-2%}
 				.azulejo-bottom {bottom:-6%}
 				.azulejo-top {top:-6%}
-			div.wiki { display:inline-block; width:$faceSide; height:$faceSide; margin:0.5em 3.3em; text-align:center; position:relative; text-decoration:none; z-index:2; font-size:1em;
+			div.wiki { display:inline-block; width:$faceSide; height:$faceSide; margin:0.7em 2em; text-align:center; position:relative; text-decoration:none; z-index:2; font-size:1em;
 				vertical-align:middle; cursor:pointer;
 				opacity:0; 
-				/*transition: all 0.2s ease;*/
 
-				span {color:white; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:700; text-transform:uppercase; font-size:2.5em; position:absolute; bottom:0.2em; line-height:1em;
+				span {color:white; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:700; text-transform:uppercase; font-size:2em; position:absolute; bottom:0.2em; line-height:1em;
 					visibility:hidden;
 					display:inline-block; width:5em; text-align:center;
 					/*-webkit-text-stroke-width:2px; -webkit-text-stroke-color:#000;*/
@@ -249,9 +252,10 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 					/*-webkit-filter:blur(5px) grayscale(1);*/
 				}
 				&:hover {
-					/*transform:scale(1.3,1.3);*/
+					transform:scale(1.3,1.3); z-index:3; 
+					transition:all 0.2s ease !important; -moz-transition:all 0.2s ease !important; -webkit-transition:all 0.2s ease !important;
 					img {
-						box-shadow:0.15em 0.15em 0.2em #555; vertical-align:middle; 
+						box-shadow:0.15em 0.15em 0.2em #555; vertical-align:middle; border-color:white;
 						/*-webkit-filter:blur(0) grayscale(0);*/
 					}
 					span {visibility:visible}
@@ -317,7 +321,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				.asesor {
 					.portrait {margin-left:0.5em}
 					p {text-align:right; 
-						background:-webkit-linear-gradient(left, transparent, #CBBFAE);
+						@include linear-gradient(to right, transparent, #CBBFAE);
 						padding:0.8em; padding-left:0;
 					}
 				}
@@ -334,8 +338,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 						img {margin-right:0;}
 					}
 					p {
-						background:-webkit-linear-gradient(right, transparent, #CBBFAE);
-						background:-moz-linear-gradient(right, transparent, #CBBFAE);
+						@include linear-gradient(to left, transparent, #CBBFAE);
 						padding:0.8em; padding-right:0;
 					}
 				}
@@ -349,7 +352,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			strong {font-family:"FF Meta W01", Helvetica, Arial, sans-serif}
 		}
 		.carton { position:absolute; left:-28em; top:27em; z-index:5;
-			img {width:25em; box-shadow:0.2em 0.2em 0.2em #aaa; transition: all 1s ease; position:relative; left:0;
+			img {width:25em; box-shadow:0.2em 0.2em 0.2em #aaa; @include transition(all 1s ease); position:relative; left:0;
 				transform:rotate(-10deg); -ms-transform:rotate(-10deg); -webkit-transform:rotate(-10deg);
 			}
 			&.carton9abr {top:10em; 
@@ -364,7 +367,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		}
 		.logos { text-align:center; margin:0 auto; margin-top:2.5em; width:90%; 
 			a { opacity:0; }
-			img {height:4.16em; display:inline-block; margin:0.8em 1.66em; vertical-align:middle; transition: all 0.2s ease;}
+			img {height:4.16em; display:inline-block; margin:0.8em 1.66em; vertical-align:middle; @include transition(all 0.2s ease);}
 			a:hover {
 				img { transform:scale(1.3,1.3); -ms-transform:scale(1.3,1.3); -webkit-transform:scale(1.3,1.3); }
 			}
@@ -379,12 +382,12 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 							em {color:#379088}
 						}
 						&:hover {background:#fff}
-						strong {transition: all 2s ease;}
+						strong {@include transition(all 2s ease);}
 					}
 				}
 				.asesor {display:none}
 				div.logo {display:inline-block; width:25%; text-align:right; height:3.2em;
-					img {width:25em; margin-top:1em; margin-right:2em; transition: all 0.2s ease;}
+					img {width:25em; margin-top:1em; margin-right:2em; @include transition(all 0.2s ease);}
 				}
 				
 				&.maspormas {left:-96em;
@@ -425,7 +428,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				img {height:100%; position:relative; top:0; left:0; margin-top:12em; /*-webkit-filter:grayscale(1); transition: all 2s ease;*/}
 			}
 			.copy { width:50%; float:left; text-align:left; position:relative; font-family:"L Futura W01", Helvetica; overflow:hidden;
-				strong, b {transition: all 2s ease;}
+				strong, b {@include transition(all 2s ease);}
 				p {width:70%; text-align:left; font-size:1.5em; margin-left:7em;}
 				p:nth-of-type(1) { margin-top:4.5em; }
 				/*p:nth-of-type(2) { margin-top:60px; }*/
@@ -442,7 +445,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		a.mapa img {width:100%; position:absolute; top:-60px; left:0}
 		.copy { position:absolute; top:30px; right:-330px; background:#fff; padding:30px; z-index:3; box-shadow:0px 3px 5px #999;
 			.data-maps img {
-				transition: all 0.2s ease;
+				@include transition(all 0.2s ease);
 				height:150px; width:98px; margin:10px; background-repeat:no-repeat;
 				&:hover{
 					transform:scale(1.2,1.2);
@@ -467,7 +470,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				h2 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:3.5em; font-weight:200; text-transform:uppercase; margin-bottom:0.2em;
 					a {
 						color:black; display:block; line-height:2em;
-						background:-webkit-linear-gradient(right, #EACCCC, transparent);
+						@include linear-gradient(to right, transparent, #EACCCC);
 					}
 					strong {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:bold}
 					span {width:4.4em; display:inline-block; position:relative;
@@ -475,11 +478,14 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 					}
 				}
 				h3 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:2.5em; width:100%; text-align:left; margin:0; font-weight:200;
-					a {color:black; height:1.7em; display:block; margin:1.9em 0; background:-webkit-linear-gradient(left, transparent, #E2DACF);
+					a {color:black; height:1.7em; display:block; margin:1.9em 0; 
+						@include linear-gradient(to right, transparent, #E2DACF);
 						span {display:inline-block; width:6em; text-align:center; position:relative; 
 							img {position:absolute; top:-2em; left:0.8em}
 						}
-						&:hover {background:-webkit-linear-gradient(left, transparent, #C5B39A)}
+						&:hover {
+							@include linear-gradient(to right, transparent, #C5B39A);
+						}
 					}
 					strong {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:bold}
 				}
@@ -491,24 +497,24 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				h2, h3 {text-align:right;}
 				h2 a img {margin-left:0.5em; left:0}
 				h2 a:hover {
-					background:-webkit-linear-gradient(right, #D86D74, transparent);
+					@include linear-gradient(to right, transparent, #D86D74);
 				}
 				h3 a img {margin-right:1em}
 			}
 			.gobierno {
 				h2 {text-align:left;
 					a {
-						background:-webkit-linear-gradient(left, #DAECE8, transparent);
+						@include linear-gradient(to left, transparent, #DAECE8);
 						img {margin-left:0.8em; margin-right:0.6em; left:-0.2em;}
 						&:hover {
-							background:-webkit-linear-gradient(left, #93D2C8, transparent);
+							@include linear-gradient(to left, transparent, #93D2C8);
 						}
 					}
 				}
 				h3 {
-					a { background:-webkit-linear-gradient(right, transparent, #E2DACF);
+					a { @include linear-gradient(to left, transparent, #E2DACF);
 						span img {left:1.8em}
-						&:hover {background:-webkit-linear-gradient(right, transparent, #C5B39A);}
+						&:hover {@include linear-gradient(to left, transparent, #C5B39A);}
 					}
 					&.contrapeso a img {height:2.2em; top:-1.5em}
 				}
@@ -550,7 +556,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 						img.kumalogo {position:absolute; height:4em; left:5em; top:1.2em}
 					}
 				}
-				h1 {text-align:left; margin-left:0; margin-top:0; padding:0.4em 0; padding-top:0.2em; padding-left:6em; font-size:5em; background:-webkit-linear-gradient(left, transparent, #EACCCC, transparent); line-height:0.9em}
+				h1 {text-align:left; margin-left:0; margin-top:0; padding:0.4em 0; padding-top:0.2em; padding-left:6em; font-size:5em; @include linear-gradient(to left, transparent, #EACCCC, transparent);}
 				div.icono { margin:2em auto; text-align:center;
 					img {width:25em}
 				}
@@ -568,7 +574,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		&.personas, &.excelencia, &.contrapeso {
 			.text {
 				h2 {background:transparent}
-				h1 {background:webkit-linear-gradient(left, transparent, #BBDAD3, transparent);}
+				h1 {@include linear-gradient(to left, transparent, #BBDAD3, transparent);}
 			}
 		}
 	}
@@ -595,27 +601,28 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 					span {width:4em; display:inline-block; text-align:center; position:relative;
 						img {height:2.5em; vertical-align:middle; position:absolute; top:-1.5em; left:0.3em}
 					}
-					&.colectiva {background:-webkit-linear-gradient(left, transparent, #B7D8D4);
+					&.colectiva {
+						@include linear-gradient(to right, transparent, #B7D8D4);
 						span {width:4.5em;}
-						&:hover {background:-webkit-linear-gradient(left, transparent, #5fc5b8)}
+						&:hover {@include linear-gradient(to right, transparent, #5fc5b8);}
 					}
-					&.participacion {background:-webkit-linear-gradient(left, transparent, #C2DBE4);
-						&:hover {background:-webkit-linear-gradient(left, transparent, #8cb7c7)}
+					&.participacion {@include linear-gradient(to right, transparent, #C2DBE4);
+						&:hover {@include linear-gradient(to right, transparent, #8cb7c7)}
 					}
-					&.apertura {background:-webkit-linear-gradient(left, transparent, #B4B4BB);
-						&:hover {background:-webkit-linear-gradient(left, transparent, #626264);}
+					&.apertura {@include linear-gradient(to right, transparent, #B4B4BB);
+						&:hover {@include linear-gradient(to right, transparent, #626264);}
 					}
-					&.innovacion {background:-webkit-linear-gradient(left, transparent, #EDAC9C);
-						&:hover {background:-webkit-linear-gradient(left, transparent, #d6765e)}
+					&.innovacion {@include linear-gradient(to right, transparent, #EDAC9C);
+						&:hover {@include linear-gradient(to right, transparent, #d6765e)}
 					}
-					&.transparencia {background:-webkit-linear-gradient(right, transparent, #E8A3A7);
-						&:hover {background:-webkit-linear-gradient(right, transparent, #c8595f)}
+					&.transparencia {@include linear-gradient(to left, transparent, #E8A3A7);
+						&:hover {@include linear-gradient(to left, transparent, #c8595f)}
 					}
-					&.derechos {background:-webkit-linear-gradient(right, transparent, #EDC2D4);
-						&:hover {background:-webkit-linear-gradient(right, transparent, #d98ead)}
+					&.derechos {@include linear-gradient(to left, transparent, #EDC2D4);
+						&:hover {@include linear-gradient(to left, transparent, #d98ead)}
 					}
-					&.genero {background:-webkit-linear-gradient(right, transparent, #DBCCE0);
-						&:hover {background:-webkit-linear-gradient(right, transparent, #b8a6be)}
+					&.genero {@include linear-gradient(to left, transparent, #DBCCE0);
+						&:hover {@include linear-gradient(to left, transparent, #b8a6be)}
 					}
 				}
 				.left, .right {width:49%; display:inline-block; vertical-align:top; text-align:left}
@@ -649,30 +656,30 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		}
 		
 		&.colectiva { 
-			h2 {background:-webkit-linear-gradient(left, transparent, #5fc5b8, transparent);}
+			h2 {@include linear-gradient(to left, transparent, #5fc5b8, transparent);}
 			.text > .icono img {width:40em}
 		}
 		&.participacion {
-			h2 {background:-webkit-linear-gradient(left, transparent, #8cb7c7, transparent);}
+			h2 {@include linear-gradient(to left, transparent, #8cb7c7, transparent);}
 		}
 		&.apertura {
-			h2 {background:-webkit-linear-gradient(left, transparent, #626264, transparent); color:white;}
+			h2 {@include linear-gradient(to left, transparent, #626264, transparent); color:white;}
 			.text > .icono img {width:30em}
 		}
 		&.innovacion {
-			h2 {background:-webkit-linear-gradient(left, transparent, #d6765e, transparent);}
+			h2 {@include linear-gradient(to left, transparent, #d6765e, transparent);}
 			.text > .icono img {width:30em}
 		}
 		&.transparencia {
-			h2 {background:-webkit-linear-gradient(left, transparent, #c8595f, transparent);}
+			h2 {@include linear-gradient(to left, transparent, #c8595f, transparent);}
 			.text > .icono img {width:25em}
 		}
 		&.derechos {
-			h2 {background:-webkit-linear-gradient(left, transparent, #d98ead, transparent);}
+			h2 {@include linear-gradient(to left, transparent, #d98ead, transparent);}
 			.text > .icono img {width:30em}
 		}
 		&.genero {
-			h2 {background:-webkit-linear-gradient(left, transparent, #b8a6be, transparent);}
+			h2 {@include linear-gradient(to left, transparent, #b8a6be, transparent);}
 		}
 	}
 }
@@ -698,19 +705,19 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 					}
 				}
 				a.en-campanha { text-align:right;
-					background:-webkit-linear-gradient(right, #EACCCC, transparent);
+					@include linear-gradient(to right, transparent, #EACCCC);
 					img {text-align:right; height:2.1em; top:-1.5em; left:-0.7em}
 					&:hover {
-						background:-webkit-linear-gradient(right, #D86D74, transparent);
+						@include linear-gradient(to right, transparent, #D86D74);
 					}
 				}
 				a.en-el-congreso {text-align:left;
-					background:-webkit-linear-gradient(left, #DAECE8, transparent);
+					@include linear-gradient(to left, transparent, #DAECE8);
 					span {width:4em;
 						img {top:-2em; left:-0.2em}
 					}
 					&:hover {
-						background:-webkit-linear-gradient(left, #93D2C8, transparent);
+						@include linear-gradient(to left, transparent, #93D2C8);
 					}
 				}
 			}
@@ -778,12 +785,12 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		}
 		&.campanha {
 			h2 {
-				background:-webkit-linear-gradient(left, transparent, #EACCCC, transparent);
+				@include linear-gradient(to left, transparent, #EACCCC, transparent);
 			}
 		}
 		&.congreso {
 			h2 {
-				background:-webkit-linear-gradient(left, transparent, #BBDAD3, transparent);
+				@include linear-gradient(to left, transparent, #BBDAD3, transparent);
 			}
 			.icono {margin-top:1.3em}
 		}
@@ -918,7 +925,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 }
 
 /************************** ;GOODBYE **************************/
-#goodbye { position:absolute; bottom:-8em; background:#333; height:5em; line-height:4em; width:100%; text-align:center; color:#fff; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; z-index:10; transition:all 1s ease;
+#goodbye { position:absolute; bottom:-8em; background:#333; height:5em; line-height:4em; width:100%; text-align:center; color:#fff; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; z-index:10; @include transition(all 1s ease);
 	&.emerge {bottom:-0.4em}
 	h1 {display:inline-block; margin:0; font-size:2.5em; height:100%; margin-right:1.5em; vertical-align:middle;
 		span {display:inline-block; margin-top:0.1em}
@@ -940,3 +947,13 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 	}
 	.wikipolitica {display:inline-block; }
 }
+
+
+/************************** ;RESPONSIVE madness **************************/
+.shortWide {
+	.screen.nosotros .galaxia div.wiki {
+		width:9em; height:9em; margin:0.7em 2.6em;
+		img {width:9em; height:9em}
+	}
+}
+

@@ -397,7 +397,7 @@ body {
     background-size: 100%; }
     .screen.video .theater {
       overflow: hidden;
-      background: black;
+      background: #000;
       width: 100%;
       position: absolute;
       top: 0; }
@@ -406,12 +406,16 @@ body {
         font-size: 1.1em;
         padding-top: 2em;
         text-align: right; }
+        .screen.video .theater .date:hover {
+          color: white; }
       .screen.video .theater #ytplayer {
         width: 100%;
         margin: 0 auto;
         display: inline-block;
         position: absolute;
         top: 5em;
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
         transition: all 0.2s ease; }
       .screen.video .theater .sidebar {
         position: absolute;
@@ -429,6 +433,8 @@ body {
           position: relative;
           display: inline-block;
           overflow: hidden;
+          -webkit-transition: all 0.2s ease;
+          -moz-transition: all 0.2s ease;
           transition: all 0.2s ease;
           cursor: pointer; }
           .screen.video .theater .sidebar .soundToggle img, .screen.video .theater .sidebar .replay img {
@@ -478,6 +484,8 @@ body {
           opacity: 0;
           position: relative;
           display: inline-block;
+          -webkit-transition: all 8s ease;
+          -moz-transition: all 8s ease;
           transition: all 8s ease; }
           .screen.video .copy h1 span.muros {
             font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
@@ -504,6 +512,8 @@ body {
           display: block;
           margin: 0.5em 0; }
         .screen.video .copy p strong {
+          -webkit-transition: all 4s ease;
+          -moz-transition: all 4s ease;
           transition: all 4s ease; }
         .screen.video .copy p b {
           color: #379088; }
@@ -526,18 +536,21 @@ body {
       display: inline-block;
       line-height: 1em;
       vertical-align: middle;
-      width: 8.2em;
+      width: 10.3em;
       text-transform: uppercase;
-      position: relative; }
+      position: relative;
+      letter-spacing: 0.2em;
+      margin-top: -0.2em; }
       .screen.nosotros h1 img {
-        height: 1.5em;
+        height: 1.2em;
         vertical-align: middle; }
       .screen.nosotros h1 a {
         position: absolute;
-        bottom: 0;
-        font-size: 0.4em;
+        bottom: -0.4em;
+        font-size: 0.37em;
         line-height: 1em;
-        right: 1.5em;
+        letter-spacing: 0;
+        right: 8.2em;
         font-weight: 200;
         color: #999;
         text-decoration: none; }
@@ -560,9 +573,9 @@ body {
         top: -6%; }
       .screen.nosotros .galaxia div.wiki {
         display: inline-block;
-        width: 12.5em;
-        height: 12.5em;
-        margin: 0.5em 3.3em;
+        width: 10.5em;
+        height: 10.5em;
+        margin: 0.7em 2em;
         text-align: center;
         position: relative;
         text-decoration: none;
@@ -570,14 +583,13 @@ body {
         font-size: 1em;
         vertical-align: middle;
         cursor: pointer;
-        opacity: 0;
-        /*transition: all 0.2s ease;*/ }
+        opacity: 0; }
         .screen.nosotros .galaxia div.wiki span {
           color: white;
           font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
           font-weight: 700;
           text-transform: uppercase;
-          font-size: 2.5em;
+          font-size: 2em;
           position: absolute;
           bottom: 0.2em;
           line-height: 1em;
@@ -588,8 +600,8 @@ body {
           /*-webkit-text-stroke-width:2px; -webkit-text-stroke-color:#000;*/
           z-index: 2; }
         .screen.nosotros .galaxia div.wiki img {
-          width: 12.5em;
-          height: 12.5em;
+          width: 10.5em;
+          height: 10.5em;
           position: relative;
           z-index: 1;
           border: 1px solid #aaa;
@@ -597,10 +609,15 @@ body {
           box-shadow: 0.15em 0.15em 0.2em #999;
           /*-webkit-filter:blur(5px) grayscale(1);*/ }
         .screen.nosotros .galaxia div.wiki:hover {
-          /*transform:scale(1.3,1.3);*/ }
+          transform: scale(1.3, 1.3);
+          z-index: 3;
+          transition: all 0.2s ease !important;
+          -moz-transition: all 0.2s ease !important;
+          -webkit-transition: all 0.2s ease !important; }
           .screen.nosotros .galaxia div.wiki:hover img {
             box-shadow: 0.15em 0.15em 0.2em #555;
             vertical-align: middle;
+            border-color: white;
             /*-webkit-filter:blur(0) grayscale(0);*/ }
           .screen.nosotros .galaxia div.wiki:hover span {
             visibility: visible; }
@@ -749,7 +766,9 @@ body {
           margin-left: 0.5em; }
         .screen.asesores div.asesores .left .asesor p {
           text-align: right;
-          background: -webkit-linear-gradient(left, transparent, #cbbfae);
+          background-color: transparent;
+          background-image: -webkit-linear-gradient(left, transparent, #CBBFAE);
+          background-image: linear-gradient(to right,transparent, #CBBFAE);
           padding: 0.8em;
           padding-left: 0; }
         .screen.asesores div.asesores .left .card {
@@ -771,8 +790,9 @@ body {
             .screen.asesores div.asesores .right .asesor .portrait img {
               margin-right: 0; }
           .screen.asesores div.asesores .right .asesor p {
-            background: -webkit-linear-gradient(right, transparent, #cbbfae);
-            background: -moz-linear-gradient(right, transparent, #cbbfae);
+            background-color: transparent;
+            background-image: -webkit-linear-gradient(right, transparent, #CBBFAE);
+            background-image: linear-gradient(to left,transparent, #CBBFAE);
             padding: 0.8em;
             padding-right: 0; }
   .screen.medios {
@@ -797,6 +817,8 @@ body {
       .screen.medios .carton img {
         width: 25em;
         box-shadow: 0.2em 0.2em 0.2em #aaa;
+        -webkit-transition: all 1s ease;
+        -moz-transition: all 1s ease;
         transition: all 1s ease;
         position: relative;
         left: 0;
@@ -826,6 +848,8 @@ body {
         display: inline-block;
         margin: 0.8em 1.66em;
         vertical-align: middle;
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
         transition: all 0.2s ease; }
       .screen.medios .logos a:hover img {
         transform: scale(1.3, 1.3);
@@ -872,6 +896,8 @@ body {
             .screen.medios .citas .medio .copy a:hover {
               background: #fff; }
             .screen.medios .citas .medio .copy a strong {
+              -webkit-transition: all 2s ease;
+              -moz-transition: all 2s ease;
               transition: all 2s ease; }
         .screen.medios .citas .medio .asesor {
           display: none; }
@@ -884,6 +910,8 @@ body {
             width: 25em;
             margin-top: 1em;
             margin-right: 2em;
+            -webkit-transition: all 0.2s ease;
+            -moz-transition: all 0.2s ease;
             transition: all 0.2s ease; }
         .screen.medios .citas .medio.maspormas {
           left: -96em; }
@@ -970,6 +998,8 @@ body {
         overflow: hidden;
         /*p:nth-of-type(2) { margin-top:60px; }*/ }
         .screen.acercade .yo-kuma .copy strong, .screen.acercade .yo-kuma .copy b {
+          -webkit-transition: all 2s ease;
+          -moz-transition: all 2s ease;
           transition: all 2s ease; }
         .screen.acercade .yo-kuma .copy p {
           width: 70%;
@@ -1019,6 +1049,8 @@ body {
       z-index: 3;
       box-shadow: 0px 3px 5px #999; }
       .screen.mapa .copy .data-maps img {
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
         transition: all 0.2s ease;
         height: 150px;
         width: 98px;
@@ -1063,7 +1095,9 @@ body {
         color: black;
         display: block;
         line-height: 2em;
-        background: -webkit-linear-gradient(right, #eacccc, transparent); }
+        background-color: transparent;
+        background-image: -webkit-linear-gradient(left, transparent, #EACCCC);
+        background-image: linear-gradient(to right,transparent, #EACCCC); }
       .propuestas .screen.toc .ciudad h2 strong, .propuestas .screen.toc .gobierno h2 strong {
         font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
         font-weight: bold; }
@@ -1089,7 +1123,9 @@ body {
         height: 1.7em;
         display: block;
         margin: 1.9em 0;
-        background: -webkit-linear-gradient(left, transparent, #e2dacf); }
+        background-color: transparent;
+        background-image: -webkit-linear-gradient(left, transparent, #E2DACF);
+        background-image: linear-gradient(to right,transparent, #E2DACF); }
         .propuestas .screen.toc .ciudad h3 a span, .propuestas .screen.toc .gobierno h3 a span {
           display: inline-block;
           width: 6em;
@@ -1100,7 +1136,9 @@ body {
             top: -2em;
             left: 0.8em; }
         .propuestas .screen.toc .ciudad h3 a:hover, .propuestas .screen.toc .gobierno h3 a:hover {
-          background: -webkit-linear-gradient(left, transparent, #c5b39a); }
+          background-color: transparent;
+          background-image: -webkit-linear-gradient(left, transparent, #C5B39A);
+          background-image: linear-gradient(to right,transparent, #C5B39A); }
       .propuestas .screen.toc .ciudad h3 strong, .propuestas .screen.toc .gobierno h3 strong {
         font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
         font-weight: bold; }
@@ -1115,25 +1153,35 @@ body {
     margin-left: 0.5em;
     left: 0; }
   .propuestas .screen.toc .ciudad h2 a:hover {
-    background: -webkit-linear-gradient(right, #d86d74, transparent); }
+    background-color: transparent;
+    background-image: -webkit-linear-gradient(left, transparent, #D86D74);
+    background-image: linear-gradient(to right,transparent, #D86D74); }
   .propuestas .screen.toc .ciudad h3 a img {
     margin-right: 1em; }
   .propuestas .screen.toc .gobierno h2 {
     text-align: left; }
     .propuestas .screen.toc .gobierno h2 a {
-      background: -webkit-linear-gradient(left, #daece8, transparent); }
+      background-color: transparent;
+      background-image: -webkit-linear-gradient(right, transparent, #DAECE8);
+      background-image: linear-gradient(to left,transparent, #DAECE8); }
       .propuestas .screen.toc .gobierno h2 a img {
         margin-left: 0.8em;
         margin-right: 0.6em;
         left: -0.2em; }
       .propuestas .screen.toc .gobierno h2 a:hover {
-        background: -webkit-linear-gradient(left, #93d2c8, transparent); }
+        background-color: transparent;
+        background-image: -webkit-linear-gradient(right, transparent, #93D2C8);
+        background-image: linear-gradient(to left,transparent, #93D2C8); }
   .propuestas .screen.toc .gobierno h3 a {
-    background: -webkit-linear-gradient(right, transparent, #e2dacf); }
+    background-color: transparent;
+    background-image: -webkit-linear-gradient(right, transparent, #E2DACF);
+    background-image: linear-gradient(to left,transparent, #E2DACF); }
     .propuestas .screen.toc .gobierno h3 a span img {
       left: 1.8em; }
     .propuestas .screen.toc .gobierno h3 a:hover {
-      background: -webkit-linear-gradient(right, transparent, #c5b39a); }
+      background-color: transparent;
+      background-image: -webkit-linear-gradient(right, transparent, #C5B39A);
+      background-image: linear-gradient(to left,transparent, #C5B39A); }
   .propuestas .screen.toc .gobierno h3.contrapeso a img {
     height: 2.2em;
     top: -1.5em; }
@@ -1237,8 +1285,9 @@ body {
       padding-top: 0.2em;
       padding-left: 6em;
       font-size: 5em;
-      background: -webkit-linear-gradient(left, transparent, #eacccc, transparent);
-      line-height: 0.9em; }
+      background-color: transparent;
+      background-image: -webkit-linear-gradient(right, transparent, #EACCCC, transparent);
+      background-image: linear-gradient(to left,transparent, #EACCCC, transparent); }
     .propuestas .screen.democratica .text div.icono, .propuestas .screen.sostenible .text div.icono, .propuestas .screen.incluyente .text div.icono, .propuestas .screen.personas .text div.icono, .propuestas .screen.excelencia .text div.icono, .propuestas .screen.contrapeso .text div.icono {
       margin: 2em auto;
       text-align: center; }
@@ -1271,7 +1320,9 @@ body {
 .propuestas .screen.personas .text h2, .propuestas .screen.excelencia .text h2, .propuestas .screen.contrapeso .text h2 {
   background: transparent; }
 .propuestas .screen.personas .text h1, .propuestas .screen.excelencia .text h1, .propuestas .screen.contrapeso .text h1 {
-  background: webkit-linear-gradient(left, transparent, #bbdad3, transparent); }
+  background-color: transparent;
+  background-image: -webkit-linear-gradient(right, transparent, #BBDAD3, transparent);
+  background-image: linear-gradient(to left,transparent, #BBDAD3, transparent); }
 
 /************************** ;PRINCIPIOS **************************/
 .principios {
@@ -1348,35 +1399,63 @@ body {
           top: -1.5em;
           left: 0.3em; }
       .principios .screen.toc .lista a.colectiva {
-        background: -webkit-linear-gradient(left, transparent, #b7d8d4); }
+        background-color: transparent;
+        background-image: -webkit-linear-gradient(left, transparent, #B7D8D4);
+        background-image: linear-gradient(to right,transparent, #B7D8D4); }
         .principios .screen.toc .lista a.colectiva span {
           width: 4.5em; }
         .principios .screen.toc .lista a.colectiva:hover {
-          background: -webkit-linear-gradient(left, transparent, #5fc5b8); }
+          background-color: transparent;
+          background-image: -webkit-linear-gradient(left, transparent, #5fc5b8);
+          background-image: linear-gradient(to right,transparent, #5fc5b8); }
       .principios .screen.toc .lista a.participacion {
-        background: -webkit-linear-gradient(left, transparent, #c2dbe4); }
+        background-color: transparent;
+        background-image: -webkit-linear-gradient(left, transparent, #C2DBE4);
+        background-image: linear-gradient(to right,transparent, #C2DBE4); }
         .principios .screen.toc .lista a.participacion:hover {
-          background: -webkit-linear-gradient(left, transparent, #8cb7c7); }
+          background-color: transparent;
+          background-image: -webkit-linear-gradient(left, transparent, #8cb7c7);
+          background-image: linear-gradient(to right,transparent, #8cb7c7); }
       .principios .screen.toc .lista a.apertura {
-        background: -webkit-linear-gradient(left, transparent, #b4b4bb); }
+        background-color: transparent;
+        background-image: -webkit-linear-gradient(left, transparent, #B4B4BB);
+        background-image: linear-gradient(to right,transparent, #B4B4BB); }
         .principios .screen.toc .lista a.apertura:hover {
-          background: -webkit-linear-gradient(left, transparent, #626264); }
+          background-color: transparent;
+          background-image: -webkit-linear-gradient(left, transparent, #626264);
+          background-image: linear-gradient(to right,transparent, #626264); }
       .principios .screen.toc .lista a.innovacion {
-        background: -webkit-linear-gradient(left, transparent, #edac9c); }
+        background-color: transparent;
+        background-image: -webkit-linear-gradient(left, transparent, #EDAC9C);
+        background-image: linear-gradient(to right,transparent, #EDAC9C); }
         .principios .screen.toc .lista a.innovacion:hover {
-          background: -webkit-linear-gradient(left, transparent, #d6765e); }
+          background-color: transparent;
+          background-image: -webkit-linear-gradient(left, transparent, #d6765e);
+          background-image: linear-gradient(to right,transparent, #d6765e); }
       .principios .screen.toc .lista a.transparencia {
-        background: -webkit-linear-gradient(right, transparent, #e8a3a7); }
+        background-color: transparent;
+        background-image: -webkit-linear-gradient(right, transparent, #E8A3A7);
+        background-image: linear-gradient(to left,transparent, #E8A3A7); }
         .principios .screen.toc .lista a.transparencia:hover {
-          background: -webkit-linear-gradient(right, transparent, #c8595f); }
+          background-color: transparent;
+          background-image: -webkit-linear-gradient(right, transparent, #c8595f);
+          background-image: linear-gradient(to left,transparent, #c8595f); }
       .principios .screen.toc .lista a.derechos {
-        background: -webkit-linear-gradient(right, transparent, #edc2d4); }
+        background-color: transparent;
+        background-image: -webkit-linear-gradient(right, transparent, #EDC2D4);
+        background-image: linear-gradient(to left,transparent, #EDC2D4); }
         .principios .screen.toc .lista a.derechos:hover {
-          background: -webkit-linear-gradient(right, transparent, #d98ead); }
+          background-color: transparent;
+          background-image: -webkit-linear-gradient(right, transparent, #d98ead);
+          background-image: linear-gradient(to left,transparent, #d98ead); }
       .principios .screen.toc .lista a.genero {
-        background: -webkit-linear-gradient(right, transparent, #dbcce0); }
+        background-color: transparent;
+        background-image: -webkit-linear-gradient(right, transparent, #DBCCE0);
+        background-image: linear-gradient(to left,transparent, #DBCCE0); }
         .principios .screen.toc .lista a.genero:hover {
-          background: -webkit-linear-gradient(right, transparent, #b8a6be); }
+          background-color: transparent;
+          background-image: -webkit-linear-gradient(right, transparent, #b8a6be);
+          background-image: linear-gradient(to left,transparent, #b8a6be); }
     .principios .screen.toc .lista .left, .principios .screen.toc .lista .right {
       width: 49%;
       display: inline-block;
@@ -1438,30 +1517,44 @@ body {
         margin-top: 4em;
         width: 35em; }
   .principios .screen.colectiva h2 {
-    background: -webkit-linear-gradient(left, transparent, #5fc5b8, transparent); }
+    background-color: transparent;
+    background-image: -webkit-linear-gradient(right, transparent, #5fc5b8, transparent);
+    background-image: linear-gradient(to left,transparent, #5fc5b8, transparent); }
   .principios .screen.colectiva .text > .icono img {
     width: 40em; }
   .principios .screen.participacion h2 {
-    background: -webkit-linear-gradient(left, transparent, #8cb7c7, transparent); }
+    background-color: transparent;
+    background-image: -webkit-linear-gradient(right, transparent, #8cb7c7, transparent);
+    background-image: linear-gradient(to left,transparent, #8cb7c7, transparent); }
   .principios .screen.apertura h2 {
-    background: -webkit-linear-gradient(left, transparent, #626264, transparent);
+    background-color: transparent;
+    background-image: -webkit-linear-gradient(right, transparent, #626264, transparent);
+    background-image: linear-gradient(to left,transparent, #626264, transparent);
     color: white; }
   .principios .screen.apertura .text > .icono img {
     width: 30em; }
   .principios .screen.innovacion h2 {
-    background: -webkit-linear-gradient(left, transparent, #d6765e, transparent); }
+    background-color: transparent;
+    background-image: -webkit-linear-gradient(right, transparent, #d6765e, transparent);
+    background-image: linear-gradient(to left,transparent, #d6765e, transparent); }
   .principios .screen.innovacion .text > .icono img {
     width: 30em; }
   .principios .screen.transparencia h2 {
-    background: -webkit-linear-gradient(left, transparent, #c8595f, transparent); }
+    background-color: transparent;
+    background-image: -webkit-linear-gradient(right, transparent, #c8595f, transparent);
+    background-image: linear-gradient(to left,transparent, #c8595f, transparent); }
   .principios .screen.transparencia .text > .icono img {
     width: 25em; }
   .principios .screen.derechos h2 {
-    background: -webkit-linear-gradient(left, transparent, #d98ead, transparent); }
+    background-color: transparent;
+    background-image: -webkit-linear-gradient(right, transparent, #d98ead, transparent);
+    background-image: linear-gradient(to left,transparent, #d98ead, transparent); }
   .principios .screen.derechos .text > .icono img {
     width: 30em; }
   .principios .screen.genero h2 {
-    background: -webkit-linear-gradient(left, transparent, #b8a6be, transparent); }
+    background-color: transparent;
+    background-image: -webkit-linear-gradient(right, transparent, #b8a6be, transparent);
+    background-image: linear-gradient(to left,transparent, #b8a6be, transparent); }
 
 /************************** ;COMPROMISOS **************************/
 .compromisos .screen {
@@ -1521,24 +1614,32 @@ body {
             position: absolute; }
       .compromisos .screen.toc div.toc a.en-campanha {
         text-align: right;
-        background: -webkit-linear-gradient(right, #eacccc, transparent); }
+        background-color: transparent;
+        background-image: -webkit-linear-gradient(left, transparent, #EACCCC);
+        background-image: linear-gradient(to right,transparent, #EACCCC); }
         .compromisos .screen.toc div.toc a.en-campanha img {
           text-align: right;
           height: 2.1em;
           top: -1.5em;
           left: -0.7em; }
         .compromisos .screen.toc div.toc a.en-campanha:hover {
-          background: -webkit-linear-gradient(right, #d86d74, transparent); }
+          background-color: transparent;
+          background-image: -webkit-linear-gradient(left, transparent, #D86D74);
+          background-image: linear-gradient(to right,transparent, #D86D74); }
       .compromisos .screen.toc div.toc a.en-el-congreso {
         text-align: left;
-        background: -webkit-linear-gradient(left, #daece8, transparent); }
+        background-color: transparent;
+        background-image: -webkit-linear-gradient(right, transparent, #DAECE8);
+        background-image: linear-gradient(to left,transparent, #DAECE8); }
         .compromisos .screen.toc div.toc a.en-el-congreso span {
           width: 4em; }
           .compromisos .screen.toc div.toc a.en-el-congreso span img {
             top: -2em;
             left: -0.2em; }
         .compromisos .screen.toc div.toc a.en-el-congreso:hover {
-          background: -webkit-linear-gradient(left, #93d2c8, transparent); }
+          background-color: transparent;
+          background-image: -webkit-linear-gradient(right, transparent, #93D2C8);
+          background-image: linear-gradient(to left,transparent, #93D2C8); }
   .compromisos .screen .text {
     width: 69.5%;
     display: inline-block;
@@ -1640,9 +1741,13 @@ body {
       margin-left: -4em;
       margin-top: 1em; }
   .compromisos .screen.campanha h2 {
-    background: -webkit-linear-gradient(left, transparent, #eacccc, transparent); }
+    background-color: transparent;
+    background-image: -webkit-linear-gradient(right, transparent, #EACCCC, transparent);
+    background-image: linear-gradient(to left,transparent, #EACCCC, transparent); }
   .compromisos .screen.congreso h2 {
-    background: -webkit-linear-gradient(left, transparent, #bbdad3, transparent); }
+    background-color: transparent;
+    background-image: -webkit-linear-gradient(right, transparent, #BBDAD3, transparent);
+    background-image: linear-gradient(to left,transparent, #BBDAD3, transparent); }
   .compromisos .screen.congreso .icono {
     margin-top: 1.3em; }
   .compromisos .screen.bienvenida {
@@ -1917,6 +2022,8 @@ body {
   color: #fff;
   font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
   z-index: 10;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
   transition: all 1s ease; }
   #goodbye.emerge {
     bottom: -0.4em; }
@@ -1969,3 +2076,14 @@ body {
       font-weight: 200; }
   #goodbye .wikipolitica {
     display: inline-block; }
+
+/************************** ;RESPONSIVE madness **************************/
+.shortWide .screen.nosotros .galaxia div.wiki {
+  width: 9em;
+  height: 9em;
+  margin: 0.7em 2.6em; }
+  .shortWide .screen.nosotros .galaxia div.wiki img {
+    width: 9em;
+    height: 9em; }
+
+/*# sourceMappingURL=style.css.map */
