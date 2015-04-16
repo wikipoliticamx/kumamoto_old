@@ -240,21 +240,26 @@ var KUMA = {
 			});
 			KUMA.nosotros.adjust();
 			var tudequevas = 'Sobre cuándo se es ya parte innegable de esta red de voluntarios que es la wiki, Franco de Vita debió haber cantado algo así como:<br /><br /> &laquo;Si le he dado todo lo que tengo,<br /> <nobr>hasta quedar en deuda conmigo misme,</nobr><br /> y todavía preguntas, si soy wiki,<br /> tú de que vas.<br /><br /> Si no hay un minuto de mi tiempo,<br /> que no me pase por el pensamiento,<br /> y todavía preguntas si soy wiki.&raquo;';
-			new Opentip(galaxia.find('h1 img'), tudequevas, {style:'glass'});
-			
+			new Opentip($('.screen.nosotros h1 img'), tudequevas, {style:'glass'});
 		},
-		adjust:function() {
-			var prop =  $('#fullPage').hasClass('shortWide') ? 0.72 : 0.84; // faceSide / 12.5em
-				scale = (KUMA.data.em/12)*0.84,
+		adjust:function() { var galaxia = $('.screen.nosotros .galaxia');
+			var prop =  {normal:0.84, shortWide:0.72, portrait:1.2, boxy:0.84, tallNarrow:1.44}[$('#fullpage').data('orientation')]; // faceSide / 12.5em
+				scale = (KUMA.data.em/12)*prop,
 				w = 1500, //sprite width
 				h = 900; //sprite height
 
-			$('.screen.nosotros .galaxia div.wiki img').each(function() { var img = $(this), x = img.data('x'), y = img.data('y');
+			galaxia.find('div.wiki img').each(function() { var img = $(this), x = img.data('x'), y = img.data('y');
 				img.css( {
 					'background-size':(w*scale)+'px '+(h*scale)+'px',
 					'background-position':(y*-150*scale)+'px '+(x*-150*scale)+'px'
 				});
 			});
+
+			var orientedI = {normal:19, shortWide:19, portrait:20, boxy:19, tallNarrow:18}[$('#fullpage').data('orientation')];
+			if( galaxia.find('div.wiki').length > 0) {
+				$('.screen.nosotros h1').detach().insertAfter(galaxia.find('div.wiki:eq('+(orientedI)+')'));
+			}
+
 		}
 	},
 	// --------------------
@@ -361,7 +366,7 @@ var KUMA = {
 			}
 		},
 		blur:function() { var p = KUMA.player;
-			if(p) {
+			if(typeof p == 'undefined') {
 				//console.log('blur!');
 				p.pauseVideo();
 				(!KUMA.mobile) && p.unMute();
@@ -383,14 +388,14 @@ var KUMA = {
 			}
 		},
 		play:function() { var p = KUMA.player;
-			if(p) {
+			if(typeof p == 'undefined') {
 				KUMA.video._play();
 			} else {
 				KUMA.video.afterReady = KUMA.video._play;
 			}
 		},
 		pause:function() { var p = KUMA.player;
-			if(p) {
+			if(typeof p == 'undefined') {
 				p.pauseVideo();
 				if($('.soundToggle.unMuted').length > 0) {
 					(!KUMA.mobile) && KUMA.player.unMute();
@@ -561,7 +566,7 @@ var KUMA = {
 				}
 			},
 			portraitLandscape:function() { var data = KUMA.data;
-				var orientations = 'boxy shortWide portrait',
+				var orientations = 'shortWide normal boxy portrait tallNarrow',
 					clear = function() {
 						$('#fullpage').removeClass(orientations);
 					},
@@ -569,16 +574,19 @@ var KUMA = {
 				clear();
 				if(prop >= 1.815) { //1366/696;
 					console.log('shortWide!', prop);
-					$('#fullpage').addClass('shortWide');
+					$('#fullpage').addClass('shortWide').data('orientation', 'shortWide');
 				} else if(prop >= 1.5) { //base
 					console.log('normal!', prop);
+					$('#fullpage').addClass('normal').data('orientation', 'normal');
 				} else if(prop >= 1) {
 					console.log('boxy!', prop);
-					KUMA.data.
-					$('#fullpage').addClass('boxy');
+					$('#fullpage').addClass('boxy').data('orientation', 'boxy');
+				} else if(prop >= 0.7) {
+					console.log('portrait!', prop);
+					$('#fullpage').addClass('boxy').data('orientation', 'portrait');
 				} else {
-					console.log('shortWide!', prop);
-					$('#fullpage').addClass('potrait');
+					console.log('tallNarrow!', prop);
+					$('#fullpage').addClass('tallNarrow').data('orientation', 'tallNarrow');
 				}
 			}
 		},

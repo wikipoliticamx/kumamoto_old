@@ -984,4 +984,39 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			a {display:none}
 		}
 	}
+	.screen.nosotros .galaxia div.wiki { margin:1.4em 2em}
 }
+
+.portrait {
+	.screen.nosotros {
+		h1 {width:100%; margin:0.4em 0;
+			a {bottom:1.5em; right:7.2em}
+		}
+		.galaxia {
+			.azulejo-top {top:-2%}
+			.azulejo-bottom {bottom:-2%}
+			div.wiki { margin:1.5em 1.5em; width:15em; height:15em;
+				img {width:15em; height:15em;}
+				span {font-size:3em}
+			}
+		}
+	}
+}
+
+.tallNarrow {
+	.screen.nosotros {
+		h1 {width:10.8em; margin:0.4em 0; font-size:8em;
+			a {bottom:-0.6em; right:8.2em}
+		}
+		.galaxia {
+			.azulejo-top {top:-0.2%}
+			.azulejo-bottom {bottom:-0.2%}
+			div.wiki { margin:2.7em 1.8em; width:18em; height:18em;
+				img {width:18em; height:18em;}
+				span {font-size:3.5em}
+				&:last-of-type {margin-right:23em}
+			}
+		}
+	}
+}
+

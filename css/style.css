@@ -2189,5 +2189,50 @@ body {
   margin-top: 2em; }
 .boxy .screen.video .copy a {
   display: none; }
+.boxy .screen.nosotros .galaxia div.wiki {
+  margin: 1.4em 2em; }
+
+.portrait .screen.nosotros h1 {
+  width: 100%;
+  margin: 0.4em 0; }
+  .portrait .screen.nosotros h1 a {
+    bottom: 1.5em;
+    right: 7.2em; }
+.portrait .screen.nosotros .galaxia .azulejo-top {
+  top: -2%; }
+.portrait .screen.nosotros .galaxia .azulejo-bottom {
+  bottom: -2%; }
+.portrait .screen.nosotros .galaxia div.wiki {
+  margin: 1.5em 1.5em;
+  width: 15em;
+  height: 15em; }
+  .portrait .screen.nosotros .galaxia div.wiki img {
+    width: 15em;
+    height: 15em; }
+  .portrait .screen.nosotros .galaxia div.wiki span {
+    font-size: 3em; }
+
+.tallNarrow .screen.nosotros h1 {
+  width: 10.8em;
+  margin: 0.4em 0;
+  font-size: 8em; }
+  .tallNarrow .screen.nosotros h1 a {
+    bottom: -0.6em;
+    right: 8.2em; }
+.tallNarrow .screen.nosotros .galaxia .azulejo-top {
+  top: -0.2%; }
+.tallNarrow .screen.nosotros .galaxia .azulejo-bottom {
+  bottom: -0.2%; }
+.tallNarrow .screen.nosotros .galaxia div.wiki {
+  margin: 2.7em 1.8em;
+  width: 18em;
+  height: 18em; }
+  .tallNarrow .screen.nosotros .galaxia div.wiki img {
+    width: 18em;
+    height: 18em; }
+  .tallNarrow .screen.nosotros .galaxia div.wiki span {
+    font-size: 3.5em; }
+  .tallNarrow .screen.nosotros .galaxia div.wiki:last-of-type {
+    margin-right: 23em; }
 
 /*# sourceMappingURL=style.css.map */
