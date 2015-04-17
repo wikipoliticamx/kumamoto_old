@@ -285,12 +285,12 @@ body {
         opacity: 0; }
     .screen.cover .copy h3 {
       font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
-      font-size: 3em;
+      font-size: 2.8em;
       margin: 0;
       opacity: 0;
       font-weight: 200;
       position: absolute;
-      top: 8em;
+      top: 8.9em;
       left: 0.8em; }
       .screen.cover .copy h3 strong, .screen.cover .copy h3 bold {
         font-weight: 700;
@@ -430,7 +430,8 @@ body {
         -webkit-transition: all 0.2s ease;
         -moz-transition: all 0.2s ease;
         transition: all 0.2s ease;
-        z-index: 1; }
+        z-index: 1;
+        margin-left: -2em; }
       .screen.video .theater .sidebar {
         position: absolute;
         width: 16.6em;
@@ -798,7 +799,7 @@ body {
           background-image: linear-gradient(to right,#f0ecdc, #CBBFAE);
           padding: 0.8em;
           padding-left: 0;
-          left: -60em; }
+          /*left:-60em;*/ }
         .screen.asesores div.asesores .left .card {
           margin-left: 1em; }
           .screen.asesores div.asesores .left .card img {
@@ -818,7 +819,7 @@ body {
             .screen.asesores div.asesores .right .asesor .portrait img {
               margin-right: 0; }
           .screen.asesores div.asesores .right .asesor p {
-            left: 60em;
+            /*left:60em;*/
             background-color: #f0ecdc;
             background-image: -webkit-linear-gradient(right, #f0ecdc, #CBBFAE);
             background-image: linear-gradient(to left,#f0ecdc, #CBBFAE);
@@ -1049,10 +1050,11 @@ body {
           margin-left: 7em; }
         .screen.acercade .yo-kuma .copy p:nth-of-type(1) {
           margin-top: 4.5em; }
-        .screen.acercade .yo-kuma .copy .todos {
-          width: 100%;
-          position: absolute;
-          bottom: 0; }
+      .screen.acercade .yo-kuma .todos {
+        width: 50%;
+        position: absolute;
+        bottom: 0;
+        left: 50%; }
   .screen.mapa {
     background: #555;
     text-align: center;
@@ -1084,7 +1086,7 @@ body {
     .screen.mapa .copy {
       position: absolute;
       top: 2.5em;
-      right: -27.5em;
+      right: -32.5em;
       background: #fff;
       padding: 2.5em;
       z-index: 3;
@@ -1309,7 +1311,7 @@ body {
   .propuestas .screen.democratica .fb img, .propuestas .screen.sostenible .fb img, .propuestas .screen.incluyente .fb img, .propuestas .screen.personas .fb img, .propuestas .screen.excelencia .fb img, .propuestas .screen.contrapeso .fb img {
     width: 511px; }
   .propuestas .screen.democratica .text, .propuestas .screen.sostenible .text, .propuestas .screen.incluyente .text, .propuestas .screen.personas .text, .propuestas .screen.excelencia .text, .propuestas .screen.contrapeso .text {
-    background: #f6f1e9 url(/img/ui/kumatile.jpg); }
+    background: #f6f1e9; }
     .propuestas .screen.democratica .text h2, .propuestas .screen.sostenible .text h2, .propuestas .screen.incluyente .text h2, .propuestas .screen.personas .text h2, .propuestas .screen.excelencia .text h2, .propuestas .screen.contrapeso .text h2 {
       text-transform: uppercase;
       font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
@@ -1726,9 +1728,7 @@ body {
           background-image: -webkit-linear-gradient(right, #f0ecdc, #93D2C8);
           background-image: linear-gradient(to left,#f0ecdc, #93D2C8); }
   .compromisos .screen .text {
-    width: 69.5%;
-    display: inline-block;
-    vertical-align: top;
+    /*width:69.5%; display:inline-block; vertical-align:top;*/
     /*span.hidden, span.menos {display:none}*/
     /*span.hidden {font-size:80%}*/
     /*a.leer-mas { text-transform:uppercase; text-decoration:none; color:black; background:#e9eaed; display:inline-block; padding:.5em 1em; font-size:0.7em;*/
@@ -1885,7 +1885,7 @@ body {
   .propuestas .copy p a:hover, .propuestas .copy p a:hover b, .propuestas .copy p a:hover strong, .propuestas .copy ol li a:hover, .propuestas .copy ol li a:hover b, .propuestas .copy ol li a:hover strong, .propuestas .text p a:hover, .propuestas .text p a:hover b, .propuestas .text p a:hover strong, .propuestas .text ol li a:hover, .propuestas .text ol li a:hover b, .propuestas .text ol li a:hover strong, .compromisos .copy p a:hover, .compromisos .copy p a:hover b, .compromisos .copy p a:hover strong, .compromisos .copy ol li a:hover, .compromisos .copy ol li a:hover b, .compromisos .copy ol li a:hover strong, .compromisos .text p a:hover, .compromisos .text p a:hover b, .compromisos .text p a:hover strong, .compromisos .text ol li a:hover, .compromisos .text ol li a:hover b, .compromisos .text ol li a:hover strong {
     color: #c87072; }
 .propuestas .copy p.menos span.hidden, .propuestas .copy p.menos span.menos, .propuestas .copy li.menos span.hidden, .propuestas .copy li.menos span.menos, .propuestas .text p.menos span.hidden, .propuestas .text p.menos span.menos, .propuestas .text li.menos span.hidden, .propuestas .text li.menos span.menos, .compromisos .copy p.menos span.hidden, .compromisos .copy p.menos span.menos, .compromisos .copy li.menos span.hidden, .compromisos .copy li.menos span.menos, .compromisos .text p.menos span.hidden, .compromisos .text p.menos span.menos, .compromisos .text li.menos span.hidden, .compromisos .text li.menos span.menos {
-  display: inline-block; }
+  display: inline; }
 .propuestas .copy p.menos span.hidden, .propuestas .copy li.menos span.hidden, .propuestas .text p.menos span.hidden, .propuestas .text li.menos span.hidden, .compromisos .copy p.menos span.hidden, .compromisos .copy li.menos span.hidden, .compromisos .text p.menos span.hidden, .compromisos .text li.menos span.hidden {
   margin: 0.5em 0; }
 .propuestas .copy p.menos a.leer-mas, .propuestas .copy li.menos a.leer-mas, .propuestas .text p.menos a.leer-mas, .propuestas .text li.menos a.leer-mas, .compromisos .copy p.menos a.leer-mas, .compromisos .copy li.menos a.leer-mas, .compromisos .text p.menos a.leer-mas, .compromisos .text li.menos a.leer-mas {
@@ -1923,7 +1923,7 @@ body {
   margin-top: 1em; }
 .propuestas .text span.hidden i, .compromisos .text span.hidden i {
   font-style: normal;
-  display: block; }
+  display: inline; }
 .propuestas .text span.hidden, .propuestas .text span.menos, .compromisos .text span.hidden, .compromisos .text span.menos {
   display: none; }
 .propuestas .text b, .compromisos .text b {
@@ -1935,7 +1935,7 @@ body {
   width: 30%;
   text-align: center; }
   .propuestas .text .left img, .compromisos .text .left img {
-    height: 200px; }
+    height: 16em; }
 .propuestas .text .right, .compromisos .text .right {
   width: 60%; }
 
@@ -2153,7 +2153,7 @@ body {
       #goodbye .redes .fb img {
         position: absolute;
         height: 8em;
-        top: -2.6em; }
+        top: -2.8em; }
   #goodbye span.correo {
     font-size: 1.5em;
     margin-right: 1.5em;
@@ -2166,6 +2166,7 @@ body {
     display: inline-block; }
 
 /************************** ;RESPONSIVENESS **************************/
+/*--------------------;SHORT WIDE--------------------*/
 .shortWide .screen.nosotros .galaxia div.wiki {
   width: 9em;
   height: 9em;
@@ -2191,8 +2192,17 @@ body {
     display: inline-block; }
 .shortWide .screen.acercade .yo-kuma .copy p:nth-of-type(1) {
   margin-top: 2.5em; }
+.shortWide .screen.acercade .yo-kuma .copy p {
+  margin-bottom: 2em; }
 .shortWide .screen.acercade .yo-kuma .copy .todos {
   bottom: -2em; }
+.shortWide.mobileNotIpad .screen {
+  height: auto;
+  overflow: visible; }
+.shortWide.mobileNotIpad #goodbye {
+  position: fixed; }
+.shortWide.mobileNotIpad #fullpage.compromisos .fb, .shortWide.mobileNotIpad #fullpage.principios .fb, .shortWide.mobileNotIpad #fullpage.propuestas .fb {
+  display: none; }
 
 /*--------------------;BOXY--------------------*/
 .boxy .screen.video .theater .date {
@@ -2234,7 +2244,44 @@ body {
   margin-top: 0; }
 .boxy .screen.acercade .yo-kuma .copy {
   font-size: 1.2em; }
+  .boxy .screen.acercade .yo-kuma .copy p {
+    margin-bottom: 2em; }
 
+/*--------------------;PORTRAIT--------------------*/
+.portrait .screen.video {
+  background: black; }
+  .portrait .screen.video .theater {
+    top: 20em; }
+    .portrait .screen.video .theater .date {
+      padding-top: 1em; }
+    .portrait .screen.video .theater #ytplayer {
+      top: 3em;
+      margin-left: auto; }
+    .portrait .screen.video .theater .sidebar {
+      width: 100%;
+      left: 0;
+      right: auto;
+      z-index: 2; }
+      .portrait .screen.video .theater .sidebar .thumbs {
+        display: inline-block;
+        vertical-align: middle; }
+      .portrait .screen.video .theater .sidebar .soundToggle, .portrait .screen.video .theater .sidebar .replay {
+        margin-top: 3em;
+        vertical-align: middle; }
+      .portrait .screen.video .theater .sidebar .replay {
+        margin-right: 2em; }
+    .portrait .screen.video .theater .fb img {
+      margin-left: -3em;
+      margin-top: -1em; }
+  .portrait .screen.video .copy {
+    bottom: 0;
+    padding-bottom: 13em;
+    background: #ADDFD7; }
+    .portrait .screen.video .copy h1 {
+      top: 2em; }
+    .portrait .screen.video .copy p {
+      margin-top: 2em;
+      font-size: 2.5em; }
 .portrait .screen.nosotros h1 {
   width: 100%;
   margin: 0.4em 0; }
@@ -2255,7 +2302,8 @@ body {
   .portrait .screen.nosotros .galaxia div.wiki span {
     font-size: 3em; }
 .portrait .screen.asesores h1 {
-  margin-top: 0.25em; }
+  margin-top: 0.3em;
+  margin-bottom: 0.3em; }
 .portrait .screen.asesores div.asesores {
   font-size: 1.2em; }
   .portrait .screen.asesores div.asesores .center {
@@ -2271,7 +2319,103 @@ body {
     border-top: 1px solid #aaa;
     padding-top: 2%;
     padding-right: 2%; }
+.portrait .screen.medios h1 {
+  margin-top: 1em;
+  margin-bottom: 0.8em; }
+.portrait .screen.medios .carton {
+  top: auto;
+  bottom: 0;
+  left: 25em; }
+  .portrait .screen.medios .carton img {
+    width: 35em; }
+  .portrait .screen.medios .carton.carton9abr {
+    top: auto;
+    bottom: 0;
+    left: auto;
+    right: 25em; }
+.portrait .screen.medios .citas .medio div.logo img {
+  margin-top: 2em;
+  width: 30em; }
+.portrait .screen.medios .citas .medio .copy {
+  font-size: 1.8em; }
+  .portrait .screen.medios .citas .medio .copy a {
+    width: 30em; }
+.portrait .screen.medios .logos {
+  margin-top: 3.5em; }
+.portrait .screen.acercade .yo-kuma .foto img {
+  margin-top: -7em; }
+.portrait .screen.acercade .yo-kuma img.todos {
+  width: 100%;
+  left: 0; }
+.portrait .screen.acercade .yo-kuma .copy {
+  font-size: 1.6em; }
+  .portrait .screen.acercade .yo-kuma .copy p {
+    margin-left: 3em;
+    margin-bottom: 2.5em; }
+.portrait #fullpage.compromisos .screen.toc .header {
+  margin-bottom: 8em; }
+.portrait #fullpage.compromisos .screen.toc p {
+  font-size: 2.8em; }
+.portrait #fullpage.compromisos .screen.toc div.toc a {
+  width: 100%;
+  font-size: 8em;
+  margin: 1em 0;
+  text-align: center; }
+.portrait #fullpage.compromisos .screen.bienvenida div.copy {
+  font-size: 2.3em;
+  right: 14em; }
+.portrait #fullpage.compromisos .screen .text h2 {
+  padding-left: 2.25em;
+  margin-bottom: 1em; }
+.portrait #fullpage.compromisos .screen .text img.kumalogo {
+  left: 2em; }
+.portrait #fullpage.compromisos .screen .text h3 {
+  margin-left: 4.6em; }
+.portrait #fullpage.compromisos .screen .text ol {
+  width: 75%; }
+.portrait #fullpage.compromisos li {
+  font-size: 1.3em;
+  line-height: 1.4em;
+  margin: 1em 0; }
 
+/*--------------------;TALL NARROW--------------------*/
+.tallNarrow.mobileNotIpad #fullpage.home {
+  /*.screen {height:auto; overflow:visible}*/
+  /*#goodbye {position:fixed}*/ }
+.tallNarrow .screen.video {
+  background: black; }
+  .tallNarrow .screen.video .theater {
+    top: 40em; }
+    .tallNarrow .screen.video .theater .date {
+      padding-top: 1em; }
+    .tallNarrow .screen.video .theater #ytplayer {
+      top: 3em;
+      margin-left: auto; }
+    .tallNarrow .screen.video .theater .sidebar {
+      width: 100%;
+      left: 0;
+      right: auto;
+      z-index: 2; }
+      .tallNarrow .screen.video .theater .sidebar .thumbs {
+        display: inline-block;
+        vertical-align: middle; }
+      .tallNarrow .screen.video .theater .sidebar .soundToggle, .tallNarrow .screen.video .theater .sidebar .replay {
+        margin-top: 3em;
+        vertical-align: middle; }
+      .tallNarrow .screen.video .theater .sidebar .replay {
+        margin-right: 2em; }
+    .tallNarrow .screen.video .theater .fb img {
+      margin-left: -3em;
+      margin-top: -1em; }
+  .tallNarrow .screen.video .copy {
+    bottom: 0;
+    padding-bottom: 15em;
+    background: #ADDFD7; }
+    .tallNarrow .screen.video .copy h1 {
+      top: 2em; }
+    .tallNarrow .screen.video .copy p {
+      margin-top: 2em;
+      font-size: 2.5em; }
 .tallNarrow .screen.nosotros h1 {
   width: 10.8em;
   margin: 0.4em 0;
@@ -2294,20 +2438,315 @@ body {
     font-size: 3.5em; }
   .tallNarrow .screen.nosotros .galaxia div.wiki:last-of-type {
     margin-right: 23em; }
-.tallNarrow .screen.asesores h1 {
-  margin: 0.5em 0; }
-.tallNarrow .screen.asesores div.asesores {
-  font-size: 1.5em; }
-  .tallNarrow .screen.asesores div.asesores .center .bottom {
+.tallNarrow .screen.asesores {
+  padding-bottom: 4em; }
+  .tallNarrow .screen.asesores h1 {
+    margin: 0.5em 0; }
+  .tallNarrow .screen.asesores div.asesores {
+    font-size: 1.8em; }
+    .tallNarrow .screen.asesores div.asesores .asesor a.twitter {
+      display: none; }
+    .tallNarrow .screen.asesores div.asesores .asesor em {
+      font-style: normal;
+      font-size: 1.2em; }
+    .tallNarrow .screen.asesores div.asesores .asesor span.name {
+      font-size: 1.9em; }
+    .tallNarrow .screen.asesores div.asesores .asesor .bio em {
+      display: none; }
+    .tallNarrow .screen.asesores div.asesores .asesor:hover .bio em {
+      display: inline-block; }
+    .tallNarrow .screen.asesores div.asesores .center {
+      margin: 2em 0; }
+      .asesor .tallNarrow .screen.asesores div.asesores .center:hover {
+        margin-top: -6em; }
+      .tallNarrow .screen.asesores div.asesores .center .bottom {
+        display: block;
+        margin-top: 1em; }
+    .tallNarrow .screen.asesores div.asesores .right, .tallNarrow .screen.asesores div.asesores .left {
+      width: 48.5%;
+      margin-top: 2em;
+      margin-bottom: 2em; }
+      .tallNarrow .screen.asesores div.asesores .right .bio em, .tallNarrow .screen.asesores div.asesores .left .bio em {
+        padding-bottom: 2em; }
+      .tallNarrow .screen.asesores div.asesores .right .asesor, .tallNarrow .screen.asesores div.asesores .left .asesor {
+        margin-top: 1.5em; }
+        .tallNarrow .screen.asesores div.asesores .right .asesor p, .tallNarrow .screen.asesores div.asesores .left .asesor p {
+          display: none;
+          width: 24em;
+          font-size: 1.5em; }
+    .tallNarrow .screen.asesores div.asesores .left {
+      border-right: none; }
+.tallNarrow .screen.medios h1 {
+  padding-top: 1em;
+  padding-bottom: 0.5em; }
+.tallNarrow .screen.medios .carton {
+  top: auto;
+  bottom: 0;
+  left: 25em;
+  display: none; }
+  .tallNarrow .screen.medios .carton img {
+    width: 35em; }
+  .tallNarrow .screen.medios .carton.carton9abr {
+    top: auto;
+    bottom: 0;
+    left: auto;
+    right: 25em; }
+.tallNarrow .screen.medios .citas .medio div.logo {
+  text-align: center;
+  width: 100%;
+  margin-top: 3em;
+  margin-bottom: 2em; }
+  .tallNarrow .screen.medios .citas .medio div.logo img {
+    margin-top: 2em;
+    width: 35em; }
+.tallNarrow .screen.medios .citas .medio.milenio .logo img {
+  width: 25em !important; }
+.tallNarrow .screen.medios .citas .medio.yonofui .logo {
+  height: 8em; }
+  .tallNarrow .screen.medios .citas .medio.yonofui .logo a {
+    font-size: 2em; }
+    .tallNarrow .screen.medios .citas .medio.yonofui .logo a img {
+      height: 4em;
+      width: 4em; }
+.tallNarrow .screen.medios .citas .medio .copy {
+  font-size: 2.5em; }
+  .tallNarrow .screen.medios .citas .medio .copy a {
+    width: 30em;
+    padding-bottom: 0.5em; }
+    .tallNarrow .screen.medios .citas .medio .copy a .source {
+      margin-top: 0.24em; }
+.tallNarrow .screen.medios .logos {
+  margin-top: 5.5em; }
+.tallNarrow .screen.acercade h1 {
+  font-size: 10em; }
+.tallNarrow .screen.acercade .yo-kuma .foto img {
+  margin-top: -7em; }
+.tallNarrow .screen.acercade .yo-kuma img.todos {
+  width: 100%;
+  left: 0;
+  bottom: -8em; }
+.tallNarrow .screen.acercade .yo-kuma .copy {
+  font-size: 1.9em; }
+  .tallNarrow .screen.acercade .yo-kuma .copy p {
+    margin-left: 3em;
+    margin-bottom: 1em;
+    width: 75%; }
+  .tallNarrow .screen.acercade .yo-kuma .copy p:nth-of-type(1) {
+    margin-top: 2.5em; }
+.tallNarrow .screen.mapa .copy {
+  font-size: 1.4em; }
+  .tallNarrow .screen.mapa .copy .data-maps {
+    font-size: 1.3em; }
+.tallNarrow #goodbye {
+  font-size: 1.3em; }
+.tallNarrow #menu {
+  font-size: 3em; }
+.tallNarrow #fullpage.compromisos .fb, .tallNarrow #fullpage.principios .fb, .tallNarrow #fullpage.propuestas .fb {
+  display: none; }
+.tallNarrow #fullpage.principios .header .azulejo-top {
+  top: -2%; }
+.tallNarrow #fullpage.principios .header .pedro-kumamoto {
+  margin-top: 5em;
+  font-size: 1.5em;
+  width: 100%; }
+  .tallNarrow #fullpage.principios .header .pedro-kumamoto .kumalogo {
+    height: 15.5em; }
+  .tallNarrow #fullpage.principios .header .pedro-kumamoto h2 {
+    font-size: 2.1em;
+    margin-top: 0.6em; }
+.tallNarrow #fullpage.principios .header .where {
+  display: block;
+  width: 100%;
+  margin-top: 2em;
+  font-size: 2em; }
+.tallNarrow #fullpage.principios .screen.toc .lista .left, .tallNarrow #fullpage.principios .screen.toc .lista .right {
+  width: 100%; }
+  .tallNarrow #fullpage.principios .screen.toc .lista .left a, .tallNarrow #fullpage.principios .screen.toc .lista .right a {
+    display: block;
+    font-size: 7em;
+    margin: 1.1em 0; }
+    .tallNarrow #fullpage.principios .screen.toc .lista .left a:last-of-type, .tallNarrow #fullpage.principios .screen.toc .lista .right a:last-of-type {
+      margin-bottom: 0; }
+  .tallNarrow #fullpage.principios .screen.toc .lista .left br, .tallNarrow #fullpage.principios .screen.toc .lista .right br {
+    display: none; }
+.tallNarrow #fullpage.principios .screen.toc .lista .left span {
+  width: 6.5em; }
+  .tallNarrow #fullpage.principios .screen.toc .lista .left span img {
+    padding-right: 2em; }
+.tallNarrow #fullpage.principios .screen.toc .lista .right a span {
+  width: 6em; }
+.tallNarrow #fullpage.principios .screen.toc .lista .right a img {
+  padding-left: 2em; }
+.tallNarrow #fullpage.principios .screen .text h2 {
+  padding-left: 2.85em;
+  margin-bottom: 1.5em;
+  line-height: 1em;
+  font-size: 10em; }
+.tallNarrow #fullpage.principios .screen .text img.kumalogo {
+  left: 2em;
+  height: 22em;
+  top: 6em; }
+.tallNarrow #fullpage.principios .screen .text h3 {
+  font-size: 6em;
+  margin-left: 4.7em; }
+.tallNarrow #fullpage.principios .screen .text p {
+  width: 75%;
+  font-size: 3.5em; }
+.tallNarrow #fullpage.principios .screen .text .confetti img {
+  width: 20em;
+  margin-left: -3em; }
+.tallNarrow #fullpage.principios .screen .text .icono {
+  font-size: 2em;
+  margin-top: 1em; }
+.tallNarrow #fullpage.propuestas .header .azulejo-top {
+  top: -2%; }
+.tallNarrow #fullpage.propuestas .header .pedro-kumamoto {
+  margin-top: 3em;
+  font-size: 1.5em;
+  width: 100%; }
+  .tallNarrow #fullpage.propuestas .header .pedro-kumamoto .kumalogo {
+    height: 15.5em; }
+  .tallNarrow #fullpage.propuestas .header .pedro-kumamoto h2 {
+    font-size: 2.1em;
+    margin-top: 0.6em; }
+.tallNarrow #fullpage.propuestas .header .where {
+  display: block;
+  width: 100%;
+  margin-top: 2em;
+  font-size: 2em; }
+.tallNarrow #fullpage.propuestas .screen.toc .ciudad, .tallNarrow #fullpage.propuestas .screen.toc .gobierno {
+  width: 100%; }
+  .tallNarrow #fullpage.propuestas .screen.toc .ciudad h2 a, .tallNarrow #fullpage.propuestas .screen.toc .ciudad h3 a, .tallNarrow #fullpage.propuestas .screen.toc .gobierno h2 a, .tallNarrow #fullpage.propuestas .screen.toc .gobierno h3 a {
+    margin: 1.2em 0; }
+  .tallNarrow #fullpage.propuestas .screen.toc .ciudad h2, .tallNarrow #fullpage.propuestas .screen.toc .gobierno h2 {
+    font-size: 7em; }
+  .tallNarrow #fullpage.propuestas .screen.toc .ciudad h3, .tallNarrow #fullpage.propuestas .screen.toc .gobierno h3 {
+    font-size: 5em; }
+.tallNarrow #fullpage.propuestas .screen.toc .ciudad h2 span {
+  width: 5.4em; }
+  .tallNarrow #fullpage.propuestas .screen.toc .ciudad h2 span img {
+    margin-right: 2em; }
+.tallNarrow #fullpage.propuestas .screen.toc .ciudad h3 span {
+  width: 7.8em; }
+  .tallNarrow #fullpage.propuestas .screen.toc .ciudad h3 span img {
+    margin-right: 2em; }
+.tallNarrow #fullpage.propuestas .screen.toc .gobierno h2 {
+  margin-top: 0; }
+  .tallNarrow #fullpage.propuestas .screen.toc .gobierno h2 span {
+    width: 5.4em; }
+    .tallNarrow #fullpage.propuestas .screen.toc .gobierno h2 span img {
+      margin-left: 2em; }
+.tallNarrow #fullpage.propuestas .screen.toc .gobierno h3 span {
+  width: 7.8em; }
+  .tallNarrow #fullpage.propuestas .screen.toc .gobierno h3 span img {
+    margin-left: 2em; }
+.tallNarrow #fullpage.propuestas .screen.ciudad div.copy, .tallNarrow #fullpage.propuestas .screen.gobierno div.copy {
+  font-size: 4em;
+  width: 20em; }
+.tallNarrow #fullpage.propuestas .screen .text h1 {
+  font-size: 10em;
+  text-align: center;
+  padding-left: 0; }
+.tallNarrow #fullpage.propuestas .screen .text h2 {
+  padding-left: 0em;
+  margin: 0;
+  padding-top: 1em;
+  padding-bottom: 0.7em;
+  margin-bottom: 0.1em;
+  margin-left: -1em;
+  line-height: 1em;
+  font-size: 6em;
+  text-align: center; }
+  .tallNarrow #fullpage.propuestas .screen .text h2 img.kumalogo {
     position: absolute;
-    bottom: 2em;
-    width: 100%;
-    left: 0; }
-  .tallNarrow .screen.asesores div.asesores .right, .tallNarrow .screen.asesores div.asesores .left {
-    width: 65%;
-    margin-top: 3em;
-    margin-bottom: 3em; }
-  .tallNarrow .screen.asesores div.asesores .left {
-    border-right: none; }
+    left: auto;
+    right: 2em;
+    height: 2.5em;
+    margin: 0;
+    top: 0.5em; }
+.tallNarrow #fullpage.propuestas .screen .text p {
+  width: 75%;
+  font-size: 2.8em; }
+.tallNarrow #fullpage.propuestas .screen .text p.propuestas {
+  font-size: 3.2em; }
+.tallNarrow #fullpage.propuestas .screen .text ol {
+  width: 100%;
+  font-size: 3em; }
+  .tallNarrow #fullpage.propuestas .screen .text ol li {
+    width: 75%;
+    margin-left: 1em; }
+.tallNarrow #fullpage.propuestas .screen .text .confetti img {
+  width: 60em;
+  margin-left: -3em; }
+.tallNarrow #fullpage.propuestas .screen .text .icono {
+  font-size: 2em;
+  margin-top: 3em; }
+.tallNarrow #fullpage.compromisos .header .azulejo-top {
+  top: -2%; }
+.tallNarrow #fullpage.compromisos .header .pedro-kumamoto {
+  margin-top: 5em;
+  font-size: 1.5em;
+  width: 100%; }
+  .tallNarrow #fullpage.compromisos .header .pedro-kumamoto .kumalogo {
+    height: 15.5em; }
+  .tallNarrow #fullpage.compromisos .header .pedro-kumamoto h2 {
+    font-size: 2.1em;
+    margin-top: 0.6em; }
+.tallNarrow #fullpage.compromisos .header .where {
+  display: block;
+  width: 100%;
+  margin-top: 2em;
+  font-size: 2em; }
+.tallNarrow #fullpage.compromisos .screen.toc .header {
+  margin-bottom: 8em; }
+.tallNarrow #fullpage.compromisos .screen.toc p {
+  font-size: 3.8em; }
+.tallNarrow #fullpage.compromisos .screen.toc div.toc a {
+  width: 100%;
+  font-size: 11em;
+  margin: 1em 0;
+  text-align: center; }
+.tallNarrow #fullpage.compromisos .screen.bienvenida div.copy {
+  font-size: 4em;
+  right: 2em;
+  bottom: 2em;
+  width: 20em;
+  padding: 1em 2em;
+  border: 1px solid #ccc; }
+.tallNarrow #fullpage.compromisos .screen .text h2 {
+  padding-left: 2.25em;
+  margin-bottom: 0.5em;
+  line-height: 1em;
+  font-size: 12em; }
+.tallNarrow #fullpage.compromisos .screen .text img.kumalogo {
+  left: 2em;
+  height: 22em;
+  top: 6em; }
+.tallNarrow #fullpage.compromisos .screen .text h3 {
+  font-size: 6em;
+  margin-left: 4.7em; }
+.tallNarrow #fullpage.compromisos .screen .text ol {
+  width: 75%;
+  font-size: 3.5em; }
+.tallNarrow #fullpage.compromisos li {
+  font-size: 1.3em;
+  line-height: 1.4em;
+  margin: 0.7em 0; }
+.tallNarrow #fullpage.compromisos ol.congreso li {
+  margin: 0.2em 0; }
+.tallNarrow .opentip-container .opentip {
+  font-size: 3em;
+  padding: 1em 1.4em;
+  max-width: 18em;
+  color: black !important;
+  text-align: center; }
+  .tallNarrow .opentip-container .opentip span {
+    padding: 0 0.27em;
+    margin-bottom: 0.27em; }
+  .tallNarrow .opentip-container .opentip strong {
+    font-size: 1.2em;
+    padding: 0 0.23em;
+    margin-bottom: 0.23em;
+    margin-top: 0.23em; }
 
 /*# sourceMappingURL=style.css.map */

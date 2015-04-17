@@ -20,7 +20,7 @@ var KUMA = {
 		}
 	},
 	// ----------------------
-	// ****** NOSOTROS ******
+	// ****** FULL PAGE ******
 	// ----------------------
 	fullPage: {
 		boot:function() { var o = KUMA.fullPage.options;
@@ -28,6 +28,9 @@ var KUMA = {
 				KUMA.fullPage.extractAnchors();
 				o.afterLoad = KUMA.fullPage.onEnter;
 				o.onLeave = KUMA.fullPage.onLeave;
+				//if(KUMA.mobileNotIpad && (KUMA.where == 'home')) {
+					//o.autoScrolling = false;
+				//}
 				$('#fullpage').fullpage( o );
 			} else {
 				$('#goodbye').addClass('emerge');
@@ -56,9 +59,11 @@ var KUMA = {
 						animate({el:'.screen.medios .medio.milenio', translateX:'-96em', duration:600});
 						animate({el:'.screen.medios .medio.informador', translateX:'96em', duration:1200});
 						$('.medios .citas strong').css('color', 'rgb(200, 112, 114)');
-						setTimeout(function() {
-							animate({el:'.screen.medios .carton', translateX:'26em', duration:1200});
-						}, 2000);
+						if( !_(['portrait', 'tallNarrow']).contains( $('body').data('orientation') )) {
+							setTimeout(function() {
+								animate({el:'.screen.medios .carton', translateX:'26em', duration:1200});
+							}, 2000);
+						}
 						_($('.screen.medios .logos a')).chain().shuffle().each(function(logo) {
 							emerge( {el:logo, 
 								duration: _([200, 300, 400, 500, 600, 700, 800, 900, 1000]).shuffle()[0],
@@ -66,15 +71,19 @@ var KUMA = {
 							} );
 						});
 					} else if(section == 'nos-asesoran') {
-						animate({el:'.screen.asesores .left p', translateX:'60em', duration:1200});
-						animate({el:'.screen.asesores .right p', translateX:'-60em', duration:1200});
+						//animate({el:'.screen.asesores .left p', translateX:'60em', duration:1200});
+						//animate({el:'.screen.asesores .right p', translateX:'-60em', duration:1200});
+						$('.left, .right').find('.asesor').each(function() {
+							var frase = $(this).find('p').text();
+							new Opentip($(this).find('.card'), frase, KUMA.nosotros.faceStyle);
+						});
 					} else if(section == 'soy-pedro') {
 						emerge( {el:'.screen.acercade h1', duration:600, timeout:500} );
 						$('.screen.acercade p strong').css('color', 'rgb(200, 112, 114)');
 						$('.screen.acercade p b').css('color', '#379088');
 						//$('.screen.acercade img.soy-pedro').css('-webkit-filter', 'grayscale(0)');
 					} else if(section == 'distrito-10') {
-						animate({el:'.screen.mapa .copy', translateX:'-30em', duration:600});
+						animate({el:'.screen.mapa .copy', translateX:'-35em', duration:600});
 					}
 				},
 				always:function(section) {
@@ -95,9 +104,9 @@ var KUMA = {
 				KUMA.fullPage.scroll.home.always(section);
 			} else if( _(['principios', 'propuestas', 'compromisos']).contains(KUMA.where) ) {
 				var url = KUMA.root+KUMA.where+'/'+section+'/';
-				if(!screen.data('already')) { //first time
+				if((!screen.data('already')) && !KUMA.mobileNotIpad) { //first time
 					//console.log('url', url)
-					KUMA.screen = screen;
+					//KUMA.screen = screen;
 					KUMA.fbContainer = screen.find('.fb-container');
 					screen.find('.fb-container').html(
 						'<div class="fb-like" data-href="'+url+'" data-width="100%" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>'+
@@ -128,15 +137,16 @@ var KUMA = {
 			//console.log('leaving anchor', anchor);
 			if(section == 'video') {
 				KUMA.video.pause();
-			} else if(section == 'nosotros') {
+			} else if((section == 'nosotros') || (section == 'asesores')) {
 				_(Opentip.tips).each(function(tip) { tip.hide(); });
 			}
 		},
 		options:{
 			//Navigation
 			menu: '#menu',
+			//autoScrolling:false,
 			//anchors:['firstSlide', 'secondSlide'],
-			navigation: false,
+			//navigation: true,
 			//navigationPosition:'right',
 			css3:true,
 			animateAnchor:false,
@@ -145,7 +155,7 @@ var KUMA = {
 			//scrollOverflow:true,
 			//scrollBar:true, //this shouldn't break everything but it does!
 			keyboardScrolling:true,
-			loopHorizontal:true,
+			//loopHorizontal:true
 			//responsive:900,
 			fixedElements:'#goodbye'
 		}
@@ -243,7 +253,7 @@ var KUMA = {
 			new Opentip($('.screen.nosotros h1 img'), tudequevas, {style:'glass'});
 		},
 		adjust:function() { var galaxia = $('.screen.nosotros .galaxia');
-			var prop =  {normal:0.84, shortWide:0.72, portrait:1.2, boxy:0.84, tallNarrow:1.44}[$('#fullpage').data('orientation')]; // faceSide / 12.5em
+			var prop =  {normal:0.84, shortWide:0.72, portrait:1.2, boxy:0.84, tallNarrow:1.44}[$('body').data('orientation')]; // faceSide / 12.5em
 				scale = (KUMA.data.em/12)*prop,
 				w = 1500, //sprite width
 				h = 900; //sprite height
@@ -255,7 +265,7 @@ var KUMA = {
 				});
 			});
 
-			var orientedI = {normal:19, shortWide:19, portrait:20, boxy:19, tallNarrow:18}[$('#fullpage').data('orientation')];
+			var orientedI = {normal:19, shortWide:19, portrait:20, boxy:19, tallNarrow:18}[$('body').data('orientation')];
 			if( galaxia.find('div.wiki').length > 0) {
 				$('.screen.nosotros h1').detach().insertAfter(galaxia.find('div.wiki:eq('+(orientedI)+')'));
 			}
@@ -316,6 +326,7 @@ var KUMA = {
 		}
 	},
 	mobile: /(iPad|iPhone|iPod|Android)/g.test( navigator.userAgent ),
+	mobileNotIpad: /(iPhone|iPod|Android)/g.test( navigator.userAgent ),
 	// -------------------
 	// ****** VIDEO ******
 	// -------------------
@@ -508,11 +519,16 @@ var KUMA = {
 
 			v.height = data.h*0.65;
 			v.width = v.height * data.prop.homeVideo;
+			
+			if(v.width > data.w) {
+				v.width = data.w * 0.95;
+				v.height = v.width * (1/data.prop.homeVideo);
+			}
 
 			$('#ytplayer').css({
 				height: v.height,
 				width: v.width,
-				left:((data.w-v.width)/2) - 20
+				left:((data.w-v.width)/2)
 			});
 
 			$('.screen.video .fb').css({
@@ -524,7 +540,7 @@ var KUMA = {
 			$('.screen.video .date').css('padding-right', sidebarWidth+30);
 			var ytplayerBottom = v.height + parseInt($('#ytplayer').css('top'));
 
-			if($('#fullpage.boxy').length > 0) {
+			if( _(['boxy', 'portrait', 'tallNarrow']).contains( $('body').data('orientation') ) ) {
 				$('.screen.video .sidebar').css('top', ytplayerBottom - (5*em));
 				ytplayerBottom += (8*em)*1;
 				$('.screen.video .sidebar').css('width', '100%');
@@ -550,7 +566,15 @@ var KUMA = {
 				var wCover = data.w*1.3,
 					hCover = wCover*(1/data.prop.coverPhoto),
 					delta = (1/data.prop.screen) * 30 * 2.3,
-					widthTest = (data.h * data.prop.cover) - (delta* data.em);
+					widthTest = (data.h * data.prop.coverPhoto) - (delta* data.em);
+
+				//console.log('delta', delta);
+				//console.log('wCover', wCover);
+				//console.log('hCover', hCover);
+				//console.log('em', data.em);
+				//console.log('h', data.h);
+				//console.log('prop cover', data.prop.cover);
+				//console.log('widthTest', widthTest);
 
 				//set Portrait
 				if( (hCover < data.h) && (widthTest > data.w) ) { //portrait
@@ -568,26 +592,33 @@ var KUMA = {
 			portraitLandscape:function() { var data = KUMA.data;
 				var orientations = 'shortWide normal boxy portrait tallNarrow',
 					clear = function() {
-						$('#fullpage').removeClass(orientations);
+						$('body').removeClass(orientations);
 					},
 					prop = data.prop.screen;
+				if(KUMA.mobileNotIpad && (KUMA.where == 'home')) {
+					$('body').addClass('mobileNotIpad');
+				} else {
+					$('body').removeClass();
+				}
 				clear();
 				if(prop >= 1.815) { //1366/696;
 					console.log('shortWide!', prop);
-					$('#fullpage').addClass('shortWide').data('orientation', 'shortWide');
+					$('body').addClass('shortWide').data('orientation', 'shortWide');
 				} else if(prop >= 1.5) { //base
 					console.log('normal!', prop);
-					$('#fullpage').addClass('normal').data('orientation', 'normal');
+					$('body').addClass('normal').data('orientation', 'normal');
 				} else if(prop >= 1) {
 					console.log('boxy!', prop);
-					$('#fullpage').addClass('boxy').data('orientation', 'boxy');
+					$('body').addClass('boxy').data('orientation', 'boxy');
 				} else if(prop >= 0.7) {
 					console.log('portrait!', prop);
-					$('#fullpage').addClass('portrait').data('orientation', 'portrait');
+					$('body').addClass('portrait').data('orientation', 'portrait');
 				} else {
 					console.log('tallNarrow!', prop);
-					$('#fullpage').addClass('tallNarrow').data('orientation', 'tallNarrow');
+					$('body').addClass('tallNarrow').data('orientation', 'tallNarrow');
 				}
+				//KUMA.fullPage.boot();
+				//$('.screen.acercade h1').html( $('body').data('orientation') +' '+prop );
 			}
 		},
 		adjust:function() { var where = KUMA.where, data = KUMA.data, screen = KUMA.screen;
@@ -600,13 +631,13 @@ var KUMA = {
 
 			screen.detect.portraitLandscape();
 
+			$('.screen').css('height', data.h);
 			if((where == 'home') || (where == 'splash')) {
 				screen.cover();
-				$('.screen').css('height', data.h);
 				screen.maxCenterWithinContainer($('.yo-kuma .foto img'), $('.yo-kuma .foto'));
 				screen.maxCenterWithinContainer($('.screen.mapa a.mapa img'), $('.screen.mapa'));
 			} else {
-				var fbWidth = Math.min(Math.max(data.w*0.3, 450), 550);
+				var fbWidth = Math.min(Math.max(data.w*0.3, 400), 550);
 				if(where == 'propuestas') {
 					screen.propuestas();
 					//$('.screen .fb').css('width', fbWidth );
@@ -614,14 +645,18 @@ var KUMA = {
 					//$('.screen .video').css('width', ((data.w - fbWidth)*0.4)-5 );
 
 				} else if(where == 'compromisos') {
-					$('.screen.bienvenida').css('height', data.h);
 
 					screen.maxCenterWithinContainer($('img.kuma-benji'), $('.screen.bienvenida'));
 				} else if(where == 'principios') {
 				}
-				if((where=='propuestas') || (where=='compromisos') || (where=='principios') ) {
-					$('.screen .fb').css('width', fbWidth );
-					$('.screen .text').css('width', data.w-fbWidth-5 );
+				if(_(['principios', 'propuestas', 'compromisos']).contains(where)) {
+					if($('body').data('orientation') != 'tallNarrow') {
+						$('.screen .fb').css('width', fbWidth );
+						$('.screen .text').css('width', data.w-fbWidth-5 );
+					} else {
+						$('.screen .fb').css('width', 0);
+						$('.screen .text').css('width', '100%' );
+					}
 				}
 			}
 			KUMA.nosotros.adjust();

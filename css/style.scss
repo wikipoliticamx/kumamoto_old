@@ -134,7 +134,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				&.kumamoto {right:0; opacity:0}
 			}
 			//Candidato independiente
-			h3 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:3em; margin:0; opacity:0; font-weight:200; position:absolute;  top:8em; left:0.8em;
+			h3 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:2.8em; margin:0; opacity:0; font-weight:200; position:absolute; top:8.9em; left:0.8em;
 				strong, bold {font-weight:700; font-size:inherit}
 			}
 			//Ocupemos la ciudad
@@ -188,7 +188,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 					&:hover {color:white; text-decoration:underline}
 				}
 			}
-			#ytplayer {width:100%; margin:0 auto; display:inline-block; position:absolute; top:5em; @include transition(all 0.2s ease); z-index:1}
+			#ytplayer {width:100%; margin:0 auto; display:inline-block; position:absolute; top:5em; @include transition(all 0.2s ease); z-index:1; margin-left:-2em;}
 			.sidebar { position:absolute; width:16.6em; right:0; top:0; height:100%; overflow:auto; text-align:center;
 				.soundToggle, .replay { height:6.6em; width:6.6em; margin-top:5em; margin-bottom:2.5em; position:relative; display:inline-block; overflow:hidden; @include transition(all 0.2s ease); cursor:pointer;
 					img {height:6.6em; }
@@ -327,7 +327,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 					p {text-align:right; 
 						@include linear-gradient(to right, $transparent, #CBBFAE);
 						padding:0.8em; padding-left:0;
-						left:-60em;
+						/*left:-60em;*/
 					}
 				}
 				.card {margin-left:1em;
@@ -343,7 +343,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 						img {margin-right:0;}
 					}
 					p {
-						left:60em;
+						/*left:60em;*/
 						@include linear-gradient(to left, $transparent, #CBBFAE);
 						padding:0.8em; padding-right:0;
 					}
@@ -433,8 +433,8 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				p {width:70%; text-align:left; font-size:1.5em; margin-left:7em;}
 				p:nth-of-type(1) { margin-top:4.5em; }
 				/*p:nth-of-type(2) { margin-top:60px; }*/
-				.todos {width:100%; position:absolute; bottom:0;}
 			}
+			.todos {width:50%; position:absolute; bottom:0; left:50%}
 		}
 	}
 
@@ -444,7 +444,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		h2 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:1.7em; text-align:center; text-transform:uppercase; margin:0}
 		h3 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:2em; text-transform:uppercase; margin-top:3.3em; margin-bottom:0.83em}
 		a.mapa img {width:100%; position:absolute; top:-5em; left:0}
-		.copy { position:absolute; top:2.5em; right:-27.5em; background:#fff; padding:2.5em; z-index:3; box-shadow:0 0.25em 0.417em #999;
+		.copy { position:absolute; top:2.5em; right:-32.5em; background:#fff; padding:2.5em; z-index:3; box-shadow:0 0.25em 0.417em #999;
 			.data-maps img {
 				@include transition(all 0.2s ease);
 				height:12.5em; width:8.17em; margin:0.83em; background-repeat:no-repeat;
@@ -550,7 +550,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			}
 			.fb { background:#e9eaed; border-left:1px solid #ccc; text-align:center;}
 			.fb img {width:511px}
-			.text {background:$crema url(/img/ui/kumatile.jpg);  
+			.text {background:$crema;  
 				h2 {text-transform:uppercase; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:3em; width:100%; 
 					margin-top:0.5em; margin-bottom:0; margin-left:10em; padding:0.2em 0; font-weight:200;
 					background:transparent; text-align:left;
@@ -740,7 +740,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		/*.infografia { width:30%; height:100%; display:inline-block; text-align:center; background:#B3D7DA;*/
 			/*img {width:80%; margin-top:5em}*/
 		/*}*/
-		.text { width:69.5%; display:inline-block; vertical-align:top;
+		.text { /*width:69.5%; display:inline-block; vertical-align:top;*/
 			a.inicio {text-decoration:none}
 			img.kumalogo {position:absolute; height:10em; left:14em; top:4em}
 			h2 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:6em; text-align:left; margin:0;
@@ -841,7 +841,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			&:hover, &:hover b, &:hover strong { color:rgb(200, 112, 114); }
 		}
 		p.menos, li.menos {
-			span.hidden, span.menos {display:inline-block}
+			span.hidden, span.menos {display:inline}
 			span.hidden {margin:0.5em 0}
 			a.leer-mas {background:#ccc}
 			span.mas {display:none}
@@ -858,13 +858,13 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 	
 	.copy { font-size:1.2em; position:relative; margin:0; margin-top:1em;}
 	.text {
-		span.hidden i {font-style:normal; display:block}
+		span.hidden i {font-style:normal; display:inline}
 		span.hidden, span.menos {display:none}
 		b {color:black}
 
 		.left, .right {display:inline-block; vertical-align:top}
 		.left {width:30%; text-align:center;
-			img {height:200px;}
+			img {height:16em;}
 		}
 		.right {width:60%}
 	}
@@ -952,7 +952,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 	.redes {display:inline-block; margin:0 2em; padding:0 1em; margin-right:1.5em;
 		img {margin-right:1.1em}
 		.fb { margin-right:10.5em;
-			img {position:absolute; height:8em; top:-2.6em}
+			img {position:absolute; height:8em; top:-2.8em}
 		}
 	}
 	span.correo {font-size:1.5em; margin-right:1.5em; display:inline-block;
@@ -963,6 +963,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 
 
 /************************** ;RESPONSIVENESS **************************/
+/*--------------------;SHORT WIDE--------------------*/
 .shortWide {
 	.screen.nosotros .galaxia div.wiki {
 		width:9em; height:9em; margin:0.7em 2.6em;
@@ -991,12 +992,23 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		}
 	}
 	.screen.acercade .yo-kuma {
-		.copy {
+		.copy { 
 			p:nth-of-type(1) { margin-top:2.5em; }
+			p {margin-bottom:2em}
 			.todos {bottom:-2em}
 		}
 	}
+	&.mobileNotIpad {
+		.screen {height:auto; overflow:visible}
+		#goodbye {position:fixed}
+		#fullpage {
+			&.compromisos, &.principios, &.propuestas {
+				.fb {display:none}
+			}
+		}
+	}
 }
+
 
 /*--------------------;BOXY--------------------*/
 .boxy {
@@ -1031,18 +1043,39 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 	.screen.nosotros .galaxia div.wiki { margin:1.4em 2em}
 	.screen.acercade .yo-kuma {
 		.foto img {margin-top:0;}
-		.copy {font-size:1.2em; }
+		.copy {font-size:1.2em; 
+			p {margin-bottom:2em}
+		}
 	}
 }
 
+/*--------------------;PORTRAIT--------------------*/
 .portrait {
+	.screen.video {background:black;
+		.theater { top:20em;
+			.date {padding-top:1em}
+			#ytplayer {top:3em; margin-left:auto}
+			.sidebar {width:100%; left:0; right:auto; z-index:2;
+				.thumbs {display:inline-block; vertical-align:middle}
+				.soundToggle, .replay {margin-top:3em; vertical-align:middle}
+				.replay {margin-right:2em}
+			}
+			.fb img {
+				margin-left:-3em; margin-top:-1em;
+			}
+		}
+		.copy {bottom:0; padding-bottom:13em; background:#ADDFD7; 
+			h1 {top:2em}
+			p {margin-top:2em; font-size:2.5em}
+		}
+	}
+
 	.screen.nosotros {
 		h1 {width:100%; margin:0.4em 0;
 			a {bottom:1.5em; right:7.2em}
 		}
 		.galaxia {
-			.azulejo-top {top:-2%}
-			.azulejo-bottom {bottom:-2%}
+			.azulejo-top {top:-2%} .azulejo-bottom {bottom:-2%}
 			div.wiki { margin:1.5em 1.5em; width:15em; height:15em;
 				img {width:15em; height:15em;}
 				span {font-size:3em}
@@ -1050,7 +1083,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		}
 	}
 	.screen.asesores {
-		h1 {margin-top:0.25em}
+		h1 {margin-top:0.3em; margin-bottom:0.3em}
 		div.asesores { font-size:1.2em;
 			.center {margin-left:-7em;
 				.bottom {
@@ -1064,16 +1097,84 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			.left {border-top:1px solid #aaa; padding-top:2%; padding-right:2%}
 		}
 	}
+	.screen.medios {
+		h1 {margin-top:1em; margin-bottom:0.8em}
+		.carton {top:auto; bottom:0; left:25em; 
+			img {width:35em}
+			&.carton9abr {top:auto; bottom:0; left:auto; right:25em}
+		}
+		.citas .medio {
+			div.logo img {margin-top:2em; width:30em}
+			.copy {font-size:1.8em;
+				a {width:30em}
+			}
+		}
+		.logos {margin-top:3.5em}
+	}
+	.screen.acercade .yo-kuma {
+		.foto img {margin-top:-7em;}
+		img.todos {width:100%; left:0}
+		.copy {font-size:1.6em; 
+			p {margin-left:3em; margin-bottom:2.5em}
+		}
+	}
+	
+	#fullpage {
+		&.compromisos {
+			.screen.toc {
+				.header {margin-bottom:8em;}
+				p { font-size:2.8em; }
+				div.toc {
+					a {width:100%; font-size:8em; margin:1em 0; text-align:center}
+				}
+			}
+			.screen.bienvenida {
+				div.copy {font-size:2.3em; right:14em}
+			}
+			.screen .text {
+				h2 {padding-left:2.25em; margin-bottom:1em}
+				img.kumalogo {left:2em}
+				h3 {margin-left:4.6em}
+				ol {width:75%}
+			}
+			li {font-size:1.3em; line-height:1.4em; margin:1em 0}
+		}
+	}
 }
 
+/*--------------------;TALL NARROW--------------------*/
 .tallNarrow {
+	&.mobileNotIpad {
+		#fullpage.home {
+			/*.screen {height:auto; overflow:visible}*/
+			/*#goodbye {position:fixed}*/
+		}
+	}
+	.screen.video {background:black;
+		.theater { top:40em;
+			.date {padding-top:1em}
+			#ytplayer {top:3em; margin-left:auto}
+			.sidebar {width:100%; left:0; right:auto; z-index:2;
+				.thumbs {display:inline-block; vertical-align:middle}
+				.soundToggle, .replay {margin-top:3em; vertical-align:middle}
+				.replay {margin-right:2em}
+			}
+			.fb img {
+				margin-left:-3em; margin-top:-1em;
+			}
+		}
+		.copy {bottom:0; padding-bottom:15em; background:#ADDFD7; 
+			h1 {top:2em}
+			p {margin-top:2em; font-size:2.5em}
+		}
+	}
+	
 	.screen.nosotros {
 		h1 {width:10.8em; margin:0.4em 0; font-size:8em;
 			a {bottom:-0.6em; right:8.2em}
 		}
 		.galaxia {
-			.azulejo-top {top:-0.2%}
-			.azulejo-bottom {bottom:-0.2%}
+			.azulejo-top {top:-0.2%} .azulejo-bottom {bottom:-0.2%}
 			div.wiki { margin:2.7em 1.8em; width:18em; height:18em;
 				img {width:18em; height:18em;}
 				span {font-size:3.5em}
@@ -1081,17 +1182,206 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			}
 		}
 	}
-	.screen.asesores {
+	.screen.asesores {padding-bottom:4em;
 		h1 {margin:0.5em 0;}
-		div.asesores {font-size:1.5em;
-			.center {
-				.bottom {
-					position:absolute; bottom:2em; width:100%; left:0
+		div.asesores {font-size:1.8em;
+			.asesor {
+				a.twitter {display:none}
+				em {font-style:normal; font-size:1.2em}
+				span.name {font-size:1.9em}
+				.bio em { display:none }
+				&:hover { 
+					.bio em { display:inline-block }
 				}
 			}
-			.right, .left {width:65%; margin-top:3em; margin-bottom:3em}
+			
+			.center {margin:2em 0;
+				.asesor &:hover {margin-top:-6em;}
+				.bottom { display:block; margin-top:1em}
+			}
+			.right, .left {width:48.5%; margin-top:2em; margin-bottom:2em;
+				.bio em {padding-bottom:2em}
+				.asesor {margin-top:1.5em;
+					p {display:none; width:24em; font-size:1.5em }
+				}
+			}
 			.left {border-right:none}
 		}
 	}
-}
+	.screen.medios {
+		h1 {padding-top:1em; padding-bottom:0.5em}
+		.carton {top:auto; bottom:0; left:25em;  display:none;
+			img {width:35em}
+			&.carton9abr {top:auto; bottom:0; left:auto; right:25em}
+		}
+		.citas .medio {
+			div.logo { text-align:center; width:100%; margin-top:3em; margin-bottom:2em;
+				img {margin-top:2em; width:35em}
+			}
+			&.milenio .logo img {width:25em !important}
+			&.yonofui {
+				.logo {height:8em;
+					a {font-size:2em;
+						img {height:4em; width:4em;}
+					}
+				}
+			}
+			.copy {font-size:2.5em;
+				a {width:30em; padding-bottom:0.5em;
+					.source {margin-top:0.24em}
+				}
+			}
+		}
+		.logos {margin-top:5.5em}
+	}
+	.screen.acercade {
+		h1 {font-size:10em;}
+		.yo-kuma {
+			.foto img {margin-top:-7em;}
+			img.todos {width:100%; left:0; bottom:-8em}
+			.copy {font-size:1.9em; 
+				p {margin-left:3em; margin-bottom:1em; width:75%}
+				p:nth-of-type(1) { margin-top:2.5em; }
+			}
+		}
+	}
+	.screen.mapa .copy { font-size:1.4em;
+		.data-maps {font-size:1.3em}
+	}
 
+	#goodbye {font-size:1.3em}
+	#menu {font-size:3em}
+	
+	#fullpage {
+		&.compromisos, &.principios, &.propuestas {
+			.fb {display:none}
+		}
+		&.principios {
+			.header {
+				.azulejo-top {top:-2%}
+				.pedro-kumamoto {margin-top:5em; font-size:1.5em; width:100%;
+					.kumalogo {height:15.5em}
+					h2 {font-size:2.1em; margin-top:0.6em }
+				}
+				.where {display:block; width:100%; margin-top:2em; font-size:2em; }
+			}
+			.screen.toc .lista {
+				.left, .right { width:100%;
+					a {display:block; font-size:7em; margin:1.1em 0;
+						&:last-of-type {margin-bottom:0}
+					}
+					br {display:none}
+				}
+				.left {
+					span {width:6.5em;
+						img {padding-right:2em}
+					}
+				}
+				.right {
+					a {
+						span {width:6em;}
+						img {padding-left:2em}
+					}
+				}
+			}
+			.screen .text {
+				h2 {padding-left:2.85em; margin-bottom:1.5em; line-height:1em; font-size:10em}
+				img.kumalogo {left:2em; height:22em; top:6em}
+				h3 {font-size:6em; margin-left:4.7em}
+				p {width:75%; font-size:3.5em}
+				.confetti img {width:20em; margin-left:-3em}
+				.icono {font-size:2em; margin-top:1em}
+			}
+		}
+		&.propuestas {
+			.header {
+				.azulejo-top {top:-2%}
+				.pedro-kumamoto {margin-top:3em; font-size:1.5em; width:100%;
+					.kumalogo {height:15.5em}
+					h2 {font-size:2.1em; margin-top:0.6em }
+				}
+				.where {display:block; width:100%; margin-top:2em; font-size:2em; }
+			}
+			.screen {
+				&.toc {
+					.ciudad, .gobierno { width:100%;
+						h2, h3 { a {margin:1.2em 0;} }
+						h2 {font-size:7em}
+						h3 {font-size:5em}
+					}
+					.ciudad {
+						h2 span {width:5.4em;
+							img {margin-right:2em}
+						}
+						h3 span {width:7.8em;
+							img {margin-right:2em}
+						}
+					}
+					.gobierno {
+						h2 {margin-top:0; 
+							span {width:5.4em;
+								img {margin-left:2em}
+							}
+						}
+						h3 span {width:7.8em;
+							img {margin-left:2em}
+						}
+					}
+				}
+				&.ciudad, &.gobierno {
+					div.copy {font-size:4em; width:20em}
+				}
+				.text {
+					h1 {font-size:10em; text-align:center; padding-left:0; }
+					h2 {padding-left:0em; margin:0; padding-top:1em; padding-bottom:0.7em; margin-bottom:0.1em; margin-left:-1em; line-height:1em; font-size:6em; text-align:center;
+						img.kumalogo {position:absolute; left:auto; right:2em; height:2.5em; margin:0; top:0.5em;}
+					}
+					p {width:75%; font-size:2.8em}
+					p.propuestas {font-size:3.2em}
+					ol {width:100%; font-size:3em;
+						li {width:75%; margin-left:1em}
+					}
+					.confetti img {width:60em; margin-left:-3em}
+					.icono {font-size:2em; margin-top:3em}
+				}
+			}
+		}
+		&.compromisos {
+			.header {
+				.azulejo-top {top:-2%}
+				.pedro-kumamoto {margin-top:5em; font-size:1.5em; width:100%;
+					.kumalogo {height:15.5em}
+					h2 {font-size:2.1em; margin-top:0.6em }
+				}
+				.where {display:block; width:100%; margin-top:2em; font-size:2em; }
+			}
+			.screen.toc {
+				.header {margin-bottom:8em;}
+				p { font-size:3.8em; }
+				div.toc {
+					a {width:100%; font-size:11em; margin:1em 0; text-align:center}
+				}
+			}
+			.screen.bienvenida {
+				div.copy {font-size:4em; right:2em; bottom:2em; width:20em; padding:1em 2em; border:1px solid #ccc}
+			}
+			.screen .text {
+				h2 {padding-left:2.25em; margin-bottom:0.5em; line-height:1em; font-size:12em}
+				img.kumalogo {left:2em; height:22em; top:6em}
+				h3 {font-size:6em; margin-left:4.7em}
+				ol {width:75%; font-size:3.5em}
+			}
+			li {font-size:1.3em; line-height:1.4em; margin:0.7em 0}
+			ol.congreso li {margin:0.2em 0}
+		}
+	}
+	.opentip-container {
+		.opentip { font-size:3em; padding:1em 1.4em; max-width:18em; color:black !important; text-align:center;
+			span {padding:0 0.27em; margin-bottom:0.27em}
+			strong {
+				font-size:1.2em;
+				padding:0 0.23em; margin-bottom:0.23em; margin-top:0.23em;
+			}
+		}
+	}
+}
