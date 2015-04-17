@@ -66,8 +66,8 @@ var KUMA = {
 							} );
 						});
 					} else if(section == 'nos-asesoran') {
-						animate({el:'.screen.asesores .left p', translateX:'40em', duration:1200});
-						animate({el:'.screen.asesores .right p', translateX:'-40em', duration:1200});
+						animate({el:'.screen.asesores .left p', translateX:'60em', duration:1200});
+						animate({el:'.screen.asesores .right p', translateX:'-60em', duration:1200});
 					} else if(section == 'soy-pedro') {
 						emerge( {el:'.screen.acercade h1', duration:600, timeout:500} );
 						$('.screen.acercade p strong').css('color', 'rgb(200, 112, 114)');
@@ -366,7 +366,7 @@ var KUMA = {
 			}
 		},
 		blur:function() { var p = KUMA.player;
-			if(typeof p == 'undefined') {
+			if(typeof p != 'undefined') {
 				//console.log('blur!');
 				p.pauseVideo();
 				(!KUMA.mobile) && p.unMute();
@@ -388,14 +388,14 @@ var KUMA = {
 			}
 		},
 		play:function() { var p = KUMA.player;
-			if(typeof p == 'undefined') {
+			if(typeof p != 'undefined') {
 				KUMA.video._play();
 			} else {
 				KUMA.video.afterReady = KUMA.video._play;
 			}
 		},
 		pause:function() { var p = KUMA.player;
-			if(typeof p == 'undefined') {
+			if(typeof p != 'undefined') {
 				p.pauseVideo();
 				if($('.soundToggle.unMuted').length > 0) {
 					(!KUMA.mobile) && KUMA.player.unMute();
@@ -516,7 +516,7 @@ var KUMA = {
 			});
 
 			$('.screen.video .fb').css({
-				left:((data.w-v.width)/2) + v.width - (15*em),
+				left:((data.w-v.width)/2)-(1*em),
 				top:v.height+(0.5*em)
 			});
 
@@ -526,7 +526,7 @@ var KUMA = {
 
 			if($('#fullpage.boxy').length > 0) {
 				$('.screen.video .sidebar').css('top', ytplayerBottom - (5*em));
-				ytplayerBottom += (10*em)*1;
+				ytplayerBottom += (8*em)*1;
 				$('.screen.video .sidebar').css('width', '100%');
 				$('#ytplayer').css('left', $('#ytplayer').css('left')+20+(2*em));
 			} else {
@@ -583,7 +583,7 @@ var KUMA = {
 					$('#fullpage').addClass('boxy').data('orientation', 'boxy');
 				} else if(prop >= 0.7) {
 					console.log('portrait!', prop);
-					$('#fullpage').addClass('boxy').data('orientation', 'portrait');
+					$('#fullpage').addClass('portrait').data('orientation', 'portrait');
 				} else {
 					console.log('tallNarrow!', prop);
 					$('#fullpage').addClass('tallNarrow').data('orientation', 'tallNarrow');

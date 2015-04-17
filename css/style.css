@@ -775,13 +775,13 @@ body {
           transform: scale(1.3);
           z-index: 5; }
       .screen.asesores div.asesores .left .card a.twitter {
-        left: 23%;
-        bottom: -1.2em;
+        right: 14%;
+        bottom: -2em;
         margin-left: 1em; }
       .screen.asesores div.asesores .right .card a.twitter {
         left: auto;
-        right: 23%;
-        bottom: -1.2em;
+        left: 10%;
+        bottom: -2em;
         margin-left: 1em; }
       .screen.asesores div.asesores .left {
         text-align: right;
@@ -798,7 +798,7 @@ body {
           background-image: linear-gradient(to right,#f0ecdc, #CBBFAE);
           padding: 0.8em;
           padding-left: 0;
-          left: -40em; }
+          left: -60em; }
         .screen.asesores div.asesores .left .card {
           margin-left: 1em; }
           .screen.asesores div.asesores .left .card img {
@@ -818,7 +818,7 @@ body {
             .screen.asesores div.asesores .right .asesor .portrait img {
               margin-right: 0; }
           .screen.asesores div.asesores .right .asesor p {
-            left: 40em;
+            left: 60em;
             background-color: #f0ecdc;
             background-image: -webkit-linear-gradient(right, #f0ecdc, #CBBFAE);
             background-image: linear-gradient(to left,#f0ecdc, #CBBFAE);
@@ -2173,7 +2173,28 @@ body {
   .shortWide .screen.nosotros .galaxia div.wiki img {
     width: 9em;
     height: 9em; }
+.shortWide .screen.video {
+  /*.theater .fb img {*/
+  /*margin-left:-3em; margin-top:-1em;*/
+  /*}*/ }
+  .shortWide .screen.video .copy {
+    bottom: 1em;
+    /*p {margin-top:2em}*/
+    /*a {display:none}*/ }
+.shortWide .screen.asesores div.asesores .right {
+  width: 47.5%; }
+.shortWide .screen.asesores div.asesores .center .asesor .bio em {
+  display: none; }
+.shortWide .screen.asesores div.asesores .center .asesor:hover {
+  margin-top: -6em; }
+  .shortWide .screen.asesores div.asesores .center .asesor:hover .bio em {
+    display: inline-block; }
+.shortWide .screen.acercade .yo-kuma .copy p:nth-of-type(1) {
+  margin-top: 2.5em; }
+.shortWide .screen.acercade .yo-kuma .copy .todos {
+  bottom: -2em; }
 
+/*--------------------;BOXY--------------------*/
 .boxy .screen.video .theater .date {
   padding-top: 1em; }
 .boxy .screen.video .theater #ytplayer {
@@ -2184,15 +2205,35 @@ body {
   right: auto;
   z-index: 2; }
   .boxy .screen.video .theater .sidebar .thumbs {
-    display: inline-block; }
+    display: inline-block;
+    vertical-align: middle; }
+  .boxy .screen.video .theater .sidebar .soundToggle, .boxy .screen.video .theater .sidebar .replay {
+    margin-top: 3em;
+    vertical-align: middle; }
   .boxy .screen.video .theater .sidebar .replay {
     margin-right: 2em; }
+.boxy .screen.video .theater .fb img {
+  margin-left: -3em;
+  margin-top: -1em; }
 .boxy .screen.video .copy p {
   margin-top: 2em; }
 .boxy .screen.video .copy a {
   display: none; }
+.boxy .screen.asesores h1 {
+  margin: 0.3em 0; }
+.boxy .screen.asesores div.asesores .left, .boxy .screen.asesores div.asesores .right {
+  margin-top: 2em;
+  margin-bottom: 2em; }
+.boxy .screen.medios h1 {
+  margin-top: 0.8em; }
+.boxy .screen.medios .citas .medio .copy {
+  font-size: 1.3em; }
 .boxy .screen.nosotros .galaxia div.wiki {
   margin: 1.4em 2em; }
+.boxy .screen.acercade .yo-kuma .foto img {
+  margin-top: 0; }
+.boxy .screen.acercade .yo-kuma .copy {
+  font-size: 1.2em; }
 
 .portrait .screen.nosotros h1 {
   width: 100%;
@@ -2213,6 +2254,23 @@ body {
     height: 15em; }
   .portrait .screen.nosotros .galaxia div.wiki span {
     font-size: 3em; }
+.portrait .screen.asesores h1 {
+  margin-top: 0.25em; }
+.portrait .screen.asesores div.asesores {
+  font-size: 1.2em; }
+  .portrait .screen.asesores div.asesores .center {
+    margin-left: -7em; }
+    .portrait .screen.asesores div.asesores .center .bottom {
+      position: absolute;
+      width: 20em; }
+      .portrait .screen.asesores div.asesores .center .bottom .asesor {
+        margin-bottom: 2em; }
+  .portrait .screen.asesores div.asesores .right, .portrait .screen.asesores div.asesores .left {
+    width: 51.5%; }
+  .portrait .screen.asesores div.asesores .left {
+    border-top: 1px solid #aaa;
+    padding-top: 2%;
+    padding-right: 2%; }
 
 .tallNarrow .screen.nosotros h1 {
   width: 10.8em;
@@ -2236,5 +2294,20 @@ body {
     font-size: 3.5em; }
   .tallNarrow .screen.nosotros .galaxia div.wiki:last-of-type {
     margin-right: 23em; }
+.tallNarrow .screen.asesores h1 {
+  margin: 0.5em 0; }
+.tallNarrow .screen.asesores div.asesores {
+  font-size: 1.5em; }
+  .tallNarrow .screen.asesores div.asesores .center .bottom {
+    position: absolute;
+    bottom: 2em;
+    width: 100%;
+    left: 0; }
+  .tallNarrow .screen.asesores div.asesores .right, .tallNarrow .screen.asesores div.asesores .left {
+    width: 65%;
+    margin-top: 3em;
+    margin-bottom: 3em; }
+  .tallNarrow .screen.asesores div.asesores .left {
+    border-right: none; }
 
 /*# sourceMappingURL=style.css.map */
