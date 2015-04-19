@@ -2196,13 +2196,31 @@ body {
   margin-bottom: 2em; }
 .shortWide .screen.acercade .yo-kuma .copy .todos {
   bottom: -2em; }
-.shortWide.mobileNotIpad .screen {
-  height: auto;
-  overflow: visible; }
-.shortWide.mobileNotIpad #goodbye {
-  position: fixed; }
-.shortWide.mobileNotIpad #fullpage.compromisos .fb, .shortWide.mobileNotIpad #fullpage.principios .fb, .shortWide.mobileNotIpad #fullpage.propuestas .fb {
-  display: none; }
+.shortWide.mobileNotIpad {
+  /*.screen {height:auto; overflow:visible}*/
+  /*#goodbye {position:fixed}*/ }
+  .shortWide.mobileNotIpad #fullpage {
+    /*&.compromisos, &.principios, &.propuestas {*/
+    /*.fb {display:none}*/
+    /*}*/ }
+
+body.mobileNotIpad #fullpage.propuestas .text h1 {
+  padding-left: 4em;
+  font-size: 4em; }
+body.mobileNotIpad #fullpage.propuestas .text h2 {
+  margin-left: 5em; }
+  body.mobileNotIpad #fullpage.propuestas .text h2 .kumalogo {
+    height: 3.5em;
+    left: 1em;
+    top: 0.7em; }
+body.mobileNotIpad #fullpage.propuestas .text p, body.mobileNotIpad #fullpage.propuestas .text ol {
+  width: 80%; }
+body.mobileNotIpad #fullpage.propuestas .text li {
+  margin-left: 1em; }
+body.mobileNotIpad #fullpage.propuestas .text span.confetti {
+  font-size: 0.7em; }
+  body.mobileNotIpad #fullpage.propuestas .text span.confetti img {
+    margin: 0.4em 0; }
 
 /*--------------------;BOXY--------------------*/
 .boxy .screen.video .theater .date {
@@ -2377,6 +2395,147 @@ body {
   font-size: 1.3em;
   line-height: 1.4em;
   margin: 1em 0; }
+.portrait #fullpage.principios .header .azulejo-top {
+  top: -2%; }
+.portrait #fullpage.principios .header .pedro-kumamoto {
+  margin-top: 5em;
+  font-size: 1.5em;
+  width: 100%; }
+  .portrait #fullpage.principios .header .pedro-kumamoto .kumalogo {
+    height: 15.5em; }
+  .portrait #fullpage.principios .header .pedro-kumamoto h2 {
+    font-size: 2.1em;
+    margin-top: 0.6em; }
+.portrait #fullpage.principios .header .where {
+  display: block;
+  width: 100%;
+  margin-top: 2em;
+  font-size: 2em; }
+.portrait #fullpage.principios .screen.toc .lista .left, .portrait #fullpage.principios .screen.toc .lista .right {
+  width: 100%; }
+  .portrait #fullpage.principios .screen.toc .lista .left a, .portrait #fullpage.principios .screen.toc .lista .right a {
+    display: block;
+    font-size: 5em;
+    margin: 1.1em 0; }
+    .portrait #fullpage.principios .screen.toc .lista .left a:last-of-type, .portrait #fullpage.principios .screen.toc .lista .right a:last-of-type {
+      margin-bottom: 0; }
+  .portrait #fullpage.principios .screen.toc .lista .left br, .portrait #fullpage.principios .screen.toc .lista .right br {
+    display: none; }
+.portrait #fullpage.principios .screen.toc .lista .left a:first-of-type {
+  margin-top: 0; }
+.portrait #fullpage.principios .screen.toc .lista .left span {
+  width: 6.5em; }
+  .portrait #fullpage.principios .screen.toc .lista .left span img {
+    padding-right: 2em; }
+.portrait #fullpage.principios .screen.toc .lista .right a span {
+  width: 6em; }
+.portrait #fullpage.principios .screen.toc .lista .right a img {
+  padding-left: 2em; }
+.portrait #fullpage.principios .screen .text h2 {
+  padding-left: 3em;
+  margin-bottom: 1.5em;
+  line-height: 1.3em; }
+.portrait #fullpage.principios .screen .text img.kumalogo {
+  left: 2em;
+  height: 10em; }
+.portrait #fullpage.principios .screen .text h3 {
+  margin-left: 4.6em; }
+.portrait #fullpage.principios .screen .text p {
+  width: 80%;
+  font-size: 2em; }
+.portrait #fullpage.principios .screen .text .confetti {
+  margin: 2em 0; }
+  .portrait #fullpage.principios .screen .text .confetti img {
+    width: 25em; }
+.portrait #fullpage.principios .screen .text .icono {
+  font-size: 1.2em;
+  margin-top: 1em; }
+.portrait #fullpage.propuestas .header .azulejo-top {
+  top: -2%; }
+.portrait #fullpage.propuestas .header .pedro-kumamoto {
+  margin-top: 3em;
+  font-size: 1.5em;
+  width: 100%; }
+  .portrait #fullpage.propuestas .header .pedro-kumamoto .kumalogo {
+    height: 15.5em; }
+  .portrait #fullpage.propuestas .header .pedro-kumamoto h2 {
+    font-size: 2.1em;
+    margin-top: 0.6em; }
+.portrait #fullpage.propuestas .header .where {
+  display: block;
+  width: 100%;
+  margin-top: 2em;
+  font-size: 1.6em; }
+.portrait #fullpage.propuestas .screen.toc .ciudad, .portrait #fullpage.propuestas .screen.toc .gobierno {
+  width: 100%; }
+  .portrait #fullpage.propuestas .screen.toc .ciudad h2 a, .portrait #fullpage.propuestas .screen.toc .ciudad h3 a, .portrait #fullpage.propuestas .screen.toc .gobierno h2 a, .portrait #fullpage.propuestas .screen.toc .gobierno h3 a {
+    margin: 1.3em 0; }
+  .portrait #fullpage.propuestas .screen.toc .ciudad h2, .portrait #fullpage.propuestas .screen.toc .gobierno h2 {
+    font-size: 5em; }
+  .portrait #fullpage.propuestas .screen.toc .ciudad h3, .portrait #fullpage.propuestas .screen.toc .gobierno h3 {
+    font-size: 4em; }
+.portrait #fullpage.propuestas .screen.toc .ciudad h2 a {
+  margin-top: 0; }
+.portrait #fullpage.propuestas .screen.toc .ciudad h2 span {
+  width: 5.4em; }
+  .portrait #fullpage.propuestas .screen.toc .ciudad h2 span img {
+    margin-right: 2em; }
+.portrait #fullpage.propuestas .screen.toc .ciudad h3 span {
+  width: 7.8em; }
+  .portrait #fullpage.propuestas .screen.toc .ciudad h3 span img {
+    margin-right: 2em; }
+.portrait #fullpage.propuestas .screen.toc .gobierno h2 {
+  margin-top: 0; }
+  .portrait #fullpage.propuestas .screen.toc .gobierno h2 a:nth-of-type(1) {
+    margin-top: 0.5em; }
+  .portrait #fullpage.propuestas .screen.toc .gobierno h2 span {
+    width: 5.4em; }
+    .portrait #fullpage.propuestas .screen.toc .gobierno h2 span img {
+      margin-left: 2em; }
+.portrait #fullpage.propuestas .screen.toc .gobierno h3 span {
+  width: 7.8em; }
+  .portrait #fullpage.propuestas .screen.toc .gobierno h3 span img {
+    margin-left: 2em; }
+.portrait #fullpage.propuestas .screen.ciudad div.copy, .portrait #fullpage.propuestas .screen.gobierno div.copy {
+  font-size: 3em;
+  width: 20em; }
+.portrait #fullpage.propuestas .screen .text h1 {
+  text-align: center;
+  padding-left: 0;
+  font-size: 6.5em; }
+.portrait #fullpage.propuestas .screen .text h2 {
+  padding-left: 0em;
+  margin: 0;
+  padding-top: 1em;
+  padding-right: 1em;
+  padding-bottom: 0.7em;
+  margin-bottom: 0.1em;
+  margin-left: -1em;
+  line-height: 1em;
+  text-align: center;
+  position: relative; }
+  .portrait #fullpage.propuestas .screen .text h2 img.kumalogo {
+    position: absolute;
+    left: auto;
+    right: 1.5em;
+    height: 2.5em;
+    margin: 0;
+    top: 0.5em; }
+.portrait #fullpage.propuestas .screen .text .copy {
+  font-size: 2.5em; }
+  .portrait #fullpage.propuestas .screen .text .copy p {
+    width: 80%;
+    padding-left: 3em; }
+  .portrait #fullpage.propuestas .screen .text .copy ol {
+    width: 100%;
+    padding-left: 2em; }
+    .portrait #fullpage.propuestas .screen .text .copy ol li {
+      width: 80%;
+      margin-left: 1em; }
+  .portrait #fullpage.propuestas .screen .text .copy .confetti img {
+    width: 25em; }
+  .portrait #fullpage.propuestas .screen .text .copy .icono {
+    margin-top: 3em; }
 
 /*--------------------;TALL NARROW--------------------*/
 .tallNarrow.mobileNotIpad #fullpage.home {
@@ -2632,6 +2791,8 @@ body {
     margin-right: 2em; }
 .tallNarrow #fullpage.propuestas .screen.toc .gobierno h2 {
   margin-top: 0; }
+  .tallNarrow #fullpage.propuestas .screen.toc .gobierno h2 a:nth-of-type(1) {
+    margin-top: 0.5em; }
   .tallNarrow #fullpage.propuestas .screen.toc .gobierno h2 span {
     width: 5.4em; }
     .tallNarrow #fullpage.propuestas .screen.toc .gobierno h2 span img {
@@ -2664,23 +2825,20 @@ body {
     height: 2.5em;
     margin: 0;
     top: 0.5em; }
-.tallNarrow #fullpage.propuestas .screen .text p {
-  width: 75%;
-  font-size: 2.8em; }
-.tallNarrow #fullpage.propuestas .screen .text p.propuestas {
-  font-size: 3.2em; }
-.tallNarrow #fullpage.propuestas .screen .text ol {
-  width: 100%;
-  font-size: 3em; }
-  .tallNarrow #fullpage.propuestas .screen .text ol li {
-    width: 75%;
-    margin-left: 1em; }
-.tallNarrow #fullpage.propuestas .screen .text .confetti img {
-  width: 60em;
-  margin-left: -3em; }
-.tallNarrow #fullpage.propuestas .screen .text .icono {
-  font-size: 2em;
-  margin-top: 3em; }
+.tallNarrow #fullpage.propuestas .screen .text .copy {
+  font-size: 3.5em; }
+  .tallNarrow #fullpage.propuestas .screen .text .copy p {
+    width: 75%; }
+  .tallNarrow #fullpage.propuestas .screen .text .copy ol {
+    width: 100%; }
+    .tallNarrow #fullpage.propuestas .screen .text .copy ol li {
+      width: 75%;
+      margin-left: 1em; }
+  .tallNarrow #fullpage.propuestas .screen .text .copy .confetti img {
+    width: 20em;
+    margin-left: -3em; }
+  .tallNarrow #fullpage.propuestas .screen .text .copy .icono {
+    margin-top: 3em; }
 .tallNarrow #fullpage.compromisos .header .azulejo-top {
   top: -2%; }
 .tallNarrow #fullpage.compromisos .header .pedro-kumamoto {

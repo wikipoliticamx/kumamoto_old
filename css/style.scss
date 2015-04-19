@@ -999,15 +999,34 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		}
 	}
 	&.mobileNotIpad {
-		.screen {height:auto; overflow:visible}
-		#goodbye {position:fixed}
+		/*.screen {height:auto; overflow:visible}*/
+		/*#goodbye {position:fixed}*/
 		#fullpage {
-			&.compromisos, &.principios, &.propuestas {
-				.fb {display:none}
+			/*&.compromisos, &.principios, &.propuestas {*/
+				/*.fb {display:none}*/
+			/*}*/
+		}
+	}
+}
+
+body.mobileNotIpad {
+	#fullpage {
+		&.propuestas {
+			.text {
+				h1 {padding-left:4em; font-size:4em}
+				h2 {margin-left:5em;
+					.kumalogo {height:3.5em; left:1em; top:0.7em}
+				}
+				p, ol {width:80%}
+				li {margin-left:1em}
+				span.confetti {font-size:0.7em;
+					img {margin:0.4em 0}
+				}
 			}
 		}
 	}
 }
+
 
 
 /*--------------------;BOXY--------------------*/
@@ -1138,6 +1157,104 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				ol {width:75%}
 			}
 			li {font-size:1.3em; line-height:1.4em; margin:1em 0}
+		}
+		&.principios {
+			.header {
+				.azulejo-top {top:-2%}
+				.pedro-kumamoto {margin-top:5em; font-size:1.5em; width:100%;
+					.kumalogo {height:15.5em}
+					h2 {font-size:2.1em; margin-top:0.6em }
+				}
+				.where {display:block; width:100%; margin-top:2em; font-size:2em; }
+			}
+			.screen.toc .lista {
+				.left, .right { width:100%;
+					a {display:block; font-size:5em; margin:1.1em 0;
+						&:last-of-type {margin-bottom:0}
+					}
+					br {display:none}
+				}
+				.left {
+					a:first-of-type {margin-top:0}
+					span {width:6.5em;
+						img {padding-right:2em}
+					}
+				}
+				.right {
+					a {
+						span {width:6em;}
+						img {padding-left:2em}
+					}
+				}
+			}
+			.screen .text {
+				h2 {padding-left:3em; margin-bottom:1.5em; line-height:1.3em;}
+				img.kumalogo {left:2em; height:10em}
+				h3 {margin-left:4.6em}
+				p {width:80%; font-size:2em}
+				.confetti {margin:2em 0;
+					img {width:25em}
+				}
+				.icono {font-size:1.2em; margin-top:1em}
+			}
+		}
+		&.propuestas {
+			.header {
+				.azulejo-top {top:-2%}
+				.pedro-kumamoto {margin-top:3em; font-size:1.5em; width:100%;
+					.kumalogo {height:15.5em}
+					h2 {font-size:2.1em; margin-top:0.6em }
+				}
+				.where {display:block; width:100%; margin-top:2em; font-size:1.6em; }
+			}
+			.screen {
+				&.toc {
+					.ciudad, .gobierno { width:100%;
+						h2, h3 { a {margin:1.3em 0;} }
+						h2 {font-size:5em}
+						h3 {font-size:4em}
+					}
+					.ciudad {
+						h2 {
+							a {margin-top:0}
+							span {width:5.4em;
+								img {margin-right:2em}
+							}
+						}
+						h3 span {width:7.8em;
+							img {margin-right:2em}
+						}
+					}
+					.gobierno {
+						h2 {margin-top:0; 
+							a:nth-of-type(1) {margin-top:0.5em }
+							span {width:5.4em;
+								img {margin-left:2em}
+							}
+						}
+						h3 span {width:7.8em;
+							img {margin-left:2em}
+						}
+					}
+				}
+				&.ciudad, &.gobierno {
+					div.copy {font-size:3em; width:20em}
+				}
+				.text {
+					h1 {text-align:center; padding-left:0; font-size:6.5em;}
+					h2 {padding-left:0em; margin:0; padding-top:1em; padding-right:1em; padding-bottom:0.7em; margin-bottom:0.1em; margin-left:-1em; line-height:1em; text-align:center; position:relative;
+						img.kumalogo {position:absolute; left:auto; right:1.5em; height:2.5em; margin:0; top:0.5em;}
+					}
+					.copy {font-size:2.5em;
+						p {width:80%; padding-left:3em}
+						ol {width:100%; padding-left:2em;
+							li {width:80%; margin-left:1em}
+						}
+						.confetti img {width:25em;}
+						.icono {margin-top:3em}
+					}
+				}
+			}
 		}
 	}
 }
@@ -1319,6 +1436,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 					}
 					.gobierno {
 						h2 {margin-top:0; 
+							a:nth-of-type(1) {margin-top:0.5em }
 							span {width:5.4em;
 								img {margin-left:2em}
 							}
@@ -1336,13 +1454,14 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 					h2 {padding-left:0em; margin:0; padding-top:1em; padding-bottom:0.7em; margin-bottom:0.1em; margin-left:-1em; line-height:1em; font-size:6em; text-align:center;
 						img.kumalogo {position:absolute; left:auto; right:2em; height:2.5em; margin:0; top:0.5em;}
 					}
-					p {width:75%; font-size:2.8em}
-					p.propuestas {font-size:3.2em}
-					ol {width:100%; font-size:3em;
-						li {width:75%; margin-left:1em}
+					.copy {font-size:3.5em;
+						p {width:75%}
+						ol {width:100%;
+							li {width:75%; margin-left:1em}
+						}
+						.confetti img {width:20em; margin-left:-3em}
+						.icono {margin-top:3em}
 					}
-					.confetti img {width:60em; margin-left:-3em}
-					.icono {font-size:2em; margin-top:3em}
 				}
 			}
 		}

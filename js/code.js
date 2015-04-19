@@ -75,7 +75,9 @@ var KUMA = {
 						//animate({el:'.screen.asesores .right p', translateX:'-60em', duration:1200});
 						$('.left, .right').find('.asesor').each(function() {
 							var frase = $(this).find('p').text();
-							new Opentip($(this).find('.card'), frase, KUMA.nosotros.faceStyle);
+							if(KUMA.mobileNotIpad) {
+								new Opentip($(this).find('.card'), frase, KUMA.nosotros.faceStyle);
+							}
 						});
 					} else if(section == 'soy-pedro') {
 						emerge( {el:'.screen.acercade h1', duration:600, timeout:500} );
@@ -104,7 +106,7 @@ var KUMA = {
 				KUMA.fullPage.scroll.home.always(section);
 			} else if( _(['principios', 'propuestas', 'compromisos']).contains(KUMA.where) ) {
 				var url = KUMA.root+KUMA.where+'/'+section+'/';
-				if((!screen.data('already')) && !KUMA.mobileNotIpad) { //first time
+				if((!screen.data('already'))) { //first time
 					//console.log('url', url)
 					//KUMA.screen = screen;
 					KUMA.fbContainer = screen.find('.fb-container');
@@ -249,8 +251,9 @@ var KUMA = {
 				}
 			});
 			KUMA.nosotros.adjust();
-			var tudequevas = 'Sobre cuándo se es ya parte innegable de esta red de voluntarios que es la wiki, Franco de Vita debió haber cantado algo así como:<br /><br /> &laquo;Si le he dado todo lo que tengo,<br /> <nobr>hasta quedar en deuda conmigo misme,</nobr><br /> y todavía preguntas, si soy wiki,<br /> tú de que vas.<br /><br /> Si no hay un minuto de mi tiempo,<br /> que no me pase por el pensamiento,<br /> y todavía preguntas si soy wiki.&raquo;';
-			new Opentip($('.screen.nosotros h1 img'), tudequevas, {style:'glass'});
+			var egg = "&laquo;I was raised up believing I was somehow unique / Like a snowflake distinct among snowflakes, unique in each way you can see / And now after some thinking, I'd say I'd rather be / A functioning cog in some great machinery serving something beyond me&raquo;"
+//'Sobre cuándo se es ya parte innegable de esta red de voluntarios que es la wiki, Franco de Vita debió haber cantado algo así como:<br /><br /> &laquo;Si le he dado todo lo que tengo,<br /> <nobr>hasta quedar en deuda conmigo misme,</nobr><br /> y todavía preguntas, si soy wiki,<br /> tú de que vas.<br /><br /> Si no hay un minuto de mi tiempo,<br /> que no me pase por el pensamiento,<br /> y todavía preguntas si soy wiki.&raquo;';
+			new Opentip($('.screen.nosotros h1 img'), egg, {style:'glass'});
 		},
 		adjust:function() { var galaxia = $('.screen.nosotros .galaxia');
 			var prop =  {normal:0.84, shortWide:0.72, portrait:1.2, boxy:0.84, tallNarrow:1.44}[$('body').data('orientation')]; // faceSide / 12.5em
@@ -595,7 +598,7 @@ var KUMA = {
 						$('body').removeClass(orientations);
 					},
 					prop = data.prop.screen;
-				if(KUMA.mobileNotIpad && (KUMA.where == 'home')) {
+				if(KUMA.mobileNotIpad) {
 					$('body').addClass('mobileNotIpad');
 				} else {
 					$('body').removeClass();
