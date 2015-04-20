@@ -826,7 +826,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 	.copy, .text {
 		p.mas, li.mas, p.menos, li.menos { cursor:pointer;
 			span.mas span.label {display:none}
-			&:hover {background:#dfd8ce;
+			&:hover {background:#fff;
 				a.leer-mas {background:#b4b0ab}
 				a.leer-mas:hover {background:#8b8884; text-decoration:none}
 				/*span.mas span.label {display:inline}*/
@@ -839,7 +839,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		p a, ol li a {color:#000; font-weight:200;
 			&:hover, &:hover b, &:hover strong { color:rgb(200, 112, 114); }
 		}
-		p.menos, li.menos {
+		p.menos, li.menos { background:#dfd8ce;
 			span.hidden, span.menos {display:inline}
 			span.hidden {margin:0.5em 0}
 			a.leer-mas {background:#ccc}

@@ -200,7 +200,7 @@ var KUMA = {
 			['luis-2', 'Juntos podemos recuperar el control del pais y cambiar los paradigmas que <b>secuestran</b> la política. Es nuestro deber como Ciudadanos Mexicanos.', 3, 0],
 			['luis-3', 'Dando lo mejor de mí, habrá un cambio; si somos muchos, es más probable. Tirar el <b>muro</b> es prioridad, hacerlo en equipo es gusto.', 3, 1],
 			['mariana', 'Sé que todos <b>de la mano</b> podemos lograr un cambio real. Actuemos juntos y logremos la politica que merecemos', 3, 3],
-			['marce', 'Porque la política trabajando con ellos es un ejercicio colectivo de generosidad.', 3, 2],
+			['marce', 'Porque la política trabajando con ellos es un ejercicio colectivo de <b>generosidad</b>.', 3, 2],
 			['mina', 'Porque quienes le estamos dando nuestro apoyo, aun siendo camaradas, lo tendremos en la mira. Y Kumamoto lo sabe y busca esa <b>crítica</b> que hace crecer.', 3, 6],
 			['miguel', 'Para generar un cambio, alguien debe tirar <b>la primer ficha</b> del dominó.', 3, 5],
 			['nayeli', '<b>Ser joven</b> significa ser dueños de nuestra vida, de nuestro presente y estar dispuestos a desafiar nuestro porvenir.', 3, 7],
