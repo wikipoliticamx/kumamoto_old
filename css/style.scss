@@ -237,7 +237,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				&:hover {color:rgb(152, 95, 96)}
 			}
 		}
-		.galaxia {text-align:center; display:inline-block; vertical-align:middle; line-height:initial; margin-top:2em;
+		.galaxia {text-align:center; display:inline-block; vertical-align:middle; line-height:normal; margin-top:2em;
 			.azulejo-top, .azulejo-bottom {position:absolute; z-index:1; width:110%; left:-2%}
 				.azulejo-bottom {bottom:-6%}
 				.azulejo-top {top:-6%}
@@ -366,6 +366,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 					left:8.3em; @include transform(scale(1.3) rotate(0));
 				}
 			}
+			&:hover {z-index:10}
 		}
 		.logos { text-align:center; margin:0 auto; margin-top:2.5em; width:90%; 
 			a { opacity:0; }
@@ -700,7 +701,9 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 	.screen { overflow:hidden;
 		.fb, .text {display:inline-block; vertical-align:top; height:100%; overflow:hidden}
 		.fb {width:30%; max-width:550px; background:#e9eaed; border-left:1px solid #aaa; text-align:center; overflow:scroll;
+			background:#cfe3e9 url(/img/ui/muros-fb.jpg); background-size:100%; background-position-y:bottom; background-repeat:no-repeat;
 			.fb-container {width:95%; margin:0 auto; margin-top:1em}
+			.fb-phrase {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; color:#cfe3e9}
 		}
 
 		&.toc { text-align:left;
@@ -978,6 +981,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		/*}*/
 	}
 	.screen.asesores {
+		h1 {line-height:1.2em}
 		div.asesores {
 			.right {
 				width:47.5%
@@ -990,12 +994,19 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			}
 		}
 	}
-	.screen.acercade .yo-kuma {
-		.copy { 
-			p:nth-of-type(1) { margin-top:2.5em; }
-			p {margin-bottom:2em}
-			.todos {bottom:-2em}
+	.screen.medios {
+		h1 {margin:0;}
+		.logos {margin-top:0;
+			img {height:3.5em}
 		}
+	}
+	.screen.acercade .yo-kuma {
+		.foto img.soy-pedro {margin-top:10em}
+		.copy { 
+			p:nth-of-type(1) { margin-top:5.5em; }
+			p {margin-bottom:2em}
+		}
+		img.todos {display:none}
 	}
 	&.mobileNotIpad {
 		/*.screen {height:auto; overflow:visible}*/
@@ -1004,6 +1015,20 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			/*&.compromisos, &.principios, &.propuestas {*/
 				/*.fb {display:none}*/
 			/*}*/
+		}
+	}
+	#fullpage {
+		&.compromisos {
+			.screen.toc .header { padding-top:5em; padding-bottom:1em; }
+		}
+		&.propuestas {
+			.screen.toc .header { padding-top:5em; padding-bottom:1em; }
+		}
+		&.principios {
+			.screen.toc {
+				.lista a {margin:0.5em 0}
+				.header { padding-top:5em; padding-bottom:1em; }
+			}
 		}
 	}
 }

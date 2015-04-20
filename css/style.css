@@ -581,7 +581,7 @@ body {
       text-align: center;
       display: inline-block;
       vertical-align: middle;
-      line-height: initial;
+      line-height: normal;
       margin-top: 2em; }
       .screen.nosotros .galaxia .azulejo-top, .screen.nosotros .galaxia .azulejo-bottom {
         position: absolute;
@@ -871,6 +871,8 @@ body {
         -ms-transform: scale(1.3) rotate(0);
         -o-transform: scale(1.3) rotate(0);
         transform: scale(1.3) rotate(0); }
+      .screen.medios .carton:hover {
+        z-index: 10; }
     .screen.medios .logos {
       text-align: center;
       margin: 0 auto;
@@ -1652,11 +1654,18 @@ body {
     background: #e9eaed;
     border-left: 1px solid #aaa;
     text-align: center;
-    overflow: scroll; }
+    overflow: scroll;
+    background: #cfe3e9 url(/img/ui/muros-fb.jpg);
+    background-size: 100%;
+    background-position-y: bottom;
+    background-repeat: no-repeat; }
     .compromisos .screen .fb .fb-container {
       width: 95%;
       margin: 0 auto;
       margin-top: 1em; }
+    .compromisos .screen .fb .fb-phrase {
+      font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
+      color: #cfe3e9; }
   .compromisos .screen.toc {
     text-align: left;
     /*h2 {color:rgb(200, 112, 114);}*/ }
@@ -2182,6 +2191,8 @@ body {
     bottom: 1em;
     /*p {margin-top:2em}*/
     /*a {display:none}*/ }
+.shortWide .screen.asesores h1 {
+  line-height: 1.2em; }
 .shortWide .screen.asesores div.asesores .right {
   width: 47.5%; }
 .shortWide .screen.asesores div.asesores .center .asesor .bio em {
@@ -2190,12 +2201,20 @@ body {
   margin-top: -6em; }
   .shortWide .screen.asesores div.asesores .center .asesor:hover .bio em {
     display: inline-block; }
+.shortWide .screen.medios h1 {
+  margin: 0; }
+.shortWide .screen.medios .logos {
+  margin-top: 0; }
+  .shortWide .screen.medios .logos img {
+    height: 3.5em; }
+.shortWide .screen.acercade .yo-kuma .foto img.soy-pedro {
+  margin-top: 10em; }
 .shortWide .screen.acercade .yo-kuma .copy p:nth-of-type(1) {
-  margin-top: 2.5em; }
+  margin-top: 5.5em; }
 .shortWide .screen.acercade .yo-kuma .copy p {
   margin-bottom: 2em; }
-.shortWide .screen.acercade .yo-kuma .copy .todos {
-  bottom: -2em; }
+.shortWide .screen.acercade .yo-kuma img.todos {
+  display: none; }
 .shortWide.mobileNotIpad {
   /*.screen {height:auto; overflow:visible}*/
   /*#goodbye {position:fixed}*/ }
@@ -2203,6 +2222,17 @@ body {
     /*&.compromisos, &.principios, &.propuestas {*/
     /*.fb {display:none}*/
     /*}*/ }
+.shortWide #fullpage.compromisos .screen.toc .header {
+  padding-top: 5em;
+  padding-bottom: 1em; }
+.shortWide #fullpage.propuestas .screen.toc .header {
+  padding-top: 5em;
+  padding-bottom: 1em; }
+.shortWide #fullpage.principios .screen.toc .lista a {
+  margin: 0.5em 0; }
+.shortWide #fullpage.principios .screen.toc .header {
+  padding-top: 5em;
+  padding-bottom: 1em; }
 
 body.mobileNotIpad #fullpage.propuestas .text h1 {
   padding-left: 4em;
