@@ -605,19 +605,19 @@ var KUMA = {
 				}
 				clear();
 				if(prop >= 1.815) { //1366/696;
-					console.log('shortWide!', prop);
+					//console.log('shortWide!', prop);
 					$('body').addClass('shortWide').data('orientation', 'shortWide');
 				} else if(prop >= 1.5) { //base
-					console.log('normal!', prop);
+					//console.log('normal!', prop);
 					$('body').addClass('normal').data('orientation', 'normal');
 				} else if(prop >= 1) {
-					console.log('boxy!', prop);
+					//console.log('boxy!', prop);
 					$('body').addClass('boxy').data('orientation', 'boxy');
 				} else if(prop >= 0.7) {
-					console.log('portrait!', prop);
+					//console.log('portrait!', prop);
 					$('body').addClass('portrait').data('orientation', 'portrait');
 				} else {
-					console.log('tallNarrow!', prop);
+					//console.log('tallNarrow!', prop);
 					$('body').addClass('tallNarrow').data('orientation', 'tallNarrow');
 				}
 				//KUMA.fullPage.boot();

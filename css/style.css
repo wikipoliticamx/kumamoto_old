@@ -21,8 +21,7 @@ body {
     display: block;
     margin: 0;
     height: 2em;
-    overflow: hidden;
-    /*&:nth-child(odd)::before {background-color:#8FC8BD}*/ }
+    overflow: hidden; }
     #menu a strong {
       display: inline-block; }
     #menu a::before {
@@ -45,6 +44,8 @@ body {
       text-transform: uppercase; }
       #menu a strong span {
         font-weight: 200; }
+    #menu a:nth-child(odd)::before {
+      background-color: #8FC8BD; }
     #menu a.uva.pausa::before {
       background: #EACCCC;
       color: #555; }
@@ -98,7 +99,7 @@ body {
 /* INDEX */
 /* SCREEN */
 .screen {
-  background: #f6f1e9;
+  background: #f6f1e9 url(/img/ui/kumatile.jpg);
   width: 100%;
   height: 100%;
   position: relative;
@@ -545,7 +546,6 @@ body {
           .screen.video .copy p a:hover {
             text-decoration: underline; }
   .screen.nosotros {
-    background: #f6f1e9 url(/img/ui/kumatile.jpg);
     color: white;
     text-align: center; }
     .screen.nosotros h1 {
@@ -646,7 +646,6 @@ body {
             visibility: visible; }
   .screen.asesores {
     text-align: center;
-    background: #f6f1e9 url(/img/ui/kumatile.jpg);
     z-index: 1;
     position: relative; }
     .screen.asesores .asesores-bkg {
@@ -997,7 +996,6 @@ body {
             margin-top: 1em; }
   .screen.acercade {
     text-align: center;
-    background: #f6f1e9 url(/img/ui/kumatile.jpg);
     z-index: 1;
     position: relative; }
     .screen.acercade h1 {
@@ -1311,7 +1309,7 @@ body {
   .propuestas .screen.democratica .fb img, .propuestas .screen.sostenible .fb img, .propuestas .screen.incluyente .fb img, .propuestas .screen.personas .fb img, .propuestas .screen.excelencia .fb img, .propuestas .screen.contrapeso .fb img {
     width: 511px; }
   .propuestas .screen.democratica .text, .propuestas .screen.sostenible .text, .propuestas .screen.incluyente .text, .propuestas .screen.personas .text, .propuestas .screen.excelencia .text, .propuestas .screen.contrapeso .text {
-    background: #f6f1e9; }
+    background: #f6f1e9 url(/img/ui/kumatile.jpg); }
     .propuestas .screen.democratica .text h2, .propuestas .screen.sostenible .text h2, .propuestas .screen.incluyente .text h2, .propuestas .screen.personas .text h2, .propuestas .screen.excelencia .text h2, .propuestas .screen.contrapeso .text h2 {
       text-transform: uppercase;
       font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
