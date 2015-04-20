@@ -1876,9 +1876,10 @@ body {
     line-height: 0.95em; }
     .propuestas .fb .fb-phrase small, .compromisos .fb .fb-phrase small, .principios .fb .fb-phrase small {
       display: block;
+      width: 75%;
+      margin: 0 auto;
       margin-top: 1.5em;
       font-style: italic;
-      width: 75%;
       font-size: 0.7em; }
 
 /************************** ;LEER MAS **************************/
