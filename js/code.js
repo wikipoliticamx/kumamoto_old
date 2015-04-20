@@ -1,6 +1,6 @@
 var KUMA = {
 	boot:function() {
-		var where = KUMA.where = $('#fullpage').attr('class');
+		var where = KUMA.data.where = $('#fullpage').attr('class');
 
 		KUMA.screen.boot();
 		KUMA.fullPage.boot();
@@ -28,7 +28,7 @@ var KUMA = {
 				KUMA.fullPage.extractAnchors();
 				o.afterLoad = KUMA.fullPage.onEnter;
 				o.onLeave = KUMA.fullPage.onLeave;
-				//if(KUMA.mobileNotIpad && (KUMA.where == 'home')) {
+				//if(KUMA.mobileNotIpad && (KUMA.data.where == 'home')) {
 					//o.autoScrolling = false;
 				//}
 				$('#fullpage').fullpage( o );
@@ -98,14 +98,15 @@ var KUMA = {
 		},
 		onEnter:function(section, index) { 
 			var screen = $('.screen:eq('+(index-1)+')');
-			if(KUMA.where == 'home') {
+			KUMA.fullPage.updateTitle(section);
+			if(KUMA.data.where == 'home') {
 				if(!screen.data('already')) { //first time
 					KUMA.fullPage.scroll.home.once(section);
 					screen.data('already', true);
 				}
 				KUMA.fullPage.scroll.home.always(section);
-			} else if( _(['principios', 'propuestas', 'compromisos']).contains(KUMA.where) ) {
-				var url = KUMA.root+KUMA.where+'/'+section+'/';
+			} else if( _(['principios', 'propuestas', 'compromisos']).contains(KUMA.data.where) ) {
+				var url = KUMA.data.root+KUMA.data.where+'/'+section+'/';
 				if((!screen.data('already'))) { //first time
 					//console.log('url', url)
 					//KUMA.screen = screen;
@@ -113,7 +114,8 @@ var KUMA = {
 					screen.find('.fb-container').html(
 						'<div class="fb-like" data-href="'+url+'" data-width="100%" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>'+
 						'<div class="fb-comments" data-href="'+url+'" data-width="100%" data-numposts="15" data-colorscheme="light"></div>'
-					);
+					).after(
+						'<div class="fb-phrase">Esta candidatura independiente<br> se construye con <strong>tus ideas</strong>.<br> <small>Comenta aquí sobre '+($('#menu a.active').data('frase')||'')+'.</small></div>');
 					if (typeof FB !== 'undefined') {
 						FB.XFBML.parse( screen.find('.fb-container')[0] );
 					}
@@ -121,6 +123,10 @@ var KUMA = {
 				}
 			}
 			KUMA.fullPage.sayGoodbye(section);
+		},
+		updateTitle:function(section) {
+			var title = $('#menu [data-menuanchor='+section+'] strong').text();
+			document.title = title + ' | '+ KUMA.data.originalTitle;
 		},
 		sayGoodbye:function(section) {
 			var sections = KUMA.fullPage.options.anchors;
@@ -624,7 +630,7 @@ var KUMA = {
 				//$('.screen.acercade h1').html( $('body').data('orientation') +' '+prop );
 			}
 		},
-		adjust:function() { var where = KUMA.where, data = KUMA.data, screen = KUMA.screen;
+		adjust:function() { var where = KUMA.data.where, data = KUMA.data, screen = KUMA.screen;
 			data.w = $(window).width();
 			data.h = $(window).height();
 			data.em = data.w/140; // 12 is the base

@@ -542,13 +542,10 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			.video, .fb, .text {width:33%; display:inline-block; vertical-align:top; height:100%; overflow:hidden}
 				.video {width:28%}
 				.text {width:38%}
-				.fb {
-					.fb-container {width:95%; margin:0 auto; margin-top:1em}
-				}
 			.video {background:#ccc; position:relative;
 				img {position:absolute; top:0; left:0; width:720px; height:1280px}
 			}
-			.fb { background:#e9eaed; border-left:1px solid #ccc; text-align:center;}
+			.fb { border-left:1px solid #ccc; text-align:center;}
 			.fb img {width:511px}
 			.text { background:$crema url(/img/ui/kumatile.jpg);
 				h2 {text-transform:uppercase; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-size:3em; width:100%; 
@@ -597,9 +594,8 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			a.inicio {text-decoration:none; color:#000}
 			img.kumalogo {position:absolute; height:10em; left:19.3em; top:4em}
 		}
-		.fb {width:30%; display:inline-block; vertical-align:top; height:100%; overflow:hidden; max-width:550px; background:#e9eaed; text-align:center; border-left:1px solid #ccc;
+		.fb {width:30%; display:inline-block; vertical-align:top; height:100%; overflow:hidden; max-width:550px; text-align:center; border-left:1px solid #ccc;
 			/*img {width:511px}*/
-			.fb-container {width:95%; margin:0 auto; margin-top:1em}
 		}
 
 		&.toc {
@@ -700,10 +696,8 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 .compromisos {
 	.screen { overflow:hidden;
 		.fb, .text {display:inline-block; vertical-align:top; height:100%; overflow:hidden}
-		.fb {width:30%; max-width:550px; background:#e9eaed; border-left:1px solid #aaa; text-align:center; overflow:scroll;
-			background:#cfe3e9 url(/img/ui/muros-fb.jpg); background-size:100%; background-position-y:bottom; background-repeat:no-repeat;
+		.fb {width:30%; max-width:550px; border-left:1px solid #aaa; text-align:center; overflow:scroll;
 			.fb-container {width:95%; margin:0 auto; margin-top:1em}
-			.fb-phrase {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; color:#cfe3e9}
 		}
 
 		&.toc { text-align:left;
@@ -823,6 +817,17 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		}
 	}
 }
+
+.propuestas, .compromisos, .principios {
+	.fb {position:relative;
+		background:#cfe3e9 url(/img/ui/muros-fb.jpg); background-size:100%; background-position-y:bottom; background-repeat:no-repeat;
+		.fb-container { background:rgb(228, 244, 249); padding:1% 2.5%; margin-top:1em; position:relative; z-index:2; }
+		.fb-phrase {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; width:100%; text-align:center; color:#91AFB8; position:absolute; z-index:1; bottom:15em; font-size:2.5em; line-height:0.95em;
+			small {display:block; margin-top:1.5em; font-style:italic; width:75%; font-size:0.7em}
+		}
+	}
+}
+
 
 /************************** ;LEER MAS **************************/
 .propuestas, .compromisos {

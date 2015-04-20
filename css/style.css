@@ -1291,10 +1291,6 @@ body {
     width: 28%; }
   .propuestas .screen.democratica .text, .propuestas .screen.sostenible .text, .propuestas .screen.incluyente .text, .propuestas .screen.personas .text, .propuestas .screen.excelencia .text, .propuestas .screen.contrapeso .text {
     width: 38%; }
-  .propuestas .screen.democratica .fb .fb-container, .propuestas .screen.sostenible .fb .fb-container, .propuestas .screen.incluyente .fb .fb-container, .propuestas .screen.personas .fb .fb-container, .propuestas .screen.excelencia .fb .fb-container, .propuestas .screen.contrapeso .fb .fb-container {
-    width: 95%;
-    margin: 0 auto;
-    margin-top: 1em; }
   .propuestas .screen.democratica .video, .propuestas .screen.sostenible .video, .propuestas .screen.incluyente .video, .propuestas .screen.personas .video, .propuestas .screen.excelencia .video, .propuestas .screen.contrapeso .video {
     background: #ccc;
     position: relative; }
@@ -1305,7 +1301,6 @@ body {
       width: 720px;
       height: 1280px; }
   .propuestas .screen.democratica .fb, .propuestas .screen.sostenible .fb, .propuestas .screen.incluyente .fb, .propuestas .screen.personas .fb, .propuestas .screen.excelencia .fb, .propuestas .screen.contrapeso .fb {
-    background: #e9eaed;
     border-left: 1px solid #ccc;
     text-align: center; }
   .propuestas .screen.democratica .fb img, .propuestas .screen.sostenible .fb img, .propuestas .screen.incluyente .fb img, .propuestas .screen.personas .fb img, .propuestas .screen.excelencia .fb img, .propuestas .screen.contrapeso .fb img {
@@ -1430,14 +1425,9 @@ body {
     height: 100%;
     overflow: hidden;
     max-width: 550px;
-    background: #e9eaed;
     text-align: center;
     border-left: 1px solid #ccc;
     /*img {width:511px}*/ }
-    .principios .screen .fb .fb-container {
-      width: 95%;
-      margin: 0 auto;
-      margin-top: 1em; }
   .principios .screen.toc .ciudad h2 {
     font-size: 6em;
     color: white;
@@ -1651,21 +1641,13 @@ body {
   .compromisos .screen .fb {
     width: 30%;
     max-width: 550px;
-    background: #e9eaed;
     border-left: 1px solid #aaa;
     text-align: center;
-    overflow: scroll;
-    background: #cfe3e9 url(/img/ui/muros-fb.jpg);
-    background-size: 100%;
-    background-position-y: bottom;
-    background-repeat: no-repeat; }
+    overflow: scroll; }
     .compromisos .screen .fb .fb-container {
       width: 95%;
       margin: 0 auto;
       margin-top: 1em; }
-    .compromisos .screen .fb .fb-phrase {
-      font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
-      color: #cfe3e9; }
   .compromisos .screen.toc {
     text-align: left;
     /*h2 {color:rgb(200, 112, 114);}*/ }
@@ -1868,6 +1850,36 @@ body {
         font-size: 1em; }
       .compromisos .screen.bienvenida div.copy b {
         color: #379088; }
+
+.propuestas .fb, .compromisos .fb, .principios .fb {
+  position: relative;
+  background: #cfe3e9 url(/img/ui/muros-fb.jpg);
+  background-size: 100%;
+  background-position-y: bottom;
+  background-repeat: no-repeat; }
+  .propuestas .fb .fb-container, .compromisos .fb .fb-container, .principios .fb .fb-container {
+    background: #e4f4f9;
+    padding: 1% 2.5%;
+    margin-top: 1em;
+    position: relative;
+    z-index: 2; }
+  .propuestas .fb .fb-phrase, .compromisos .fb .fb-phrase, .principios .fb .fb-phrase {
+    font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    width: 100%;
+    text-align: center;
+    color: #91AFB8;
+    position: absolute;
+    z-index: 1;
+    bottom: 15em;
+    font-size: 2.5em;
+    line-height: 0.95em; }
+    .propuestas .fb .fb-phrase small, .compromisos .fb .fb-phrase small, .principios .fb .fb-phrase small {
+      display: block;
+      margin-top: 1.5em;
+      font-style: italic;
+      width: 75%;
+      font-size: 0.7em; }
 
 /************************** ;LEER MAS **************************/
 .propuestas .copy p.mas, .propuestas .copy li.mas, .propuestas .copy p.menos, .propuestas .copy li.menos, .propuestas .text p.mas, .propuestas .text li.mas, .propuestas .text p.menos, .propuestas .text li.menos, .compromisos .copy p.mas, .compromisos .copy li.mas, .compromisos .copy p.menos, .compromisos .copy li.menos, .compromisos .text p.mas, .compromisos .text li.mas, .compromisos .text p.menos, .compromisos .text li.menos {
