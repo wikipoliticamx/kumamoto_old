@@ -646,7 +646,7 @@ var KUMA = {
 				screen.maxCenterWithinContainer($('.yo-kuma .foto img'), $('.yo-kuma .foto'));
 				screen.maxCenterWithinContainer($('.screen.mapa a.mapa img'), $('.screen.mapa'));
 			} else {
-				var fbWidth = Math.min(Math.max(data.w*0.3, 400), 550);
+				var fbWidth = Math.min(Math.max(data.w*0.3, 400), 545);
 				if(where == 'propuestas') {
 					screen.propuestas();
 					//$('.screen .fb').css('width', fbWidth );
