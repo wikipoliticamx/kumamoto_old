@@ -111,7 +111,7 @@ var KUMA = {
 					//console.log('url', url)
 					//KUMA.screen = screen;
 					KUMA.fbContainer = screen.find('.fb-container');
-					screen.find('.fb-container').html(
+					KUMA.fbContainer.html(
 						'<div class="fb-like" data-href="'+url+'" data-width="100%" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>'+
 						'<div class="fb-comments" data-href="'+url+'" data-width="100%" data-numposts="15" data-colorscheme="light"></div>'
 					).after(
