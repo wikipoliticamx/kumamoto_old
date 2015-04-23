@@ -52,6 +52,7 @@ var KUMA = {
 						emerge( {el:'.screen.video h1 .caen', duration:600, timeout:1500} );
 						emerge( {el:'.screen.video p', duration:900, timeout:500} );
 						$('.screen.video p strong').css('color', 'rgb(152, 95, 96)');
+						KUMA.mobile && $('#veil').show();
 					} else if(section == 'nosotros') {
 						KUMA.nosotros.emerge();
 					} else if(section == 'lo-que-se-dice-de-nosotros') {
@@ -344,7 +345,10 @@ var KUMA = {
 			v.find('.thumbs img').click(KUMA.video.load);
 			v.find('.thumbs img:first').addClass('active');
 			if(KUMA.mobile) {
-				v.find('.soundToggle').hide();
+				v.find('.soundToggle').click('');
+				$('#veil').show().click(function() { 
+					$(this).hide();
+				}); //hack to fix scrolling on mobile
 			} else {
 				v.find('.soundToggle').click(KUMA.video.soundToggle);
 				$(window).blur( KUMA.video.blur );
@@ -435,6 +439,7 @@ var KUMA = {
 				if(!KUMA.player.isMuted()) {
 					$('.screen.video .soundToggle').addClass('unMuted').removeClass('muted');
 				}
+				KUMA.mobile && $('#veil').show();
 			} else if(state.data == -1) { //unstarted
 				//weird that I need to do this now, I didn't used to need to
 				KUMA.player.playVideo();
@@ -537,7 +542,7 @@ var KUMA = {
 				v.height = v.width * (1/data.prop.homeVideo);
 			}
 
-			$('#ytplayer').css({
+			$('#ytplayer, #veil').css({
 				height: v.height,
 				width: v.width,
 				left:((data.w-v.width)/2)
@@ -553,7 +558,7 @@ var KUMA = {
 			var ytplayerBottom = v.height + parseInt($('#ytplayer').css('top'));
 
 			if( _(['boxy', 'portrait', 'tallNarrow']).contains( $('body').data('orientation') ) ) {
-				$('.screen.video .sidebar').css('top', ytplayerBottom - (5*em));
+				$('.screen.video .sidebar').css('top', ytplayerBottom + (1*em));
 				ytplayerBottom += (8*em)*1;
 				$('.screen.video .sidebar').css('width', '100%');
 				$('#ytplayer').css('left', $('#ytplayer').css('left')+20+(2*em));
