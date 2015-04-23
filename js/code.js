@@ -299,7 +299,7 @@ var KUMA = {
 			setTimeout(function() {
 				emerge( {el:c.find('.copy img'), duration:200, timeout:500} );
 				emerge( {el:c.find('h3'), duration:800, timeout:800} );
-				animate({el:c.find('h1.pedro'), translateY:400, duration:700});
+				animate({el:c.find('h1.pedro'), translateY:'3.33em', duration:700});
 				$(c.find('img.kumafoto')).css('transition', 'all 4s ease')
 					.css('-webkit-filter', 'blur(0)');
 			}, 200);
