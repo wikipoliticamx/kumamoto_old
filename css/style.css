@@ -2055,15 +2055,19 @@ body {
 
 #fullpage.compromisos .where .compromisos {
   display: inline-block; }
-#fullpage.compromisos .where .propuestas, #fullpage.compromisos .where .principios {
+#fullpage.compromisos .where .propuestas, #fullpage.compromisos .where .principios, #fullpage.compromisos .where .privacidad {
   display: none; }
 #fullpage.propuestas .where .propuestas {
   display: inline-block; }
-#fullpage.propuestas .where .compromisos, #fullpage.propuestas .where .principios {
+#fullpage.propuestas .where .compromisos, #fullpage.propuestas .where .principios, #fullpage.propuestas .where .privacidad {
   display: none; }
 #fullpage.principios .where .principios {
   display: inline-block; }
-#fullpage.principios .where .propuestas, #fullpage.principios .where .compromisos {
+#fullpage.principios .where .propuestas, #fullpage.principios .where .compromisos, #fullpage.principios .where .privacidad {
+  display: none; }
+#fullpage.privacidad .where .privacidad {
+  display: inline-block; }
+#fullpage.privacidad .where .propuestas, #fullpage.privacidad .where .compromisos, #fullpage.privacidad .where .principios {
   display: none; }
 
 /************************** ;NAVBAR **************************/

@@ -911,19 +911,25 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 	&.compromisos {
 		.where {
 			.compromisos {display:inline-block}
-			.propuestas, .principios {display:none}
+			.propuestas, .principios, .privacidad {display:none}
 		}
 	}
 	&.propuestas {
 		.where {
 			.propuestas {display:inline-block}
-			.compromisos, .principios {display:none}
+			.compromisos, .principios, .privacidad {display:none}
 		}
 	}
 	&.principios {
 		.where {
 			.principios {display:inline-block}
-			.propuestas, .compromisos {display:none}
+			.propuestas, .compromisos, .privacidad {display:none}
+		}
+	}
+	&.privacidad {
+		.where {
+			.privacidad {display:inline-block}
+			.propuestas, .compromisos, .principios {display:none}
 		}
 	}
 }
