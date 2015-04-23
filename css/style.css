@@ -397,7 +397,7 @@ body {
     background-position: center top;
     background-size: 100%; }
     .screen.video .theater {
-      overflow: hidden;
+      /*overflow:hidden;*/
       background: #000;
       width: 100%;
       position: absolute;

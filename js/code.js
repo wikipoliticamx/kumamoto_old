@@ -173,7 +173,7 @@ var KUMA = {
 	// ----------------------
 	nosotros:{
 		miembros:[
-			['alaide', 'Nos dijeron que la política era de <b>otros</b> y había una sola forma de hacerla, pero tenemos todas las posiblidades al alcance de nuestra mano.', 0, 0],
+			['alaide', 'Nos dijeron que la política era de <b>otros</b> y había una sola forma de hacerla, pero tenemos todas las posibilidades al alcance de nuestra mano.', 0, 0],
 			['ale', 'Tenemos que comenzar a creer que nuestra realidad es <b>transformable</b> y que se pueden construir cosas bonitas a partir de la indignación.', 0, 2],
 			['armando', 'Esta campaña es nuestra mejor oportunidad para sacar a los <b>cínicos</b> del gobierno y recuperar las riendas del futuro', 0, 9],
 			['alex', 'Utilizaré todas las opciones y oportunidades para ir en contra de <b>lógicas perniciosas</b>. Creando un proyecto de deseo en la realidad.', 0, 3],
@@ -380,6 +380,7 @@ var KUMA = {
 		width:500,
 		ready:function() { var p = KUMA.player;
 			if(!KUMA.mobile) {
+				KUMA.player.loadVideoById( $('.screen.video .sidebar .thumbs img:first').data('youtube') );
 				p.playVideo();
 				p.pauseVideo();
 				KUMA.video.afterReady && KUMA.video.afterReady();
@@ -387,7 +388,6 @@ var KUMA = {
 		},
 		blur:function() { var p = KUMA.player;
 			if(typeof p != 'undefined') {
-				//console.log('blur!');
 				p.pauseVideo();
 				(!KUMA.mobile) && p.unMute();
 			}
@@ -424,17 +424,20 @@ var KUMA = {
 		},
 		change:function(state) {
 			KUMA.video.state = state;
-			if(state.data == 0) {
+			if(state.data == 0) { //ended
 				var next = $('.screen.video .thumbs img.active').next()[0];
 				if(next) {
 					next.click();
 				} else {
 					$('#ytplayer').css('visibility', 'hidden');
 				}
-			} else if(state.data == 1) {
+			} else if(state.data == 1) { //playing
 				if(!KUMA.player.isMuted()) {
 					$('.screen.video .soundToggle').addClass('unMuted').removeClass('muted');
 				}
+			} else if(state.data == -1) { //unstarted
+				//weird that I need to do this now, I didn't used to need to
+				KUMA.player.playVideo();
 			}
 		},
 		updateMeta:function(thumb) {
