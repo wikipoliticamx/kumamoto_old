@@ -384,7 +384,6 @@ var KUMA = {
 		width:500,
 		ready:function() { var p = KUMA.player;
 			if(!KUMA.mobile) {
-				KUMA.player.loadVideoById( $('.screen.video .sidebar .thumbs img:first').data('youtube') );
 				p.playVideo();
 				p.pauseVideo();
 				KUMA.video.afterReady && KUMA.video.afterReady();
@@ -442,7 +441,10 @@ var KUMA = {
 				KUMA.mobile && $('#veil').show();
 			} else if(state.data == -1) { //unstarted
 				//weird that I need to do this now, I didn't used to need to
-				KUMA.player.playVideo();
+				if( KUMA.video.afterLoad ) {
+					KUMA.player.playVideo();
+					KUMA.video.afterLoad = false;
+				}
 			}
 		},
 		updateMeta:function(thumb) {
@@ -454,6 +456,7 @@ var KUMA = {
 			KUMA.player.loadVideoById( $(this).attr('data-youtube') );
 			$('.screen.video .thumbs img').removeClass('active');
 			KUMA.video.updateMeta( $(this) );
+			KUMA.video.afterLoad = true;
 			$(this).addClass('active');
 		}
 	},
