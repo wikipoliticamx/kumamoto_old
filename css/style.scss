@@ -635,7 +635,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			.text > .icono img {width:30em}
 		}
 		&.transparencia {
-			h2 {@include linear-gradient(to left, $transparent, #c8595f, $transparent);}
+			h2 {@include linear-gradient(to left, $transparent, #c8595f, $transparent); line-height:1.1em}
 			.text > .icono img {width:25em}
 		}
 		&.derechos {
