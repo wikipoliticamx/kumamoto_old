@@ -319,6 +319,9 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			}
 			&:hover {z-index:10}
 		}
+		.ferrizStill { position:absolute; right:0; top:27em; z-index:5; 
+			img {width:25em; box-shadow:0.2em 0.2em 0.2em #aaa; @include transition(all 1s ease); position:relative; left:0; @include transform(rotate(-10deg)); }
+		}
 		.logos { text-align:center; margin:0 auto; margin-top:2.5em; width:90%; 
 			a { opacity:0; }
 			img {height:4.16em; display:inline-block; margin:0.8em 1.66em; vertical-align:middle; @include transition(all 0.2s ease);}
