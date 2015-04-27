@@ -307,34 +307,37 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		h1 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:7em; text-align:center; margin-top:0.2em; margin-bottom:0.35em; text-transform:uppercase; letter-spacing:0;
 			strong {font-family:"FF Meta W01", Helvetica, Arial, sans-serif}
 		}
-		.carton { position:absolute; left:-28em; top:27em; z-index:5;
-			img {width:25em; box-shadow:0.2em 0.2em 0.2em #aaa; @include transition(all 1s ease); position:relative; left:0; @include transform(rotate(-10deg)); }
-			&.carton9abr {top:10em; 
+		.carton { position:absolute; right:-27em; top:44em; z-index:5;
+			img {width:25em; box-shadow:0.2em 0.2em 0.2em #aaa; @include transition(all 1s ease); position:relative; @include transform(rotate(-10deg)); }
+			&.carton9abr {top:24em; 
 				img { @include transform(rotate(10deg)); }
 			}
 			&:hover, &.carton9abr:hover {
 				img {
-					left:8.3em; @include transform(scale(1.3) rotate(0));
+					@include transform(scale(1.3) rotate(0));
 				}
 			}
 			&:hover {z-index:10}
 		}
-		.ferrizStill { position:absolute; right:0; top:27em; z-index:5; 
-			img {width:25em; box-shadow:0.2em 0.2em 0.2em #aaa; @include transition(all 1s ease); position:relative; left:0; @include transform(rotate(-10deg)); }
+		.ferrizStill { position:absolute; right:-27em; top:9em; z-index:5; 
+			img {width:25em; box-shadow:0.2em 0.2em 0.2em #aaa; @include transition(all 1s ease); position:relative; @include transform(rotate(-10deg)); }
+			&:hover {
+				img { @include transform(scale(1.3) rotate(0)); }
+			}
 		}
-		.logos { text-align:center; margin:0 auto; margin-top:2.5em; width:90%; 
+		.logos { text-align:center; margin:0 auto; margin-top:1em; width:90%; overflow:scroll; height:7.5em;
 			a { opacity:0; }
-			img {height:4.16em; display:inline-block; margin:0.8em 1.66em; vertical-align:middle; @include transition(all 0.2s ease);}
+			img {height:2.6em; display:inline-block; margin:0.8em 1.66em; vertical-align:middle; @include transition(all 0.2s ease);}
 			a:hover {
 				img { @include transform(scale(1.3)); }
 			}
 			a.void {cursor:default}
 		}
 		.citas { display:block; width:100%; font-size:1.3em; margin:0 auto; padding:0.64em 0; position:relative; background:$crema url(/img/ui/kumatile.jpg); 
-			.medio {text-decoration:none; color:black; overflow:hidden; text-align:center; font-family:"L Futura W01", Helvetica; display:block; margin:0; position:relative;
+			.medio {text-decoration:none; color:black; overflow:hidden; text-align:center; font-family:"L Futura W01", Helvetica; display:block; margin:0; margin-right:8em;position:relative;
 				a {text-decoration:none; color:#000}
 				.copy { display:inline-block; width:40em; vertical-align:top; 
-					a { padding:1em; display:inline-block; text-align:left; width:40em; vertical-align:top;
+					a { padding:0.8em; display:inline-block; text-align:left; width:40em; vertical-align:top;
 						.source { text-align:right; color:#999; margin-top:0.64em;
 							em {color:#379088}
 						}

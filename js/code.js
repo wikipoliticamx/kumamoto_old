@@ -62,7 +62,7 @@ var KUMA = {
 						$('.medios .citas strong').css('color', 'rgb(200, 112, 114)');
 						if( !_(['portrait', 'tallNarrow']).contains( $('body').data('orientation') )) {
 							setTimeout(function() {
-								animate({el:'.screen.medios .carton', translateX:'26em', duration:1200});
+								animate({el:'.screen.medios .carton, .screen.medios .ferrizStill', translateX:'-26em', duration:1200});
 							}, 2000);
 						}
 						_($('.screen.medios .logos a')).chain().shuffle().each(function(logo) {
