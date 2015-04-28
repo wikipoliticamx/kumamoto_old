@@ -1,6 +1,7 @@
 var KUMA = {
 	boot:function() {
 		var where = KUMA.data.where = $('#fullpage').attr('class');
+		$('.header .where div.'+where).addClass('active');
 
 		KUMA.screen.boot();
 		KUMA.fullPage.boot();
@@ -24,7 +25,7 @@ var KUMA = {
 	// ----------------------
 	fullPage: {
 		boot:function() { var o = KUMA.fullPage.options;
-			if($('#fullpage.splash').length == 0) {
+			if( !_(['kit', 'privacidad']).contains(KUMA.data.where) ) {
 				KUMA.fullPage.extractAnchors();
 				o.afterLoad = KUMA.fullPage.onEnter;
 				o.onLeave = KUMA.fullPage.onLeave;
@@ -33,7 +34,8 @@ var KUMA = {
 				//}
 				$('#fullpage').fullpage( o );
 			} else {
-				$('#goodbye').addClass('emerge');
+				$('#goodbye').hide();
+				$('html, body').css('overflow', 'visible');
 			}
 		},
 		extractAnchors:function() { var anchors = [];

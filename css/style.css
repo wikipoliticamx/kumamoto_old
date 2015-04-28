@@ -1949,22 +1949,10 @@ body {
       margin-top: 0;
       line-height: 1em; }
 
-#fullpage.compromisos .where .compromisos {
-  display: inline-block; }
-#fullpage.compromisos .where .propuestas, #fullpage.compromisos .where .principios, #fullpage.compromisos .where .privacidad {
+#fullpage .header .where h1 > div {
   display: none; }
-#fullpage.propuestas .where .propuestas {
+#fullpage .header .where h1 > div.active {
   display: inline-block; }
-#fullpage.propuestas .where .compromisos, #fullpage.propuestas .where .principios, #fullpage.propuestas .where .privacidad {
-  display: none; }
-#fullpage.principios .where .principios {
-  display: inline-block; }
-#fullpage.principios .where .propuestas, #fullpage.principios .where .compromisos, #fullpage.principios .where .privacidad {
-  display: none; }
-#fullpage.privacidad .where .privacidad {
-  display: inline-block; }
-#fullpage.privacidad .where .propuestas, #fullpage.privacidad .where .compromisos, #fullpage.privacidad .where .principios {
-  display: none; }
 
 /************************** ;NAVBAR **************************/
 .navbar {
@@ -2095,5 +2083,93 @@ body {
       font-weight: 200; }
   #goodbye .wikipolitica {
     display: inline-block; }
+
+/************************** ;KIT KUMAMOTO **************************/
+.kit .content {
+  width: 80%;
+  margin: 0 auto; }
+  .kit .content p {
+    font-size: 1.2em; }
+  .kit .content h1 {
+    font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    font-size: 4em;
+    text-align: left;
+    margin: 0;
+    z-index: 2;
+    color: #000;
+    width: 100%;
+    margin-top: 0.8em;
+    margin-bottom: 0.5em;
+    line-height: 1em;
+    border-bottom: 1px solid #000;
+    margin-left: -1em; }
+  .kit .content div.toc p {
+    width: 60em;
+    margin: 0 auto; }
+  .kit .content div.toc ul {
+    font-size: 2em;
+    width: 25em;
+    margin: 1em auto; }
+    .kit .content div.toc ul li {
+      margin: 0.5em 0; }
+  .kit .content .videos a.video {
+    display: inline-block;
+    width: 30%;
+    vertical-align: middle;
+    text-align: center; }
+    .kit .content .videos a.video img {
+      display: block;
+      height: 18em; }
+    .kit .content .videos a.video strong {
+      display: block;
+      font-size: 1.4em;
+      margin-top: 0.4em; }
+  .kit .content .fondos .half {
+    width: 45%;
+    display: inline-block; }
+    .kit .content .fondos .half .demo {
+      height: 30em;
+      border: 1px solid #ccc;
+      margin-right: 1em;
+      margin-bottom: 1em;
+      vertical-align: middle; }
+    .kit .content .fondos .half .phone {
+      vertical-align: middle; }
+    .kit .content .fondos .half ul {
+      padding-left: 0; }
+      .kit .content .fondos .half ul li {
+        display: inline-block; }
+        .kit .content .fondos .half ul li a {
+          display: inline-block;
+          padding: 0.5em;
+          margin: 0.6em;
+          background: #eee;
+          text-decoration: none; }
+          .kit .content .fondos .half ul li a:hover {
+            background: #ccc;
+            text-decoration: underline; }
+          .kit .content .fondos .half ul li a strong {
+            font-size: 1.4em; }
+  .kit .content .coverPhotos a.coverPhoto {
+    display: inline-block;
+    width: 30%;
+    vertical-align: middle;
+    text-align: center; }
+    .kit .content .coverPhotos a.coverPhoto img {
+      width: 100%; }
+  .kit .content .imprimibles .thumbs a, .kit .content .calcas .thumbs a, .kit .content .playeras .thumbs a {
+    text-decoration: none;
+    display: inline-block;
+    width: 35%;
+    text-align: center; }
+    .kit .content .imprimibles .thumbs a img, .kit .content .calcas .thumbs a img, .kit .content .playeras .thumbs a img {
+      width: 70%; }
+  .kit .content .calcas .demo, .kit .content .playeras .demo {
+    height: 30em; }
+  .kit .content .calcas .thumbs .three a, .kit .content .playeras .thumbs .three a {
+    width: 30%;
+    height: 15em;
+    margin: 2em 0; }
 
 /*# sourceMappingURL=style.css.map */

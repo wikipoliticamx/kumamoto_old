@@ -864,30 +864,8 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 }
 
 #fullpage {
-	&.compromisos {
-		.where {
-			.compromisos {display:inline-block}
-			.propuestas, .principios, .privacidad {display:none}
-		}
-	}
-	&.propuestas {
-		.where {
-			.propuestas {display:inline-block}
-			.compromisos, .principios, .privacidad {display:none}
-		}
-	}
-	&.principios {
-		.where {
-			.principios {display:inline-block}
-			.propuestas, .compromisos, .privacidad {display:none}
-		}
-	}
-	&.privacidad {
-		.where {
-			.privacidad {display:inline-block}
-			.propuestas, .compromisos, .principios {display:none}
-		}
-	}
+	.header .where h1 > div {display:none}
+	.header .where h1 > div.active {display:inline-block}
 }
 
 /************************** ;NAVBAR **************************/
@@ -934,5 +912,60 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		a {color:#fff !important; text-decoration:none; font-weight:200}
 	}
 	.wikipolitica {display:inline-block; }
+}
+
+
+
+/************************** ;KIT KUMAMOTO **************************/
+.kit {
+	.content {width:80%; margin:0 auto;
+		p {font-size:1.2em}
+		h1 {
+			font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:4em; text-align:left; margin:0;
+				z-index:2; color:#000; width:100%; margin-top:0.8em; margin-bottom:0.5em; line-height:1em; border-bottom:1px solid #000; margin-left:-1em; 
+		}
+		div.toc {
+			p {width:60em; margin:0 auto;}
+			ul {font-size:2em; width:25em; margin:1em auto;
+				li {margin:0.5em 0}
+			}
+		}
+		.videos {
+			a.video {display:inline-block; width:30%; vertical-align:middle; text-align:center;
+				img {display:block; height:18em}
+				strong {display:block; font-size:1.4em; margin-top:0.4em}
+			}
+		}
+		.fondos {
+			.half { width:45%; display:inline-block;
+				.demo {height:30em; border:1px solid #ccc; margin-right:1em; margin-bottom:1em; vertical-align:middle;}
+				.phone {vertical-align:middle}
+				ul {padding-left:0;
+					li {display:inline-block;
+						a {display:inline-block; padding:0.5em; margin:0.6em; background:#eee; text-decoration:none;
+							&:hover {background:#ccc; text-decoration:underline;}
+							strong {font-size:1.4em}
+						}
+					}
+				}
+			}
+		}
+		.coverPhotos {
+			a.coverPhoto {display:inline-block; width:30%; vertical-align:middle; text-align:center;
+				img {width:100%;}
+			}
+		}
+		.imprimibles, .calcas, .playeras {
+			.thumbs {
+				a {text-decoration:none; display:inline-block; width:35%; text-align:center;
+					img {width:70%;}
+				}
+			}
+		}
+		.calcas, .playeras {
+			.demo {height:30em}
+			.thumbs .three a {width:30%; height:15em; margin:2em 0}
+		}
+	}
 }
 
