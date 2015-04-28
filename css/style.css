@@ -2085,6 +2085,19 @@ body {
     display: inline-block; }
 
 /************************** ;KIT KUMAMOTO **************************/
+.kit div.toc {
+  background: #f6f1e9 url(/img/ui/kumatile.jpg);
+  padding: 2em 0;
+  font-size: 1.2em; }
+  .kit div.toc p {
+    width: 60em;
+    margin: 0 auto; }
+  .kit div.toc ul {
+    font-size: 1.5em;
+    width: 25em;
+    margin: 1em auto; }
+    .kit div.toc ul li {
+      margin: 0.5em 0; }
 .kit .content {
   width: 80%;
   margin: 0 auto; }
@@ -2104,15 +2117,6 @@ body {
     line-height: 1em;
     border-bottom: 1px solid #000;
     margin-left: -1em; }
-  .kit .content div.toc p {
-    width: 60em;
-    margin: 0 auto; }
-  .kit .content div.toc ul {
-    font-size: 2em;
-    width: 25em;
-    margin: 1em auto; }
-    .kit .content div.toc ul li {
-      margin: 0.5em 0; }
   .kit .content .videos a.video {
     display: inline-block;
     width: 30%;
