@@ -840,7 +840,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 }
 
 /************************** ;HEADER **************************/
-.header {padding-top:6em; padding-bottom:4em; position:relative; z-index:2; font-size:1em;
+.header {padding-top:6em; padding-bottom:4em; position:relative; z-index:2; font-size:1em; overflow:hidden;
 	.azulejo-top {position:absolute; z-index:1; width:110%; left:-2%; top:-22%; }
 	.pedro-kumamoto {width:49.5%; padding-left:4em; margin:0 auto; display:inline-block; vertical-align:middle; position:relative; z-index:2;
 		a {text-decoration:none; color:black; display:block;
@@ -939,7 +939,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		.fondos {
 			.half { width:45%; display:inline-block;
 				.demo {height:30em; border:1px solid #ccc; margin-right:1em; margin-bottom:1em; vertical-align:middle;}
-				.phone {vertical-align:middle}
+				.phone {height:30em; vertical-align:middle}
 				ul {padding-left:0;
 					li {display:inline-block;
 						a {display:inline-block; padding:0.5em; margin:0.6em; background:#eee; text-decoration:none;
@@ -964,7 +964,9 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		}
 		.calcas, .playeras {
 			.demo {height:30em}
-			.thumbs .three a {width:30%; height:15em; margin:2em 0}
+			.thumbs .three a {width:30%; margin:2em 0;
+				img {height:15em; width:auto}
+			}
 		}
 	}
 }
