@@ -2096,11 +2096,13 @@ body {
   padding: 2em 0;
   font-size: 1.2em; }
   .kit div.toc p {
-    width: 60em;
+    width: 80%;
     margin: 0 auto; }
+    .kit div.toc p big {
+      font-size: 2em; }
   .kit div.toc ul {
     font-size: 1.5em;
-    width: 25em;
+    width: 80%;
     margin: 1em auto; }
     .kit div.toc ul li {
       margin: 0.5em 0;
@@ -2129,7 +2131,7 @@ body {
     margin-top: 0.8em;
     margin-bottom: 0.5em;
     line-height: 1em;
-    border-bottom: 0.04em solid #000;
+    border-bottom: 1px solid #000;
     margin-left: -1em;
     padding-bottom: 0.2em; }
     .kit .content h1 img {
