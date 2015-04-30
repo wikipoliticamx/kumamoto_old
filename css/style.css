@@ -2101,7 +2101,15 @@ body {
     width: 25em;
     margin: 1em auto; }
     .kit div.toc ul li {
-      margin: 0.5em 0; }
+      margin: 0.5em 0;
+      list-style-type: none; }
+      .kit div.toc ul li a span {
+        display: inline-block;
+        width: 4em;
+        text-align: center; }
+        .kit div.toc ul li a span img {
+          height: 2em;
+          vertical-align: middle; }
 .kit .content {
   width: 80%;
   margin: 0 auto; }
@@ -2119,8 +2127,13 @@ body {
     margin-top: 0.8em;
     margin-bottom: 0.5em;
     line-height: 1em;
-    border-bottom: 1px solid #000;
-    margin-left: -1em; }
+    border-bottom: 0.1em solid #000;
+    margin-left: -1em;
+    padding-bottom: 0.2em; }
+    .kit .content h1 img {
+      vertical-align: bottom;
+      height: 1.5em;
+      margin-right: 0.3em; }
   .kit .content .videos a.video {
     display: inline-block;
     width: 30%;
@@ -2172,7 +2185,8 @@ body {
     text-decoration: none;
     display: inline-block;
     width: 35%;
-    text-align: center; }
+    text-align: center;
+    vertical-align: middle; }
     .kit .content .imprimibles .thumbs a img, .kit .content .calcas .thumbs a img, .kit .content .playeras .thumbs a img {
       width: 70%;
       border: 0.1em solid #ccc; }
