@@ -918,6 +918,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 
 /************************** ;KIT KUMAMOTO **************************/
 .kit {
+	a {color:black}
 	div.toc { background:$crema url(/img/ui/kumatile.jpg); padding:2em 0; font-size:1.2em;
 		p {width:60em; margin:0 auto;}
 		ul {font-size:1.5em; width:25em; margin:1em auto;
@@ -952,16 +953,19 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		}
 		.coverPhotos {
 			a.coverPhoto {display:inline-block; width:30%; vertical-align:middle; text-align:center;
-				img {width:100%;}
+				img {width:100%; border:0.1em solid #ccc}
 			}
 		}
 		.imprimibles, .calcas, .playeras {
 			.thumbs {
 				a {text-decoration:none; display:inline-block; width:35%; text-align:center;
-					img {width:70%; border:0.08em solid #ccc}
+					img {width:70%; border:0.1em solid #ccc}
 				}
 			}
 		}
+		a img {@include transition(all 0.4s ease);}
+		a:hover img {@include transform(scale(1.2));}
+		
 		.calcas, .playeras {
 			.demo {height:30em}
 			.thumbs .three a {width:30%; margin:2em 0;

@@ -2087,6 +2087,8 @@ body {
     display: inline-block; }
 
 /************************** ;KIT KUMAMOTO **************************/
+.kit a {
+  color: black; }
 .kit div.toc {
   background: #f6f1e9 url(/img/ui/kumatile.jpg);
   padding: 2em 0;
@@ -2164,7 +2166,8 @@ body {
     vertical-align: middle;
     text-align: center; }
     .kit .content .coverPhotos a.coverPhoto img {
-      width: 100%; }
+      width: 100%;
+      border: 0.1em solid #ccc; }
   .kit .content .imprimibles .thumbs a, .kit .content .calcas .thumbs a, .kit .content .playeras .thumbs a {
     text-decoration: none;
     display: inline-block;
@@ -2172,7 +2175,17 @@ body {
     text-align: center; }
     .kit .content .imprimibles .thumbs a img, .kit .content .calcas .thumbs a img, .kit .content .playeras .thumbs a img {
       width: 70%;
-      border: 0.08em solid #ccc; }
+      border: 0.1em solid #ccc; }
+  .kit .content a img {
+    -webkit-transition: all 0.4s ease;
+    -moz-transition: all 0.4s ease;
+    transition: all 0.4s ease; }
+  .kit .content a:hover img {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2); }
   .kit .content .calcas .demo, .kit .content .playeras .demo {
     height: 30em; }
   .kit .content .calcas .thumbs .three a, .kit .content .playeras .thumbs .three a {
