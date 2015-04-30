@@ -20,8 +20,7 @@ body {
     color: #fff;
     display: block;
     margin: 0;
-    height: 2em;
-    overflow: hidden; }
+    height: 2em; }
     #menu a strong {
       display: inline-block; }
     #menu a::before {
@@ -35,8 +34,11 @@ body {
       /*box-shadow:2px 2px 5px #555;*/
       counter-increment: item;
       border-right: 1px solid #777; }
-    #menu a:last-of-type(1)::before {
-      border-bottom: 1px solid #777; }
+    #menu a:first-of-type::before {
+      border-top: 1px solid #777; }
+    #menu a:last-of-type::before {
+      border-bottom: 1px solid #777;
+      padding-bottom: 0; }
     #menu a strong {
       display: none;
       background: #aaa;

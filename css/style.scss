@@ -6,7 +6,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 
 /************************** ;MENU **************************/
 #menu {position:absolute; bottom:15%; left:0; z-index:2; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:2em; counter-reset:item -1; line-height:1em;
-	a { color:#fff; display:block; margin:0; height:2em; overflow:hidden; 
+	a { color:#fff; display:block; margin:0; height:2em; 
 		strong {display:inline-block}
 
 		&::before { background:#67B2A4; width:2em; height:1.6em; padding:0.5em 0; text-align:center; display:inline-block;
@@ -15,9 +15,15 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 			counter-increment:item;
 			border-right:1px solid #777;
 		}
-		&:last-of-type(1) {
+		&:first-of-type {
+			&::before {
+				border-top:1px solid #777;
+			}
+		}
+		&:last-of-type {
 			&::before {
 				border-bottom:1px solid #777;
+				padding-bottom:0;
 			}
 		}
 		strong {display:none; background:#aaa; padding:0.5em 1em; text-transform:uppercase;
