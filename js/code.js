@@ -111,8 +111,6 @@ var KUMA = {
 			} else if( _(['principios', 'propuestas', 'compromisos']).contains(KUMA.data.where) ) {
 				var url = KUMA.data.root+KUMA.data.where+'/'+section+'/';
 				if((!screen.data('already'))) { //first time
-					//console.log('url', url)
-					//KUMA.screen = screen;
 					KUMA.fbContainer = screen.find('.fb-container');
 					KUMA.fbContainer.html(
 						'<div class="fb-like" data-href="'+url+'" data-width="100%" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>'+
@@ -120,7 +118,10 @@ var KUMA = {
 					).after(
 						'<div class="fb-phrase">Esta candidatura independiente<br> se construye con <strong>tus ideas</strong>.<br> <small>Comenta aquí sobre '+($('#menu a.active').data('frase')||'')+'.</small></div>');
 					if (typeof FB !== 'undefined') {
-						FB.XFBML.parse( screen.find('.fb-container')[0] );
+						FB.XFBML.parse( KUMA.fbContainer[0] );
+					}
+					if(screen.find('.fb').length > 0) {
+						Ps.initialize ( screen.find('.fb')[0] );
 					}
 					screen.data('already', true);
 				}
@@ -659,7 +660,7 @@ var KUMA = {
 				screen.maxCenterWithinContainer($('.yo-kuma .foto img'), $('.yo-kuma .foto'));
 				screen.maxCenterWithinContainer($('.screen.mapa a.mapa img'), $('.screen.mapa'));
 			} else {
-				var fbWidth = Math.min(Math.max(data.w*0.3, 400), 545);
+				var fbWidth = Math.min(Math.max(data.w*0.3, 450), 545);
 				if(where == 'propuestas') {
 					screen.propuestas();
 					//$('.screen .fb').css('width', fbWidth );

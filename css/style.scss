@@ -783,7 +783,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 .propuestas, .compromisos, .principios {
 	.fb {position:relative;
 		background:#cfe3e9 url(/img/ui/muros-fb.jpg); background-size:100%; background-position:0 bottom; background-repeat:no-repeat;
-		.fb-container { background:rgb(228, 244, 249); padding:1% 2.5%; margin-top:1em; position:relative; z-index:2; }
+		.fb-container { background:rgb(228, 244, 249); padding:1% 2.5%; margin-top:1em; position:relative; z-index:2; margin-bottom:25em}
 		.fb-phrase {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; width:100%; text-align:center; color:#91AFB8; position:absolute; z-index:1; bottom:10em; font-size:2.5em; line-height:0.95em;
 			small {display:block; width:75%; margin:0 auto; margin-top:1.5em; font-style:italic; font-size:0.7em}
 		}
@@ -958,7 +958,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		.imprimibles, .calcas, .playeras {
 			.thumbs {
 				a {text-decoration:none; display:inline-block; width:35%; text-align:center;
-					img {width:70%;}
+					img {width:70%; border:0.08em solid #ccc}
 				}
 			}
 		}

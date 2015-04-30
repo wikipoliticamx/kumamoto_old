@@ -18,6 +18,7 @@ Plugins
 * [bendc/animate](https://github.com/bendc/animate)
 * [fullPage](http://alvarotrigo.com/fullPage/)
 * [OpenTip](https://github.com/enyo/opentip)
+* [Perfect Scrollbar](http://noraesae.github.io/perfect-scrollbar/)
 
 Reading material
 ----------------
