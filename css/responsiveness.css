@@ -797,4 +797,8 @@ body.mobileNotIpad #fullpage.propuestas .text span.confetti {
     margin-bottom: 0.23em;
     margin-top: 0.23em; }
 
+/*@media print {*/
+/*.screen {width:11in; height:8.5in}*/
+/*}*/
+
 /*# sourceMappingURL=responsiveness.css.map */

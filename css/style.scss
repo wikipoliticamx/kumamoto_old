@@ -941,13 +941,16 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		p {font-size:1.2em}
 		h1 {
 			font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:4em; text-align:left; margin:0;
-				z-index:2; color:#000; width:100%; margin-top:0.8em; margin-bottom:0.5em; line-height:1em; border-bottom:0.1em solid #000; margin-left:-1em; padding-bottom:0.2em;
+				z-index:2; color:#000; width:100%; margin-top:0.8em; margin-bottom:0.5em; line-height:1em; border-bottom:0.04em solid #000; margin-left:-1em; padding-bottom:0.2em;
 			img {vertical-align:bottom; height:1.5em; margin-right:0.3em;}
 		}
 		.videos {
 			a.video {display:inline-block; width:30%; vertical-align:middle; text-align:center;
 				img {display:block; height:18em}
 				strong {display:block; font-size:1.4em; margin-top:0.4em}
+				&.wide { margin-top:2em;
+					img {height:15em}
+				}
 			}
 		}
 		.fondos {

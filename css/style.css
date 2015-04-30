@@ -2129,7 +2129,7 @@ body {
     margin-top: 0.8em;
     margin-bottom: 0.5em;
     line-height: 1em;
-    border-bottom: 0.1em solid #000;
+    border-bottom: 0.04em solid #000;
     margin-left: -1em;
     padding-bottom: 0.2em; }
     .kit .content h1 img {
@@ -2148,6 +2148,10 @@ body {
       display: block;
       font-size: 1.4em;
       margin-top: 0.4em; }
+    .kit .content .videos a.video.wide {
+      margin-top: 2em; }
+      .kit .content .videos a.video.wide img {
+        height: 15em; }
   .kit .content .fondos .half {
     width: 45%;
     display: inline-block; }
