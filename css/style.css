@@ -98,6 +98,9 @@ body {
     #menu a.perspectiva-de-genero::before {
       background: #DBCCE0; }
 
+.ps-scrollbar-y-rail {
+  z-index: 2; }
+
 /* INDEX */
 /* SCREEN */
 .screen {
