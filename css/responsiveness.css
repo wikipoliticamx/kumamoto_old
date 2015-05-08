@@ -15,18 +15,16 @@
     bottom: 1em;
     /*p {margin-top:2em}*/
     /*a {display:none}*/ }
-.shortWide .screen.asesores {
-  /*div.asesores {*/
-  /*.center .asesor {*/
-  /*.bio em { display:none }*/
-  /*&:hover { margin-top:-6em;*/
-  /*.bio em { display:inline-block }*/
-  /*}*/
-  /*}*/
-  /*}*/ }
-  .shortWide .screen.asesores h1 {
-    line-height: 1.2em;
-    margin: 0.15em 0; }
+.shortWide .screen.asesores h1 {
+  line-height: 1.2em; }
+.shortWide .screen.asesores div.asesores .right {
+  width: 47.5%; }
+.shortWide .screen.asesores div.asesores .center .asesor .bio em {
+  display: none; }
+.shortWide .screen.asesores div.asesores .center .asesor:hover {
+  margin-top: -6em; }
+  .shortWide .screen.asesores div.asesores .center .asesor:hover .bio em {
+    display: inline-block; }
 .shortWide .screen.medios h1 {
   margin: 0; }
 .shortWide .screen.medios .logos {
@@ -110,21 +108,9 @@ body.mobileNotIpad #fullpage.propuestas .text span.confetti {
   display: none; }
 .boxy .screen.asesores h1 {
   margin: 0.3em 0; }
-.boxy .screen.asesores div.asesores .center {
-  width: 100%;
-  position: absolute;
-  bottom: 2em;
-  left: 0; }
 .boxy .screen.asesores div.asesores .left, .boxy .screen.asesores div.asesores .right {
   margin-top: 2em;
-  margin-bottom: 2em;
-  border-width: 0;
-  width: 55em; }
-  .boxy .screen.asesores div.asesores .left p, .boxy .screen.asesores div.asesores .right p {
-    width: 22em; }
-.boxy .screen.asesores div.asesores .asesor .bio em {
-  display: inline-block;
-  font-size: 1em; }
+  margin-bottom: 2em; }
 .boxy .screen.medios h1 {
   margin-top: 0.8em; }
 .boxy .screen.medios .citas .medio {
@@ -210,22 +196,18 @@ body.mobileNotIpad #fullpage.propuestas .text span.confetti {
 .portrait .screen.asesores div.asesores {
   font-size: 1.2em; }
   .portrait .screen.asesores div.asesores .center {
-    margin-left: -7em;
-    width: 16em;
-    position: absolute; }
+    margin-left: -7em; }
+    .portrait .screen.asesores div.asesores .center .bottom {
+      position: absolute;
+      width: 20em; }
+      .portrait .screen.asesores div.asesores .center .bottom .asesor {
+        margin-bottom: 2em; }
+  .portrait .screen.asesores div.asesores .right, .portrait .screen.asesores div.asesores .left {
+    width: 51.5%; }
   .portrait .screen.asesores div.asesores .left {
     border-top: 1px solid #aaa;
-    padding-top: 3em;
-    padding-right: 3em;
-    margin-right: 3em; }
-  .portrait .screen.asesores div.asesores .right {
-    border: 0; }
-  .portrait .screen.asesores div.asesores .right, .portrait .screen.asesores div.asesores .left {
-    margin-right: 12em;
-    width: 55em;
-    display: inline-block; }
-    .portrait .screen.asesores div.asesores .right p, .portrait .screen.asesores div.asesores .left p {
-      width: 25em; }
+    padding-top: 2%;
+    padding-right: 2%; }
 .portrait .screen.medios h1 {
   margin-top: 1em;
   margin-bottom: 0.8em; }
@@ -447,8 +429,6 @@ body.mobileNotIpad #fullpage.propuestas .text span.confetti {
 .tallNarrow.mobileNotIpad #fullpage.home {
   /*.screen {height:auto; overflow:visible}*/
   /*#goodbye {position:fixed}*/ }
-.tallNarrow.mobileNotIpad .screen.asesores .asesor .bio em {
-  pointer-events: none; }
 .tallNarrow .screen.video {
   background: black; }
   .tallNarrow .screen.video .theater {
@@ -523,19 +503,15 @@ body.mobileNotIpad #fullpage.propuestas .text span.confetti {
     .tallNarrow .screen.asesores div.asesores .asesor:hover .bio em {
       display: inline-block; }
     .tallNarrow .screen.asesores div.asesores .center {
-      margin: 2em 0;
-      position: absolute;
-      top: 7em;
-      left: 0;
-      width: 100%; }
+      margin: 2em 0; }
       .asesor .tallNarrow .screen.asesores div.asesores .center:hover {
         margin-top: -6em; }
       .tallNarrow .screen.asesores div.asesores .center .bottom {
         display: block;
         margin-top: 1em; }
     .tallNarrow .screen.asesores div.asesores .right, .tallNarrow .screen.asesores div.asesores .left {
-      width: 47%;
-      margin-top: 45em;
+      width: 48.5%;
+      margin-top: 2em;
       margin-bottom: 2em; }
       .tallNarrow .screen.asesores div.asesores .right .bio em, .tallNarrow .screen.asesores div.asesores .left .bio em {
         padding-bottom: 2em; }

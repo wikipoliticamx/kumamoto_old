@@ -20,15 +20,18 @@ $transparent:rgb(240, 236, 220);
 			/*}*/
 		}
 		&.asesores {
-			h1 {line-height:1.2em; margin:0.15em 0}
-			/*div.asesores {*/
-				/*.center .asesor {*/
-					/*.bio em { display:none }*/
-					/*&:hover { margin-top:-6em;*/
-						/*.bio em { display:inline-block }*/
-					/*}*/
-				/*}*/
-			/*}*/
+			h1 {line-height:1.2em}
+			div.asesores {
+				.right {
+					width:47.5%
+				}
+				.center .asesor {
+					.bio em { display:none }
+					&:hover { margin-top:-6em;
+						.bio em { display:inline-block }
+					}
+				}
+			}
 		}
 		&.medios {
 			h1 {margin:0;}
@@ -117,11 +120,7 @@ body.mobileNotIpad {
 		&.asesores {
 			h1 {margin:0.3em 0}
 			div.asesores {
-				.center {width:100%; position:absolute; bottom:2em; left:0;}
-				.left, .right { margin-top:2em; margin-bottom:2em; border-width:0; width:55em;
-					p {width:22em}
-				}
-				.asesor .bio em {display:inline-block; font-size:1em}
+				.left, .right { margin-top:2em; margin-bottom:2em}
 			}
 		}
 		&.medios {
@@ -183,14 +182,16 @@ body.mobileNotIpad {
 		&.asesores {
 			h1 {margin-top:0.3em; margin-bottom:0.3em}
 			div.asesores { font-size:1.2em;
-				.center {margin-left:-7em; width:16em; position:absolute; }
-				.left {border-top:1px solid #aaa; padding-top:3em; padding-right:3em; margin-right:3em}
-				.right {border:0 }
-				.right, .left {
-					margin-right:12em;
-					width:55em; display:inline-block;
-					p {width:25em;}
+				.center {margin-left:-7em;
+					.bottom {
+						position:absolute; width:20em;
+						.asesor {margin-bottom:2em}
+					}
 				}
+				.right, .left {
+					width:51.5%;
+				}
+				.left {border-top:1px solid #aaa; padding-top:2%; padding-right:2%}
 			}
 		}
 		&.medios {
@@ -350,9 +351,6 @@ body.mobileNotIpad {
 			/*.screen {height:auto; overflow:visible}*/
 			/*#goodbye {position:fixed}*/
 		}
-		.screen.asesores {
-			.asesor .bio em {pointer-events:none}
-		}
 	}
 	.screen.video {background:black;
 		.theater { top:40em;
@@ -398,11 +396,12 @@ body.mobileNotIpad {
 					.bio em { display:inline-block }
 				}
 			}
-			.center {margin:2em 0; position:absolute; top:7em; left:0; width:100%;
+			
+			.center {margin:2em 0;
 				.asesor &:hover {margin-top:-6em;}
 				.bottom { display:block; margin-top:1em}
 			}
-			.right, .left {width:47%; margin-top:45em; margin-bottom:2em;
+			.right, .left {width:48.5%; margin-top:2em; margin-bottom:2em;
 				.bio em {padding-bottom:2em}
 				.asesor {margin-top:1.5em;
 					p {display:none; width:24em; font-size:1.5em }
