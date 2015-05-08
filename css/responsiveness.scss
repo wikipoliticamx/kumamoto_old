@@ -350,6 +350,9 @@ body.mobileNotIpad {
 			/*.screen {height:auto; overflow:visible}*/
 			/*#goodbye {position:fixed}*/
 		}
+		.screen.asesores {
+			.asesor .bio em {pointer-events:none}
+		}
 	}
 	.screen.video {background:black;
 		.theater { top:40em;
@@ -395,12 +398,11 @@ body.mobileNotIpad {
 					.bio em { display:inline-block }
 				}
 			}
-			
-			.center {margin:2em 0;
+			.center {margin:2em 0; position:absolute; top:7em; left:0; width:100%;
 				.asesor &:hover {margin-top:-6em;}
 				.bottom { display:block; margin-top:1em}
 			}
-			.right, .left {width:48.5%; margin-top:2em; margin-bottom:2em;
+			.right, .left {width:47%; margin-top:45em; margin-bottom:2em;
 				.bio em {padding-bottom:2em}
 				.asesor {margin-top:1.5em;
 					p {display:none; width:24em; font-size:1.5em }

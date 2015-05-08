@@ -78,7 +78,7 @@ var KUMA = {
 						//animate({el:'.screen.asesores .right p', translateX:'-60em', duration:1200});
 						$('.left, .right').find('.asesor').each(function() {
 							var frase = $(this).find('p').text();
-							if(KUMA.mobileNotIpad) {
+							if(KUMA.mobileNotIpad && (frase != '')) {
 								new Opentip($(this).find('.card'), frase, KUMA.nosotros.faceStyle);
 							}
 						});

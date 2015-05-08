@@ -447,6 +447,8 @@ body.mobileNotIpad #fullpage.propuestas .text span.confetti {
 .tallNarrow.mobileNotIpad #fullpage.home {
   /*.screen {height:auto; overflow:visible}*/
   /*#goodbye {position:fixed}*/ }
+.tallNarrow.mobileNotIpad .screen.asesores .asesor .bio em {
+  pointer-events: none; }
 .tallNarrow .screen.video {
   background: black; }
   .tallNarrow .screen.video .theater {
@@ -521,15 +523,19 @@ body.mobileNotIpad #fullpage.propuestas .text span.confetti {
     .tallNarrow .screen.asesores div.asesores .asesor:hover .bio em {
       display: inline-block; }
     .tallNarrow .screen.asesores div.asesores .center {
-      margin: 2em 0; }
+      margin: 2em 0;
+      position: absolute;
+      top: 7em;
+      left: 0;
+      width: 100%; }
       .asesor .tallNarrow .screen.asesores div.asesores .center:hover {
         margin-top: -6em; }
       .tallNarrow .screen.asesores div.asesores .center .bottom {
         display: block;
         margin-top: 1em; }
     .tallNarrow .screen.asesores div.asesores .right, .tallNarrow .screen.asesores div.asesores .left {
-      width: 48.5%;
-      margin-top: 2em;
+      width: 47%;
+      margin-top: 45em;
       margin-bottom: 2em; }
       .tallNarrow .screen.asesores div.asesores .right .bio em, .tallNarrow .screen.asesores div.asesores .left .bio em {
         padding-bottom: 2em; }
