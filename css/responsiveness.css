@@ -15,16 +15,18 @@
     bottom: 1em;
     /*p {margin-top:2em}*/
     /*a {display:none}*/ }
-.shortWide .screen.asesores h1 {
-  line-height: 1.2em; }
-.shortWide .screen.asesores div.asesores .right {
-  width: 47.5%; }
-.shortWide .screen.asesores div.asesores .center .asesor .bio em {
-  display: none; }
-.shortWide .screen.asesores div.asesores .center .asesor:hover {
-  margin-top: -6em; }
-  .shortWide .screen.asesores div.asesores .center .asesor:hover .bio em {
-    display: inline-block; }
+.shortWide .screen.asesores {
+  /*div.asesores {*/
+  /*.center .asesor {*/
+  /*.bio em { display:none }*/
+  /*&:hover { margin-top:-6em;*/
+  /*.bio em { display:inline-block }*/
+  /*}*/
+  /*}*/
+  /*}*/ }
+  .shortWide .screen.asesores h1 {
+    line-height: 1.2em;
+    margin: 0.15em 0; }
 .shortWide .screen.medios h1 {
   margin: 0; }
 .shortWide .screen.medios .logos {
@@ -108,9 +110,21 @@ body.mobileNotIpad #fullpage.propuestas .text span.confetti {
   display: none; }
 .boxy .screen.asesores h1 {
   margin: 0.3em 0; }
+.boxy .screen.asesores div.asesores .center {
+  width: 100%;
+  position: absolute;
+  bottom: 2em;
+  left: 0; }
 .boxy .screen.asesores div.asesores .left, .boxy .screen.asesores div.asesores .right {
   margin-top: 2em;
-  margin-bottom: 2em; }
+  margin-bottom: 2em;
+  border-width: 0;
+  width: 55em; }
+  .boxy .screen.asesores div.asesores .left p, .boxy .screen.asesores div.asesores .right p {
+    width: 22em; }
+.boxy .screen.asesores div.asesores .asesor .bio em {
+  display: inline-block;
+  font-size: 1em; }
 .boxy .screen.medios h1 {
   margin-top: 0.8em; }
 .boxy .screen.medios .citas .medio {
@@ -196,18 +210,22 @@ body.mobileNotIpad #fullpage.propuestas .text span.confetti {
 .portrait .screen.asesores div.asesores {
   font-size: 1.2em; }
   .portrait .screen.asesores div.asesores .center {
-    margin-left: -7em; }
-    .portrait .screen.asesores div.asesores .center .bottom {
-      position: absolute;
-      width: 20em; }
-      .portrait .screen.asesores div.asesores .center .bottom .asesor {
-        margin-bottom: 2em; }
-  .portrait .screen.asesores div.asesores .right, .portrait .screen.asesores div.asesores .left {
-    width: 51.5%; }
+    margin-left: -7em;
+    width: 16em;
+    position: absolute; }
   .portrait .screen.asesores div.asesores .left {
     border-top: 1px solid #aaa;
-    padding-top: 2%;
-    padding-right: 2%; }
+    padding-top: 3em;
+    padding-right: 3em;
+    margin-right: 3em; }
+  .portrait .screen.asesores div.asesores .right {
+    border: 0; }
+  .portrait .screen.asesores div.asesores .right, .portrait .screen.asesores div.asesores .left {
+    margin-right: 12em;
+    width: 55em;
+    display: inline-block; }
+    .portrait .screen.asesores div.asesores .right p, .portrait .screen.asesores div.asesores .left p {
+      width: 25em; }
 .portrait .screen.medios h1 {
   margin-top: 1em;
   margin-bottom: 0.8em; }
