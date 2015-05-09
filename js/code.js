@@ -106,6 +106,7 @@ var KUMA = {
 				if(!screen.data('already')) { //first time
 					KUMA.fullPage.scroll.home.once(section);
 					screen.data('already', true);
+					Ps.initialize ( $('.video .thumbs')[0] );
 				}
 				KUMA.fullPage.scroll.home.always(section);
 			} else if( _(['principios', 'propuestas', 'compromisos']).contains(KUMA.data.where) ) {

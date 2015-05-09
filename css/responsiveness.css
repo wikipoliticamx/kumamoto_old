@@ -429,6 +429,8 @@ body.mobileNotIpad #fullpage.propuestas .text span.confetti {
 .tallNarrow.mobileNotIpad #fullpage.home {
   /*.screen {height:auto; overflow:visible}*/
   /*#goodbye {position:fixed}*/ }
+.tallNarrow.mobileNotIpad .screen.asesores .asesor .bio em {
+  pointer-events: none; }
 .tallNarrow .screen.video {
   background: black; }
   .tallNarrow .screen.video .theater {

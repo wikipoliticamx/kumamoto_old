@@ -156,7 +156,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 					}
 				}
 				.replay {margin-left:2em}
-				.thumbs {
+				.thumbs {position:relative; max-height:43.64em;
 					img {width:16.666em; height:9.25em; display:inline-block; margin:0.83em 0.41em; @include filter(grayscale(100%)); cursor:pointer; border:1px solid transparent;
 						&:hover, &.active { 
 							@include filter(grayscale(0));
