@@ -145,6 +145,7 @@ var KUMA = {
 		onLeave:function(anchor, index, slideIndex, direction) {
 			var sections = KUMA.fullPage.options.anchors, 
 				section = sections[anchor-1];
+			ga('send', 'pageview', location.pathname + location.hash);
 			//console.log('leaving section', section);
 			//console.log('leaving index', index);
 			//console.log('leaving anchor', anchor);
