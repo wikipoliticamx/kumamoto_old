@@ -1231,9 +1231,9 @@ body {
         color: #000; }
         .propuestas .screen.democratica .text h2 a img.kumalogo, .propuestas .screen.sostenible .text h2 a img.kumalogo, .propuestas .screen.incluyente .text h2 a img.kumalogo, .propuestas .screen.personas .text h2 a img.kumalogo, .propuestas .screen.excelencia .text h2 a img.kumalogo, .propuestas .screen.contrapeso .text h2 a img.kumalogo {
           position: absolute;
-          height: 4em;
-          left: 5em;
-          top: 1.2em; }
+          height: 4.2em;
+          left: 5.5em;
+          top: 0.5em; }
         .propuestas .screen.democratica .text h2 a:hover img, .propuestas .screen.sostenible .text h2 a:hover img, .propuestas .screen.incluyente .text h2 a:hover img, .propuestas .screen.personas .text h2 a:hover img, .propuestas .screen.excelencia .text h2 a:hover img, .propuestas .screen.contrapeso .text h2 a:hover img {
           -webkit-transform: scale(1.1);
           -moz-transform: scale(1.1);
@@ -1327,8 +1327,8 @@ body {
       color: #000; }
     .principios .screen .text img.kumalogo {
       position: absolute;
-      height: 10em;
-      left: 19.3em;
+      height: 11.5em;
+      left: 19em;
       top: 4em; }
   .principios .screen .fb {
     width: 30%;
@@ -1651,9 +1651,9 @@ body {
       text-decoration: none; }
     .compromisos .screen .text img.kumalogo {
       position: absolute;
-      height: 10em;
-      left: 14em;
-      top: 4em; }
+      height: 13em;
+      left: 11em;
+      top: 2.5em; }
     .compromisos .screen .text h2 {
       font-family: "FF Meta W01", Helvetica, Arial, sans-serif;
       font-weight: 200;

@@ -517,7 +517,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 					background:transparent; text-align:left;
 					img {height:1.5em; vertical-align:middle; margin-right:0.3em; }
 					a {text-decoration:none; color:#000;
-						img.kumalogo {position:absolute; height:4em; left:5em; top:1.2em}
+						img.kumalogo {position:absolute; height:4.2em; left:5.5em; top:0.5em}
 						&:hover {
 							img {@include transform(scale(1.1));}
 						}
@@ -561,7 +561,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		.text { width:69%; height:100%; display:inline-block; vertical-align:top; position:relative;
 			h2 {font-size:4.5em; padding-left:1.9em}
 			a.inicio {text-decoration:none; color:#000}
-			img.kumalogo {position:absolute; height:10em; left:19.3em; top:4em}
+			img.kumalogo {position:absolute; height:11.5em; left:19em; top:4em}
 		}
 		.fb {width:30%; display:inline-block; vertical-align:top; height:100%; overflow:hidden; max-width:550px; text-align:center; border-left:1px solid #ccc;
 			/*img {width:511px}*/
@@ -707,7 +707,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 		/*}*/
 		.text { /*width:69.5%; display:inline-block; vertical-align:top;*/
 			a.inicio {text-decoration:none}
-			img.kumalogo {position:absolute; height:10em; left:14em; top:4em}
+			img.kumalogo {position:absolute; height:13em; left:11em; top:2.5em}
 			h2 {font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:6em; text-align:left; margin:0;
 				color:#000; width:100%; padding-left:1em; line-height:1.5em; padding-left:4.25em;
 			}
