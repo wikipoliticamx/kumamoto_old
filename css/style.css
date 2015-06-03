@@ -136,9 +136,9 @@ body {
     user-select: none; }
     .screen.cover .copy .kumalogo {
       float: left;
-      margin-right: 2.5em;
-      height: 20em;
-      margin-top: 0.4em;
+      margin-right: 0;
+      height: 23em;
+      margin-top: -0.6em;
       opacity: 0;
       position: relative;
       z-index: 2; }
@@ -243,7 +243,7 @@ body {
       .screen.cover.portrait .copy h3 span {
         display: none; }
     .screen.cover.portrait .copy .kumalogo {
-      height: 35em;
+      height: 40em;
       position: absolute;
       top: 40em;
       display: block; }
@@ -1903,9 +1903,9 @@ body {
       display: block; }
       .header .pedro-kumamoto a .kumalogo {
         float: left;
-        margin-right: 2.5em;
-        height: 14.5em;
-        margin-top: 0.2em;
+        margin-right: 0.5em;
+        height: 17.2em;
+        margin-top: -1.2em;
         position: relative;
         z-index: 3; }
       .header .pedro-kumamoto a h1 {

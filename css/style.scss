@@ -81,7 +81,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 
 		.copy {padding:2.5em 0 0 2.5em; position:absolute; top:0; width:100%; height:100%; z-index:1; @include user-select(none);
 
-			.kumalogo {float:left; margin-right:2.5em; height:20em; margin-top:0.4em; opacity:0; position:relative; z-index:2}
+			.kumalogo {float:left; margin-right:0; height:23em; margin-top:-0.6em; opacity:0; position:relative; z-index:2}
 			
 			h1 {padding-top:0; margin-top:0; font-size:10em; line-height:1em; font-family:"Lemon/Milk", Helvetica, Arial; margin-bottom:0; 
 				position:relative; color:transparent; 
@@ -121,7 +121,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 				h3 {top:8.7em; left:0.7em; font-size:3.8em;
 					span {display:none}
 				}
-				.kumalogo {height:35em; position:absolute; top:40em; display:block;}
+				.kumalogo {height:40em; position:absolute; top:40em; display:block;}
 
 				h2 {font-size:8em; right:17.85em; left:auto; top:auto; bottom:3.5em; width:14em; color:#fff}
 				h4 {top:auto; left:auto; bottom:4em; right:4em;
@@ -851,7 +851,7 @@ body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#f
 	.azulejo-top {position:absolute; z-index:1; width:110%; left:-2%; top:-22%; }
 	.pedro-kumamoto {width:49.5%; padding-left:4em; margin:0 auto; display:inline-block; vertical-align:middle; position:relative; z-index:2;
 		a {text-decoration:none; color:black; display:block;
-			.kumalogo {float:left; margin-right:2.5em; height:14.5em; margin-top:0.2em; position:relative; z-index:3}
+			.kumalogo {float:left; margin-right:0.5em; height:17.2em; margin-top:-1.2em; position:relative; z-index:3}
 			h1 {padding-top:0; margin-top:0; font-size:10em; line-height:0.6em; font-family:"Lemon/Milk", Helvetica, Arial; margin-bottom:0; 
 				position:relative; color:transparent; text-align:left;
 				img {height:0.5em; vertical-align:middle}
