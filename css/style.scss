@@ -3,6 +3,11 @@ $transparent:rgb(240, 236, 220);
 @import "bourbon/bourbon";
 
 body {font-family:sans-serif; margin:0; padding:0; font-size:12px; background:#fff}
+#veda {position:absolute; top:0; left:0; width:100%; background-color:rgba(216,109,117,0.8);
+	color:white; z-index:100; text-align:center; line-height:1.4em; padding:0.6em 1em;  font-size:1.2em; cursor:pointer;
+	&:hover {background-color:rgba(216,109,117,1);}
+	.close {font-size:1.5em; font-weight:bold; float:right; padding-left:1em; padding-right:1em}
+}
 
 /************************** ;MENU **************************/
 #menu {position:absolute; bottom:15%; left:0; z-index:2; font-family:"FF Meta W01", Helvetica, Arial, sans-serif; font-weight:200; font-size:2em; counter-reset:item -1; line-height:1em;

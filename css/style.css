@@ -5,6 +5,28 @@ body {
   font-size: 12px;
   background: #fff; }
 
+#veda {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(216, 109, 117, 0.8);
+  color: white;
+  z-index: 100;
+  text-align: center;
+  line-height: 1.4em;
+  padding: 0.6em 1em;
+  font-size: 1.2em;
+  cursor: pointer; }
+  #veda:hover {
+    background-color: #d86d75; }
+  #veda .close {
+    font-size: 1.5em;
+    font-weight: bold;
+    float: right;
+    padding-left: 1em;
+    padding-right: 1em; }
+
 /************************** ;MENU **************************/
 #menu {
   position: absolute;
