@@ -14,18 +14,23 @@ body {
   color: white;
   z-index: 100;
   text-align: center;
-  line-height: 1.4em;
-  padding: 0.6em 1em;
-  font-size: 1.2em;
   cursor: pointer; }
+  #veda div {
+    padding: 0.6em 1.5em;
+    padding-right: 0;
+    vertical-align: middle;
+    line-height: 1.2em;
+    font-size: 1.2em; }
+  #veda span.close {
+    font-size: 2em;
+    font-weight: bold;
+    padding-left: 0.5em;
+    padding-right: 1.5em;
+    float: right;
+    vertical-align: middle;
+    color: white; }
   #veda:hover {
     background-color: #d86d75; }
-  #veda .close {
-    font-size: 1.5em;
-    font-weight: bold;
-    float: right;
-    padding-left: 1em;
-    padding-right: 1em; }
 
 /************************** ;MENU **************************/
 #menu {

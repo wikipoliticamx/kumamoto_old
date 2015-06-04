@@ -570,16 +570,24 @@ var KUMA = {
 			var ytplayerBottom = v.height + parseInt($('#ytplayer').css('top'));
 
 			if( _(['boxy', 'portrait', 'tallNarrow']).contains( $('body').data('orientation') ) ) {
-				$('#veda').css('font-size','2em');
+				$('#veda div').css('font-size','2.5em');
+				$('#veda span.close').css('padding-bottom','0.5em');
 				$('.screen.video .sidebar').css('top', ytplayerBottom + (1*em));
 				ytplayerBottom += (8*em)*1;
 				$('.screen.video .sidebar').css('width', '100%');
 				$('#ytplayer').css('left', $('#ytplayer').css('left')+20+(2*em));
 			} else {
-				$('#veda').css('font-size','1.2em');
+				$('#veda div').css('font-size','1.2em');
+				$('#veda span.close').css('padding-bottom','0');
 				$('.screen.video .sidebar').css('top', 0);
 				$('.screen.video .sidebar').css('width', sidebarWidth);
 			}
+
+			if( _(['boxy']).contains( $('body').data('orientation') ) ) {
+				$('#veda div').css('font-size','2em');
+				$('#veda span.close').css('padding-bottom','0.5em');
+			}
+			
 			$('.screen.video .theater').css('height', ytplayerBottom);
 		},
 		propuestas:function() {
