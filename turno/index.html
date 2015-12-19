@@ -1,0 +1,89 @@
+<html>
+	<head>
+		<title>Turno</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+		<script language="javascript">
+			var TIME = {
+				start:60,
+				tick:function() {
+					TIME.interval = setInterval(function() {
+						$('span').text( $('span').text() - 1 );
+						document.title = "Turno " + $('span').text();
+						TIME.style();
+					}, 1000);
+				},
+				style:function() {
+					var count = parseInt( $('span').text() );
+					TIME.resetClasses();
+					if(count > -10) {
+						TIME.resize(2);
+					}
+					if((count >= 0) && (count < 10) && ($('span').text().length == 1)) {
+						$('span').text( 0+$('span').text() );
+					}
+					if( (count > 0) && (count <= 10)) {
+						$('body').addClass('almost');
+					} else if(count <= 0) {
+						$('body').addClass('over');
+						if(count <= -10) {
+							var threeFit = TIME.resize(3);
+							$('span').css({
+								fontSize: threeFit,
+								marginTop: ($(window).height() - threeFit)/3
+							});
+							$('body').toggleClass('blink');
+						} 
+						if(count <= -99) {
+							clearInterval(TIME.interval);
+						}
+					}
+				},
+				play:function() {
+					if($('body').hasClass('paused')) {
+						TIME.style();
+						TIME.tick();
+					} else {
+						clearInterval(TIME.interval);
+						TIME.resetClasses();
+						$('body').addClass('paused');
+					}
+				},
+				reset:function() {
+					clearInterval(TIME.interval);
+					$('span').text( TIME.start ).css('marginTop', 0);
+					TIME.style();
+					$('body').addClass('paused');
+				},
+				resetClasses:function() {
+					$('body').removeClass('paused running almost over blink');
+			 	},
+				resize:function(fit) {
+					var fitted = Math.min($(window).height()*0.8, (TIME.heightWidthProportion*$(window).width())/fit);
+					$('span').css('fontSize', fitted);
+					return fitted;
+				},
+				boot:function() {
+					$('span').text(TIME.start);
+					$('body').click( TIME.play ).dblclick( TIME.reset );
+					TIME.heightWidthProportion = 10/($('span').width()/2);
+					TIME.resize(2);
+				}
+			};
+			$(function() {
+				TIME.boot();
+			});
+		</script>
+		<style type="text/css">
+			body {margin:0; padding:0; text-align:center}
+			span { font-family:"Fira Mono", "DejaVu Sans Mono", Menlo, Consolas, "Liberation Mono", Monaco, "Lucida Console", monospace; font-weight:bold; font-size:10px; cursor:pointer; vertical-align:middle; display:inline-block; user-select: none; }
+			.paused {color:white; background:black}
+			.running {color:black; background:white}
+			.almost {color:black; background:yellow}
+			.over {color:black; background:red}
+			.blink {color:red; background:black}
+		</style>
+	</head>
+	<body class="paused">
+		<span></span>
+	</body>
+</html>
