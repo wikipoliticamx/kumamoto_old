@@ -65,6 +65,7 @@
 				},
 				boot:function() {
 					TIME.start = parseInt(window.location.hash.substr(1)) || 60;
+					document.title = "Turno " + TIME.start;
 					$('span').text(TIME.start);
 					$('body').click( TIME.play ).dblclick( TIME.reset );
 					TIME.heightWidthProportion = 10/($('span').width()/2);
