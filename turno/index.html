@@ -43,9 +43,10 @@
 						TIME.style();
 						TIME.tick();
 					} else {
-						clearInterval(TIME.interval);
-						TIME.resetClasses();
-						$('body').addClass('paused');
+						TIME.reset();
+						//clearInterval(TIME.interval);
+						//TIME.resetClasses();
+						//$('body').addClass('paused');
 					}
 				},
 				reset:function() {
@@ -63,6 +64,7 @@
 					return fitted;
 				},
 				boot:function() {
+					TIME.start = parseInt(window.location.hash.substr(1)) || 60;
 					$('span').text(TIME.start);
 					$('body').click( TIME.play ).dblclick( TIME.reset );
 					TIME.heightWidthProportion = 10/($('span').width()/2);
@@ -73,6 +75,7 @@
 				TIME.boot();
 			});
 		</script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 		<style type="text/css">
 			body {margin:0; padding:0; text-align:center}
 			span { font-family:"Fira Mono", "DejaVu Sans Mono", Menlo, Consolas, "Liberation Mono", Monaco, "Lucida Console", monospace; font-weight:bold; font-size:10px; cursor:pointer; vertical-align:middle; display:inline-block; user-select: none; }
